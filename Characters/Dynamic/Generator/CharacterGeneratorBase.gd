@@ -128,7 +128,10 @@ func createBodyparts(character:DynamicCharacter, _args = {}):
 				possible.append([bodypartID, weight])
 				fullWeight += weight
 
-		#print(bodypartSlot, " ", possible) # Uncomment for debug
+		if(bodypartSlot == BodypartSlot.Breasts && character.npcGeneratedGender == NpcGender.Peachboy):
+			possible.append(["transbreasts",1.0])
+
+		print(bodypartSlot, " ", possible) # Uncomment for debug
 		if(possible.size() > 0):
 			if(!RNG.chance(fullWeight * 100.0)):
 				continue
