@@ -19,7 +19,7 @@ export(Resource) var GlobalTheme
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	versionLabel.text = "Version: "+GlobalRegistry.getGameVersionString()
+	versionLabel.text = "perVersion: "+GlobalRegistry.getGameVersionString()
 
 	$HBoxContainer/Panel2/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer3/DonationsLabel.bbcode_text = GlobalRegistry.getDonationDataString()
 	var _ok = GlobalRegistry.connect("donationDataUpdated", self, "updateDonationData")
