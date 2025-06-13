@@ -1579,11 +1579,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Modules/TaviModule/Module.gd"
 }, {
-"base": "Module",
-"class": "TestModule",
-"language": "GDScript",
-"path": "res://Modules/TestModule/Module.gd"
-}, {
 "base": "QuestBase",
 "class": "TestQuest",
 "language": "GDScript",
@@ -1989,7 +1984,6 @@ _global_script_class_icons={
 "TFResult": "",
 "TFUtil": "",
 "TaviModule": "",
-"TestModule": "",
 "TestQuest": "",
 "TestResource": "",
 "TextureRectLayered": "",
