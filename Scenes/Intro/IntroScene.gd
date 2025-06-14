@@ -88,6 +88,10 @@ func _react(_action: String, _args):
 		startNewDay()
 		GM.pc.afterSleepingInBed()
 		runScene("WorldScene")
+		GM.main.setFlag("Game_CompletedPrologue", true)
+		startNewDay()
+		GM.pc.afterSleepingInBed()
+		runScene("WorldScene")
 		endScene()
 	
 	#"crime_innocent", "crime_theft", "crime_murder", "crime_prostitution"
