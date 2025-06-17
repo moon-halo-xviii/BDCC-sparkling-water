@@ -22,21 +22,20 @@ func _run():
 
 	if(state == "chastityCheck"):
 		if(GM.pc.hasPerk(Perk.StartMaleChastity) && GM.pc.hasPenis()):
+			setFlag("MedicalModule.PC_ReceivedPermanentCage", true)
 			setState("chastitySelect")
 		else:
 			setState("crimeSelect")
 
 	if(state == "chastitySelect"):
+		playAnimation(StageScene.Solo,"stand")
 		saynn("Pick your chastity belt type:")
 		addButton("Normal","The more comfortable one","regular_one")
 		addButton("Flat","The more punishing one","flat_one")
-
-	#Since there's only two cage options right now, it's better to let the user toggle between them here. If more cages are added in the future, return the user to chastitySelect instead.
-	if(state in ["regular_one","flat_one","chastitySwap"]):
-		playAnimation(StageScene.Solo,"stand")
-		saynn("Is this alright?")
-		addButton("Confirm","Looks good","crimeSelect")
-		addButton("Try the other","Let me try the other one","chastitySwap")
+		if(GM.pc.getInventory().getEquippedItem(InventorySlot.Penis) == null):
+			addDisabledButton("Continue","You must select a chastity belt")
+		else:
+			addButton("Continue","Looks good","crimeSelect")
 
 	if(state == "crimeSelect"):
 		saynn("What crime are you guilty of?")
@@ -85,6 +84,8 @@ func _react(_action: String, _args):
 	
 	if(_action == "endthisscene"):
 		GM.main.setFlag("Game_CompletedPrologue", true)
+		aimCamera(GM.pc.getCellLocation())
+		GM.pc.setLocation(GM.pc.getCellLocation())
 		startNewDay()
 		GM.pc.afterSleepingInBed()
 		runScene("WorldScene")
@@ -106,24 +107,18 @@ func _react(_action: String, _args):
 		GM.pc.setInmateType(InmateType.SexDeviant)
 	
 	if(_action == "regular_one"):
-		setFlag("MedicalModule.PC_ReceivedPermanentCage", true)
 		setFlag("MedicalModule.PC_PickedFlatPermanentCage", false)
 		
-		GM.pc.getInventory().forceEquipStoreOtherUnlessRestraint(GlobalRegistry.createItem("ChastityCagePermanentNormal"))
+		GM.pc.getInventory().forceEquipRemoveOther(GlobalRegistry.createItem("ChastityCagePermanentNormal"))
+		setState("chastitySelect")
+		return
 		
 	if(_action == "flat_one"):
-		setFlag("MedicalModule.PC_ReceivedPermanentCage", true)
 		setFlag("MedicalModule.PC_PickedFlatPermanentCage", true)
 		
-		GM.pc.getInventory().forceEquipStoreOtherUnlessRestraint(GlobalRegistry.createItem("ChastityCagePermanent"))
-
-	if(_action == "chastitySwap"):
-		if(getFlag("MedicalModule.PC_PickedFlatPermanentCage")):
-			setFlag("MedicalModule.PC_PickedFlatPermanentCage", false)	
-			GM.pc.getInventory().forceEquipRemoveOther(GlobalRegistry.createItem("ChastityCagePermanentNormal"))
-		else:
-			setFlag("MedicalModule.PC_PickedFlatPermanentCage", true)
-			GM.pc.getInventory().forceEquipRemoveOther(GlobalRegistry.createItem("ChastityCagePermanent"))
+		GM.pc.getInventory().forceEquipRemoveOther(GlobalRegistry.createItem("ChastityCagePermanent"))
+		setState("chastitySelect")
+		return
 
 	if(_action == "changePreferences"):
 		runScene("EncountersMenuScene", [], "encounters_menu")
