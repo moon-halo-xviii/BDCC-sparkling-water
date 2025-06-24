@@ -387,7 +387,7 @@ func _run():
 		addButton("Pentaerythritol","Is this your final answer?","passQ5")
 		addButton("Xylitol","Is this your final answer?","failQ5")
 		addButton("Iwanitol","Is this your final answer?","iwanitol")
-		addButton("Polyethylene terepthalate","Is this your final answer?","failQ5")
+		addButton("Polyethylene terephthalate","Is this your final answer?","failQ5")
 		addButton("Glycerol","Is this your final answer?","failQ5")
 		addButton("Cinoxate","Is this your final answer?","failQ5")
 
