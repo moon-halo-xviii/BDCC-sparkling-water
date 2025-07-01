@@ -8,6 +8,10 @@ var debugMode = false
 
 var colorPickerScene = preload("res://UI/ColorPickerWidget.tscn")
 
+var charArray = []
+var selectedChar = null
+var dpID = null
+
 func _initScene(_args = []):
 	if(_args.size() > 0 && _args[0]):
 		debugMode = true
@@ -18,8 +22,36 @@ func _init():
 
 func _run():
 	#print(Bodypart.findPossibleBodypartIDs(BodypartSlot.Tail, GM.pc, [Species.Human]))
-	
-	if(state == "" || state == "pickgender"):
+	if(state == ""):
+		for datapackID in GM.main.datapackCharacters:
+			addButton(datapackID, "Pick this datapack", "dpselect", [datapackID])
+		
+		addButton("Pick gender","Select your gender. You should be grateful; most people don't get to do this at conception","pickgender")
+
+	if(state == "dpinfo"):
+		clearCharacter()
+		playAnimation(StageScene.Solo,"stand")
+		addButton("Go Back", "return to datapack selection","")
+		for charID in charArray:
+			addButton(charID.id,"select this character","charselect",[charID])
+
+	if(state == "charinfo"):
+		if(selectedChar == null):
+			saynn("Oops! Something went wrong")
+			addButton("Go Back", "return to character selection", "dpinfo")
+		else:
+			saynn("Name: "+selectedChar.name)
+			saynn("Description: "+selectedChar.description)
+
+			saynn("Datapack: "+dpID)
+
+			var charanim = dpID+":"+selectedChar.id
+			addCharacter(charanim)
+			playAnimation(StageScene.Solo,"stand",{pc=charanim})
+			addButton("Go Back", "return to character selection", "dpinfo")
+			addButton("Select","Use this character","datapackCharacterImport")
+
+	if(state == "pickgender"):
 		say("Pick your character's gender. This will affect the color of your speech and how others will treat you. This can be changed at any point")
 		
 		addButton("Male", "You're a guy", "setgender", [Gender.Male])
@@ -255,6 +287,69 @@ func _run():
 		addButton("Back", "Go back a menu", "bodyAttributes")
 
 func _react(_action: String, _args):
+	if(_action == "dpselect"):
+		dpID = _args[0]
+		var datapackID = _args[0]
+		var theDatapack:Datapack = GlobalRegistry.getDatapack(datapackID)
+
+		charArray.clear()
+		var newCharacters = theDatapack.characters
+
+		for charID in newCharacters:
+			charArray.append(newCharacters[charID])
+		
+		setState("dpinfo")
+		return
+
+	if(_action == "charselect"):
+		selectedChar = _args[0]
+		setState("charinfo")
+		return
+
+	if(_action == "datapackCharacterImport"):
+		GM.pc.setName(selectedChar.name)
+		GM.pc.setGender(NpcGender.toNormalGender(selectedChar.gender))
+		GM.pc.setPronounGender(NpcGender.toNormalGender(selectedChar.pronounsGender))
+		GM.pc.setSpecies(selectedChar.species)
+
+		var loadedBodyparts = selectedChar.bodyparts
+		
+		#new removal sequence is necessary for datapack characters with empty slots that weren't explicitly selected as "-Nothing-"; this tends to be the tail
+		for slot in BodypartSlot.getAll():
+			if(not(slot in loadedBodyparts)):
+				GM.pc.removeBodypart(slot)
+		
+		for slot in loadedBodyparts:
+			if(loadedBodyparts[slot] == null || loadedBodyparts[slot]["id"] == "" || loadedBodyparts[slot]["id"] == null):
+				GM.pc.removeBodypart(slot)
+				continue
+			var id = SAVE.loadVar(loadedBodyparts[slot], "id", "errorbad")
+			var bodypart = GlobalRegistry.createBodypart(id)
+
+			var bodypartAttribs = SAVE.loadVar(loadedBodyparts[slot], "data", {})
+			for attribID in bodypartAttribs:
+				bodypart.applyAttribute(attribID, bodypartAttribs[attribID])
+			if(loadedBodyparts[slot].has("pickedSkin")):
+				bodypart.pickedSkin = loadedBodyparts[slot]["pickedSkin"]
+				if(bodypart.pickedSkin == ""):
+					bodypart.pickedSkin = null
+			if(loadedBodyparts[slot].has("pickedR")):
+				bodypart.pickedRColor = loadedBodyparts[slot]["pickedR"]
+			if(loadedBodyparts[slot].has("pickedG")):
+				bodypart.pickedGColor = loadedBodyparts[slot]["pickedG"]
+			if(loadedBodyparts[slot].has("pickedB")):
+				bodypart.pickedBColor = loadedBodyparts[slot]["pickedB"]
+			GM.pc.giveBodypart(bodypart, false)
+		
+		GM.pc.pickedSkin = selectedChar.pickedSkin
+		GM.pc.pickedSkinRColor = selectedChar.pickedSkinRColor
+		GM.pc.pickedSkinGColor = selectedChar.pickedSkinGColor
+		GM.pc.pickedSkinBColor = selectedChar.pickedSkinBColor
+
+
+		setState("pickedspecies")
+		return
+
 	if(_action == "setgender"):
 		GM.pc.setGender(_args[0])
 		setState("pickpronouns")
