@@ -12,6 +12,11 @@ var charArray = []
 var selectedChar = null
 var dpID = null
 
+var importName = true
+var importPersonality = true
+var importFetishes = true
+var importClothes = true
+
 func _initScene(_args = []):
 	if(_args.size() > 0 && _args[0]):
 		debugMode = true
@@ -23,33 +28,89 @@ func _init():
 func _run():
 	#print(Bodypart.findPossibleBodypartIDs(BodypartSlot.Tail, GM.pc, [Species.Human]))
 	if(state == ""):
+		saynn("Would you like to create a new character, or import one from a datapack?")
+#		saynn("If you want to import a character, you will be brought to the datapack menu first.")
+
+		addButton("Create New", "Make a new character", "pickgender")
+		addButton("Import", "Import from a datapack", "dpselectmenu")
+
+
+#	if(state == "dpload"):
+#		GM.ui.hideAllScreens()
+#		GM.ui.ingameMenuScreen.hideAllMenus()
+#		GM.ui.ingameMenuScreen.visible = true
+#		GM.ui.ingameMenuScreen.datapack_ingame_menu.visible = true
+#
+#		saynn("Please press 'continue'")
+#
+#		addButton("Continue", "Next", "dpselectmenu")
+
+	if(state == "dpselectmenu"):
+		addButton("Back","Return to the previous menu","")
+		addButton("Refresh","Refresh the menu", "dpselectmenu")
 		for datapackID in GM.main.datapackCharacters:
 			addButton(datapackID, "Pick this datapack", "dpselect", [datapackID])
-		
-		addButton("Pick gender","Select your gender. You should be grateful; most people don't get to do this at conception","pickgender")
+		if(GM.main.getLoadedDatapacks().size() == 0):
+			saynn("Please load your datapacks from the menu now, and press Refresh to select them here.")
+		else:
+			saynn("Select the datapack you wish to use")
 
 	if(state == "dpinfo"):
 		clearCharacter()
 		playAnimation(StageScene.Solo,"stand")
-		addButton("Go Back", "return to datapack selection","")
+		saynn("Select your character")
+		addButton("Back", "Return to datapack selection","dpselectmenu")
 		for charID in charArray:
 			addButton(charID.id,"select this character","charselect",[charID])
 
 	if(state == "charinfo"):
 		if(selectedChar == null):
 			saynn("Oops! Something went wrong")
-			addButton("Go Back", "return to character selection", "dpinfo")
+			addButton("Back", "return to character selection", "importOptions")
 		else:
 			saynn("Name: "+selectedChar.name)
 			saynn("Description: "+selectedChar.description)
+			saynn("Gender: "+Gender.genderToString(selectedChar.gender))
 
-			saynn("Datapack: "+dpID)
+			if(selectedChar.personality.size() > 0):
+				saynn("\nPersonality:")
+				for personalityStat in selectedChar.personality:
+					saynn(personalityStat+": "+str(selectedChar.personality[personalityStat]))
+
+			if(selectedChar.fetishes.size() > 0):
+				saynn("\nFetishes:")
+				for fetish in selectedChar.fetishes:
+					saynn(fetish+": "+str(selectedChar.fetishes[fetish]))
 
 			var charanim = dpID+":"+selectedChar.id
 			addCharacter(charanim)
 			playAnimation(StageScene.Solo,"stand",{pc=charanim})
-			addButton("Go Back", "return to character selection", "dpinfo")
-			addButton("Select","Use this character","datapackCharacterImport")
+			addButton("Back", "Return to character selection", "dpinfo")
+			addButton("Select","Use this character","importOptions")
+
+	if(state == "importOptions"):
+		addButton("Back","Review character info","charinfo")
+
+		saynn("\n[b]Use the buttons below to configure your import settings, and then press Confirm to continue[/b]\n")
+
+		saynn("Use Character's Name: "+str(importName))		
+		addButton("Name", "Toggle Character Name", "toggleName")
+
+		if(selectedChar.personality.size() > 0):
+			saynn("Use Character's Personality: "+str(importPersonality))
+			addButton("Personality", "Toggle Character Personality", "togglePersonality")
+		
+		if(selectedChar.fetishes.size() > 0):
+			saynn("Use Character's Fetishes: "+str(importFetishes))
+			addButton("Fetishes","Toggle Character Personality", "toggleFetishes")
+		
+		saynn("Put Character's Clothes In Inventory: "+str(importClothes))
+		addButton("Clothes","Toggle Clothes", "toggleClothes")
+
+
+		saynn("\nAfter importing, you will be brought to the character creation menu, where you can edit the character further")
+		
+		addButton("Confirm","Use these settings and continue","datapackCharacterImport")
 
 	if(state == "pickgender"):
 		say("Pick your character's gender. This will affect the color of your speech and how others will treat you. This can be changed at any point")
@@ -306,10 +367,29 @@ func _react(_action: String, _args):
 		setState("charinfo")
 		return
 
+	if(_action == "toggleName"):
+		importName = !importName
+		setState("importOptions")
+		return
+
+	if(_action == "togglePersonality"):
+		importPersonality = !importPersonality
+		setState("importOptions")
+		return
+
+	if(_action == "toggleFetishes"):
+		importFetishes = !importFetishes
+		setState("importOptions")
+		return
+
+	if(_action == "toggleClothes"):
+		importClothes = !importClothes
+		setState("importOptions")
+		return
+
 	if(_action == "datapackCharacterImport"):
-		GM.pc.setName(selectedChar.name)
-		GM.pc.setGender(NpcGender.toNormalGender(selectedChar.gender))
-		GM.pc.setPronounGender(NpcGender.toNormalGender(selectedChar.pronounsGender))
+		GM.pc.setGender(selectedChar.gender)
+		GM.pc.setPronounGender(selectedChar.pronounsGender)
 		GM.pc.setSpecies(selectedChar.species)
 
 		var loadedBodyparts = selectedChar.bodyparts
@@ -346,6 +426,33 @@ func _react(_action: String, _args):
 		GM.pc.pickedSkinGColor = selectedChar.pickedSkinGColor
 		GM.pc.pickedSkinBColor = selectedChar.pickedSkinBColor
 
+		setFlag("PickedSkinAtLeastOnce", true)
+
+		GM.pc.pickedFemininity = selectedChar.femininity
+		GM.pc.pickedThickness = selectedChar.thickness
+
+		if(importName):
+			GM.pc.setName(selectedChar.name)
+
+		if(importPersonality):
+			var personality = GM.pc.getPersonality()
+
+			for personalityStat in selectedChar.personality:
+				personality.setStat(personalityStat, selectedChar.personality[personalityStat])
+
+		if(importFetishes):
+			var fetishes = GM.pc.getFetishHolder()
+
+			for fetish in selectedChar.fetishes:
+				fetishes.setFetish(fetish, selectedChar.fetishes[fetish])
+
+		if(importClothes):
+			var playerInventory = GM.pc.getInventory()
+			for slot in selectedChar.equippedItems:
+				if((slot in InventorySlot.getAll()) && (slot != "neck")): #you wouldn't be able to remove your collar to put it on anyway
+					var item = selectedChar.equippedItems[slot]["id"]
+					if(not(item in ["inmateuniform", "inmateuniformHighsec", "inmateuniformSexDeviant"])):
+						playerInventory.addItem(GlobalRegistry.createItem(item))
 
 		setState("pickedspecies")
 		return
