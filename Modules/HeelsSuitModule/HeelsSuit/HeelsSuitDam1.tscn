@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Inventory/RiggedModels/InmateUniform/damaged/damLilacLeg.png" type="Texture" id=1]
-[ext_resource path="res://Inventory/RiggedModels/InmateUniform/damaged/damLilacBody.png" type="Texture" id=2]
-[ext_resource path="res://Inventory/RiggedModels/InmateUniform/damaged/damBreast.png" type="Texture" id=3]
-[ext_resource path="res://Inventory/RiggedModels/InmateUniform/damaged/damLilacArm.png" type="Texture" id=4]
-[ext_resource path="res://Inventory/RiggedModels/InmateUniform/LilacInmateUniform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Modules/HeelsSuitModule/HeelsSuit/HeelsSuit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Modules/HeelsSuitModule/HeelsSuit/dam1/bodySuitDam1.png" type="Texture" id=2]
+[ext_resource path="res://Modules/HeelsSuitModule/HeelsSuit/legUpSuit.png" type="Texture" id=3]
+[ext_resource path="res://Modules/HeelsSuitModule/HeelsSuit/dam1/breastsScaleableSuitDam1.png" type="Texture" id=4]
+[ext_resource path="res://Modules/HeelsSuitModule/HeelsSuit/dam1/armSuitDam1.png" type="Texture" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "bodywide.png"
@@ -22,19 +22,19 @@ flags_unshaded = true
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 params_depth_draw_mode = 3
-albedo_texture = ExtResource( 4 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=3]
-resource_name = "legup.png.001"
+resource_name = "arm.png.001"
 flags_transparent = true
 flags_unshaded = true
 vertex_color_use_as_albedo = true
 params_cull_mode = 2
 params_depth_draw_mode = 3
-albedo_texture = ExtResource( 1 )
+albedo_texture = ExtResource( 5 )
 
 [sub_resource type="SpatialMaterial" id=4]
-resource_name = "breasts4.png"
+resource_name = "legup.png.001"
 flags_transparent = true
 flags_unshaded = true
 vertex_color_use_as_albedo = true
@@ -42,7 +42,16 @@ params_cull_mode = 2
 params_depth_draw_mode = 3
 albedo_texture = ExtResource( 3 )
 
-[node name="LilacInmateUniformDamaged" instance=ExtResource( 5 )]
+[sub_resource type="SpatialMaterial" id=5]
+resource_name = "breasts4.png"
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_cull_mode = 2
+params_depth_draw_mode = 3
+albedo_texture = ExtResource( 4 )
+
+[node name="TestSuit" instance=ExtResource( 1 )]
 
 [node name="bodywidepng" parent="." index="0"]
 material/0 = SubResource( 1 )
@@ -51,15 +60,13 @@ material/0 = SubResource( 1 )
 material/0 = SubResource( 2 )
 
 [node name="armpng001" parent="." index="2"]
-material/0 = SubResource( 2 )
+material/0 = SubResource( 3 )
 
 [node name="legupDeformable" parent="." index="3"]
-visible = false
-material/0 = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="legupDeformable001" parent="." index="4"]
-material/0 = SubResource( 3 )
+material/0 = SubResource( 4 )
 
 [node name="breastsScalable001" parent="PartStatePicker/PartState" index="0"]
-visible = false
-material/0 = SubResource( 4 )
+material/0 = SubResource( 5 )
