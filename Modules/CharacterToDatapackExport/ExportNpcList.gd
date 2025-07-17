@@ -4,6 +4,7 @@ onready var npcRow = load("res://Modules/CharacterToDatapackExport/ExportNPCRow.
 onready var container = $PanelContainer/VBoxC/ScrollC/VboxC2
 onready var nameButton = $PanelContainer/VBoxC/UpperPanel/HBoxContainer/Name
 onready var genderButton = $PanelContainer/VBoxC/UpperPanel/HBoxContainer/Gender
+onready var speciesButton = $PanelContainer/VBoxC/UpperPanel/HBoxContainer/Species
 onready var popupWindow = $CenterContainer/Notification
 onready var popupWindowLabel = $CenterContainer/Notification/NotificationLabel
 onready var popupOkButton = $CenterContainer/Notification/HBoxC/Ok
@@ -11,14 +12,15 @@ onready var popupCancelButton = $CenterContainer/Notification/HBoxC/Cancel
 
 var _nameBtnState: bool = true
 var _genderBtnState: bool = true
+var _speciesBtnState: bool = true
 var _IDtoForget
 var nodeToFree
-signal exportNPC(action, ID)
+signal onExportPressed(ID)
 
-func addRow(name: String, gender: String, ID: String, occupation: String, canMeet: bool = true):
+func addRow(name: String, gender: String, species: String, ID: String, occupation: String, canMeet: bool = true):
 	var newRow = npcRow.instance()
 	container.add_child(newRow)
-	newRow.initData(name, gender, ID, occupation, canMeet)
+	newRow.initData(name, gender, species, ID, occupation, canMeet)
 	newRow.connect("selectNPC", self, "onSelectNPC")
 
 func _on_Cancel_pressed():
@@ -26,7 +28,7 @@ func _on_Cancel_pressed():
 
 
 func onSelectNPC(ID):
-	emit_signal("exportNPC", "exportNPC", [ID])
+	emit_signal("onExportPressed", ID)
 
 
 func sendPopupMessage(msgText: String = ""):
@@ -86,6 +88,21 @@ func _on_Gender_pressed():
 	
 	_genderBtnState = !_genderBtnState
 
+func _on_Species_pressed():
+	unpressAllButtons()
+	speciesButton.pressed = true
+	
+	var nodesSortedArr = container.get_children()
+	
+	if(_speciesBtnState):
+		nodesSortedArr.sort_custom(self, "sortSpeciesAscending")
+	else:
+		nodesSortedArr.sort_custom(self, "sortSpeciesDescending")
+	
+	for nodeNum in nodesSortedArr.size():
+		container.move_child(nodesSortedArr[nodeNum], nodeNum)
+
+	_speciesBtnState = !_speciesBtnState
 
 func sortGenderAscending(a: Node, b: Node):
 	return a.getNpcGender().naturalnocasecmp_to(b.getNpcGender()) < 0
@@ -94,6 +111,13 @@ func sortGenderAscending(a: Node, b: Node):
 func sortGenderDescending(a: Node, b: Node):
 	return a.getNpcGender().naturalnocasecmp_to(b.getNpcGender()) > 0
 
+func sortSpeciesAscending(a: Node, b: Node):
+	return a.getSpeciesFullName().naturalnocasecmp_to(b.getSpeciesFullName()) < 0
+
+func sortSpeciesDescending(a: Node, b: Node):
+	return a.getSpeciesFullName().naturalnocasecmp_to(b.getSpeciesFullName()) > 0
+
 func unpressAllButtons():
 	nameButton.pressed = false
 	genderButton.pressed = false
+	speciesButton.pressed = false

@@ -2,6 +2,7 @@ extends PanelContainer
 
 onready var _npcNameLabel = $HBoxContainer/Name
 onready var _npcGenderLabel = $HBoxContainer/Gender
+onready var _npcSpeciesLabel = $HBoxContainer/Species
 onready var meetButton = $HBoxContainer/CenterContainer2/Meet
 onready var showNpcButton = $ShowNPC
 signal selectNPC(npcID)
@@ -10,9 +11,10 @@ var _npcOccupation: String
 var affection:float = 0.0
 var lust:float = 0.0
 
-func initData(name, gender, ID, occupation, canMeet=true):
+func initData(name, gender, species, ID, occupation, canMeet=true):
 	_npcNameLabel.text = name
 	_npcGenderLabel.text  = gender
+	_npcSpeciesLabel.text = species
 	self._npcID = ID
 	_npcOccupation = occupation
 	meetButton.disabled = !canMeet
@@ -28,7 +30,7 @@ func getNpcID():
 	if(_npcID != null):
 		return _npcID
 	else: 
-		Log.error("Exception: NPCRow: character ID was not set")
+		Log.error("Exception: ExportNPCRow: character ID was not set")
 
 
 func getNpcName():
@@ -37,6 +39,9 @@ func getNpcName():
 
 func getNpcGender():
 	return _npcGenderLabel.text
+
+func getSpeciesFullName():
+	return _npcSpeciesLabel.text
 
 func _on_ShowNPC_pressed():
 	GM.ui.clearCharactersPanel()

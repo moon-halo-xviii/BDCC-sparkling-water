@@ -15,7 +15,7 @@ var ogdata = null
 var characterID = null
 var datapackID = null
 
-var newDatapack = false
+var isNewDatapack = false
 
 func _init():
 	sceneID = "ExportMenu"
@@ -37,16 +37,17 @@ func _run():
 	if(state == "occupationmenupool"):
 		var npclist = npclistscene.instance()
 		GM.ui.addCustomControl("npclist", npclist)
-		var _ok = npclist.connect("exportNPC", self, "_react")
+		var _ok = npclist.connect("onExportPressed", self, "onExportPressed")
 
 		var characterIDs = GM.main.getDynamicCharacterIDsFromPool(pickedPoolToShow)
 		for xCharacterID in characterIDs:
 			var dynamicCharacter:BaseCharacter = GlobalRegistry.getCharacter(xCharacterID)
 			if(dynamicCharacter == null):
 				continue
-			var NPCname = dynamicCharacter.getName()
+			var npcName = dynamicCharacter.getName()
 			var gender = NpcGender.getVisibleName(dynamicCharacter.npcGeneratedGender)
-			npclist.addRow(NPCname, gender, xCharacterID, pickedPoolToShow, dynamicCharacter.canMeetCharacter())
+			var species =  dynamicCharacter.getSpeciesFullName()
+			npclist.addRow(npcName, gender, species, xCharacterID, pickedPoolToShow, dynamicCharacter.canMeetCharacter())
 
 		addButton("Cancel", "Go back", "")
 		var encounterPools = GM.main.getDynamicCharactersPools()
@@ -55,22 +56,30 @@ func _run():
 
 	if(state == "exportNPC"):
 		saynn("You did it?")
-		addButton("Continue", "Continue", "promptID")
+		addButton("Continue", "Continue", "promptCharID")
 
-	if(state == "promptID"):
+	if(state == "promptCharID"):
 		say("Set the character's ID:")
 
 		var textBox:LineEdit = addTextbox("characterID")
-		var _ok = textBox.connect("text_entered", self, "onTextBoxEnterPressed")
+		var _ok = textBox.connect("text_entered", self, "onCharTextBoxEnterPressed")
 
 		addButton("Back", "Go back", "promptIDBack")
-		addButton("Confirm", "Choose this ID", "setID")
+		addButton("Confirm", "Choose this ID", "setCharID")
 
 	if(state == "promptDatapack"):
 		saynn("Select which datapack you want to save this character to, or make a new one.")
-		addButton("Back", "Go back", "promptID")
+		addButton("Back", "Go back", "promptCharID")
+		addButton("Create new", "Make a new datapack", "promptDatapackID")
 		for datapack in GlobalRegistry.datapacks:
 			addButton(datapack, "Select this datapack", "setDatapack", [datapack])
+	
+	if(state == "promptDatapackID"):
+		saynn("Set the datapack ID:")
+		var textBox:LineEdit = addTextbox("datapackID")
+		var _ok = textBox.connect("text_entered", self, "onDatapackTextBoxEnterPressed")
+		addButton("Back", "Go back", "promptDatapack")
+		addButton("Confirm", "Choose this ID", "setDatapackID")
 
 	if(state == "reviewConfig"):
 		if(targetType == "Player"):
@@ -90,32 +99,45 @@ func _run():
 		saynn("Export finished.")
 		addButton("Continue", "Return to the player menu", "endthescene")
 
-func onTextBoxEnterPressed(_new_text:String):
-	GM.main.pickOption("setID", [])
+func onCharTextBoxEnterPressed(_new_text:String):
+	GM.main.pickOption("setCharID", [])
+
+func onDatapackTextBoxEnterPressed(_new_text:String):
+	GM.main.pickOption("setDatapackID", [])
+
+func onExportPressed(_charID:String):
+	target = GlobalRegistry.getCharacter(_charID)
+	targetType = "Dynamic"
+	GM.main.pickOption("promptCharID", [])
 
 func _react(_action: String, _args):
 	if(_action == "exportPlayer"):
 		target = GM.pc
 		targetType = "Player"
-		setState("promptID")
-		return
-
-	if(_action == "exportNPC"):
-		target = GlobalRegistry.getCharacter(_args[0])
-		targetType = "Dynamic"
-		state = "exportNPC"
-		run() #it just works; setState doesn't
+		setState("promptCharID")
 		return
 
 	if(_action == "occupationmenupool"):
 		pickedPoolToShow = _args[0]
 
-	if(_action == "setID"):
+	if(_action == "setCharID"):
 		if(getTextboxData("characterID") == ""):
 			return
 		
 		characterID = getTextboxData("characterID")
 		setState("promptDatapack")
+		return
+	
+	if(_action == "setDatapackID"):
+		var candidate = getTextboxData("datapackID")
+		if(candidate == ""):
+			return
+		elif(GlobalRegistry.datapacks.has(candidate)):
+			addMessage("Datapack with this ID already exists")
+			return
+		datapackID = candidate
+		isNewDatapack = true
+		setState("reviewConfig")
 		return
 		
 	if(_action == "setDatapack"):
@@ -127,7 +149,7 @@ func _react(_action: String, _args):
 		if(targetType == "Player"):
 			setState("")
 		else:
-			pass
+			setState("exportNPClistmenu")
 		return
 
 	if(_action == "toggleIgnoreTF"):
@@ -136,8 +158,15 @@ func _react(_action: String, _args):
 		return
 
 	if(_action == "runExport"):
-		if(newDatapack == true):
-			pass
+		if(isNewDatapack == true):
+			var newDatapack:Datapack = Datapack.new()
+			newDatapack.id = datapackID
+			newDatapack.name = datapackID
+			var _ok = newDatapack.saveToDisk()
+			if(!_ok):
+				Log.printerr("ExportMenu.gd: error saving datapack to disk")
+				return
+			GlobalRegistry.datapacks[newDatapack.id] = newDatapack
 
 		var datapack = GlobalRegistry.getDatapacks()[datapackID]					
 		var newDatapackCharacter:DatapackCharacter = DatapackCharacter.new()
@@ -149,6 +178,9 @@ func _react(_action: String, _args):
 
 		if(targetType == "Player"):
 			newDatapackCharacter.description = "An imported player character"
+		elif(targetType == "Dynamic"):
+			newDatapackCharacter.description = "An imported dynamic character"
+			newDatapackCharacter.customSpeciesName = target.npcCustomSpeciesName
 		
 		tfHolder = target.getTFHolder()
 
@@ -201,7 +233,7 @@ func _react(_action: String, _args):
 			if(template[slot] == null || template[slot]["id"] == "" || template[slot]["id"] == null):
 				continue
 
-			if(tfHolder != null):
+			if(ignoreTF && tfHolder != null):
 				if(slot in tfHolder.affectedParts):
 					template[slot]["id"] = tfHolder.grabBodypartOriginalData(slot)["bodypartID"]
 					if("partskin" in ogdata["partsSkins"][slot]):

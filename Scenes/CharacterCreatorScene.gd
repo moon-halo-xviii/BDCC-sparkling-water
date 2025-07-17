@@ -11,6 +11,7 @@ var colorPickerScene = preload("res://UI/ColorPickerWidget.tscn")
 var charArray = []
 var selectedChar = null
 var dpID = null
+var charRef = ""
 
 var importName = true
 var importPersonality = true
@@ -29,33 +30,20 @@ func _run():
 	#print(Bodypart.findPossibleBodypartIDs(BodypartSlot.Tail, GM.pc, [Species.Human]))
 	if(state == ""):
 		saynn("Would you like to create a new character, or import one from a datapack?")
-#		saynn("If you want to import a character, you will be brought to the datapack menu first.")
 
 		addButton("Create New", "Make a new character", "pickgender")
 		addButton("Import", "Import from a datapack", "dpselectmenu")
 
-
-#	if(state == "dpload"):
-#		GM.ui.hideAllScreens()
-#		GM.ui.ingameMenuScreen.hideAllMenus()
-#		GM.ui.ingameMenuScreen.visible = true
-#		GM.ui.ingameMenuScreen.datapack_ingame_menu.visible = true
-#
-#		saynn("Please press 'continue'")
-#
-#		addButton("Continue", "Next", "dpselectmenu")
-
 	if(state == "dpselectmenu"):
+		if(dpID in GM.main.loadedDatapacks):
+			GM.main.unloadDatapack(dpID)
 		addButton("Back","Return to the previous menu","")
-		addButton("Refresh","Refresh the menu", "dpselectmenu")
-		for datapackID in GM.main.datapackCharacters:
+		for datapackID in GlobalRegistry.datapacks:			
 			addButton(datapackID, "Pick this datapack", "dpselect", [datapackID])
-		if(GM.main.getLoadedDatapacks().size() == 0):
-			saynn("Please load your datapacks from the menu now, and press Refresh to select them here.")
-		else:
-			saynn("Select the datapack you wish to use")
+		saynn("Select the datapack you wish to use")
 
 	if(state == "dpinfo"):
+		GM.main.loadDatapackAndDependencies(dpID)
 		clearCharacter()
 		playAnimation(StageScene.Solo,"stand")
 		saynn("Select your character")
@@ -82,9 +70,10 @@ func _run():
 				for fetish in selectedChar.fetishes:
 					saynn(fetish+": "+str(selectedChar.fetishes[fetish]))
 
-			var charanim = dpID+":"+selectedChar.id
-			addCharacter(charanim)
-			playAnimation(StageScene.Solo,"stand",{pc=charanim})
+			charRef = dpID+":"+selectedChar.id
+
+#			addCharacter(charRef)
+			playAnimation(StageScene.Solo,"stand",{pc=charRef})
 			addButton("Back", "Return to character selection", "dpinfo")
 			addButton("Select","Use this character","importOptions")
 
@@ -350,8 +339,7 @@ func _run():
 func _react(_action: String, _args):
 	if(_action == "dpselect"):
 		dpID = _args[0]
-		var datapackID = _args[0]
-		var theDatapack:Datapack = GlobalRegistry.getDatapack(datapackID)
+		var theDatapack:Datapack = GlobalRegistry.getDatapack(dpID)
 
 		charArray.clear()
 		var newCharacters = theDatapack.characters
@@ -388,6 +376,8 @@ func _react(_action: String, _args):
 		return
 
 	if(_action == "datapackCharacterImport"):
+#		removeCharacter(charRef)
+		GM.main.unloadDatapack(dpID)
 		GM.pc.setGender(selectedChar.gender)
 		GM.pc.setPronounGender(selectedChar.pronounsGender)
 		GM.pc.setSpecies(selectedChar.species)
