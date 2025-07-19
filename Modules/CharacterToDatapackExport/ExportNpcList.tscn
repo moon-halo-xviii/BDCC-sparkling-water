@@ -123,7 +123,7 @@ rect_min_size = Vector2( 2, 0 )
 custom_constants/separation = 8
 custom_styles/separator = SubResource( 8 )
 
-[node name="Gender" type="Button" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+[node name="Gender" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
 margin_left = 399.0
 margin_right = 791.0
 margin_bottom = 60.0
@@ -134,8 +134,8 @@ custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = ExtResource( 1 )
-toggle_mode = true
 text = "Gender:"
+align = 1
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
 margin_left = 791.0
@@ -144,7 +144,7 @@ margin_bottom = 60.0
 custom_constants/separation = 8
 custom_styles/separator = SubResource( 8 )
 
-[node name="Species" type="Button" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+[node name="Species" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
 margin_left = 799.0
 margin_right = 1190.0
 margin_bottom = 60.0
@@ -154,8 +154,8 @@ custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = ExtResource( 1 )
-toggle_mode = true
 text = "Species:"
+align = 1
 
 [node name="dummy" type="Label" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
 margin_left = 1190.0
@@ -253,7 +253,7 @@ size_flags_vertical = 3
 autowrap = true
 
 [connection signal="pressed" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Name" to="." method="_on_Name_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Gender" to="." method="_on_Gender_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Species" to="." method="_on_Species_pressed"]
+[connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Gender" to="." method="_on_Gender_item_selected"]
+[connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Species" to="." method="_on_Species_item_selected"]
 [connection signal="pressed" from="CenterContainer/Notification/HBoxC/Ok" to="." method="_on_Ok_pressed"]
 [connection signal="pressed" from="CenterContainer/Notification/HBoxC/Cancel" to="." method="_on_Cancel_pressed"]

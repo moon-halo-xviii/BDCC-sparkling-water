@@ -48,6 +48,19 @@ func _run():
 			var gender = NpcGender.getVisibleName(dynamicCharacter.npcGeneratedGender)
 			var species =  dynamicCharacter.getSpeciesFullName()
 			npclist.addRow(npcName, gender, species, xCharacterID, pickedPoolToShow, dynamicCharacter.canMeetCharacter())
+		
+		#sorting the options for the sort dialogs
+
+		npclist.genderButton.add_item("Gender")
+		npclist.speciesButton.add_item("Species")
+
+		npclist.genderIndex.sort_custom(self, "configureGenderDialog")
+		for gender in npclist.genderIndex:
+			npclist.genderButton.add_item(gender)
+
+		npclist.speciesIndex.sort_custom(self, "configureSpeciesDialog")
+		for species in npclist.speciesIndex:
+			npclist.speciesButton.add_item(species)
 
 		addButton("Cancel", "Go back", "")
 		var encounterPools = GM.main.getDynamicCharactersPools()
@@ -68,14 +81,14 @@ func _run():
 		addButton("Confirm", "Choose this ID", "setCharID")
 
 	if(state == "promptDatapack"):
-		saynn("Select which datapack you want to save this character to, or make a new one.")
+		say("Select which datapack you want to save this character to, or make a new one.")
 		addButton("Back", "Go back", "promptCharID")
 		addButton("Create new", "Make a new datapack", "promptDatapackID")
 		for datapack in GlobalRegistry.datapacks:
 			addButton(datapack, "Select this datapack", "setDatapack", [datapack])
 	
 	if(state == "promptDatapackID"):
-		saynn("Set the datapack ID:")
+		say("Set the datapack ID:")
 		var textBox:LineEdit = addTextbox("datapackID")
 		var _ok = textBox.connect("text_entered", self, "onDatapackTextBoxEnterPressed")
 		addButton("Back", "Go back", "promptDatapack")
@@ -187,8 +200,13 @@ func _react(_action: String, _args):
 		#transformation assignments
 		if(ignoreTF):
 			ogdata = tfHolder.grabCharOriginalData()
-			newDatapackCharacter.gender = ogdata["gender"]
-			newDatapackCharacter.pronounsGender = ogdata["pronounsGender"]
+
+			if(targetType == "Player"):
+				newDatapackCharacter.gender = ogdata["gender"]
+				newDatapackCharacter.pronounsGender = ogdata["pronounsGender"]
+			else:
+				newDatapackCharacter.gender = target.getGender()
+				newDatapackCharacter.pronounsGender = target.getPronounGender()
 			newDatapackCharacter.femininity = ogdata["femininity"]
 			newDatapackCharacter.thickness = ogdata["thickness"]
 			newDatapackCharacter.species = ogdata["species"]
@@ -216,7 +234,40 @@ func _react(_action: String, _args):
 		newDatapackCharacter.stats = target.skillsHolder.stats
 		newDatapackCharacter.perks = target.skillsHolder.getPerks().keys()
 
-		newDatapackCharacter.attacks = ["biteattack", "simplekickattack", "shoveattack", "NpcScratch"]
+		if(targetType == "Player"):
+			newDatapackCharacter.attacks = ["simplepunchattack", "simplekickattack", "biteattack", "trygetupattack"]
+
+			if(target.getLevel() >= 10):
+				newDatapackCharacter.attacks.append("lickWounds")
+
+			for perk in target.skillsHolder.getPerks():
+				match perk:
+					"CombatShove":
+						newDatapackCharacter.attacks.append("shoveattack")
+					"SexBiter":
+						newDatapackCharacter.attacks.append("StrongBite")
+					"CombatBetterMeleeWeapons":
+						newDatapackCharacter.attacks.append("ShivAttack")
+					"CombatBetterMeleeWeaponsV2":
+						newDatapackCharacter.attacks.append("stunbatonAttack")
+					"CombatBetterMeleeWeaponsV3":
+						newDatapackCharacter.attacks.append("stunbatonOverchargeAttack")
+					"BDSMRigger":
+						newDatapackCharacter.attacks.append("CuffPCHands")
+						newDatapackCharacter.attacks.append("ForceBlindfoldPC")
+					"BDSMRiggerV2":
+						newDatapackCharacter.attacks.append(RNG.pick(["ForceGagPC", "ForceMuzzlePC", "ForceRingGagPC"]))
+					"BDSMRiggerV3":
+						newDatapackCharacter.attacks.append("DoubleCuffPC")
+					"MilkBiggerBreasts":
+						newDatapackCharacter.attacks.append("AIHumiliateMommy")
+					"SexBetterTease", "NakedMagicHips":
+						if(not("stretchingAttack" in newDatapackCharacter.attacks)): newDatapackCharacter.attacks.append("stretchingAttack")
+					"BreedBreedersBliss", "BreedCumInflationheat", "BreedCumProduction", "BreedCumVolume", "BreedExtraTooltipInfo":
+						if(not("BreedingTaunt" in newDatapackCharacter.attacks)): newDatapackCharacter.attacks.append("BreedingTaunt")		
+
+		else:
+			newDatapackCharacter.attacks = target.getAttacks()
 		
 		#personality and fetish assignment
 		for stat in PersonalityStat.getAll():
@@ -231,7 +282,7 @@ func _react(_action: String, _args):
 
 		for slot in template:
 			if(template[slot] == null || template[slot]["id"] == "" || template[slot]["id"] == null):
-				if(slot in tfHolder.affectedParts):
+				if(ignoreTF && slot in tfHolder.affectedParts):
 					template[slot] = {
 						"id": tfHolder.originalParts[slot]["bodypartID"],
 						"data": {},
@@ -266,8 +317,10 @@ func _react(_action: String, _args):
 				"breasts":
 					attribDict["breastsize"] = template[slot]["data"]["size"]
 				"penis":
-					attribDict["cocksize"] = template[slot]["data"]["lengthCM"]
-					attribDict["ballsscale"] = template[slot]["data"]["ballsScale"]
+					if "lengthCM" in template[slot]["data"]:
+						attribDict["cocksize"] = template[slot]["data"]["lengthCM"]
+					if "ballsScale" in template[slot]["data"]:
+						attribDict["ballsscale"] = template[slot]["data"]["ballsScale"]
 				"tail":
 					attribDict["tailscale"] = template[slot]["data"]["tailScale"]
 
@@ -314,6 +367,14 @@ func _react(_action: String, _args):
 		return
 
 	setState(_action)
+
+func configureGenderDialog(a: String, b: String):
+	var valA = NpcGender.getAll().find(a)
+	var valB = NpcGender.getAll().find(b)
+	return valA < valB
+
+func configureSpeciesDialog(a: String, b: String):
+	return a.naturalnocasecmp_to(b) < 0
 
 # func saveData():
 # 	return {
