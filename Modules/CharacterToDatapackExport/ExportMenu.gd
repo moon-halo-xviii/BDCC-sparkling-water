@@ -52,15 +52,22 @@ func _run():
 		#sorting the options for the sort dialogs
 
 		npclist.genderButton.add_item("Gender")
-		npclist.speciesButton.add_item("Species")
+		npclist.genderButton.add_separator()
 
 		npclist.genderIndex.sort_custom(self, "configureGenderDialog")
-		for gender in npclist.genderIndex:
-			npclist.genderButton.add_item(gender)
+		for gender in NpcGender.getAll():
+			var visibleName = NpcGender.getVisibleName(gender)
+			if visibleName in npclist.genderIndex:
+				npclist.genderButton.add_item(visibleName)
+		
+
+		npclist.speciesButton.add_item("Species")
+		npclist.speciesButton.add_separator()
 
 		npclist.speciesIndex.sort_custom(self, "configureSpeciesDialog")
 		for species in npclist.speciesIndex:
 			npclist.speciesButton.add_item(species)
+
 
 		addButton("Cancel", "Go back", "")
 		var encounterPools = GM.main.getDynamicCharactersPools()
@@ -187,7 +194,19 @@ func _react(_action: String, _args):
 
 		#standard attribute assignments
 		newDatapackCharacter.name = target.getName()
-		newDatapackCharacter.inmateType = target.getInmateType()
+
+		if target.isInmate():
+			newDatapackCharacter.inmateType = target.getInmateType()
+			newDatapackCharacter.lootTableID = "inmate"
+		else:
+			newDatapackCharacter.characterType = target.getCharacterType()
+			match newDatapackCharacter.characterType:
+				CharacterType.Guard:
+					newDatapackCharacter.lootTableID = "guard"
+				CharacterType.Engineer:
+					newDatapackCharacter.lootTableID = "engineer"
+				CharacterType.Nurse:
+					newDatapackCharacter.lootTableID = "medical"
 
 		if(targetType == "Player"):
 			newDatapackCharacter.description = "An imported player character"
@@ -265,9 +284,9 @@ func _react(_action: String, _args):
 						if(not("stretchingAttack" in newDatapackCharacter.attacks)): newDatapackCharacter.attacks.append("stretchingAttack")
 					"BreedBreedersBliss", "BreedCumInflationheat", "BreedCumProduction", "BreedCumVolume", "BreedExtraTooltipInfo":
 						if(not("BreedingTaunt" in newDatapackCharacter.attacks)): newDatapackCharacter.attacks.append("BreedingTaunt")		
-
 		else:
-			newDatapackCharacter.attacks = target.getAttacks()
+			newDatapackCharacter.attacks = target.getAttacks("")
+			newDatapackCharacter.lustInterests = target.lustInterests["interests"]
 		
 		#personality and fetish assignment
 		for stat in PersonalityStat.getAll():

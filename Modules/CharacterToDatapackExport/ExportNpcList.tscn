@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://UI/NpcList/PanelStyle.tres" type="StyleBox" id=1]
 [ext_resource path="res://Modules/CharacterToDatapackExport/ExportNpcList.gd" type="Script" id=2]
 [ext_resource path="res://GlobalTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Modules/CharacterToDatapackExport/PopupMenuTheme.tres" type="Theme" id=4]
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.207843, 0.133333, 0.364706, 1 )
@@ -33,36 +34,6 @@ corner_detail = 12
 [sub_resource type="StyleBoxEmpty" id=8]
 
 [sub_resource type="Theme" id=3]
-
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.207843, 0.133333, 0.364706, 1 )
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color( 0.247059, 0.243137, 0.490196, 1 )
-corner_radius_top_left = 25
-corner_radius_top_right = 25
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.360288, 0.357468, 0.535156, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_size = 2
-
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.247059, 0.243137, 0.490196, 1 )
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
-shadow_size = 2
-
-[sub_resource type="StyleBoxEmpty" id=15]
 
 [node name="ExportNpcList" type="MarginContainer"]
 margin_left = 7.0
@@ -103,7 +74,7 @@ rect_min_size = Vector2( 0, 60 )
 custom_constants/separation = 0
 
 [node name="Name" type="Button" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_right = 391.0
+margin_right = 387.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 110, 50 )
 rect_clip_content = true
@@ -113,56 +84,58 @@ custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = ExtResource( 1 )
 toggle_mode = true
-text = "Name:"
+text = "Name"
 
 [node name="VSeparator" type="VSeparator" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_left = 391.0
-margin_right = 399.0
+margin_left = 387.0
+margin_right = 395.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 2, 0 )
 custom_constants/separation = 8
 custom_styles/separator = SubResource( 8 )
 
 [node name="Gender" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_left = 399.0
-margin_right = 791.0
+margin_left = 395.0
+margin_right = 783.0
 margin_bottom = 60.0
 rect_min_size = Vector2( 120, 50 )
 rect_clip_content = true
 size_flags_horizontal = 11
+theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = ExtResource( 1 )
-text = "Gender:"
+text = "Gender"
 align = 1
 
 [node name="VSeparator2" type="VSeparator" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_left = 791.0
-margin_right = 799.0
+margin_left = 783.0
+margin_right = 791.0
 margin_bottom = 60.0
 custom_constants/separation = 8
 custom_styles/separator = SubResource( 8 )
 
 [node name="Species" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_left = 799.0
-margin_right = 1190.0
+margin_left = 791.0
+margin_right = 1178.0
 margin_bottom = 60.0
 rect_clip_content = true
 size_flags_horizontal = 11
+theme = ExtResource( 4 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 6 )
 custom_styles/normal = ExtResource( 1 )
-text = "Species:"
+text = "Species"
 align = 1
 
 [node name="dummy" type="Label" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
-margin_left = 1190.0
+margin_left = 1178.0
 margin_top = 5.0
 margin_right = 1265.0
 margin_bottom = 55.0
-rect_min_size = Vector2( 75, 50 )
+rect_min_size = Vector2( 87, 50 )
 size_flags_horizontal = 0
 size_flags_stretch_ratio = 0.5
 align = 1
@@ -189,71 +162,6 @@ margin_bottom = 597.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-visible = false
-margin_top = 5.0
-margin_right = 1266.0
-margin_bottom = 666.0
-rect_min_size = Vector2( 300, 200 )
-mouse_filter = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Notification" type="PopupDialog" parent="CenterContainer"]
-margin_left = 433.0
-margin_top = 255.0
-margin_right = 833.0
-margin_bottom = 405.0
-rect_min_size = Vector2( 400, 150 )
-custom_styles/panel = SubResource( 11 )
-popup_exclusive = true
-
-[node name="HBoxC" type="HBoxContainer" parent="CenterContainer/Notification"]
-visible = false
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -40.0
-rect_min_size = Vector2( 0, 40 )
-
-[node name="Ok" type="Button" parent="CenterContainer/Notification/HBoxC"]
-visible = false
-margin_right = 400.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 200, 20 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/normal = SubResource( 13 )
-text = "OK"
-
-[node name="Cancel" type="Button" parent="CenterContainer/Notification/HBoxC"]
-visible = false
-margin_left = 269.0
-margin_right = 400.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 200, 20 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_styles/hover = SubResource( 12 )
-custom_styles/pressed = SubResource( 13 )
-custom_styles/focus = SubResource( 15 )
-custom_styles/normal = SubResource( 13 )
-text = "Cancel"
-
-[node name="NotificationLabel" type="Label" parent="CenterContainer/Notification"]
-anchor_right = 1.0
-margin_left = 15.0
-margin_top = 15.0
-margin_right = -15.0
-margin_bottom = 106.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-autowrap = true
-
 [connection signal="pressed" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Name" to="." method="_on_Name_pressed"]
 [connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Gender" to="." method="_on_Gender_item_selected"]
 [connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Species" to="." method="_on_Species_item_selected"]
-[connection signal="pressed" from="CenterContainer/Notification/HBoxC/Ok" to="." method="_on_Ok_pressed"]
-[connection signal="pressed" from="CenterContainer/Notification/HBoxC/Cancel" to="." method="_on_Cancel_pressed"]
