@@ -141,15 +141,18 @@ func _react(_action: String, _args):
 		pickedPoolToShow = _args[0]
 
 	if(_action == "setCharID"):
-		if(getTextboxData("characterID") == ""):
+		var candidate = getTextboxData("characterID")
+		candidate = Util.stripBadCharactersFromID(candidate)
+		if(candidate == ""):
 			return
 		
-		characterID = getTextboxData("characterID")
+		characterID = candidate
 		setState("promptDatapack")
 		return
 	
 	if(_action == "setDatapackID"):
 		var candidate = getTextboxData("datapackID")
+		candidate = Util.stripBadCharactersFromID(candidate)
 		if(candidate == ""):
 			return
 		elif(GlobalRegistry.datapacks.has(candidate)):
