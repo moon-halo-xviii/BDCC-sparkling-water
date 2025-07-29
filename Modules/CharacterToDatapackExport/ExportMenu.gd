@@ -343,6 +343,13 @@ func _react(_action: String, _args):
 						attribDict["cocksize"] = template[slot]["data"]["lengthCM"]
 					if "ballsScale" in template[slot]["data"]:
 						attribDict["ballsscale"] = template[slot]["data"]["ballsScale"]
+					#BallsExtra support
+					if "sensitivity" in template[slot]["data"]:
+						attribDict["sensitivity"] = template[slot]["data"]["sensitivity"]
+					if "ballsDensity" in template[slot]["data"]:
+						attribDict["ballsdensity"] = template[slot]["data"]["ballsDensity"]
+					if "inwardTesties" in template[slot]["data"]:
+						attribDict["inwardtesties"] = template[slot]["data"]["inwardTesties"]
 				"tail":
 					attribDict["tailscale"] = template[slot]["data"]["tailScale"]
 
