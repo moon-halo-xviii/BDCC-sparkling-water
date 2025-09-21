@@ -79,6 +79,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Game/Combat/AIStrategy/BasicAI.gd"
 }, {
+"base": "Button",
+"class": "BetterButton",
+"language": "GDScript",
+"path": "res://Game/UI/Buttons/BetterButton.gd"
+}, {
 "base": "Object",
 "class": "BodilyFluids",
 "language": "GDScript",
@@ -707,7 +712,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "GameUI",
 "language": "GDScript",
-"path": "res://Game/GameUI.gd"
+"path": "res://Game/UI/GameUI.gd"
 }, {
 "base": "Node2D",
 "class": "GameWorld",
@@ -989,6 +994,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Game/Options/MyProjectSettings.gd"
 }, {
+"base": "InmateGenerator",
+"class": "NakedSlaveGenerator",
+"language": "GDScript",
+"path": "res://Characters/Dynamic/Generator/NakedSlaveGenerator.gd"
+}, {
+"base": "Object",
+"class": "NemesisReason",
+"language": "GDScript",
+"path": "res://Game/InteractionSystem/Relationship/NemesisReason.gd"
+}, {
 "base": "Module",
 "class": "NovaModule",
 "language": "GDScript",
@@ -1143,6 +1158,21 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://Player/Player.gd"
+}, {
+"base": "Reference",
+"class": "PlayerSlaveryBase",
+"language": "GDScript",
+"path": "res://Game/PlayerSlavery/PlayerSlaveryBase.gd"
+}, {
+"base": "Reference",
+"class": "PlayerSlaveryDef",
+"language": "GDScript",
+"path": "res://Game/PlayerSlavery/PlayerSlaveryDef.gd"
+}, {
+"base": "Reference",
+"class": "PlayerSlaveryHolder",
+"language": "GDScript",
+"path": "res://Game/PlayerSlavery/PlayerSlaveryHolder.gd"
 }, {
 "base": "Module",
 "class": "PunishmentsModule",
@@ -1529,6 +1559,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Inventory/SmartLocks/SmartLockBase.gd"
 }, {
+"base": "Object",
+"class": "SocialEventType",
+"language": "GDScript",
+"path": "res://Game/InteractionSystem/Relationship/SocialEventType.gd"
+}, {
+"base": "Reference",
+"class": "SpecialRelationshipBase",
+"language": "GDScript",
+"path": "res://Game/InteractionSystem/Relationship/SpecialRelationshipBase.gd"
+}, {
 "base": "Reference",
 "class": "Species",
 "language": "GDScript",
@@ -1708,6 +1748,16 @@ _global_script_classes=[ {
 "class": "WorldZone",
 "language": "GDScript",
 "path": "res://Game/World/Util/WorldZone.gd"
+}, {
+"base": "Node",
+"class": "WritingZoneInfoNode",
+"language": "GDScript",
+"path": "res://Player/Player3D/WritingsHandler/WritingZoneInfoNode.gd"
+}, {
+"base": "Node",
+"class": "WritingsHandler",
+"language": "GDScript",
+"path": "res://Player/Player3D/WritingsHandler/WritingsHandler.gd"
 } ]
 _global_script_class_icons={
 "AIStrategyBase": "",
@@ -1724,6 +1774,7 @@ _global_script_class_icons={
 "BaseCharacter": "",
 "BaseStageScene3D": "",
 "BasicAI": "",
+"BetterButton": "",
 "BodilyFluids": "",
 "BodyWritings": "",
 "BodyWritingsDB": "",
@@ -1906,6 +1957,8 @@ _global_script_class_icons={
 "Module": "",
 "MyBoneAttachment": "",
 "MyProjectSettings": "",
+"NakedSlaveGenerator": "",
+"NemesisReason": "",
 "NovaModule": "",
 "NpcBreakTaskBase": "",
 "NpcCon": "",
@@ -1937,6 +1990,9 @@ _global_script_class_icons={
 "PersonalityStat": "",
 "PickupLineDB": "",
 "Player": "",
+"PlayerSlaveryBase": "",
+"PlayerSlaveryDef": "",
+"PlayerSlaveryHolder": "",
 "PunishmentsModule": "",
 "Quest": "",
 "QuestBase": "",
@@ -2014,6 +2070,8 @@ _global_script_class_icons={
 "SlaveTypeBase": "",
 "SmartLock": "",
 "SmartLockBase": "",
+"SocialEventType": "",
+"SpecialRelationshipBase": "",
 "Species": "",
 "SpeciesCompatibility": "",
 "SpeechModifierBase": "",
@@ -2049,7 +2107,9 @@ _global_script_class_icons={
 "WorldHistory": "",
 "WorldHistoryEvent": "",
 "WorldPopulation": "",
-"WorldZone": ""
+"WorldZone": "",
+"WritingZoneInfoNode": "",
+"WritingsHandler": ""
 }
 
 [application]
@@ -2071,7 +2131,7 @@ OPTIONS="*res://Game/Options/GlobalOptions.gd"
 GlobalRegistry="*res://GlobalRegistry.gd"
 GM="*res://Game/GM.gd"
 SAVE="*res://Game/SaveManager.gd"
-GlobalTooltip="*res://UI/GlobalTooltipSystem.gd"
+GlobalTooltip="*res://Game/UI/Tooltip/TooltipSystem.tscn"
 AutoTranslation="*res://Util/AutoTranslation/AutoTranslation.gd"
 CrotchFavBlocks="*res://Game/Datapacks/UI/CrotchCode/Util/CrotchFavBlocks.gd"
 ModularDialogue="*res://Game/ModularDialogue/ModularDialogue.gd"
@@ -2079,6 +2139,7 @@ ModularDialogue="*res://Game/ModularDialogue/ModularDialogue.gd"
 [debug]
 
 gdscript/warnings/treat_warnings_as_errors=true
+gdscript/warnings/integer_division=false
 gdscript/warnings/unsafe_cast=true
 
 [display]
@@ -2176,6 +2237,10 @@ window_fullscreen={
  ]
 }
 
+[logging]
+
+file_logging/enable_file_logging=true
+
 [physics]
 
 common/enable_pause_aware_picking=true
@@ -2184,7 +2249,6 @@ common/enable_pause_aware_picking=true
 
 quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
-vram_compression/import_pvrtc=true
 gles2/compatibility/disable_half_float=true
 environment/default_clear_color=Color( 0.247059, 0.243137, 0.490196, 1 )
 quality/filters/use_fxaa=true

@@ -15,7 +15,7 @@ dest_files=[ "res://.import/SimpleSpottedSkin.png-d15620bc04bfd17820eec4c7e9d71a
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

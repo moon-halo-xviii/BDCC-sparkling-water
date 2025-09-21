@@ -27,7 +27,7 @@ func addEffect(col, text, desc, texture = null, isWide = false):
 		block.setTexture(texture)
 	block.setNameAndDesc(text, desc)
 	block.connect("mouse_entered", self, "onBlockMouseEntered", [block])
-	block.connect("mouse_exited", self, "onBlockMouseExited")
+	block.connect("mouse_exited", self, "onBlockMouseExited", [block])
 	
 	
 	flexContainer.add_child(block)
@@ -44,15 +44,16 @@ func addStatusEffect(type, text, desc, texture = null, isWideTooltip = false):
 	statusEffects.append(block)
 
 func onBlockMouseEntered(block):
-	GlobalTooltip.showTooltip(block.effectName, block.effectDesc, showTooltipBelow, false, block.tooltipShouldBeWide)
+	GlobalTooltip.showTooltip(block, block.effectName, block.effectDesc, showTooltipBelow, false, block.tooltipShouldBeWide)
 
-func onBlockMouseExited():
-	GlobalTooltip.hideTooltip()
+func onBlockMouseExited(block):
+	GlobalTooltip.hideTooltip(block)
 
 func clearBattleEffects():
 	for b in battleEffects:
 		flexContainer.remove_child(b)
-		b.queue_free()
+		if(b):
+			b.queue_free()
 	battleEffects = []
 
 func clearStatusEffects():

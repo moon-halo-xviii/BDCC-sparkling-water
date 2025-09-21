@@ -31,14 +31,19 @@ func _run():
 		sayn("")
 		
 		if(encounterSettings.doesPreferKnownEncounters()):
-			saynn("You prefer to encounter characters that you already saw.")
+			saynn("Known characters: You prefer to encounter characters that you already saw.")
 		else:
-			saynn("You don't mind meeting new characters.")
+			saynn("Known characters: You don't mind meeting new characters.")
 		
 		if(GM.pc.dynamicPersonality):
-			saynn("Your personality can dynamically change after sex.")
+			saynn("Dynamic personality: Your personality or fetishes can dynamically change after sex.")
 		else:
-			saynn("Your personality will never change after sex.")
+			saynn("Dynamic personality: Your personality or fetishes will never change after sex.")
+		
+		if(encounterSettings.shouldSubThreesomesBeEnabled()):
+			saynn("Threesomes: You don't mind being a sub in threesomes.")
+		else:
+			saynn("Threesomes: Doms will never dynamically join the sex if you are a sub.")
 		
 		sayn("Relative chances for the genders of encountered npcs:")
 		for gender in NpcGender.getAll():
@@ -86,6 +91,7 @@ func _run():
 		
 		addButton("Toggle known", "Toggle between meeting only old characters and meeting both old and new", "toggleKnown")
 		addButton("Dynamic personality", "Change the way your personality changes after sex", "togglePersonalityChange")
+		addButton("Threesomes (sub)", "Toggle the ability for extra doms to join the sex when you are a sub", "toggleThreesomesSub")
 		addButton("My fetishes", "Menu that allows you to see and change your fetishes", "fetishmenu")
 		addButton("My personality", "Menu that allows you to see and change your personality", "personalitymenu")
 		addButton("Genders", "Pick the chances of the genders of the encountered npcs", "gendersmenu")
@@ -253,7 +259,7 @@ func _run():
 		
 	if(state == "occupationmenupool"):
 		var npclist = npclistScene.instance()
-		GM.ui.addCustomControl("npclist", npclist)
+		GM.ui.addFullScreenCustomControl("npclist", npclist)
 		var _ok = npclist.connect("onMeetNpcButton", self, "doMeetNpc")
 		
 		var characterIDS = GM.main.getDynamicCharacterIDsFromPool(pickedPoolToShow)
@@ -284,9 +290,9 @@ func _run():
 		sayn("Your fetishes:")
 		for fetishID in GlobalRegistry.getFetishes():
 			var fetish = GlobalRegistry.getFetish(fetishID)
-			var fetishInterest = fetishHolder.getFetishInterest(fetishID)
-			var fetishColor = FetishInterest.getColorString(fetishInterest)
-			var fetishInterestText = FetishInterest.getVisibleName(fetishInterest)
+			var fetishValue:float = fetishHolder.getFetish(fetishID)
+			var fetishColor = FetishInterest.getColorString(fetishValue)
+			var fetishInterestText = FetishInterest.getVisibleName(fetishValue)
 			
 			sayn(fetish.getVisibleName()+": "+"[color="+fetishColor+"]"+fetishInterestText+"[/color]")
 			
@@ -296,7 +302,7 @@ func _run():
 		var fetishHolder = GM.pc.getFetishHolder()
 		var fetish = GlobalRegistry.getFetish(pickedFetishToChange)
 		if(fetish != null):
-			saynn("Your current value for '"+fetish.getVisibleName()+"' fetish is "+FetishInterest.getVisibleName(fetishHolder.getFetishInterest(pickedFetishToChange)))
+			saynn("Your current value for '"+fetish.getVisibleName()+"' fetish is "+FetishInterest.getVisibleName(fetishHolder.getFetish(pickedFetishToChange)))
 			
 			saynn("Pick your new value for this fetish")
 			
@@ -418,6 +424,10 @@ func _react(_action: String, _args):
 	
 	if(_action == "togglePersonalityChange"):
 		GM.pc.dynamicPersonality = !GM.pc.dynamicPersonality
+		return 
+		
+	if(_action == "toggleThreesomesSub"):
+		GM.main.getEncounterSettings().toggleThreesomesSub()
 		return 
 	
 	if(_action == "occupationmenupool"):

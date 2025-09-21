@@ -15,7 +15,7 @@ dest_files=[ "res://.import/veryspiky.png-d2743230ff2b3c2e48e79d03d0315b57.stex"
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

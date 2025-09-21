@@ -15,7 +15,7 @@ dest_files=[ "res://.import/TriDottedSkin.png-5d8ab5d284cbf81ba6a6b23e195f682f.s
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

@@ -15,7 +15,7 @@ dest_files=[ "res://.import/TribalSkin.png-e5299464a7e34bf8cc0911770973e077.stex
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

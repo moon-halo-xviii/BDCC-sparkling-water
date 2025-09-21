@@ -57,7 +57,7 @@ func _run():
 
 		saynn("[say=eliza]I was a ghost, right? That sounds spooky~[/say]")
 
-		saynn("[say=pc]Well, I only saw parts of you that were.. touching me? And that was somewhat unsettling, yes[/say]")
+		saynn("[say=pc]Well, I only saw parts of you that were.. touching me? And that was somewhat unsettling, yes.[/say]")
 
 		saynn("Doctor fidgets around a bit, rubbing her chin and thinking.")
 
@@ -98,7 +98,7 @@ func _run():
 		addButton("Do it", "Try to follow your intuition", "do_it")
 
 	if(state == "do_it"):
-		saynn("You look around, that seems to be helpful even with a blindfold. Then you take a fist step and realize that your ‘eyes’ don’t deceive you, the testing table and the walls are exactly where you think they are. You begin walking around the room like you see everything just fine. Although, when you try to read something from up close, the text is just too blurry.")
+		saynn("You look around, that seems to be helpful even with a blindfold. Then you take a first step and realize that your ‘eyes’ don’t deceive you, the testing table and the walls are exactly where you think they are. You begin walking around the room like you see everything just fine. Although, when you try to read something from up close, the text is just too blurry.")
 
 		saynn("You wonder where Eliza is.")
 
@@ -116,7 +116,7 @@ func _run():
 
 		saynn("A paw appears and grabs you by the collar again before pulling you to the nearest wall. It pins your back to it while something else starts to rub against your chastity belt. Something.. quite phallic and hard.")
 
-		saynn("[say=pc]Is that a.. cock[/say]")
+		saynn("[say=pc]Is that a.. cock.[/say]")
 
 		saynn("[say=eliza]Surprised? Just a feeldoe strapon, relax~[/say]")
 

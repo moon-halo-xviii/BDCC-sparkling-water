@@ -15,7 +15,7 @@ dest_files=[ "res://.import/BlockedSkin.png-7a6390f807368489e7f02016543a7fe4.ste
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

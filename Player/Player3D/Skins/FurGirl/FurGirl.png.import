@@ -15,7 +15,7 @@ dest_files=[ "res://.import/FurGirl.png-8c266c7f5aed5e77d38e3f37f3c9e9af.stex" ]
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

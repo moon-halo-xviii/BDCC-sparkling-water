@@ -82,6 +82,29 @@ static func getFilesInFolder(folder):
 		Log.printerr("An error occurred when trying to access the path "+folder)
 	return result
 
+static func getFilesInFoldersRecursive(folder: String, ignoreBaseDir = false):
+	var result = []
+	
+	var dir = Directory.new()
+	if dir.open(folder) == OK:
+		dir.list_dir_begin(true)
+		var file_name = dir.get_next()
+		while file_name != "":
+			if dir.current_is_dir():
+				var full_path = folder.plus_file(file_name)
+				result.append_array(getFilesInFoldersRecursive(full_path, false))
+				#print("Found directory: " + file_name)
+			else:
+				if(!ignoreBaseDir):
+					var full_path = folder.plus_file(file_name)
+					result.append(full_path)
+				pass
+			file_name = dir.get_next()
+	else:
+		Log.printerr("An error occurred when trying to access the path "+folder)
+	
+	return result
+
 # https://godotengine.org/qa/20058/elegant-way-to-create-string-from-array-items
 static func join(arr: Array, separator: String = "") -> String:
 	var output = ""
@@ -211,8 +234,21 @@ static func numberToPercentString(value: float):
 		return "+"+str(value*100)+"%"
 	return "0%"
 
+static func getFileModifiedTime(_path:String, correctTimezone:bool = true) -> int:
+	var file = File.new()
+	var fileModifTime:int = file.get_modified_time(_path)
+	if(fileModifTime > 100000000000): # Android returns milliseconds I think so we have to use this hack
+		fileModifTime = fileModifTime / 1000
+	
+	if(correctTimezone):
+		var timezone_info:Dictionary = Time.get_time_zone_from_system()
+		var offset_minutes:int = timezone_info["bias"]
+		fileModifTime += offset_minutes*60
+	
+	return fileModifTime
+
 # https://godotengine.org/qa/19077/how-to-get-the-date-as-per-rfc-1123-date-format-in-game
-static func datetimeToRFC113(time):
+static func datetimeToRFC113(time) -> String:
 	var nameweekday= ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 	var namemonth= ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 	var dayofweek = time["weekday"]   # from 0 to 6 --> Sunday to Saturday

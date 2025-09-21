@@ -15,7 +15,7 @@ dest_files=[ "res://.import/KidlatSkin.png-1becb2cb9e85e1fbb6aa7e14a344f50f.stex
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

@@ -15,7 +15,7 @@ dest_files=[ "res://.import/BreezeSkin.png-6726e972acd16f0645c40d92db78f0ce.stex
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

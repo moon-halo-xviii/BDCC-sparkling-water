@@ -11,6 +11,15 @@ var savedCharacterID
 var temporaryState = {}
 var exposedBodyparts = []
 var skinData = {}
+var writingsData:Dictionary = {
+#	BodyWritingsZone.ThighLeft: [
+#		["Fuck me", false],
+#		["Make me cum", false],
+#	],
+#	BodyWritingsZone.ThighRight: [
+#		["Free use", false],
+#	],
+} # {zone = [["writing1", isBold], ["writing2", isBold2]]}
 
 var armsCuffed = false
 var armsPuppy = false
@@ -52,6 +61,9 @@ onready var breastsJiggleBone = $DollSkeleton/BreastsJiggleBone
 onready var bellyJiggleBone = $DollSkeleton/BellyJiggleBone
 onready var buttJiggleBone = $DollSkeleton/ButtJiggleBone
 
+onready var random_leak_timer = $"%RandomLeakTimer"
+
+
 func getDollSkeleton():
 	return $DollSkeleton
 
@@ -68,7 +80,8 @@ func _ready():
 	
 	if(addTestBody):
 		testBody()
-	$RandomLeakTimer.start(RNG.randf_range(3, 20))
+	if(random_leak_timer):
+		random_leak_timer.start(RNG.randf_range(3, 20))
 	
 	if(GM.main != null && is_instance_valid(GM.main)):
 		var _ok = GM.main.connect("saveLoadingFinished", self, "reconnect")
@@ -306,7 +319,7 @@ func prepareCharacter(charID):
 	call_deferred("checkDirection") # Deferred because the character is usually flipped after this call
 
 func checkDirection():
-	var newIsFacingRight:bool = (get_scale().x < 0)
+	var newIsFacingRight:bool = (get_scale().x*(get_parent().get_scale().x if get_parent() else 1.0) < 0)
 	
 	if(newIsFacingRight != isFacingRight):
 		isFacingRight = newIsFacingRight
@@ -432,7 +445,7 @@ func setBallsScale(newScale: float):
 	setBoneScaleAndOffset("Balls", newScale, Vector3(0.0, 0.156431, 0.0)*offsetScale)
 
 
-func _on_Doll3DTooltip_mouseEntered(bodypartID):
+func _on_Doll3DTooltip_mouseEntered(_dollTooltip, bodypartID):
 	if(savedCharacterID is String && savedCharacterID != "" && bodypartID != "" && is_visible_in_tree() && !isOnlyPenis):
 		var character = getCharFromID(savedCharacterID)
 		if(character == null):
@@ -442,10 +455,10 @@ func _on_Doll3DTooltip_mouseEntered(bodypartID):
 		if(bodypart == null):
 			return
 			
-		GlobalTooltip.showTooltip(bodypart.getName(), bodypart.getTooltipInfo())
+		GlobalTooltip.showTooltip(_dollTooltip, bodypart.getName(), bodypart.getTooltipInfo())
 		
 
-func _on_Doll3DTooltip_mouseExited(bodypartID):
+func _on_Doll3DTooltip_mouseExited(_dollTooltip, bodypartID):
 	if(savedCharacterID is String && savedCharacterID != "" && bodypartID != ""):
 		var character = getCharFromID(savedCharacterID)
 		if(character == null):
@@ -454,7 +467,7 @@ func _on_Doll3DTooltip_mouseExited(bodypartID):
 		var bodypart:Bodypart = character.getBodypart(bodypartID)
 		if(bodypart == null):
 			return
-		GlobalTooltip.hideTooltip()
+		GlobalTooltip.hideTooltip(_dollTooltip)
 
 func setHiddenParts(newHiddenParts):
 	hiddenPartZones = newHiddenParts
@@ -706,7 +719,7 @@ func _on_RandomLeakTimer_timeout():
 	if(anusLeaking):
 		waitTime -= 5.0
 	
-	$RandomLeakTimer.start(RNG.randf_range(waitTime * 0.5, waitTime * 1.5))
+	random_leak_timer.start(RNG.randf_range(waitTime * 0.5, waitTime * 1.5))
 
 func setCockTemporaryHard():
 	var currentCockState = getFinalState("cock")

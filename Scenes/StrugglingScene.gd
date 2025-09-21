@@ -30,13 +30,23 @@ func _initScene(_args = []):
 		if(item.isRestraint()):
 			item.getRestraintData().resetOnNewTry()
 
+func hasAnythingToInspect() -> bool:
+	for item in GM.pc.getInventory().getEquppedRestraints():
+		var restraintData: RestraintData = item.getRestraintData()
+		if(restraintData.hasSmartLock()):
+			return true
+		if(!restraintData.canStruggleFinal()):
+			continue
+		return true
+	return false
+
 func _run():
 	if(state == ""):
 		if(shouldPlayAnimations):
 			playAnimation(StageScene.Solo, "stand")
 		
 		var isBlind = GM.pc.isBlindfolded()
-		saynn("Pick the restraint you wanna focus on. Keep in mind that some restraints will be harder to remove depending on what you have on. Crying from pain or moaning loudly from an orgasm will probably attract someone")
+		saynn("Pick the restraint you wanna focus on. Keep in mind that some restraints will be harder to remove depending on what you have on.")
 		
 		if(GM.pc.getInventory().hasItemID("restraintkey")):
 			addButtonAt(13, "Use key", "Use one of your restraint keys to unlock something", "usekey")
@@ -160,7 +170,8 @@ func _run():
 				playAnimation(StageScene.Solo, animToPlay)
 		
 		var game = minigameScene.instance()
-		GM.ui.addCustomControl("minigame", game)
+		GM.ui.addFullScreenCustomControl("minigame", game)
+		#GM.ui.addCustomControl("minigame", game)
 		if(OPTIONS.isHardStruggleEnabled()):
 			game.setHardStruggleEnabled(true)
 		if(GM.pc.hasPerk(Perk.BDSMInstantEscape) && game.has_method("instantEscapePerk")):
@@ -356,7 +367,10 @@ func _react(_action: String, _args):
 		#if(GM.pc.getPain() >= GM.pc.painThreshold()):
 		#	setState("toopainful")
 		#	return
-		setState("")
+		if(hasAnythingToInspect()):
+			setState("")
+		else:
+			endScene()
 		return
 		
 	if(_action == "spottedcheck"):

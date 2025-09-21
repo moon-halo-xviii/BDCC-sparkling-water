@@ -274,14 +274,16 @@ func hoursPassed(_howmuch):
 	var targetLust = getAmbientLust()
 	
 	if(currentLust < targetLust):
-		var addValue = min(_howmuch, (targetLust - currentLust))
+		var addPerHour:int = Util.maxi(1, targetLust/10.0)
+		var addValue = min(_howmuch*addPerHour, (targetLust - currentLust))
 		addLust(addValue)
 
 	var currentPain = getPain()
 	var targetPain = getAmbientPain()
 	
 	if(currentPain < targetPain):
-		var addValue = min(_howmuch, (targetPain - currentPain))
+		var addPerHour:int = Util.maxi(1, targetPain/10.0)
+		var addValue = min(_howmuch*addPerHour, (targetPain - currentPain))
 		addPain(addValue)
 		
 	skillsHolder.hoursPassed(_howmuch)
@@ -462,7 +464,7 @@ func loadData(data):
 		var id = SAVE.loadVar(loadedBodyparts[slot], "id", "errorbad")
 		var bodypart = GlobalRegistry.createBodypart(id)
 		if(bodypart == null):
-			var replacementID = BodypartSlot.findReplacement(slot, id)
+			var replacementID = BodypartSlot.findReplacement(slot, id, getSpecies(), getGender())
 			if(replacementID == null || replacementID == ""):
 				Log.printerr("Couldn't find an replacement bodypart for slot "+str(slot))
 				continue
@@ -544,12 +546,13 @@ func getBodypartTooltipInfo(_bodypartSlot):
 	
 	return "error"
 
-func afterSleeping():
-	var mult = max(1.0 + GM.pc.getBuffsHolder().getCustom(BuffAttribute.RestEffectiveness), 0.1) # 0.1 minimum to avoid softlock scenarios
-	var staminaChange = mult * (getMaxStamina() - getStamina())
-	var painChange = mult * getPain()
-	addStamina(staminaChange)
-	addPain(-painChange)
+func afterSleeping(restoreStats:bool = true):
+	if(restoreStats):
+		var mult = max(1.0 + GM.pc.getBuffsHolder().getCustom(BuffAttribute.RestEffectiveness), 0.1) # 0.1 minimum to avoid softlock scenarios
+		var staminaChange = mult * (getMaxStamina() - getStamina())
+		var painChange = mult * getPain()
+		addStamina(staminaChange)
+		addPain(-painChange)
 	skillsHolder.onNewDay()
 	for item in getInventory().getEquppedRestraints():
 		item.getRestraintData().resetOnNewDay()
@@ -702,10 +705,11 @@ func getAttributesText():
 		["Thickness", str(pickedThickness)+"%"],
 	]
 
-func freeMouthDeleteAll():
+func freeMouthDeleteAll(includeRingGag:bool = false):
+	var r0 = getInventory().removeEquippedItemsWithBuff(Buff.RingGagBuff) if includeRingGag else false
 	var r1 = getInventory().removeEquippedItemsWithBuff(Buff.GagBuff)
 	var r2 = getInventory().removeEquippedItemsWithBuff(Buff.MuzzleBuff)
-	return r1 || r2
+	return r0 || r1 || r2
 	
 func freeHandsDeleteAll():
 	return getInventory().removeEquippedItemsWithBuff(Buff.BlockedHandsBuff)
@@ -851,23 +855,27 @@ func personalityChangesAfterSex():
 func getCharacterType():
 	return CharacterType.Inmate
 
-func doPainfullyStretchHole(_bodypart, _who = "pc"):
+func doPainfullyStretchHole(_bodypart, _who = "pc") -> bool:
 	if(_bodypart == BodypartSlot.Vagina && hasBodypart(_bodypart)):
 		if(hasEffect(StatusEffect.LubedUp)):
-			return
+			return false
 		
 		addEffect(StatusEffect.StretchedPainfullyPussy, [1])
 		emit_signal("holePainfullyStretched", _bodypart, _who)
+		return true
 	if(_bodypart == BodypartSlot.Anus && hasBodypart(_bodypart)):
 		if(hasEffect(StatusEffect.LubedUp)):
-			return
+			return false
 		
 		addEffect(StatusEffect.StretchedPainfullyAnus, [1])
 		emit_signal("holePainfullyStretched", _bodypart, _who)
+		return true
+	return false
 
-func doWound(_who = "pc"):
+func doWound(_who = "pc") -> bool:
 	addEffect(StatusEffect.Wounded, [1])
 	emit_signal("gotWoundedBy", _who)
+	return true
 
 func getEncounterChanceModifierStaff():
 	return clamp(buffsHolder.getCustom(BuffAttribute.EncounterChanceModifierStaff) + 1.0, 0.1, 10.0)
@@ -886,8 +894,6 @@ func giveBirth():
 		var paycheck = Util.mini(20, bornChildAmount * 2)
 		addCredits(paycheck)
 		
-		#if(GM.ui != null):
-		#	GM.ui.showHornyMessage("[center][color=#f0dd61]AlphaCorp thanks you for your compliance and hopes to continue our 'fruitful cooperation' in the future \n [b]You recieved: " +str(paycheck)+ " credits![/b][/color][/center]")
 		GM.main.addMessage("AlphaCorp has transferred "+str(paycheck)+" credits to you for being a good mother.")
 	
 	return bornChildren

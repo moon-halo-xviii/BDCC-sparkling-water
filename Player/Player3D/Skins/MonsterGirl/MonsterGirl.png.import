@@ -15,7 +15,7 @@ dest_files=[ "res://.import/MonsterGirl.png-8999f8152ca885bcd6b4238e1887529b.ste
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

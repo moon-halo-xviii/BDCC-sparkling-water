@@ -15,7 +15,7 @@ dest_files=[ "res://.import/RunicSkin.png-08cb41ba729f645e29852d6675cd6ecd.stex"
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

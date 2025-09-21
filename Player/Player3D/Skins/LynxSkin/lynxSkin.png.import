@@ -15,7 +15,7 @@ dest_files=[ "res://.import/lynxSkin.png-fc0979c0a54d190d24f5cf27352e7495.stex" 
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

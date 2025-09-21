@@ -15,7 +15,7 @@ dest_files=[ "res://.import/HardcoreSkin.png-6fd2ac862c297ee01d285e3d7287a697.st
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0

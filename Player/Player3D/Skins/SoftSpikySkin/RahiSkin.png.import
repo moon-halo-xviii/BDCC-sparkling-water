@@ -15,7 +15,7 @@ dest_files=[ "res://.import/RahiSkin.png-e18a686b5155e9cba31cc4efbf44ef6a.stex" 
 [params]
 
 compress/mode=0
-compress/lossy_quality=0.7
+compress/lossy_quality=0.8
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
