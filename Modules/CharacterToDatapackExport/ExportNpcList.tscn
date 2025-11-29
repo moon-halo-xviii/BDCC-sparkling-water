@@ -1,0 +1,167 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://UI/NpcList/PanelStyle.tres" type="StyleBox" id=1]
+[ext_resource path="res://Modules/CharacterToDatapackExport/ExportNpcList.gd" type="Script" id=2]
+[ext_resource path="res://GlobalTheme.tres" type="Theme" id=3]
+[ext_resource path="res://Modules/CharacterToDatapackExport/PopupMenuTheme.tres" type="Theme" id=4]
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.207843, 0.133333, 0.364706, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 7
+border_color = Color( 0.666667, 0.666667, 0.666667, 1 )
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 12
+
+[sub_resource type="StyleBoxFlat" id=5]
+content_margin_left = 0.0
+bg_color = Color( 0.207843, 0.133333, 0.364706, 1 )
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 7
+border_color = Color( 0.901961, 0.901961, 0.901961, 1 )
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+corner_detail = 12
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="Theme" id=3]
+
+[node name="ExportNpcList" type="MarginContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 1273.0
+margin_bottom = 693.0
+rect_min_size = Vector2( 0, 5 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+custom_constants/margin_top = 5
+custom_constants/margin_bottom = 20
+script = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_top = 5.0
+margin_right = 1266.0
+margin_bottom = 666.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_horizontal = 3
+custom_styles/panel = ExtResource( 1 )
+
+[node name="VBoxC" type="VBoxContainer" parent="PanelContainer"]
+margin_right = 1266.0
+margin_bottom = 661.0
+custom_constants/separation = 0
+
+[node name="UpperPanel" type="VBoxContainer" parent="PanelContainer/VBoxC"]
+margin_right = 1266.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 64 )
+custom_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxC/UpperPanel"]
+margin_right = 1266.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+custom_constants/separation = 0
+
+[node name="Name" type="Button" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_right = 387.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 110, 50 )
+rect_clip_content = true
+size_flags_horizontal = 11
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = ExtResource( 1 )
+toggle_mode = true
+text = "Name"
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_left = 387.0
+margin_right = 395.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 2, 0 )
+custom_constants/separation = 8
+custom_styles/separator = SubResource( 8 )
+
+[node name="Gender" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_left = 395.0
+margin_right = 783.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 120, 50 )
+rect_clip_content = true
+size_flags_horizontal = 11
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = ExtResource( 1 )
+text = "Gender"
+align = 1
+
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_left = 783.0
+margin_right = 791.0
+margin_bottom = 60.0
+custom_constants/separation = 8
+custom_styles/separator = SubResource( 8 )
+
+[node name="Species" type="OptionButton" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_left = 791.0
+margin_right = 1178.0
+margin_bottom = 60.0
+rect_clip_content = true
+size_flags_horizontal = 11
+theme = ExtResource( 4 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = ExtResource( 1 )
+text = "Species"
+align = 1
+
+[node name="dummy" type="Label" parent="PanelContainer/VBoxC/UpperPanel/HBoxContainer"]
+margin_left = 1178.0
+margin_top = 5.0
+margin_right = 1265.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 87, 50 )
+size_flags_horizontal = 0
+size_flags_stretch_ratio = 0.5
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxC/UpperPanel"]
+margin_top = 60.0
+margin_right = 1266.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 0, 4 )
+
+[node name="ScrollC" type="ScrollContainer" parent="PanelContainer/VBoxC"]
+margin_top = 64.0
+margin_right = 1266.0
+margin_bottom = 661.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 3 )
+
+[node name="VboxC2" type="VBoxContainer" parent="PanelContainer/VBoxC/ScrollC"]
+margin_right = 1266.0
+margin_bottom = 597.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Name" to="." method="_on_Name_pressed"]
+[connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Gender" to="." method="_on_Gender_item_selected"]
+[connection signal="item_selected" from="PanelContainer/VBoxC/UpperPanel/HBoxContainer/Species" to="." method="_on_Species_item_selected"]
