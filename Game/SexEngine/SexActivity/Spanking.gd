@@ -131,7 +131,7 @@ func getActions(_indx:int):
 			addAction("coverbutt", 0.05-fetish(SUB_0, Fetish.Masochism)*0.1, "Cover butt", "Try to avoid some of the pain")
 
 		if(isReadyToCumHandled(SUB_0)):
-			addAction("cum", 1.0, "Cum!", "You gonna cum.", {A_PRIORITY: 1001})
+			addAction("cum", 1.0, "Cum!", "You're gonna cum.", {A_PRIORITY: 1001})
 
 		if(subShouldCount && awaitsAnswer):
 			var answers = [correctSpankAmount]
@@ -498,3 +498,6 @@ func getAnimation():
 			return [StageScene.Spanking, "fastonce", {pc=DOM_0, npc=SUB_0}]
 		
 		return [StageScene.Spanking, "tease", {pc=DOM_0, npc=SUB_0}]
+
+func hasAnimsToPlay() -> bool:
+	return true

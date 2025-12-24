@@ -29,11 +29,12 @@ func _run():
 
 	if(state == "pickpronouns"):
 		say("Pick your character's pronouns. This can be changed at any point")
-		addButton("Same as gender", "Use your gender's pronouns", "setpronouns", [null])
-		addButton("Male", "He/his", "setpronouns", [Gender.Male])
-		addButton("Female", "She/her", "setpronouns", [Gender.Female])
-		addButton("Androgynous", "They/their", "setpronouns", [Gender.Androgynous])
-		addButton("Other", "It/its", "setpronouns", [Gender.Other])
+
+		addButton("Derive from gender", "Automatically adjust pronouns based on gender", "setpronouns", [null])
+		addButton("he/his", "Choose masculine pronouns", "setpronouns", [Gender.Male])
+		addButton("she/her", "Choose feminine pronouns", "setpronouns", [Gender.Female])
+		addButton("they/their", "Choose androgynous or neutral pronouns", "setpronouns", [Gender.Androgynous])
+		addButton("it/its", "Choose neutral pronouns", "setpronouns", [Gender.Other])
 		addButton("back", "Back to picking gender", "pickgender")
 
 	if(state == "pickspecies"):
@@ -155,7 +156,9 @@ func _run():
 		var allbodypartsIDs = GlobalRegistry.getBodypartsIdsBySlot(pickingBodypartType)
 		for bodypartID in allbodypartsIDs:
 			var bodypart = GlobalRegistry.getBodypartRef(bodypartID)
-			var supportedSpecies = bodypart.getCompatibleSpecies()
+			if(!bodypart):
+				continue
+			var supportedSpecies:Array = bodypart.getCompatibleSpeciesFinal()
 			
 			var hasInSupported = false || debugMode
 			var hasInAllowed = false
@@ -167,7 +170,7 @@ func _run():
 				
 			for playerSpecie in playerSpecies:
 				var speciesObject = GlobalRegistry.getSpecies(playerSpecie)
-				if(bodypartID in speciesObject.getAllowedBodyparts()):
+				if(speciesObject && (bodypartID in speciesObject.getAllowedBodypartsFinal())):
 					hasInAllowed = true
 					break
 			

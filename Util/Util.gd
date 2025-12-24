@@ -1,6 +1,19 @@
 extends Object
 class_name Util
 
+static func fixed_shell_open(string: String):
+	# This fixes the issue where Finder fails to open directory path on OSX.
+	# Meepyneepy
+	var os_name = OS.get_name()
+	
+	if string.begins_with("https://"):
+		# String is link, open like normal.
+		return OS.shell_open(string)
+	elif os_name == "OSX" and string.begins_with("/"):
+		return OS.shell_open("file://" + string)
+	else:
+		return OS.shell_open(string)
+
 static func delete_children(node):
 	for n in node.get_children():
 		node.remove_child(n)
@@ -284,7 +297,7 @@ static func stripBadCharactersFromID(path: String) -> String:
 	for character in path:
 		var c:String = character.to_lower()
 		if(letters_chars.has(c) || numbers_chars.has(c) || ["_"].has(c)):
-			newPath += c
+			newPath += character
 	
 	return newPath
 

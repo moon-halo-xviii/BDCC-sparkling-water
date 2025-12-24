@@ -47,6 +47,7 @@ func getSupportedSexTypes():
 		SexType.DefaultSex: true,
 		SexType.StocksSex: true,
 		SexType.SlutwallSex: true,
+		SexType.BitchsuitSex: true,
 	}
 
 func isStocksSex() -> bool:
@@ -57,6 +58,8 @@ func getPoseDescriptor() -> String:
 		return " in stocks"
 	if(getSexType() == SexType.SlutwallSex):
 		return " in the slutwall"
+	if(getSexType() == SexType.BitchsuitSex):
+		return " on all fours"
 	if(currentPose == POSE_ALLFOURS):
 		return " on all fours"
 	if(currentPose == POSE_FULLNELSON):
@@ -366,22 +369,22 @@ func fucking_processTurn():
 func getActions(_indx:int):
 	if(_indx == DOM_0):
 		if(state in [""]):
-			addAction("rub", 1.0, "Rub", "Rub your "+getDickName()+" against their "+RNG.pick(usedBodypartNames))
+			addAction("rub", 1.0, "Rub", "Rub your "+getDickName()+" against their "+RNG.pick(usedBodypartNames), {A_PRIORITY: 4})
 			if(getDomInfo().isReadyToPenetrate() && getSubInfo().getChar().getFirstItemThatCoversBodypart(usedBodypart) == null && getDomInfo().getChar().getFirstItemThatCoversBodypart(BodypartSlot.Penis) == null):
-				addAction("insert", 1.0, "Penetrate", "Try to insert your "+getDickName()+" into their "+RNG.pick(usedBodypartNames))
+				addAction("insert", 1.0, "Penetrate", "Try to insert your "+getDickName()+" into their "+RNG.pick(usedBodypartNames), {A_PRIORITY: 5})
 			if(getSubInfo().getChar().hasBodypart(otherHoleBodypart) && !getSexEngine().hasTag(getSubID(), otherHoleTag)):
 				var switchholeScore:float = 5.0 * (-getDomInfo().goalsScore(getGoals(), getSubID()) + getDomInfo().goalsScore({otherGoal: 1.0}, getSubID()))
 				addAction("switchhole", switchholeScore, "Switch hole", "Switch to the sub's "+RNG.pick(otherHoleNames))
 			addAction("stop", getStopScore(), "Stop fuck", "Stop fucking")
 		if(state in ["fucking"]):
-			addAction("slowdown", getPauseSexScore(DOM_0, SUB_0, usedBodypart), "Slow down", "Stop fucking for a second..")
+			addAction("slowdown", getPauseSexScore(DOM_0, SUB_0, usedBodypart), "Slow down", "Stop fucking for a second..", {A_PRIORITY: 1})
 			
 			if(isStraponSex() && getDom().bodypartHasTrait(BodypartSlot.Penis, PartTrait.PenisKnot)):
 				var subArousal:float = getSubInfo().getArousal()
 				var straponForceKnotScore:float = 0.05
 				if(subArousal > 0.8 || getSubInfo().isUnconscious()):
 					straponForceKnotScore = 0.5
-				addAction("straponForceKnot", straponForceKnotScore, "Force knot in", "Try to force the knot in!")
+				addAction("straponForceKnot", straponForceKnotScore, "Force knot in", "Try to force the knot in!", {A_PRIORITY: 3})
 			if(isReadyToCumHandled(DOM_0) && isStraponSex()):
 				addAction("domstraponcum", 1.0, "Cum!", "You're about to cum!", {A_PRIORITY: 1001})
 			if(isReadyToCumHandled(DOM_0) && !isStraponSex()):
@@ -390,7 +393,7 @@ func getActions(_indx:int):
 					condomScore = 1.0
 				
 				var scoreToCumInside:float = max(condomScore, getDomInfo().fetishScore({Fetish.Breeding: 1.0}) + 0.5 - 20.0*float(gonnaCumOutside))
-				if(getSub().hasPerk(Perk.FertilitySubmissiveAndBreedable)):
+				if(getSub().hasPerk(Perk.FertilitySubmissiveAndBreedable) || getSexEngine().domNoPullingOut):
 					scoreToCumInside = 1.0
 				
 				var hasKnot:bool = getDom().bodypartHasTrait(BodypartSlot.Penis, PartTrait.PenisKnot)
@@ -430,8 +433,8 @@ func getActions(_indx:int):
 				addAction("offerotherhole", offerotherholeScore, "Offer "+RNG.pick(otherHoleNames)+" instead", "Offer your other hole", {A_CHANCE: getDomSwitchHoleChance()})
 		if(state in ["fucking"]):
 			var moanScore:float = max(0.1, fetish(SUB_0, fetishReceiving)*0.5 + personality(SUB_0, PersonalityStat.Subby)*0.5)
-			addAction("moan", moanScore, "Moan", "Show how much you like it")
-			addAction("resistduringfuck", getSubInfo().getResistScore() / 2.0, "Resist", "Try to stop them!", {A_CHANCE: getSubResistChance(20.0, 15.0)})
+			addAction("moan", moanScore, "Moan", "Show how much you like it", {A_PRIORITY: 3})
+			addAction("resistduringfuck", getSubInfo().getResistScore() / 2.0, "Resist", "Try to stop them!", {A_CHANCE: getSubResistChance(20.0, 15.0), A_PRIORITY: 2})
 			if(getDomInfo().isCloseToCumming() && !isStraponSex()):
 				var begtopulloutScore:float = (getResistScore(SUB_0) / 2.0 - getSubInfo().fetishScore({Fetish.BeingBred: 1.0})) / 3.0
 				addAction("begtopullout", begtopulloutScore, "Beg to pull out", "Ask them not to cum inside you", {A_CHANCE: 10 - 10 * getDomInfo().fetishScore({Fetish.Breeding: 1.0})})
@@ -789,12 +792,24 @@ func getSubResistChance(baseChance:float, domAngerRemoval:float) -> float:
 		theChance *= 0.8
 	if(isStocksSex() || getSexType() == SexType.SlutwallSex):
 		theChance *= 0.5
+	if(getSexType() == SexType.BitchsuitSex):
+		theChance *= 0.3
 	if(currentPose == POSE_FULLNELSON):
 		theChance *= 0.5
 	
 	return max(theChance, 5.0)
 
 func getAnimation():
+	if(getSexType() == SexType.BitchsuitSex):
+		if(state in [""]):
+			return [StageScene.PuppySexAllFours, "tease", {pc=DOM_0, npc=SUB_0}]
+		if(state in ["aftercumminginside", "knotting"]):
+			return [StageScene.PuppySexAllFours, "inside", {pc=DOM_0, npc=SUB_0}]
+		if(getDomInfo().isCloseToCumming() || (isStraponSex() && getSubInfo().isCloseToCumming())):
+			return [StageScene.PuppySexAllFours, "fast", {pc=DOM_0, npc=SUB_0}]
+			
+		return [StageScene.PuppySexAllFours, "sex", {pc=DOM_0, npc=SUB_0}]
+
 	if(getSexType() == SexType.SlutwallSex):
 		if(state in [""]):
 			return [StageScene.SlutwallSex, "tease", {npc=DOM_0, pc=SUB_0}]

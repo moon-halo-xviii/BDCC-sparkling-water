@@ -25,6 +25,7 @@ const optionsFilepath = "user://options.json"
 var fetchNewRelease = true
 var fullscreen:bool = false
 var fpsLimit:int = 0
+var profilerEnabled:bool = false
 var webTextInputFallback:bool = false
 # Pregnancy options
 var menstrualCycleLengthDays: int
@@ -42,6 +43,7 @@ var maxKeepNPCKids:int = 30
 var sandboxPawnCount:int = 30
 var sandboxBreeding:String = "rare" # normal reduced rare veryrare never
 var sandboxNpcLeveling:float = 1.0
+var sandboxSeeChances:bool = true
 
 # Difficulty options
 var hardStruggleEnabled: bool = false
@@ -101,6 +103,7 @@ var genderNamesOverrides = {}
 func resetToDefaults():
 	fetchNewRelease = true
 	fpsLimit = 0
+	profilerEnabled = false
 	webTextInputFallback = false
 	menstrualCycleLengthDays = 7
 	eggCellLifespanHours = 48
@@ -150,6 +153,7 @@ func resetToDefaults():
 	sandboxPawnCount = 30
 	sandboxBreeding = "rare"
 	sandboxNpcLeveling = 1.0
+	sandboxSeeChances = true
 	blockCatcherPanelHeight = 8
 	
 	enabledContent.clear()
@@ -261,6 +265,8 @@ func isRollbackEnabled():
 	return rollbackEnabled
 
 func isRollbackThreadEnabled() -> bool:
+	if(OS.get_name() == "HTML5"): # Doesn't work on web, no thread support?
+		return false
 	return rollbackThread
 
 func getRollbackSlotsAmount():
@@ -330,6 +336,9 @@ func getSandboxOffscreenBreedingMult() -> float:
 		return 0.0
 	
 	return 1.0
+
+func shouldSeePawnActionChances() -> bool:
+	return sandboxSeeChances
 
 func getInventoryIconSize():
 	if(inventoryIconsSize == "small"):
@@ -401,6 +410,14 @@ func getChangeableOptions():
 						[1.5, "150%"],
 						[2.0, "200%"],
 					],
+					"tab": TAB_GAMEPLAY,
+				},
+				{
+					"name": "Visible chances of pawn's actions",
+					"description": "Enable the display of relative chances of pawn's actions during interactions with them.",
+					"id": "sandboxSeeChances",
+					"type": "checkbox",
+					"value": sandboxSeeChances,
 					"tab": TAB_GAMEPLAY,
 				},
 			],
@@ -963,7 +980,7 @@ func getChangeableOptions():
 				},
 				{
 					"name": "Separate thread",
-					"description": "If checked, the game will save the game's rollback state in a separate thread. Should result in a smoother gameplay but might lead to all sorts of strange bugs. Disable if the game is crashing randomly.",
+					"description": "If checked, the game will save the game's rollback state in a separate thread. Should result in a smoother gameplay but might lead to all sorts of strange bugs. Disable if the game is crashing randomly. Doesn't do anything in the HTML5 version.",
 					"id": "rollbackThread",
 					"type": "checkbox",
 					"value": rollbackThread,
@@ -1063,6 +1080,8 @@ func applyOption(categoryID, optionID, value):
 			sandboxBreeding = value
 		if(optionID == "sandboxNpcLeveling"):
 			sandboxNpcLeveling = value
+		if(optionID == "sandboxSeeChances"):
+			sandboxSeeChances = value
 	
 	if(categoryID == "jigglephysics"):
 		if(optionID == "jigglePhysicsBreastsEnabled"):
@@ -1361,9 +1380,11 @@ func saveData():
 		"sandboxPawnCount": sandboxPawnCount,
 		"sandboxBreeding": sandboxBreeding,
 		"sandboxNpcLeveling": sandboxNpcLeveling,
+		"sandboxSeeChances": sandboxSeeChances,
 		"blockCatcherPanelHeight": blockCatcherPanelHeight,
 		"webTextInputFallback": webTextInputFallback,
 		"fullscreen": fullscreen,
+		"profilerEnabled": profilerEnabled,
 	}
 	
 	return data
@@ -1424,9 +1445,11 @@ func loadData(data):
 	sandboxPawnCount = loadVar(data, "sandboxPawnCount", 30)
 	sandboxBreeding = loadVar(data, "sandboxBreeding", "rare")
 	sandboxNpcLeveling = loadVar(data, "sandboxNpcLeveling", 1.0)
+	sandboxSeeChances = loadVar(data, "sandboxSeeChances", true)
 	blockCatcherPanelHeight = loadVar(data, "blockCatcherPanelHeight", 16)
 	webTextInputFallback = loadVar(data, "webTextInputFallback", false)
 	fullscreen = loadVar(data, "fullscreen", false)
+	profilerEnabled = loadVar(data, "profilerEnabled", false)
 
 func saveToFile():
 	var saveData = saveData()
@@ -1490,6 +1513,9 @@ func getImagePackOrder():
 func isFullscreen() -> bool:
 	return fullscreen
 
+func shouldProfile() -> bool:
+	return profilerEnabled
+
 func shouldUseFallbackTextInputs() -> bool:
 	return webTextInputFallback
 
@@ -1498,6 +1524,11 @@ func _process(_delta:float):
 		OS.window_fullscreen = !OS.window_fullscreen
 		fullscreen = OS.window_fullscreen
 		saveToFile()
+
+func toggleShouldProfile():
+	profilerEnabled = !profilerEnabled
+	GM.createProfiler()
+	saveToFile()
 
 func _ready() -> void:
 	get_viewport().connect("gui_focus_changed", self, "_on_focus_changed")

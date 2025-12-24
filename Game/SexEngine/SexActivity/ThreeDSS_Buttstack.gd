@@ -3,6 +3,7 @@ extends SexActivityBase
 var sub0Hole:String = S_VAGINA
 var sub1Hole:String = S_VAGINA
 var domFocus:int = SUB_0
+var straponTimer:int = 0
 
 func _init():
 	id = "ThreeDSS_Buttstack"
@@ -193,6 +194,11 @@ func sex_processTurn():
 	doProcessFuck(DOM_0, domFocus, getCurrentHole(), " in a buttstack position")
 	doProcessFuckExtra(DOM_0, domFocus, getCurrentHole())
 
+	if(isWearingStrapon(DOM_0) && !getDomOrSub(domFocus).canZoneOrgasm(getCurrentHole())): # If sub can't cum, just have some fun
+		straponTimer += 1
+		if(straponTimer > 5 && RNG.chance(5.0*straponTimer)):
+			satisfyGoals()
+
 func getActions(_indx:int):
 	if(_indx == DOM_0):
 		addAction("stop", getStopScore(), "Stop Buttstack", "Stop the threesome")
@@ -202,28 +208,27 @@ func getActions(_indx:int):
 			addAction("pullOut", getStopScore(), "Pull out", "Pull your member out")
 		
 		if(state == ""):
-			addAction("rub", 1.0 if !isReadyToPenetrate(_indx) else 0.4, "Rub", "Rub your cock against them")
+			addAction("rub", 1.0 if !isReadyToPenetrate(_indx) else 0.4, "Rub", "Rub your cock against them", {A_PRIORITY: 4})
 			if(isReadyToFuck(DOM_0) && canPenetrateHole()):
-				addAction("penetrate", 1.0, "Penetrate", "Try to start fucking them!")
+				addAction("penetrate", 1.0, "Penetrate", "Try to start fucking them!", {A_PRIORITY: 5})
 		if(state != "inside"):
 			if(canSwitchTarget()):
 				addAction("switch", 0.1, "Switch to "+getOtherChar().getName(), "Switch to the other sub!")
 			if(canSwitchHole()):
 				addAction("switchHole", 0.0, "Switch to "+("pussy" if getCurrentHole() == S_ANUS else "anal"), "Switch which hole you are targeting")
 		if(state == "sex"):
-			addAction("pause", getPauseSexScore(_indx, domFocus, getCurrentHole()), "Slow down", "Pause the fucking")
-		if(state == "sex"):
-			if(isReadyToCumHandled(_indx) && !isStrapon(_indx)):
-				addAction("cum", 0.0 if canSwitchTarget() else 1.0, "Cum inside", "Cum inside them!", {A_PRIORITY: 1001})
-				if(canSwitchTarget()):
-					addAction("cumShare", 1.0, "Share load", "Cum inside both of them!", {A_PRIORITY: 1001})
+			addAction("pause", getPauseSexScore(_indx, domFocus, getCurrentHole()), "Slow down", "Pause the fucking", {A_PRIORITY: 1})
+		if(state == "sex" && isReadyToCumHandled(_indx) && !isStrapon(_indx)):
+			addAction("cum", 0.0 if canSwitchTarget() else 1.0, "Cum inside", "Cum inside them!", {A_PRIORITY: 1001})
+			if(canSwitchTarget()):
+				addAction("cumShare", 1.0, "Share load", "Cum inside both of them!", {A_PRIORITY: 1001})
 		elif(state == "sex" && isReadyToCumHandled(domFocus) && !canDoActions(domFocus)):
 			addAction("subcum", 1.0, "Sub orgasm!", "They are about to cum!", {A_PRIORITY: 1001})
 		elif(state == "sex" && isStrapon(_indx) && isReadyToCumHandled(_indx)):
 			addAction("domcumstrapon", 1.0, "Cum!", "You're about to cum", {A_PRIORITY: 1001})
 		
 	if(_indx == SUB_0 || _indx == SUB_1):
-		addAction("pullaway", getResistScore(_indx), "Pull away", "Try to pull away", {A_CHANCE: getSubResistChance(30.0, 25.0)})
+		addAction("pullaway", getResistScore(_indx), "Pull away", "Try to pull away", {A_CHANCE: getSubResistChance(30.0, 25.0), A_PRIORITY: 2})
 		if(state == "sex"):
 			if(isReadyToCumHandled(_indx)):
 				addAction("subcum", 1.0, "Cum!", "You're about to cum!", {A_PRIORITY: 1001})
@@ -395,6 +400,7 @@ func saveData():
 	data["sub0Hole"] = sub0Hole
 	data["sub1Hole"] = sub1Hole
 	data["domFocus"] = domFocus
+	data["straponTimer"] = straponTimer
 
 	return data
 	
@@ -404,3 +410,4 @@ func loadData(data):
 	sub0Hole = SAVE.loadVar(data, "sub0Hole", S_ANUS)
 	sub1Hole = SAVE.loadVar(data, "sub1Hole", S_ANUS)
 	domFocus = SAVE.loadVar(data, "domFocus", SUB_0)
+	straponTimer = SAVE.loadVar(data, "straponTimer", 0)

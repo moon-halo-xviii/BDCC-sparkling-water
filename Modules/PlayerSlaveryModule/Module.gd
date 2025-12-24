@@ -26,6 +26,10 @@ func _init():
 		"res://Modules/PlayerSlaveryModule/Start/PlayerSlaveryStartMemeScene.gd",
 		
 		"res://Modules/PlayerSlaveryModule/Start/NemesisAmbushScene.gd",
+		"res://Modules/PlayerSlaveryModule/Util/NpcOwnerSleepTogetherScene.gd",
+		
+		"res://Modules/PlayerSlaveryModule/Tentacles/PSTentaclesStart.gd",
+		"res://Modules/PlayerSlaveryModule/Tentacles/PSTentaclesWalker.gd",
 		]
 	characters = [
 		"res://Modules/PlayerSlaveryModule/ShaftMiner/PSRicky.gd",
@@ -42,6 +46,7 @@ func _init():
 		"res://Modules/PlayerSlaveryModule/Start/PlayerSlaveryStartMemeEvent.gd",
 		"res://Modules/PlayerSlaveryModule/Start/UnconStartSlaveryEvent.gd",
 		"res://Modules/PlayerSlaveryModule/Start/NemesisAmbushEvent.gd",
+		"res://Modules/PlayerSlaveryModule/Util/NpcOwnerSleepTogetherEvent.gd",
 	]
 
 func resetFlagsOnNewDay():

@@ -24,6 +24,7 @@ func getSupportedSexTypes():
 		SexType.DefaultSex: true,
 		SexType.StocksSex: true,
 		SexType.SlutwallSex: true,
+		SexType.BitchsuitSex: true,
 	}
 
 func getActivityBaseScore(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo: SexSubInfo):
@@ -107,20 +108,27 @@ func addDrugButtons(possibleDrugsInfo:Array, _sexEngine: SexEngine, _domInfo: Se
 		if(dom.isPlayer() && item != null && item.canCombine()):
 			desc = "Amount left: "+ str(dom.getInventory().getAmountOf(itemID))+"\n"+desc
 		
-		var drugFetishScore:float = 0.0
+		var drugFetishScore:float = 1.0
 		
-		if(drugInfo.has("sexgoal")):
-			drugFetishScore = _domInfo.goalsScore({drugInfo["sexgoal"]: 1.0}, _subInfo.charID)
-		else:
-			drugFetishScore = clamp(_domInfo.fetishScore({Fetish.DrugUse: 1.0}) + 0.5, 0.0, 1.0) / 10.0
+		if(!_isCanApply):
+			if(drugInfo.has("sexgoal")):
+				drugFetishScore = _domInfo.goalsScore({drugInfo["sexgoal"]: 1.0}, _subInfo.charID)
+			else:
+				drugFetishScore = clamp(_domInfo.fetishScore({Fetish.DrugUse: 1.0}) + 0.5, 0.0, 1.0) / 10.0
 
+		var drugSubcategory:Array = item.getSexEngineSubcategory() if(item != null) else []
 		if((_isCanApply || !dom.isOralBlocked()) && (!drugInfo.has("canUseOnDom") || drugInfo["canUseOnDom"])):
-			addStartAction(["useonself", itemID, _isCanApply, item], drugInfo["name"], desc, drugInfo["scoreOnSelf"] * drugFetishScore, {A_CATEGORY: getCategory()+["Self" if !_isCanApply else "Apply self"]})
+			var useonselfScore:float = max(drugInfo["scoreOnSelf"], 0.0) * drugFetishScore
+			addStartAction(["useonself", itemID, _isCanApply, item], drugInfo["name"], desc, useonselfScore, {A_CATEGORY: getCategory()+["Self" if !_isCanApply else "Apply self"]+drugSubcategory})
 		if((_isCanApply || !sub.isOralBlocked()) && (!drugInfo.has("canUseOnSub") || drugInfo["canUseOnSub"])):
 			if(_subInfo.canDoActions() && _sexEngine.getSexTypeID() != SexType.SlutwallSex && !_isCanApply):
-				addStartAction(["offertosub", itemID, _isCanApply, item], drugInfo["name"], desc, drugInfo["scoreOnSub"]*(1.0 - _domInfo.getAngerScore()) * drugFetishScore, {A_CATEGORY: getCategory()+["Offer to sub"]})
+				var offertosubScore:float = max(drugInfo["scoreOnSub"], 0.0)*(1.0 - _domInfo.getAngerScore()) * drugFetishScore
+				#print("OFFER TO SUB: "+itemID+": " +str(offertosubScore))
+				addStartAction(["offertosub", itemID, _isCanApply, item], drugInfo["name"], desc, offertosubScore, {A_CATEGORY: getCategory()+["Offer to sub"]+drugSubcategory})
 			
-			addStartAction(["forcetosub", itemID, _isCanApply, item], drugInfo["name"], desc, drugInfo["scoreOnSub"]*(_domInfo.getAngerScore() if !_isCanApply else 1.0) * drugFetishScore, {A_CATEGORY: getCategory()+["Force on sub" if !_isCanApply else "Apply on sub"]})
+			var forcetosubScore:float = max(drugInfo["scoreOnSub"], 0.0)*(_domInfo.getAngerScore() if !_isCanApply else 1.0) * drugFetishScore
+			#print("FORCE ON SUB: "+itemID+": " +str(forcetosubScore))
+			addStartAction(["forcetosub", itemID, _isCanApply, item], drugInfo["name"], desc, forcetosubScore, {A_CATEGORY: getCategory()+["Force on sub" if !_isCanApply else "Apply on sub"]+drugSubcategory})
 
 func pcCanSeeText(ifcan, ifcant = "some pill"):
 	if(GM.pc.isBlindfolded()):
@@ -204,7 +212,7 @@ func startActivity(_args):
 			return
 		
 		var text = RNG.pick([
-			"{dom.You} {dom.youVerb('produce')} "+pcCanSeeText(drugInfo["usedName"])+" and {dom.youAre} about to {dom.youVerb('put')} it into {dom.yourHis} mouth.",
+			"{dom.You} {dom.youVerb('produce')} "+pcCanSeeText(drugInfo["usedName"])+" and {dom.youAre} about to put it into {dom.yourHis} mouth.",
 		])
 		if(_isCanApply):
 			text = RNG.pick([
