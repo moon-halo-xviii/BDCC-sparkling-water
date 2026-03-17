@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Photograph.mp3-116fa7767dad0d04f0a33b8e5a46d6de.mp3str"
+
+[deps]
+
+source_file="res://Modules/BDCCDD-SOUNDTEST/BGM/Photograph.mp3"
+dest_files=[ "res://.import/Photograph.mp3-116fa7767dad0d04f0a33b8e5a46d6de.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

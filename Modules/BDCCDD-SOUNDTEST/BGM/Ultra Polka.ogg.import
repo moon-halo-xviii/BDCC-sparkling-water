@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ultra Polka.ogg-a1f5725dbec66a5589829d616347fb9d.oggstr"
+
+[deps]
+
+source_file="res://Modules/BDCCDD-SOUNDTEST/BGM/Ultra Polka.ogg"
+dest_files=[ "res://.import/Ultra Polka.ogg-a1f5725dbec66a5589829d616347fb9d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

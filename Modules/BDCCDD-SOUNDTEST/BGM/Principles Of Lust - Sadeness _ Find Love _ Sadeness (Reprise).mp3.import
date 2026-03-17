@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Principles Of Lust - Sadeness _ Find Love _ Sadeness (Reprise).mp3-59193be8166aff28d890353b1e18c450.mp3str"
+
+[deps]
+
+source_file="res://Modules/BDCCDD-SOUNDTEST/BGM/Principles Of Lust - Sadeness _ Find Love _ Sadeness (Reprise).mp3"
+dest_files=[ "res://.import/Principles Of Lust - Sadeness _ Find Love _ Sadeness (Reprise).mp3-59193be8166aff28d890353b1e18c450.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
