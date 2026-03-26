@@ -13,7 +13,7 @@ func _run():
 		
 		addCharacter("eliza")
 
-		saynn("You hear a subtle machine hum as you get close to the medical section of the intake block. It looks small and cozy, spotting a surgical bed, some chairs, drawers, an instrument table and some other medical equipment. Between all of that you spot a doctor just standing there looking into a tablet. She looks about 1.7 meters tall and is clearly a feline. You notice her pastel yellow fur, eyes the color of a green emerald and cat ears that show pink flesh on the inside. Normal reading glasses, a green top, long skirt, dark stockings, a belt with many pouches and a lab coat is what she is wearing. The lab coat is of a sterile white color with a bright green trim.")
+		saynn("You hear a subtle machine hum as you get close to the medical section of the intake block. It looks small and cozy, spotting a surgical bed, some chairs, drawers, an instrument table and some other medical equipment. Between all of that you spot a doctor just standing there looking into a tablet. She looks about 1.7 meters tall, with bright pink hair and eyes the color of emeralds. Normal reading glasses, a green top, long skirt, dark stockings, a small amulet hanging from her neck, a belt with many pouches and a lab coat is what she is wearing. The lab coat is of a sterile white color with a bright green trim.")
 
 		saynn("You tug on your tight collar, unsure what to do.")
 
@@ -25,7 +25,7 @@ func _run():
 		setLocationName("Medical area")
 		playAnimation(StageScene.Duo, "defeat", {npc="eliza"})
 		
-		saynn("You decide not to announce your presence and instead begin to slowly creep up to the lady, who seems to be too busy with reading something off of her tablet. You keep watching her as you make your steps as light as possible. You notice her feline ears twitching ever so slightly. As you approach the instrument table, you notice a variety of tools: syringes, clamps, retractors but most importantly, a few scalpels. Your hand hovers over one as you try to grab it. But as soon as you do, you hear a voice.")
+		saynn("You decide not to announce your presence and instead begin to slowly creep up to the lady, who seems to be too busy with reading something off of her tablet. You keep watching her as you make your steps as light as possible. As you approach the instrument table, you notice a variety of tools: syringes, clamps, retractors but most importantly, a few scalpels. Your hand hovers over one as you try to grab it. But as soon as you do, you hear a voice.")
 
 		saynn("[say=eliza]You will regret it, inmate. Put it down.[/say]")
 
@@ -77,7 +77,7 @@ func _run():
 		aimCamera("intro_medicalarea")
 		setLocationName("Medical area")
 		
-		saynn("You cough slightly to try and get her attention. Her feline ears quickly pick up on the noise and direct themselves towards you, followed soon by her glance.")
+		saynn("You cough slightly to try and get her attention. She quickly picks up on the noise and turns to face you.")
 
 		saynn("[say=pc]Um. I’m {pc.name}.[/say]")
 
@@ -235,7 +235,7 @@ func _run():
 		
 		saynn("You spot a few inmates around. All sorts of inmates of different species. Some wear orange uniforms, others wear red or pink. Obviously they weren’t told that you’re arriving but you do begin to catch their stares. Almost every inmate is now watching you being led around on a leash, you can hear some voices talking about you but it’s all incomprehensible to you.")
 
-		saynn("One particular stare steals your attention. One of the reds. It’s clearly a female feline, a very tall one, about 2 meters. Her unusual fur is mostly purple with a toxic-green pattern added to it, cunning eyes are of different colors, green and red. She is standing by herself, away from everyone, arms crossed, eyes are staring at you, the lips form a very subtle smile. As the doctor leads you somewhere, that inmate stays silent, just watching you.")
+		saynn("One particular stare steals your attention. One of the reds. It’s a woman, a very tall one, about 2 meters. Her hair is mostly purple with a toxic-green pattern added to it, cunning eyes are of different colors, green and red. On top of that, something about her complexion strikes you as unusual, but you can't quite put your finger on it. She is standing by herself, away from everyone, arms crossed, eyes are staring at you, the lips form a very subtle smile. As the doctor leads you somewhere, that inmate stays silent, just watching you.")
 
 		saynn("The doctor leads you to some stairs to the lower floor where all the cells are. She finds the {pc.inmateColor} block and quickly checks her tablet.")
 		
@@ -290,17 +290,17 @@ func _run():
 		addButton("Shove!", "Your limbs are cuffed so this is the best you can do", "shove!")
 
 	if(state == "shove!"):
-		saynn("You wait for a good moment, gathering all your strength, before bringing your shoulder out and shoving the doctor away. The cat gasps as she staggers back and drops onto her ass, you hear a noise of cloth tearing.")
+		saynn("You wait for a good moment, gathering all your strength, before bringing your shoulder out and shoving the doctor away. The doctor gasps as she staggers back and drops onto her ass, you hear a noise of cloth tearing.")
 
 		saynn("[say=eliza]Ugh. My skirt! That’s it.[/say]")
 
-		saynn("The kitty cat doctor is really mad now, she shows off her fangs as she gets up and creeps towards you, holding the shock remote in one of her paws and the syringe in another.")
+		saynn("The pretty little doctor is really mad now, she bares her teeth as she gets up and creeps towards you, holding the shock remote in one of her paws and the syringe in another.")
 
 		saynn("You prepare to fight her off again. But.. You seem to be.. getting weaker.. your muscles.. they don’t want to tense up anymore. You look at the syringe that Eliza is holding and realize.. that it’s empty. Oh no. Your expression immediately changes and the doc picks up on it.")
 
 		saynn("[say=eliza]What happened? Don’t feel like fighting anymore? Body betraying you? What a shame.[/say]")
 
-		saynn("She puts the spent syringe away and rushes towards you. One of her paws pins you to the bed while another extends its claws and slips into your shorts! You feel her sharp claws painfully poking against the sensitive skin of your balls as she has them in a tight grip.")
+		saynn("She puts the spent syringe away and rushes towards you. One of her hands pins you to the bed while another slips into your shorts! Ayo? Oh no! You feel her nails painfully poking against the sensitive skin of your balls as she has them in a tight grip.")
 
 		saynn("[say=eliza]Do you need me to explain what will happen to them if I continue?[/say]")
 
@@ -309,7 +309,7 @@ func _run():
 		addButton("Shake head", "Enough torture", "shake_head")
 
 	if(state == "shake_head"):
-		saynn("You look at her and shake your head. Rage slowly fades from Eliza’s face. She pulls her paw away from your balls and fixes her lab coat and skirt, looking very professional again.")
+		saynn("You look at her and shake your head. Rage slowly fades from Eliza’s face. She pulls her hand away from your balls and fixes her lab coat and skirt, looking very professional again.")
 
 		saynn("[say=eliza]Excuse my anger, patient. Don’t do silly stuff like that and we will do just fine, mhm? Now get up.[/say]")
 
@@ -324,7 +324,7 @@ func _run():
 
 		saynn("[say=eliza]Don’t move.[/say]")
 
-		saynn("She reaches her paws towards your shorts and then pulls them down, exposing your {pc.cock} in the process! She hums while intently staring at your member.")
+		saynn("She reaches her hands towards your shorts and then pulls them down, exposing your {pc.cock} in the process! She hums while intently staring at your member.")
 
 		saynn("[say=eliza]Yeah, that would be an interesting data point. A larger array of samples is always good, right?[/say]")
 
@@ -363,7 +363,7 @@ func _run():
 
 		saynn("[say=eliza]Not the one that I would pick. But I respect your choice~.[/say]")
 
-		saynn("The kitty cat puts the other cage away and returns to you. She carefully lowers herself before your {pc.dick} and proceeds to push your balls through the first part of the cage, the cock ring. Cold metal touches your skin and makes you squirm slightly. Doctor’s touch is soft though, her fingers working on your dick and balls cause you to get a slight erection, something that makes you blush even more.")
+		saynn("The lady puts the other cage away and returns to you. She carefully lowers herself before your {pc.dick} and proceeds to push your balls through the first part of the cage, the cock ring. Cold metal touches your skin and makes you squirm slightly. Doctor’s touch is soft though, her fingers working on your dick and balls cause you to get a slight erection, something that makes you blush even more.")
 
 		saynn("[say=eliza]Huh~. I’d offer a cock pump to help but for the sake of the experiment I can’t allow that~.[/say]")
 
@@ -402,7 +402,7 @@ func _run():
 		# (same from here)
 
 	if(state in ["flat_one", "neither"]):
-		saynn("The kitty cat puts the other cage away and returns to you. She carefully lowers herself before your {pc.dick} and proceeds to push your balls through the first part of the cage, the cock ring. Cold metal touches your skin and makes you squirm slightly. Doctor’s touch is soft though, her fingers working on your dick and balls cause you to get a slight erection, something that makes you blush even more.")
+		saynn("The lady puts the other cage away and returns to you. She carefully lowers herself before your {pc.dick} and proceeds to push your balls through the first part of the cage, the cock ring. Cold metal touches your skin and makes you squirm slightly. Doctor’s touch is soft though, her fingers working on your dick and balls cause you to get a slight erection, something that makes you blush even more.")
 
 		saynn("[say=eliza]Huh~. I’d offer a cock pump to help but for the sake of the experiment I can’t allow that~.[/say]")
 
@@ -493,7 +493,11 @@ func _react_scene_end(_tag, _result):
 	pass
 
 func getDevCommentary():
-	return "This is the scene that introduces Eliza, the cute doctor that likes to experiment on inmates x3. Why? Because she can. And because AlphaCorp wants so. She will find any reason to justify her actions ^^.\n\nOutside of that, I obviously just needed some doctor that would do all the experiments with you. Eliza does have some backstory behind her. Not that deep but it's there. I have reasons for why she acts a little crazy sometimes is what I'm saying ^^\n\nIf you chose the permanent male chastity starting perk Eliza will cage you up in this scene x3. It was fun to write. I dunno, I enjoy writing chastity content a lot. But it's obviously not for everyone. I tried not to treat the player as Sissy. Because.. well.. what if the player is not male x3. But also the world needs more chastity stuff without sissification."
+	var devCom = "This is the scene that introduces Eliza, the cute doctor that likes to experiment on inmates x3. Why? Because she can. And because AlphaCorp wants so. She will find any reason to justify her actions ^^.\n\nOutside of that, I obviously just needed some doctor that would do all the experiments with you. Eliza does have some backstory behind her. Not that deep but it's there. I have reasons for why she acts a little crazy sometimes is what I'm saying ^^\n\nIf you chose the permanent male chastity starting perk Eliza will cage you up in this scene x3. It was fun to write. I dunno, I enjoy writing chastity content a lot. But it's obviously not for everyone. I tried not to treat the player as Sissy. Because.. well.. what if the player is not male x3. But also the world needs more chastity stuff without sissification."
+
+	var newCom = "MOON_HALO: Risha might've been more of a pain to do than I expected, but I always knew that Eliza was going to be tricky, given the transformations you can unlock for her. That, and she's normally very expressive with her ears, which doesn't work as well for a human as it does for a cat. As a result, some of her subtler descriptions end up getting lost here."
+
+	return "\n\n".join([devCom, newCom])
 
 func hasDevCommentary():
 	return true

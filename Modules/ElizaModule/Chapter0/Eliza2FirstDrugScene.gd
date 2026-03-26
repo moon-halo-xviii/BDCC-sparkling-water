@@ -67,7 +67,7 @@ func _run():
 
 		saynn("[say=eliza]The primary components? Sulfur-based compounds.. an unusual polymerized protein.. and.. oh, this is fancy.. something resembling bio-alchemical traces. Weird mix.. but I kinda love it.[/say]")
 
-		saynn("She narrows her eyes, studying the structure further while her paw begins to press buttons on the keyboard.")
+		saynn("She narrows her eyes, studying the structure further while her fingers begin to press buttons on the keyboard.")
 
 		saynn("[say=eliza]Let me unroll this polynucleotide chain. Ohh.. Wow. I already know what it will do~. Do you?[/say]")
 
@@ -183,7 +183,7 @@ func _run():
 	if(state == "no_eat"):
 		saynn("[say=pc]I'm good. Can I just have that pill maybe?[/say]")
 
-		saynn("She twists the drug in her paw, an unsatisfied curiosity sparkling in her eyes.")
+		saynn("She twists the drug in her hand, an unsatisfied curiosity sparkling in her eyes.")
 
 		saynn("[say=eliza]Ummm.. nah.[/say]")
 
@@ -231,7 +231,7 @@ func _run():
 
 		saynn("[say=pc]Alright. It's a lot so far.[/say]")
 
-		saynn("Eliza smiles and walks up to you, her paws land on your shoulders.")
+		saynn("Eliza smiles and walks up to you, her hands land on your shoulders.")
 
 		saynn("[say=eliza]Poke around, it's not quantum physics~. Just try not to trash the place.. or I will come find you. And you don't want me to come after you~.[/say]")
 
@@ -261,7 +261,7 @@ func _run():
 
 		addButton("Continue", "See what happens next", "end_tutorial")
 	if(state == "eat_no_effect"):
-		saynn("What could go wrong.. You grab the pill from Eliza's paw.. and throw it into your mouth.")
+		saynn("What could go wrong.. You grab the pill from Eliza's palm.. and throw it into your mouth.")
 
 		saynn("[say=eliza]So eager~. I love the enthusiasm.[/say]")
 
@@ -325,7 +325,7 @@ func _run():
 
 		saynn("[say=pc]Alright. It's a lot so far.[/say]")
 
-		saynn("Eliza smiles and walks up to you, her paws land on your shoulders.")
+		saynn("Eliza smiles and walks up to you, her hands land on your shoulders.")
 
 		saynn("[say=eliza]Poke around, it's not quantum physics~. Just try not to trash the place.. or I will come find you. And you don't want me to come after you~.[/say]")
 
@@ -343,7 +343,7 @@ func _run():
 
 		addButton("Continue", "See what happens next", "endthescene")
 	if(state == "eat_has_effect"):
-		saynn("What could go wrong.. You grab the pill from Eliza's paw.. and throw it into your mouth.")
+		saynn("What could go wrong.. You grab the pill from Eliza's palm.. and throw it into your mouth.")
 
 		saynn("[say=eliza]So eager~. I love the enthusiasm.[/say]")
 

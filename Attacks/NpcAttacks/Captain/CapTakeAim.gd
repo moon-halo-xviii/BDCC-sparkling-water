@@ -30,7 +30,7 @@ func _canUse(_attacker, _receiver, _context = {}):
 	return true
 
 func getAnticipationText(_attacker, _receiver):
-	return "{attacker.name} meows." 
+	return "{attacker.name}"+RNG.pick([" sneers.", "'s eyes narrow."," takes a deep breath."]) 
 
 func getAttackSoloAnimation():
 	return "holdpistol"

@@ -12,7 +12,7 @@ func _run():
 
 		saynn("[say=eliza]Khm.. fuck.. Oh hey! Come here, assistant.[/say]")
 
-		saynn("You approach the counter, behind which you see Doctor Quinn, with her usual mag in her paw. Her lab coat has some dark wet splotches.")
+		saynn("You approach the counter, behind which you see Doctor Quinn, with her usual mag in her hand. Her lab coat has some dark wet splotches.")
 
 		saynn("[say=pc]Looks like you have a coffee addiction.[/say]")
 
@@ -98,7 +98,7 @@ func _run():
 
 		saynn("[say=eliza]Noo-o-o! Of course not.[/say]")
 
-		saynn("She places a paw on her before smirking.")
+		saynn("She places a hand on her hip before smirking.")
 
 		saynn("[say=eliza]I actually helped him. I actually improved his living conditions! Gave him a better cell to enjoy.[/say]")
 

@@ -132,7 +132,7 @@ func _run():
 
 		saynn("[say=lin_alex]You're right. Just.. don't overwork yourself, Al. Don't forget what really matters. Also..[/say]")
 
-		saynn("She reaches her paw and caresses your cheek, her digit then slides over your lips.")
+		saynn("She reaches her hand and caresses your cheek, her finger then slides over your lips.")
 
 		saynn("[say=lin_alex]You got something there. Some piece of meat, heh.[/say]")
 
@@ -564,7 +564,7 @@ func _run():
 
 		saynn("[say=alexrynard]Don't we all?[/say]")
 
-		saynn("She leans closer to you again.. her paw sliding up over your arm.")
+		saynn("She leans closer to you again.. her hand sliding up over your arm.")
 
 		saynn("[say=lin_alex]About that cold pizza..[/say]")
 
@@ -942,7 +942,7 @@ func _run():
 
 		saynn("[say=alexrynard]It's okay, I understand, quit being sorry.[/say]")
 
-		saynn("She reaches her paws out to hug you carefully.. and then leaves a little kiss on your lips. You kiss her back, way longer this time, your tongues doing a little dance in her mouth.")
+		saynn("She reaches her arms out to hug you carefully.. and then leaves a little kiss on your lips. You kiss her back, way longer this time, your tongues doing a little dance in her mouth.")
 
 		saynn("[say=lin_alex]I think I'm gonna.. leave you to it. If you ever need something, let me know.[/say]")
 
@@ -1127,7 +1127,7 @@ func _run():
 
 		saynn("[say=alexrynard]Sure.[/say]")
 
-		saynn("She reaches her paws out, gently caressing your cheeks and carefully bringing all the loose hair strands behind your head. Then she uses a spare rubber band to form a nice ponytail.")
+		saynn("She reaches her arms out, gently caressing your cheeks and carefully bringing all the loose hair strands behind your head. Then she uses a spare rubber band to form a nice ponytail.")
 
 		addButton("Continue", "See how it looks", "alex_gets_ponytail")
 	if(state == "alex_gets_ponytail"):
@@ -1140,7 +1140,7 @@ func _run():
 
 		saynn("[say=lin_alex]And you look and feel very manly~.[/say]")
 
-		saynn("Lin nuzzles your cheeks, her paws exploring your body.")
+		saynn("Lin nuzzles your cheeks, her hands exploring your body.")
 
 		saynn("[say=alexrynard]Someone's horny, huh~?[/say]")
 

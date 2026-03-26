@@ -7,8 +7,8 @@ var canJustContinue:bool = false
 func _init():
 	id = "SexPawjobMutual"
 	
-	activityName = "Mutual pawjob"
-	activityDesc = "Humiliate the sub by making them cum with your feet/hind paws. Get some fun in return too!"
+	activityName = "Mutual footjob"
+	activityDesc = "Humiliate the sub by making them cum with your feet. Get some fun in return too!"
 	activityCategory = ["Humiliate"]
 
 func getVisibleName() -> String:
@@ -100,9 +100,9 @@ func getActions(_indx:int):
 		addAction("stop", getStopScore(), "Stop "+getVisibleName(), "Stop the fun")
 		if(state == ""):
 			if(hasBodypartUncovered(SUB_0, S_PENIS) && hasBodypartUncovered(DOM_0, getDomHole())):
-				addAction("force", 1.0, "Force pawjob" if !canJustContinue else "Continue pawjob", "Make the sub pleasure you while you pleasure them.", {A_CHANCE: 30.0})
+				addAction("force", 1.0, "Force footjob" if !canJustContinue else "Continue footjob", "Make the sub pleasure you while you pleasure them.", {A_CHANCE: 30.0})
 			if(!canJustContinue && offerTime <= 0):
-				addAction("offer", 1.0 - getDomInfo().getAngerScore(), "Offer mutual", "Offer a mutual pawjob to the sub!")
+				addAction("offer", 1.0 - getDomInfo().getAngerScore(), "Offer mutual", "Offer a mutual footjob to the sub!")
 		if(state == "pawjob"):
 			addAction("pause", getPauseSexScore(DOM_0, SUB_0, S_PENIS, S_LEGS) + getPauseSexScore(DOM_0, SUB_0, getDomHole()), "Pause stroking", "Pause the stroking")
 			if(isReadyToCumHandled(DOM_0)):

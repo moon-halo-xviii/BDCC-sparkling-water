@@ -11,7 +11,7 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Elegant-looking canine with gray fur. Black pants, white shirt and old-school reading glasses"
+	return "Elegant-looking man with gray hair. Black pants, white shirt and old-school reading glasses"
 
 func getSpecies():
-	return [Species.Canine]
+	return [Species.Human]

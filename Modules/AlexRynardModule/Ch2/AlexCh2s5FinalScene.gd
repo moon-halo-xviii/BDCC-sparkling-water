@@ -711,7 +711,7 @@ func _run():
 
 		saynn("[say=eliza]All good foxy, I got you~.[/say]")
 
-		saynn("Her paws are resting on his back, preventing him from backing off.")
+		saynn("Her hands are resting on his back, preventing him from backing off.")
 
 		saynn("[say=eliza]What do you say though~?[/say]")
 
@@ -779,7 +779,7 @@ func _run():
 
 		saynn("[say=alexrynard]Sure. And if your coffee machine breaks..[/say]")
 
-		saynn("Eliza closes the distance and slides her paw over Alex's cheek.")
+		saynn("Eliza closes the distance and slides her hand over Alex's cheek.")
 
 		saynn("[say=eliza]You will be the first one to know..[/say]")
 

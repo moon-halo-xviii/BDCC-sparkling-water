@@ -4,14 +4,12 @@ func _init():
 	id = "elizaMom"
 	npcCharacterType = CharacterType.Generic
 	
-	pickedSkin="LuxeSkin"
+	pickedSkin="TaviSkin"
 	pickedSkinRColor=Color("ffedc68f")
-	pickedSkinGColor=Color("fffff1e2")
-	pickedSkinBColor=Color("ffc84977")
+	pickedSkinGColor=Color("ffedc68f")
+	pickedSkinBColor=Color("fffff1e2")
 	npcSkinData={
-	"head": {"skin": "TaviSkin",},
 	"hair": {"r": Color("ffa76762"),"g": Color("ffff0054"),"b": Color("ffff5bd6"),},
-	"ears": {"g": Color("ffff727d"),"b": Color("ffcbcbcb"),},
 	}
 	
 	npcHasMenstrualCycle = true
@@ -26,10 +24,10 @@ func getChatColor():
 	return "#F26AB5"
 	
 func getSmallDescription() -> String:
-	return "An elegant feline with pastel yellow fur and some small purple marks sprinkled around. Has deep eyes of a mature woman. Wears a lab coat"
+	return "An elegant matron with reddish hair. and some small pale marks sprinkled around her medium-fair skin. Has deep eyes of a mature woman. Wears a lab coat"
 
 func getSpecies():
-	return ["feline"]
+	return ["human"]
 
 func getThickness() -> int:
 	return 130
@@ -38,9 +36,9 @@ func getFemininity() -> int:
 	return 100
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("bunhair"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears2"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthroarms"))
 	var breasts = GlobalRegistry.createBodypart("humanbreasts")
@@ -48,10 +46,7 @@ func createBodyparts():
 	giveBodypartUnlessSame(breasts)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("vagina"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	var tail = GlobalRegistry.createBodypart("felinetail")
-	tail.tailScale = 1.2
-	giveBodypartUnlessSame(tail)
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 
 func getDefaultEquipment():
 	return ["LabcoatOutfitAlt", "LaceBra", "LacePanties"]

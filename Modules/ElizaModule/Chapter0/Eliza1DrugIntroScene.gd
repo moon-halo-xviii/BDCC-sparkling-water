@@ -29,7 +29,7 @@ func _run():
 
 		saynn("Cats and their boxes..")
 
-		saynn("[say=eliza]It's unique. Perfect in every way. I love holding it in my paws, looking at it.. feeling its magic on whiskers.[/say]")
+		saynn("[say=eliza]It's unique. Perfect in every way. I love holding it in my hands, looking at it.. feeling its magic on whiskers.[/say]")
 
 		saynn("She strokes her imaginary cardboard box and purrs softly.")
 
@@ -132,7 +132,7 @@ func _run():
 
 		saynn("[say=pc]And you need me because..?[/say]")
 
-		saynn("She looks at the beaker in her paws again.")
+		saynn("She looks at the beaker in her hands again.")
 
 		saynn("[say=eliza]Well.. I kinda ruined this sample. I learned a lot.. but I need more. If I harvest enough data about its structure.. I think I might be able to reverse-engineer it.. and then.. who knows.. maybe replicate it.[/say]")
 
@@ -148,7 +148,7 @@ func _run():
 
 		saynn("[say=eliza]You will get to be my lab assistant.. And that will have some cool perks attached to it..[/say]")
 
-		saynn("Her clawed paw scritches you under the chin.")
+		saynn("Her finger scritches you under the chin.")
 
 		saynn("[say=eliza]Trust me~.[/say]")
 

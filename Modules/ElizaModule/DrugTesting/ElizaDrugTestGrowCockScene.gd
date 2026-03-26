@@ -74,7 +74,7 @@ func _run():
 
 		saynn("[say=eliza]Yep. Mmhm..[/say]")
 
-		saynn("Her shaft is pulsing subtly in her paw.")
+		saynn("Her shaft is pulsing subtly in her hand.")
 
 		saynn("[say=eliza]It feels good to touch.. so sensitive.[/say]")
 
@@ -92,11 +92,11 @@ func _run():
 		playAnimation(StageScene.Grope, "watchstroke", {pc="eliza", npc="pc", pcCum=true, bodyState={exposedCrotch=true, hard=true}})
 		saynn("Eventually, she gives in.")
 
-		saynn("One of her paws grips the base firmly while the other one wraps its clawed digits around the shaft and begins to stroke it in slow, deliberate sweeps. Her barbs get caught by her fingers.. each one sending involuntary quivers through her body.")
+		saynn("One of her hands grips the base firmly while the other one wraps its clawed digits around the shaft and begins to stroke it in slow, deliberate sweeps. Her barbs get caught by her fingers.. each one sending involuntary quivers through her body.")
 
 		saynn("[say=eliza]Ah~..[/say]")
 
-		saynn("Her chest rises and falls, each breath is followed by a fresh moan. Her paw manages to squeeze more of that transparent pre out of her shaft, her balls twitching.")
+		saynn("Her chest rises and falls, each breath is followed by a fresh moan. Her hand manages to squeeze more of that transparent pre out of her shaft, her balls twitching.")
 
 		saynn("[say=pc]Looks like you're enjoying yourself.[/say]")
 
@@ -113,7 +113,7 @@ func _run():
 
 		saynn("[say=eliza]I will have to clean up the mess..[/say]")
 
-		saynn("She notices that some of the cum has landed on her paw. Eliza blinks a few times.. and then licks it off. Her muffled panting transitions into a low purr as she cleans her every digit, licking off any seed that got onto them..")
+		saynn("She notices that some of the cum has landed on her hand. Eliza blinks a few times.. and then licks it off. Her muffled panting transitions into a low purr as she cleans her every digit, licking off any seed that got onto them..")
 
 		saynn("[say=eliza]Not too bad. But I think I had enough fun with it for now.[/say]")
 

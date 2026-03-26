@@ -206,7 +206,7 @@ func _run():
 
 		saynn("[say=alexrynard]Ah, Fuck![/say]")
 
-		saynn("You would think that a little shock wouldn't have such an effect.. but Alex is grumbling a lot, his shaking paws holding onto the table tightly. He speaks through his teeth.")
+		saynn("You would think that a little shock wouldn't have such an effect.. but Alex is grumbling a lot, his shaking hands holding onto the table tightly. He speaks through his teeth.")
 
 		saynn("[say=alexrynard]That's why you always wear rubber gloves.. fuck..[/say]")
 
@@ -781,7 +781,7 @@ func _run():
 
 		saynn("[say=alexrynard]Yeah, that's what they are for. Create a new task and someone's gonna get it repaired.[/say]")
 
-		saynn("Eliza boldly closes the distance, her feline paws carefully fix the collar of his orange uniform.")
+		saynn("Eliza boldly closes the distance, carefully fixing the collar of his orange uniform.")
 
 		saynn("[say=eliza]What if we don't though.. Just hear me out.. It's probably something small and silly.. like, some nurse probably flicked a wrong switch.. I really-really-really don't wanna wait multiple weeks to get it fixed..[/say]")
 
@@ -1273,7 +1273,7 @@ func _run():
 
 		saynn("[say=pc]Relax. Can't be that bad.[/say]")
 
-		saynn("Eliza soon returns, holding.. two ice-creams in her paws. She hands one to you and one to Alex.")
+		saynn("Eliza soon returns, holding.. two ice-creams in her hands. She hands one to you and one to Alex.")
 
 		saynn("[say=eliza]Here, thank you so much![/say]")
 

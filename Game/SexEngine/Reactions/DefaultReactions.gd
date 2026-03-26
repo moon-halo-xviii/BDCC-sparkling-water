@@ -3702,10 +3702,10 @@ func getLines(_reaction:int, _role:int, _args:Array):
 						"Some love for the balls.",
 						"Look at you, all worked up under my {main.feet}.",
 						"You like it when I rub your balls like this?",
-						"Can’t resist my paws, can you?",
+						"Can’t resist my feet, can you?",
 						"These little balls are begging for it.",
 						"Don’t get too cocky, I’m in charge here.",
-						"Paws on your balls, and you’re melting.",
+						"Toes on your balls, and you’re melting.",
 						"Those balls are twitching under my touch.",
 						"Play nice or my {main.feet} get rough.",
 					])

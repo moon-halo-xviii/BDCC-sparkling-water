@@ -7,14 +7,14 @@ func _init():
 	npcBaseLust = 120
 	npcCharacterType = CharacterType.Guard
 	
-	pickedSkin="FerriSkin"
-	pickedSkinRColor=Color("ff007e91")
-	pickedSkinGColor=Color("ffd0e4e3")
-	pickedSkinBColor=Color("ff000000")
+	pickedSkin="LuxeSkin"
+	pickedSkinRColor=Color("ffa87a59")
+	pickedSkinGColor=Color("ffa87a59")
+	pickedSkinBColor=Color("ff8f6345")
 	npcSkinData={
 	"hair": {"r": Color("ff003e6f"),"g": Color("ff113c5e"),"b": Color("ff00335c"),},
-	"ears": {"g": Color("ffff5858"),},
-	"penis": {"g": Color("ffc31919"),"b": Color("ffd0501e"),},
+	"penis": {"skin": "felinescarred", "g": Color("ffa16954"),"b": Color("ffc9c9c9"),},
+	"breasts": {"skin": "MonsterGirl", "g": Color("ff604133")}
 	}
 	
 	npcLustInterests = {
@@ -109,10 +109,10 @@ func getPronounGender():
 	return Gender.Female
 	
 func getSmallDescription() -> String:
-	return "A very tall lynx with cyan fur. Usually wears her bulky guard armor. Her feline face features a huge amount of piercings"
+	return "A very tall and strong woman with navy blue hair. Usually wears her bulky guard armor. Has a huge amount of facial piercings"
 
 func getSpecies():
-	return ["feline"]
+	return ["human"]
 
 func _getAttacks():
 	return ["aitaunthumiliate", "stunbatonAttack", "stunbatonStrongAttack", "biteattack", "simplekickattack", "shoveattack", "trygetupattack"]
@@ -129,10 +129,10 @@ func getFemininity() -> int:
 func createBodyparts():
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("overeyehair"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("lynxears2"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("humanbreasts")
 	breasts.size = 8
@@ -142,7 +142,6 @@ func createBodyparts():
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("vagina"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("shorttail"))
 
 func reactRestraint(restraintType, restraintAmount, isGettingForced):
 	if(!isGettingForced):
@@ -197,9 +196,9 @@ func reactRestraint(restraintType, restraintAmount, isGettingForced):
 			"Don't make me mad",
 			"You can't win like this",
 			"Fight me instead of this shit",
-			"I'm a huge cat, you can't tie me up",
+			"I'm a huge motherfucker, you can't tie me up",
 		])
 	return null
 
 func getDefaultEquipment():
-	return ["GuardArmor", "RishaPiercings"]
+	return ["GuardArmor", "HumanPiercings"]

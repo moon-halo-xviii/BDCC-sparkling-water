@@ -42,7 +42,7 @@ func _run():
 
 		saynn("[say=pc]Quinn?[/say]")
 
-		saynn("She huffs as her hind paws suddenly begin to change shape, toes losing their definition.. until they merge into two bulky hooves. A sinuous, spaded tail unfurls behind her, flicking with dangerous energy.")
+		saynn("She huffs as her feet suddenly begin to change shape, toes losing their definition.. until they merge into two bulky hooves. A sinuous, spaded tail unfurls behind her, flicking with dangerous energy.")
 
 		saynn("So fast.. she said that it would take days.. and yet.. here she is.")
 
@@ -93,7 +93,7 @@ func _run():
 
 		saynn("[say=eliza]You're lucky I'm in a good mood.[/say]")
 
-		saynn("Her flexible tail pulls you forward, towards her crotch.. until your lips are inches away from her lace panties. Her paws grab your wrists and raise them higher, above your head.")
+		saynn("Her flexible tail pulls you forward, towards her crotch.. until your lips are inches away from her lace panties. Her hands grab your wrists and raise them higher, above your head.")
 
 		saynn("[say=eliza]Think I should keep you?[/say]")
 
@@ -171,7 +171,7 @@ func _run():
 		addButton("Continue", "See what happens next", "after_lick_undo_tf")
 	if(state == "after_lick_undo_tf"):
 		playAnimation(StageScene.Duo, "stand", {npc="eliza"})
-		saynn("Whatever Eliza ate, it seems to have an opposite effect to DemoniX. Her horns begin to retract back into her skull, getting smaller and smaller. Her pointy tail morphs, getting a bit shorter, losing its sharp tip and growing fur.. her hooves go away, replaced by the digitigrade hind paws. Her body loses some of its curviness..")
+		saynn("Whatever Eliza ate, it seems to have an opposite effect to DemoniX. Her horns begin to retract back into her skull, getting smaller and smaller. Her pointy tail morphs, getting a bit shorter, losing its sharp tip and growing fur.. her hooves go away, replaced by human feet. Her body loses some of its curviness..")
 
 		saynn("[say=eliza]Mmhh..[/say]")
 
@@ -204,7 +204,7 @@ func _run():
 
 		saynn("[say=eliza]Really~?[/say]")
 
-		saynn("Her clawed paws reach for her clothing.. and begin stripping it. Her labcoat, her top, her pencil skirt, all fall down to the floor. Even her fancy black lingerie doesn't survive it and experience the same fate.")
+		saynn("Her clawed hands reach for her clothing.. and begin stripping it. Her labcoat, her top, her pencil skirt, all fall down to the floor. Even her fancy black lingerie doesn't survive it and experience the same fate.")
 
 		saynn("Her alluring curves, her gorgeous six-pack, her busty chest, wide hips and a firm ass, it's all out on display.. as well as her moist demon pussy. The scent of her arousal is making your head spin slightly even from a distance.")
 
@@ -223,7 +223,7 @@ func _run():
 		addButton("Continue", "See what happens next", "resist_table")
 	if(state == "resist_table"):
 		playAnimation(StageScene.SexOralTable, "tease", {pc="elizaDemon", npc="pc", bodyState={naked=true}})
-		saynn("But before you can react, Eliza dashes towards you with demonic speed, her claws catching your wrists in an iron grip. She pushes you backward with inhuman strength, shoving you onto the procedure table. You struggle against her.. but she is far too strong, her clawed paws pinning you down.")
+		saynn("But before you can react, Eliza dashes towards you with demonic speed, her claws catching your wrists in an iron grip. She pushes you backward with inhuman strength, shoving you onto the procedure table. You struggle against her.. but she is far too strong, her clawed hands pinning you down.")
 
 		saynn("[say=pc]Agh.. How are you..[/say]")
 
@@ -307,7 +307,7 @@ func _run():
 
 		saynn("[say=eliza]Should I.. I'm so sexy right now..[/say]")
 
-		saynn("She looks down at herself, at her clawed paws, at her strong hooves, at her curvy hips.. one of her paws reaches up high to her horns and gives them a small rub. But even that is enough to send shivers through her.")
+		saynn("She looks down at herself, at her clawed hands, at her strong hooves, at her curvy hips.. one of her hands reaches up high to her horns and gives them a small rub. But even that is enough to send shivers through her.")
 
 		saynn("[say=eliza]Oh.. that feels so strange.[/say]")
 
@@ -320,7 +320,7 @@ func _run():
 		addButton("Continue", "See what happens next", "resist_grind_after_undotf")
 	if(state == "resist_grind_after_undotf"):
 		playAnimation(StageScene.SexOralTable, "tease", {pc="eliza", npc="pc"})
-		saynn("Whatever Eliza ate, it seems to have an opposite effect to DemoniX. Her horns begin to retract back into her skull, getting smaller and smaller. Her pointy tail morphs, getting a bit shorter, losing its sharp tip and growing fur.. her hooves go away, replaced by the digitigrade hind paws. Her body loses some of its curviness..")
+		saynn("Whatever Eliza ate, it seems to have an opposite effect to DemoniX. Her horns begin to retract back into her skull, getting smaller and smaller. Her pointy tail morphs, getting a bit shorter, losing its sharp tip and growing fur.. her hooves go away, replaced by human feet. Her body loses some of its curviness..")
 
 		saynn("[say=eliza]Mmhh..[/say]")
 

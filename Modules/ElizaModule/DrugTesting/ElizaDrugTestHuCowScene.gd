@@ -65,7 +65,7 @@ func _run():
 
 		saynn("[say=eliza]So heavy.. hah..[/say]")
 
-		saynn("Her paws squeeze the fun bags slightly, making them squirt milk.")
+		saynn("Her hands squeeze the fun bags slightly, making them squirt milk.")
 
 		saynn("[say=eliza]Ah.. Feels kinda good.[/say]")
 
@@ -83,7 +83,7 @@ func _run():
 
 		saynn("[say=pc]Why not?[/say]")
 
-		saynn("Her paws keep cupping and kneading her chest.")
+		saynn("Her hands keep cupping and kneading her chest.")
 
 		saynn("[say=eliza]Because of these.. huge.. milky.. tits.. So heavy.. nips are itching..[/say]")
 

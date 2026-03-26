@@ -26,9 +26,9 @@ func _run():
 		
 		saynn("[say=captain]Stand on the line. Good. You better start learning how to follow orders, a very useful skill.[/say]")
 		
-		saynn("You take a good look at the people before, the officer is a medium-sized, about 1.7 meters tall, canine with very dark, almost black, fur. He has blue eyes and a short fancy haircut, slowly swishing behind him is a black canine tail. He sports bulky shoes, tight black pants, leather belt with some pouches and a dark blue military jacket with a bright glowing trim to it, everything just screams formal. The only armor he has are the carbon shoulder pads with the same bright trim.")
+		saynn("You take a good look at the people ahead. The officer is a medium-sized man, about 1.7 meters tall, his chin raised as he looks down on the inmates standing before him. He has blue eyes and a short fancy haircut, sporting blue highlights in his otherwise very dark hair. He sports bulky shoes, tight black pants, leather belt with some pouches and a dark blue military jacket with a bright glowing trim to it, everything just screams formal. The only armor he has are the carbon shoulder pads with the same bright trim.")
 		
-		saynn("Behind the officer is a very tall guard, more than 2 meters tall. You notice her face to be feminine but considering how much heavy armor she is carrying she must be quite strong. Her fur is of a strange dark-cyan color, the face features show that she is some kind of feline, ears have tassels on them and behind her is a very short tail. You notice that she holds a weapon, something that looks like a stun baton.")
+		saynn("Behind the officer is a very tall guard, more than 2 meters tall. Considering how much heavy armor she's carrying, she must be quite strong. Then again, she'd probably have to be a bit hardy to stand up without toppling over, given how massive her breasts are. Her hair is of a dark navy color - blue seems to be in vogue around here - and her face is decorated with numerous metallic piercings. You notice that she holds a weapon, something that looks like a stun baton.")
 		
 		saynn("The officer crosses his arms, he is about a meter away so you clearly see the nameplate on his jacket saying “Wright”.")
 
@@ -59,7 +59,7 @@ func _run():
 	if(state == "shoveaway"):
 		playAnimation(StageScene.Solo, "shove")
 		
-		saynn("You slap his arm away and shove him back. You growl and bare your fangs.")
+		saynn("You slap his arm away and shove him back. You growl and bare your teeth.")
 		
 		saynn("[say=pc]Don’t touch me. And I won’t tell you anything.[/say]")
 
@@ -333,7 +333,11 @@ func _react_scene_end(_tag, _result):
 			addExperienceToPlayer(20)
 
 func getDevCommentary():
-	return "So this is probably the earliest actual written scene if you don't count the fighting one ^^. If you ever been on RRDC, a place in second life, you will find all of this very familiar.. Because this is pretty much how intakes work in there x3. RRDC is basically a place for rp if you didn't know. I will be honest, I just wanted to turn that rp place into a game x3. Why? To tell my own stories I guess.. I only copied the prison idea itself, all the lore and characters and stories are fully written by me.\n\nBut yeah ^^. This scene introduces you to the captain, probably one of the most powerful people on the station. So of course he has to be kind ^^. But also strict and all that. He is balanced out by his bloodthirsty hornythirsty guard Risha. Risha is a bitch x3 she is clearly enjoying the power she has over inmates. Would be cool to maybe write some content for her where you somehow set her up, making it so she is caught and turned into an inmate herself. But that would require so much thinking.. I basically have to write 2 games then, where Risha is guard or inmate. And that sounds ehhhhhhh.. would be cool though"
+	var devCom = "So this is probably the earliest actual written scene if you don't count the fighting one ^^. If you ever been on RRDC, a place in second life, you will find all of this very familiar.. Because this is pretty much how intakes work in there x3. RRDC is basically a place for rp if you didn't know. I will be honest, I just wanted to turn that rp place into a game x3. Why? To tell my own stories I guess.. I only copied the prison idea itself, all the lore and characters and stories are fully written by me.\n\nBut yeah ^^. This scene introduces you to the captain, probably one of the most powerful people on the station. So of course he has to be kind ^^. But also strict and all that. He is balanced out by his bloodthirsty hornythirsty guard Risha. Risha is a bitch x3 she is clearly enjoying the power she has over inmates. Would be cool to maybe write some content for her where you somehow set her up, making it so she is caught and turned into an inmate herself. But that would require so much thinking.. I basically have to write 2 games then, where Risha is guard or inmate. And that sounds ehhhhhhh.. would be cool though"
+	
+	var newCom = "MOON_HALO: Going into this, I thought most of the NPCs were going to be a breeze to turn into humans. Then I got to Risha's face piercings. I know Risha is often a big pain in the ass (both figuratively and literally), but I wasn't expecting to have to rig new jewelry to go with her new head. Sure, the way I arranged some of them might not exactly line up with how her human portrait is drawn, but I think it looks better on the scene doll this way instead of trying to match the liberties I took with her portrait."
+
+	return "\n\n".join([devCom, newCom])
 
 func hasDevCommentary():
 	return true

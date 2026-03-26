@@ -53,7 +53,7 @@ func _run():
 
 		saynn("[say=eliza]Nah, I'm taking you to the staff bar.. And don't worry, you're my assistant, you can be there.[/say]")
 
-		saynn("Her paw pulls a chain leash.")
+		saynn("She pulls out a chain leash.")
 
 		saynn("[say=eliza]As long as you have this clipped to your collar~.[/say]")
 

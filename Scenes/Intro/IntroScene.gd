@@ -21,7 +21,7 @@ func _run():
 
 		saynn("[say=intro_detective]Come in and take a seat.[/say]")
 
-		saynn("You look at him, the [b]guy has clear canine features[/b] and a wolf mane, behind him is a fluffy tail. [b]You decide to step inside[/b]. It’s a well-lit small room with just a table, two metal chairs and a security camera in the corner. Panic is still there, the guy pushes you in slightly and locks the door behind him before sitting down on one of the chairs himself and watching you.")
+		saynn("You look at him, the [b]guy has worn, serious features[/b]: deep wrinkles, graying hair, and light bags under his eyes. [b]You decide to step inside[/b]. It’s a well-lit small room with just a table, two metal chairs and a security camera in the corner. Panic is still there, the guy pushes you in slightly and locks the door behind him before sitting down on one of the chairs himself and watching you.")
 
 		addButton("Take a seat", "Well, what else is there to do", "take_a_sit")
 
@@ -30,11 +30,11 @@ func _run():
 		setLocationName("Interrogation room")
 		playAnimation(StageScene.Solo, "sit")
 		
-		saynn("You sit on the second chair, the one that is further from the only exit. You take a better look at the guy. He is clearly a wolf, quite tall, in his forties, gray fur, black pants and a white t-shirt.")
+		saynn("You sit on the second chair, the one that is further from the only exit. You take a better look at the guy. He is quite tall, in his forties, wearing black pants, a white t-shirt, and half frame reading glasses. His belt is equipped with a gun holster, a radio, and some other pouches.")
 
 		saynn("[say=intro_detective]Name is Jake, IIPF, threat assessment division. If you want some water let me know, I can bring a bottle for you.[/say]")
 
-		saynn("[b]Your head is still fuzzy[/b], you could clearly use some water but you shake your head and refuse. The wolf’s voice seems quite calm, his eyes do follow your motions but he is mostly relaxed in the chair.")
+		saynn("[b]Your head is still fuzzy[/b], you could clearly use some water but you shake your head and refuse. The cop’s voice seems quite calm, his eyes do follow your motions but he is mostly relaxed in the chair.")
 
 		saynn("[say=intro_detective]No? Got it, just wanna make sure you have everything. I will ask you some questions if that’s okay. You’re not under arrest and are free to leave at any point. But I would really appreciate your cooperation, we need information.[/say]")
 
@@ -97,7 +97,7 @@ func _run():
 
 		saynn("[say=pc]How can you be so sure?[/say]")
 
-		saynn("The wolf sighs.")
+		saynn("The detective sighs.")
 
 		saynn("[say=intro_detective]We've been doing this for hundreds of years. I've been in the police force for 20 years. Minds are predictable, there are no secrets left anymore.[/say]")
 
@@ -133,7 +133,7 @@ func _run():
 
 		saynn("[say=pc]Hey! What is that.[/say]")
 
-		saynn("He doesn’t stop, he tries to swiftly inject it into your neck but you shove him away. And then again. He shows his fangs and growls at you before lunging forward and grabbing your arms. He is strong, you can only push him away so long before he overpowers you. [b]You feel a prick[/b]. Ow. What a fucker. Jake puts the used thing away and leaves you alone, taking a seat again. You’re still angry but.. [b]your head starts to feel.. light..[/b]")
+		saynn("He doesn’t stop, he tries to swiftly inject it into your neck but you shove him away. And then again. He bares his teeth and growls at you before lunging forward and grabbing your arms. He is strong, you can only push him away so long before he overpowers you. [b]You feel a prick[/b]. Ow. What a fucker. Jake puts the used thing away and leaves you alone, taking a seat again. You’re still angry but.. [b]your head starts to feel.. light..[/b]")
 
 		saynn("[say=intro_detective]It’s called truth serum. You made me do it, {pc.name}[/say]")
 
@@ -150,7 +150,7 @@ func _run():
 	if(state == "admit"):
 		saynn("[say=pc]Fine.. I will tell you everything.[/say]")
 
-		saynn("Wolf nods.")
+		saynn("Jake nods.")
 
 		saynn("[say=intro_detective]I’m listening. Can go as slow as you want, you’re in a safe environment.[/say]")
 		
@@ -189,7 +189,7 @@ func _run():
 
 		saynn("[say=pc]I needed it quick, okay? Not everyone is privileged, not everyone has rich parents or was born in a good place on a wealthy planet. You have no right to judge me. I saw the only opportunity and I took it. Yes, I stole the money, I did it. I’m a thief, criminal, thug, whatever you wanna call me. Try wearing my shoes first. I didn’t kill anyone or ruin anyone’s life.[/say]")
 
-		saynn("The wolf carefully listens to you, his posture is relaxed, his hand rubs his chin.")
+		saynn("The detective carefully listens to you, his posture is relaxed, his hand rubs his chin.")
 
 		saynn("[say=intro_detective]Mhm. I trust you, I really do. I don’t agree with you but I trust you. Yes, you didn’t ruin someone’s life, you just made it worse, you stole their money, made them feel worse and right now the government has to spend money on you as well. In the end you made this world slightly worse, you’re a net negative. Objectively speaking you are a criminal and you knew exactly what you were doing. You really wanted money you didn’t earn so you’re trying to justify this crime in your head.[/say]")
 
@@ -206,7 +206,7 @@ func _run():
 
 		saynn("[say=intro_detective]You really think so?[/say]")
 
-		saynn("Your eyes glow with hatred, you wanna stand up and punch something but the wolf makes you sit again.")
+		saynn("Your eyes glow with hatred, you wanna stand up and punch something but the cop makes you sit again.")
 
 		saynn("[say=pc]I made the world better, okay? I shouldn’t even be here, I’m not a danger to anyone, I got my revenge.[/say]")
 
@@ -273,7 +273,7 @@ func _run():
 
 		saynn("[say=intro_detective]This is a trial. The judges made their decision. Soon you will be relocated into the facility called Broken Dreams Correctional Center where you will be serving the punishment. Your sentence is…[/say]")
 
-		saynn("He looks at the tablet again and takes a short pause.")
+		saynn("He looks at the tablet again, adjusting his glasses, and takes a short pause.")
 
 		saynn("[say=intro_detective]Indefinite.[/say]")
 
@@ -377,7 +377,11 @@ func _react_scene_end(_tag, _result):
 		setState("donecreating")
 
 func getDevCommentary():
-	return "Heya, today is the 16th of May, 2023, the day that I (Rahi) added support for developer commentary ^^\n\nThis might be the first one you read.. or not.. depends on if you started a new game after turning that option on. But I will try to make these readable out of order so no worries ^^.\n\nWhy did I add this? Isn't this a waste of my time? Isn't this a waste of your time? I dunno, I just felt like adding this.. I like to ramble sometimes and, since my game brings up lots of topics, dark or not, there is a lot to talk about ^^\n\nWill this waste my time and keep you from getting more content? Ideally it shouldn't. Here is a spoiler for you, I only work on my game for a few hours a day x3, usually about 3-4 hours. So like, finishing the work day and then just spilling my thoughts out into the commentary of some scene could be a nice way to.. stay balanced.. I dunno.\n\nI just wanna.. explain some of my choices in these, you know? So expect spoilers in these, lots of them x3\n\nBut yeah. Fun fact, this whole scene was actually rewritten just before I posted the first public version. It was worse before, trust me x3.\n\nI watched a lot of JCS - Criminal Psychology videos on youtube back then and I kinda wanted the game to start with you getting interrogated by seemingly a kind/understanding cop that then suddenly turns into a 'bad cop'. I think it's a good way to introduce the players to this dark world.. get them immersed.. or something."
+	var devCom = "Heya, today is the 16th of May, 2023, the day that I (Rahi) added support for developer commentary ^^\n\nThis might be the first one you read.. or not.. depends on if you started a new game after turning that option on. But I will try to make these readable out of order so no worries ^^.\n\nWhy did I add this? Isn't this a waste of my time? Isn't this a waste of your time? I dunno, I just felt like adding this.. I like to ramble sometimes and, since my game brings up lots of topics, dark or not, there is a lot to talk about ^^\n\nWill this waste my time and keep you from getting more content? Ideally it shouldn't. Here is a spoiler for you, I only work on my game for a few hours a day x3, usually about 3-4 hours. So like, finishing the work day and then just spilling my thoughts out into the commentary of some scene could be a nice way to.. stay balanced.. I dunno.\n\nI just wanna.. explain some of my choices in these, you know? So expect spoilers in these, lots of them x3\n\nBut yeah. Fun fact, this whole scene was actually rewritten just before I posted the first public version. It was worse before, trust me x3.\n\nI watched a lot of JCS - Criminal Psychology videos on youtube back then and I kinda wanted the game to start with you getting interrogated by seemingly a kind/understanding cop that then suddenly turns into a 'bad cop'. I think it's a good way to introduce the players to this dark world.. get them immersed.. or something."
+
+	var newCom = "MOON_HALO: On top of de-wolfing Jake, I added some extra details to the prose: introducing his belt before he pulls out the injector, having him fiddle with his glasses, playing on his appearance a little. I'm trying to conserve as much of Rahi's writing as possible, but a few extra touches couldn't hurt, right? I like what the detective character brings to this scene. And yes, he still growls, even though he's not a wolf anymore."
+
+	return "\n\n".join([devCom, newCom])
 
 func hasDevCommentary():
 	return true

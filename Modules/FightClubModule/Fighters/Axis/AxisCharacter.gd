@@ -3,14 +3,12 @@ extends Character
 func _init():
 	id = "axis"
 	
-	pickedSkin="WoonaSkin"
-	pickedSkinRColor=Color("ffefefef")
-	pickedSkinGColor=Color("ffdfdfdf")
-	pickedSkinBColor=Color("ffe6e6e6")
+	pickedSkin="HumanSkin"
+	pickedSkinRColor=Color("fff8efda")
+	pickedSkinGColor=Color("ffded6c3")
+	pickedSkinBColor=Color("fffff6e0")
 	npcSkinData={
-	"head": {"b": Color("ff232323"),},
 	"hair": {"r": Color("ffffffff"),"g": Color("ffd3d3d3"),"b": Color("ffa9a9a9"),},
-	"penis": {"g": Color("ffff0000"),"b": Color("ff8b0000"),},
 	}
 	
 	npcLevel = 12
@@ -72,16 +70,16 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Muscular white wolf with red eyes. Wears lilac uniform"
+	return "Muscular guy with red eyes. Wears lilac uniform"
 
 func getSpecies():
-	return ["canine"]
+	return ["human"]
 
 func _getAttacks():
 	return ["simplepunchattack", "simplekickattack", "biteattack", "AxisTaunt", "AxisGrab", "trygetupattack"]
 
 func getFightIntro(_battleName):
-	var mes = "The wolf waves to the crowd, he is tall and looks strong, the lilac uniform looks strange on him. He then bows to you before offering you a playful smirk."
+	var mes = "Axis waves to the crowd, he is tall and looks strong, the lilac uniform looks strange on him. He then bows to you before offering you a playful smirk."
 	mes += "\n\n"
 	mes += "[say=axis]Hey there~. I must admit, you are quite a courageous person to come here.[/say]"
 	mes += "\n\n"
@@ -101,21 +99,20 @@ func getFemininity() -> int:
 	return 0
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("wolfhead"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("wolfears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("baldhair"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
 	breasts.size = -1
 	giveBodypartUnlessSame(breasts)
-	var penis = GlobalRegistry.createBodypart("caninepenis")
+	var penis = GlobalRegistry.createBodypart("humanpenis")
 	penis.lengthCM = 25
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("caninetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 
 func getDefaultEquipment():
 	return ["inmatecollar", "inmateuniformSexDeviant"]

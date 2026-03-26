@@ -8,15 +8,14 @@ func _init():
 	npcBaseLust = 120
 	npcCharacterType = CharacterType.Inmate
 	
-	pickedSkin="LynxSkin"
-	pickedSkinRColor=Color("ffab472b")
+	pickedSkin="HumanSkin"
+	pickedSkinRColor=Color("ffad6e5c")
 	pickedSkinGColor=Color("ffe7b686")
-	pickedSkinBColor=Color("ff7a2a13")
+	pickedSkinBColor=Color("ff2e1d18")
 	npcSkinData={
 	"hair": {"r": Color("ffd42eb4"),"g": Color("ff00ff6c"),"b": Color("ffe105ff"),},
-	"arms": {"skin": "MonsterGirl",},
-	"tail": {"skin": "MonsterGirl",},
-	"legs": {"skin": "MonsterGirl",},
+	"arms": {"skin": "TribalSkin", "g": Color("ffad6e5c")},
+	"legs": {"skin": "TribalSkin", "g": Color("ffcf8578")},
 	}
 	
 	npcLustInterests = {
@@ -90,10 +89,10 @@ func getGender():
 	return Gender.Female
 	
 func getSmallDescription() -> String:
-	return "A tall horse from the red block. Looks very buff for a female, thick body, clearly defined muscles, huge tits."
+	return "A tall gal from the red block. Looks very buff for a woman, thick body, clearly defined muscles, huge tits."
 
 func getSpecies():
-	return ["equine"]
+	return ["human"]
 
 func _getAttacks():
 	return ["StrongPunch", "RebelThrow", "RebelTaunt", "RebelPin", "trygetupattack"]
@@ -119,7 +118,7 @@ func getFemininity() -> int:
 
 func createBodyparts():
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("mohawkhair"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horseears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("humanbreasts")
@@ -127,9 +126,8 @@ func createBodyparts():
 	giveBodypartUnlessSame(breasts)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("vagina"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horsetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("hoofs"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horsehead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 
 func getLootTable(_battleName):
 	return InmateLoot.new()

@@ -4,13 +4,14 @@ func _init():
 	id = "captain"
 	npcCharacterType = CharacterType.Generic
 	
-	pickedSkin="FerriSkin"
-	pickedSkinRColor=Color("ff404040")
-	pickedSkinGColor=Color("ff545454")
-	pickedSkinBColor=Color("ff545454")
+	pickedSkin="HumanSkin"
+	pickedSkinRColor=Color("ffeac3a9")
+	pickedSkinGColor=Color("ffe6bfa5")
+	pickedSkinBColor=Color("ffedcfbb")
 	npcSkinData={
+	"head": {"skin": "FerriSkin"},
 	"hair": {"r": Color("ff252525"),"g": Color("ff252525"),"b": Color("ff001384"),},
-	"ears": {"g": Color("ffe3776f"),},
+	"ears": {"g": Color("ff997f6e"),"b": Color("ffb59782")},
 	}
 	
 	npcLevel = 50
@@ -78,10 +79,10 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Canine with black fur. Very formal clothing"
+	return "The man in charge. Black hair with blue accents. Very formal clothing"
 
 func getSpecies():
-	return ["canine"]
+	return ["human"]
 
 func _getAttacks():
 	return ["CapEnergyBlast", "CapTacticalStrike", "CapDisablingShot", "CapRapidFire", "CapTakeAim", "CapEvasiveManeuver", "trygetupattack"]
@@ -99,10 +100,9 @@ func createBodyparts():
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
 	breasts.size = -1
 	giveBodypartUnlessSame(breasts)
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("caninetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("canineears"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("caninehead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("combedbackhair"))
 
 func getDefaultEquipment():

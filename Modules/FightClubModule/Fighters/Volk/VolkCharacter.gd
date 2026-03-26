@@ -8,13 +8,13 @@ func _init():
 	npcBaseLust = 100
 	npcCharacterType = CharacterType.Inmate
 	
-	pickedSkin="WoonaSkin"
-	pickedSkinRColor=Color("ff868686")
-	pickedSkinGColor=Color("ff3b3b3b")
-	pickedSkinBColor=Color("ffcbcbcb")
+	pickedSkin="HumanSkin"
+	pickedSkinRColor=Color("fff2e6d6")
+	pickedSkinGColor=Color("ffd6cbbc")
+	pickedSkinBColor=Color("fffff2e0")
 	npcSkinData={
 	"hair": {"r": Color("ffffffff"),"g": Color("ffd3d3d3"),"b": Color("ffa9a9a9"),},
-	"penis": {"g": Color("ff732a2a"),"b": Color("ffd14747"),},
+	"head": {"skin": "WildSkin", "b": Color("ffcc6654")}
 	}
 	
 	npcLustInterests = {
@@ -92,7 +92,7 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "A male canine from the general block. Gray fur, short height, lots of scars"
+	return "An Eastern European guy from the general block. Gray fur, short height, lots of scars"
 
 func getSpecies():
 	return ["canine"]
@@ -121,21 +121,20 @@ func getFemininity() -> int:
 	return 30
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("wolfhead"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("wolfears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("messyhair"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
 	breasts.size = -1
 	giveBodypartUnlessSame(breasts)
-	var penis = GlobalRegistry.createBodypart("caninepenis")
+	var penis = GlobalRegistry.createBodypart("humanpenis")
 	penis.lengthCM = 15
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("caninetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 
 func getLootTable(_battleName):
 	var loot = InmateLoot.new()

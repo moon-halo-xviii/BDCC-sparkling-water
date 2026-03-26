@@ -69,7 +69,7 @@ func _run():
 
 		saynn("[say=eliza]Alright, I will find a willing test subject myself then~.[/say]")
 
-		saynn("Her clawed paw puts the pill away.")
+		saynn("She stashes the pill away into one of her pockets.")
 
 		saynn("[say=eliza]But if you find one first, test this pill on them and bring them here. You will have to wait until the transformation reaches its final stage of course. There is not much point otherwise.[/say]")
 
@@ -79,7 +79,7 @@ func _run():
 
 		addButton("Continue", "See what happens next", "endthescene")
 	if(state == "eat_no_effect"):
-		saynn("What could go wrong.. You grab the pill from Eliza's paw.. and throw it into your mouth.")
+		saynn("What could go wrong.. You grab the pill from Eliza's palm.. and throw it into your mouth.")
 
 		saynn("[say=eliza]"+str(RNG.pick(["So eager~.", "Love the enthusiasm~.", "That's it~.", "I didn't even had to convince you~.", "If only all test subjects were like you~."]))+"[/say]")
 
@@ -103,7 +103,7 @@ func _run():
 
 		addButton("Continue", "See what happens next", "endthescene")
 	if(state == "eat_has_effect"):
-		saynn("What could go wrong.. You grab the pill from Eliza's paw.. and throw it into your mouth.")
+		saynn("What could go wrong.. You grab the pill from Eliza's palm.. and throw it into your mouth.")
 
 		saynn("[say=eliza]"+str(RNG.pick(["So eager~.", "Love the enthusiasm~.", "That's it~.", "I didn't even had to convince you~.", "If only all test subjects were like you~."]))+"[/say]")
 

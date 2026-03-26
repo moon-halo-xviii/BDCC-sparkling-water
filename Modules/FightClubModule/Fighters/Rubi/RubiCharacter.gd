@@ -8,13 +8,14 @@ func _init():
 	npcBaseLust = 50
 	npcCharacterType = CharacterType.Inmate
 	
-	pickedSkin="SoftSpikySkin"
-	pickedSkinRColor=Color("ffeaeeec")
-	pickedSkinGColor=Color("ffa5b9b0")
-	pickedSkinBColor=Color("ff125437")
+	pickedSkin="SmuttySkin"
+	pickedSkinRColor=Color("ffe8d2a9")
+	pickedSkinGColor=Color("ffe8d2a9")
+	pickedSkinBColor=Color("ff585e5d")
 	npcSkinData={
 	"hair": {"r": Color("ff6f847f"),"g": Color("ff74968e"),"b": Color("ffa9a9a9"),},
-	"penis": {"g": Color("ff25ed6c"),"b": Color("ff8b0000"),},
+	"head": {"b": Color("ffd872b8")},
+	"body": {"b": Color("ffd872b8")},
 	}
 	
 	npcLustInterests = {
@@ -96,10 +97,10 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Slim lilac femboy. His feline body is of a medium height and is quite fit, narrow shoulders, wide hips."
+	return "Slim lilac femboy. His petite body is of a medium height and is quite fit, narrow shoulders, wide hips."
 
 func getSpecies():
-	return ["feline"]
+	return ["human"]
 
 func _getAttacks():
 	return ["simplepunchattack", "simplekickattack", "shoveattack", "trygetupattack"]
@@ -122,21 +123,20 @@ func getFemininity() -> int:
 	return 40
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("longhair"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthroarms"))
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
 	breasts.size = -1
 	giveBodypartUnlessSame(breasts)
-	var penis = GlobalRegistry.createBodypart("felinepenis")
+	var penis = GlobalRegistry.createBodypart("humanpenis")
 	penis.lengthCM = 15
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 
 func getLootTable(_battleName):
 	return InmateLoot.new()

@@ -29,7 +29,7 @@ func _run():
 
 		saynn("[say=kait]Then just don’t stand in a way?.. I don’t wanna fight you, I wanna fight them, the corrupt evil fuckers that rule over us like we’re slaves.[/say]")
 
-		addDisabledButton("Join", "Begin the Team Escape route (not done, sorry)")
+		addButton("Join", "Begin the Team Escape route. Took long enough!", "fakeout")
 		addButton("Just leave", "You don’t feel like doing anything with her", "just_leave")
 		addButton("Beat her up", "(brutal noncon) She is just a lilac slut, no need to listen to her", "beat_her_up")
 		GM.ES.triggerRun("ArenaFighterPCWon", ["kait"])
@@ -37,7 +37,7 @@ func _run():
 	if(state == "just_leave"):
 		saynn("[say=pc]Your idea seems pretty bad. Look around. It’s a fortress. Just learn to live here.[/say]")
 
-		saynn("Kait growls and shows off her fangs.")
+		saynn("Kait growls and bares her teeth.")
 
 		saynn("[say=kait]What if I don’t wanna? I’m not gonna give up no matter what.[/say]")
 
@@ -56,15 +56,15 @@ func _run():
 
 		saynn("[say=pc]You know what I’m wondering about, Kait?[/say]")
 
-		saynn("She glares at you and extends her claws.")
+		saynn("She glares at you and raises her hands up to her chest.")
 
 		saynn("[say=kait]What?[/say]")
 
 		saynn("You crouch before her and tilt your head to the side slightly.")
 
-		saynn("[say=pc]Do you purr when you get fucked in the pussy?[/say]")
+		saynn("[say=pc]How loud do you moan when you get fucked in the pussy?[/say]")
 
-		saynn("She growls and reaches her paw to scratch your face. You anticipate that and capture her arm before wrenching it under an unnatural angle, causing lots of discomfort. Kait cries out painfully and shoves her knee into you, managing to push you back. But not without you getting a grasp on her inmate shirt and ripping all the buttons off and exposing her bare chest with cute c-cup tits with perky pink nipples. The crowd cheers as the fight continues.")
+		saynn("She growls and reaches her hand to scratch your face. You anticipate that and capture her arm before wrenching it under an unnatural angle, causing lots of discomfort. Kait cries out painfully and shoves her knee into you, managing to push you back. But not without you getting a grasp on her inmate shirt and ripping all the buttons off and exposing her bare chest with cute c-cup tits with perky pink nipples. The crowd cheers as the fight continues.")
 
 		saynn("[say=kait]Go fuck yourself![/say]")
 
@@ -72,17 +72,17 @@ func _run():
 
 		saynn("Kait slowly gets up and gets into a fighting stance. She looks tired and is still very much cornered between two fences with her shirt being casually spread open. You take your time to recover after her last trick and then begin to slowly creep towards her again.")
 
-		saynn("You decide to give her the initiative and react to what she will do, you’re very much aware of her strong legs. As you close up the distance you notice her preparing a kick and as she goes forward with it, you mastefully avoid her and get a firm grasp on her digitigrade leg. Kait snarls as she tries to free it but is unable to due to her weak state.")
+		saynn("You decide to give her the initiative and react to what she will do, you’re very much aware of her strong legs. As you close up the distance you notice her preparing a kick and as she goes forward with it, you mastefully avoid her and get a firm grasp on her leg. Kait snarls as she tries to free it but is unable to due to her weak state.")
 
 		saynn("[say=pc]Would be a shame to lose one, wouldn’t it?[/say]")
 
-		saynn("Kait gasps as she sees you winding your free arm up before bringing it down, striking the leopard’s exposed knee with your elbow. You hear a crack and then a loud cry, Kait experiences true agony as her leg was almost snapped in half. Adrenaline rushes through her blood. Desperate, she grabs onto the fences with her arms and shoves her healthy leg into your chin with full strength of a furious kitty, sending you back a good few meters. Ow, you feel your jaw misaligned. What a bitch.")
+		saynn("Kait gasps as she sees you winding your free arm up before bringing it down, striking her exposed knee with your elbow. You hear a crack and then a loud cry, Kait experiences true agony as her leg was almost snapped in half. Adrenaline rushes through her blood. Desperate, she grabs onto the fences with her arms and shoves her healthy leg into your chin, sending you back a good few meters. Ow, you feel your jaw misaligned. What a bitch.")
 
 		saynn("Kait, unable to stand on her leg, drops to the floor again, hissing and growling at everything. You slowly get up off the floor and put your hands on your lower jaw before forcing it back into place with a satisfying click, she is not the only one who feels adrenaline.")
 
 		saynn("[say=pc]I can do this all day. While you only have one working leg left. Is it worth it?[/say]")
 
-		saynn("Kait whines and cries out from ugly sensations, her shaky paws rub her half-broken leg, trying to soothe the pain. She sees you being up fast and shows her hatred by growling at you. She uses her arms to push herself up and get up off the ground. She has to stand on one leg, her other is barely touching the floor. The snow leopard doesn’t even care that her breasts are exposed.")
+		saynn("Kait whines and cries out from ugly sensations, her shaky paws rub her half-broken leg, trying to soothe the pain. She sees you being up fast and shows her hatred by growling at you. She uses her arms to push herself up and get up off the ground. She has to stand on one leg, her other is barely touching the floor. The bitch doesn’t even care that her breasts are exposed.")
 
 		saynn("[say=kait]F-Fuck you..[/say]")
 
@@ -95,9 +95,9 @@ func _run():
 			pc="pc", npc="kait", 
 		})
 		
-		saynn("As you get close to her and try to attack her, she tries to kick you again. But it seems like the crowd is tired of seeing her do the same thing, as soon as she grabs onto the fence with her paws, many crowd’s hands slip through the holes in the fences and grab her, pinning Kait’s arms to the fence! Her pupils increase in size, she tries to free herself but only gets her legs grabbed and held in place too, leaving her exposed breasts and chest completely open. She looks at you, her eyes show terror, despair.")
+		saynn("As you get close to her and try to attack her, she tries to kick you again. But it seems like the crowd is tired of seeing her do the same thing, as soon as she grabs onto the fence, many crowd’s hands slip through the holes in the fences and grab her, pinning Kait’s arms to the fence! Her pupils increase in size, she tries to free herself but only gets her legs grabbed and held in place too, leaving her exposed breasts and chest completely open. She looks at you, her eyes show terror, despair.")
 
-		saynn("Of course you're gonna take advantage of that, you prepare a powerful kick and then lunge forward, shoving your leg into the center of Kait’s mass, her torso. When it connects, you hear a sound of cracked ribs and then a loud gasp, your attack knocks all the air out of Kait. As the hands let her go, she slides down to her knees and then collapses onto the ground like a huge sack of meat. She only finds enough strength to curl up and hug herself, sobbing and whining.")
+		saynn("Of course you're gonna take advantage of that, you prepare a powerful kick and then lunge forward, shoving your leg into the center of Kait’s mass, her torso. When it connects, you hear a sound of cracked ribs and then a loud gasp, your attack knocks all the air out of Kait. As the hands let her go, she slides down to her knees and then collapses onto the ground like the huge sack of meat she is. She barely finds enough strength to curl up and hug herself, sobbing and whining.")
 
 		saynn("You look down at her. She is coughing and gasping for air, exposed parts of her body are all covered in bruises, her knee looks red.")
 
@@ -114,7 +114,7 @@ func _run():
 		addButtonWithChecks("Breed her", "(noncon) Might as well stuff some kittens into her", "breed_her", [], [ButtonChecks.HasReachablePenis])
 
 	if(state == "leave_now"):
-		saynn("You loom over the Kait’s body and decide that torturing her won’t be fun anymore. You turn away and climb the nearest fence, leaving her alone. Cats can lick their wounds, she will be fine.")
+		saynn("You loom over the Kait’s body and decide that torturing her won’t be fun anymore. You turn away and climb the nearest fence, leaving her alone. She will be fine... Well, once the crowd is through with her, at least. You can hear the vultures circling behind you...")
 
 		# (scene ends)
 		addButton("Continue", "Time to leave", "endthescene")
@@ -131,7 +131,7 @@ func _run():
 		# (if has cock)
 		if(GM.pc.hasPenis()):
 			if(GM.pc.isWearingChastityCage()):
-				saynn("You stand near Kait’s body and expose your {pc.cock} that’s locked away behind a chastity cage. The urge comes quickly, a stream of warm piss emerges from the tip of your dick and offers the cat on the ground a golden shower. She winces and tries to cover herself but the piss gets everywhere, you make sure to coat her hair, face, exposed tits and her legs with your gross fluids. A puddle of piss is getting bigger under Kait, the way she is panting there is no way she didn’t catch the scent.")
+				saynn("You stand near Kait’s body and expose your {pc.cock} that’s locked away behind a chastity cage. The urge comes quickly, a stream of warm piss emerges from the tip of your dick and offers the whore on the ground a golden shower. She winces and tries to cover herself but the piss gets everywhere, you make sure to coat her hair, face, exposed tits and her legs with your gross fluids. A puddle of piss is getting bigger under Kait, the way she is panting there is no way she didn’t catch the scent.")
 			else:
 				saynn("You stand near Kait’s body and pull out your {pc.cock}. The urge comes quickly, a stream of warm piss emerges from the tip of your dick and offers the cat on the ground a golden shower. She winces and tries to cover herself but the piss gets everywhere, you make sure to coat her hair, face, exposed tits and her legs with your gross fluids. A puddle of piss is getting bigger under Kait, the way she is panting there is no way she didn’t catch the scent.")
 
@@ -180,7 +180,7 @@ func _run():
 
 		saynn("Kait’s legs are shaking, she gets a grasp on the fence before her and just lets it happen. You tightly squeeze one of her tits, leaving a bruise, while thrusting deep inside. Her inner walls were mostly dry so fucking her was hard and painful but Kait’s body slowly starts to betray her, detecting the unwilling intercourse that is happening and getting her penetrated slit prepared.")
 
-		saynn("Her white fluffy tail is wagging like hell, you get a hold of it and wrap it around your hand, using it as a leash, pulling the girl’s ass back to shove your cock deeper, its tip already ramming her cervix, causing more muffled cries. The crowd joins too, they sneak their hands through the holes in the fences and start groping the poor girl, fondling her exposed breasts and caressing her girly hips while you keep abusing her slutty cunt. Your hand moves from squeezing her breasts to holding her throat, applying extra pressure to make breathing next to impossible.")
+		saynn("You get a hold of her torn shirt, looping the fabric under her waist before wrapping it around your hand, pulling the girl’s ass back to shove your cock deeper, its tip already ramming her cervix, causing more muffled cries. The crowd joins too, they sneak their hands through the holes in the fences and start groping the poor girl, fondling her exposed breasts and caressing her girly hips while you keep abusing her slutty cunt. Your hand moves from squeezing her breasts to holding her throat, applying extra pressure to make breathing next to impossible.")
 
 		addButton("Inside", "Stuff Kait’s womb", "inside")
 		addButton("Pull out", "You changed your mind", "pull_out")
@@ -201,11 +201,11 @@ func _run():
 		else:
 			saynn("[say=pc]Here is another load for your cunt.[/say]")
 
-		saynn("While you’re choking Kait, her cunt is clenching so hard around your shaft that you feel like you’re about to cum. And you give in to that feeling, you shove your {pc.cock} balls-deep, breaking through her cervix and proceeding to stuff her womb full of your {pc.cum} as the orgasm overtakes your whole body. The poor kitty squirms and shakes under you as her cunt is getting pumped full of your sticky stuff, her tired eyes roll up, she looks like she is about to lose consciousness.")
+		saynn("While you’re choking Kait, her cunt is clenching so hard around your shaft that you feel like you’re about to cum. And you give in to that feeling, you shove your {pc.cock} balls-deep, breaking through her cervix and proceeding to stuff her womb full of your {pc.cum} as the orgasm overtakes your whole body. The poor girl squirms and shakes under you as her cunt is getting pumped full of your sticky stuff, her tired eyes roll up, she looks like she is about to lose consciousness.")
 
 		saynn("You wait until her slit is properly bred before pulling your messy cock out and wasting the last waves of {pc.cum} by covering her ass and back. Then you finally stop choking her, letting her slowly slide down the fence and spit out her ruined panties as she is coughing for air. Her used cunt is leaking {pc.cum} onto the floor, the crowd keeps fondling and playing with the kneeling slut, preventing her from flopping onto the ground. The view is nice and messy, just like you wanted.")
 
-		saynn("You put your cock away and offer the snow leopard a sarcastic pat on the head. Then you crouch near her and give her scritches under her chin. Kait looks broken, just sobbing quietly and hissing when something hurts, she gives up resisting unknown touches and just holds her paws on her chest and knee.")
+		saynn("You put your cock away and offer her a sarcastic pat on the head. Then you crouch near her and give her scritches under her chin. Kait looks broken, just sobbing quietly and hissing when something hurts, she gives up resisting unknown touches and just holds her paws on her chest and knee.")
 
 		saynn("[say=pc]Next time just spread your legs, whore.[/say]")
 
@@ -227,7 +227,7 @@ func _run():
 
 		saynn("You wait until the last string of your {pc.cum} lands on Kait before you finally stop choking her, letting her slowly slide down the fence and spit out her ruined panties as she is coughing for air. Her stretched cunt is pulsating and slowly closes up, the crowd keeps fondling and playing with the kneeling slut, preventing her from flopping onto the ground. The view is nice and messy, just like you wanted.")
 
-		saynn("You put your cock away and offer the snow leopard a sarcastic pat on the head. Then you crouch near her and give her scritches under her chin. Kait looks broken, just sobbing quietly and hissing when something hurts, she gives up resisting unknown touches and just holds her paws on her chest and knee.")
+		saynn("You put your cock away and offer her a sarcastic pat on the head. Then you crouch near her and give her scritches under her chin. Kait looks broken, just sobbing quietly and hissing when something hurts, she gives up resisting unknown touches and just holds her paws on her chest and knee.")
 
 		saynn("[say=pc]Next time just spread your legs, whore.[/say]")
 
@@ -237,6 +237,20 @@ func _run():
 
 		addButton("Continue", "Time to leave", "endthescene")
 
+	if(state = "fakeout"):
+		addCharacter("inmateMale")
+
+		saynn("Hold on, let her cook.")
+
+		saynn("[say=pc]You really mean that?[/say]")
+
+		saynn("She coughs as she straightens her posture, leaning back on the fence as she looks at you. Then, she gestures around the ring with her arms.")
+
+		saynn("[say=kait]This shit? This is just divide and conquer. Trick us into fighting each other, humiliating one another, making us think that we've gotta take someone else's dignity if we wanna have any. Meanwhile, they take whatever they want, and that's just the way it is. They throw us into this fuck factory, and collectively rape all of us.[/say]")
+
+		saynn("[say=inmateMale]Speak for yourself, slut![/say]")
+
+		saynn("The crowd laughs and jeers; they must be getting bored. Kait flinches,")
 
 func _react(_action: String, _args):
 	if(_action == "piss_on_her"):
@@ -257,3 +271,5 @@ func _react(_action: String, _args):
 
 	setState(_action)
 
+func getDevCommentary():
+	return "MOON_HALO: "

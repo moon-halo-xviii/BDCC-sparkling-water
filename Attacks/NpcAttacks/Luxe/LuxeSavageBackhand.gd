@@ -20,7 +20,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 		addLuxeRage(_attacker, 0.25)
 		return genericDodgeMessage(_attacker, _receiver)
 	
-	var text = "{attacker.name}'s massive paw slams into the side of your head with bone-crushing force, claws slicing into your skin as the world spins violently. Blood spatters against the floor as the pain roars through your skull."
+	var text = "{attacker.name}'s massive fist slams into the side of your head with bone-crushing force, claws slicing into your skin as the world spins violently. Blood spatters against the floor as the pain roars through your skull."
 	
 	if(RNG.chance(50) && _receiver.addEffect(StatusEffect.Bleeding)):
 		text += " [b]You begin to bleed![/b]"

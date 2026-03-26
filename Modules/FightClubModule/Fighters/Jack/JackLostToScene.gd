@@ -19,7 +19,7 @@ func _run():
 
 		saynn("You grab onto his hand and try to pry it off but his grasp is just too powerful. Then you try to strike and kick his chest but he is like a wall, impenetrable to your weak attacks. Jack just nickers at your silly actions.")
 
-		addButtonWithChecks("Offer a condom", "(oral) Maybe the horsie won’t breed you raw", "offer_a_condom", [], [ButtonChecks.HasCondoms])
+		addButtonWithChecks("Offer a condom", "(oral) Maybe the stallion won’t breed you raw", "offer_a_condom", [], [ButtonChecks.HasCondoms])
 		addButton("Breeding", "See what happens next..", "breeding")
 		GM.ES.triggerRun("ArenaFighterPCLost", ["jack"])
 
@@ -35,9 +35,17 @@ func _run():
 
 		saynn("[say=jack]Hah. Ya sure it’ll hold? Although, now I have a different idea.[/say]")
 
-		saynn("Jack grabs your offering and lets go of your collar, letting you hit the floor. You get up to your knees and watch the horse rip the package open and then expose his sheath that houses his cock. The tip of his member is out but that's not enough to put the rubber on.")
+		saynn("Jack grabs your offering and lets go of your collar, letting you hit the floor. You get up to your knees and watch the horse rip the package open and then expose his sheath that houses his cock. Wait... It looks a little weird?...\n\nOh no." )
+
+		saynn("[say=pc][b]I-is that an actual horse cock?![/b][/say]")
+
+		saynn("[say=jack]Don't know why you sound so surprised. I told you I was a stallion.[/say]")
+
+		saynn("Oh god, oh fuck, you were not prepared for this. The tip of his freaky horse member is out, but that's not enough to put the rubber on.")
 
 		saynn("[say=jack]Need ya help here.[/say]")
+
+		saynn("[say=pc]I THOUGHT IT WAS A METAPHOR! HOW DO YOU HAVE A HORSE COCK?![/say]")
 
 		saynn("Instead of explaining, Jack instead puts a hand on the back of your head and shoves it towards his crotch, letting you get a great view of his flat flared member while it’s being rubbed against your cheek. His precum is thick, it quickly makes you look like a wet mess. After being used as a sheath polisher for a bit, you begin to feel his cock getting harder and pushing you away even as it fills with blood.")
 
@@ -136,7 +144,13 @@ func _run():
 		else:
 			saynn("Jack slides his hand over your naked curves and plays with your {pc.breasts}, making the crowd happy.")
 
-		saynn("He then forcibly pulls you down to your knees before tugging his shorts down, letting his cock out. And wow, as he strokes it in your view, you notice how huge it is, the shaft must be at least {jack.penisSizeStr} with the heavy balls swaying underneath, one slightly higher than the other. Jack also offers you a view of the flat flared tip with inflated glances and a drop of thick precum hanging off of it.")
+		saynn("He then forcibly pulls you down to your knees before tugging his shorts down, letting his cock out. And wow, as he strokes it in your view, you notice how huge it- Wait, what? That can't be...")
+
+		saynn("[say=pc][b]I-is that an actual horse cock?![/b][/say]")
+
+		saynn("[say=jack]Don't know why you sound so surprised. I told you I was a stallion.[/say]")
+
+		saynn("Oh god, oh fuck. You were not prepared for this. His member is positively massive: the shaft must be at least {jack.penisSizeStr} with the heavy balls swaying underneath, one slightly higher than the other. Jack also offers you a view of the flat flared tip with inflated glances and a drop of thick precum hanging off of it.")
 
 		saynn("You gulp and raise your brow, your body tenses up just imagining this cock inside you.")
 
@@ -162,7 +176,7 @@ func _run():
 
 			saynn("Jack only pounds you harder, the crowd cheers when they see his cock creating a visible bulge on your belly. You’re not sure how but your pussy got stretched enough to fit his whole shaft, you feel his huge balls slapping against your crotch.")
 
-			saynn("Your stretched slit squirts again and gets tighter around the horse cock while your shaky arms give up, causing you to lie down with your butt still up. Jack lets out a horse whinny, he is clearly close.")
+			saynn("Your stretched slit squirts again and gets tighter around the horse cock while your shaky arms give up, causing you to lie down with your butt still up. Jack lets out an intense groan, he is clearly close.")
 
 		# (if no pussy)
 		else:
@@ -180,7 +194,7 @@ func _run():
 
 			saynn("Jack only pounds you harder, the crowd cheers when they see his cock creating a visible bulge on your belly. You’re not sure how but your fuckhole got stretched enough to fit his whole shaft, you feel his huge balls slapping against your crotch.")
 
-			saynn("Your stretched tailhole gets tighter around the horse cock while your shaky arms give up, causing you to lie down with your butt still up. Jack lets out a horse whinny, he is clearly close.")
+			saynn("Your stretched tailhole gets tighter around the horse cock while your shaky arms give up, causing you to lie down with your butt still up. Jack lets out an intense groan, he is clearly close.")
 
 		addButton("Get bred", "See what happens to you next..", "get_bred")
 
@@ -194,7 +208,7 @@ func _run():
 		
 		# (if pussy)
 		if(GM.pc.hasVagina()):
-			saynn("After a few strong thrusts Jack neighs and forces his entire shaft inside you, smashing your womb before proceeding to stuff it! You bend your back and cry out a passionate moan while your babymaker is being filled to the brim with thick white horse cum. There is not nearly enough space, you can’t stop squirming around his cock while your soft insides are being painted white with some cum already escaping back and creating a quite wet mess.")
+			saynn("After a few strong thrusts Jack grunts and forces his entire shaft inside you, smashing your womb before proceeding to stuff it! You bend your back and cry out a passionate moan while your babymaker is being filled to the brim with thick white horse cum. There is not nearly enough space, you can’t stop squirming around his cock while your soft insides are being painted white with some cum already escaping back and creating a quite wet mess.")
 
 			saynn("[say=pc]F-f-ffuuck!..[/say]")
 
@@ -204,7 +218,7 @@ func _run():
 
 		# (if no pussy)
 		else:
-			saynn("After a few strong thrusts Jack neighs and forces his entire shaft inside you, smashing your ass before proceeding to stuff it! You bend your back and cry out a passionate moan while your butt is being filled to the brim with thick white horse cum. There is not nearly enough space, you can’t stop squirming around his cock while your soft insides are being painted white with some cum already escaping back and creating a quite wet mess.")
+			saynn("After a few strong thrusts Jack grunts and forces his entire shaft inside you, smashing your ass before proceeding to stuff it! You bend your back and cry out a passionate moan while your butt is being filled to the brim with thick white horse cum. There is not nearly enough space, you can’t stop squirming around his cock while your soft insides are being painted white with some cum already escaping back and creating a quite wet mess.")
 
 			saynn("[say=pc]F-f-ffuuck!..[/say]")
 
@@ -218,7 +232,9 @@ func _run():
 
 		saynn("[say=jack]Pleasure breeding ya. Come back for more, pretty thing.[/say]")
 
-		saynn("Jack admires the view for a second and climbs over the fence, leaving you a mess.")
+		saynn("[say=pc]How... Do you have... A fucking horse cock?...[/say]")
+
+		saynn("Jack doesn't respond. He simply admires the view for a second and climbs over the fence, leaving you a mess.")
 
 		# (scene ends)
 		
@@ -251,3 +267,5 @@ func _react(_action: String, _args):
 
 	setState(_action)
 
+func getDevCommentary():
+	return "MOON_HALO: I guess I could've just made this guy have a really big cock, but this seemed funnier."

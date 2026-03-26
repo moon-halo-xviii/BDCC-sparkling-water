@@ -47,7 +47,7 @@ func _run():
 
 		saynn("[say=captain]Thank you, inmate. You saved his life.[/say]")
 
-		saynn("Eliza puts her paw on her mouth.")
+		saynn("Eliza puts her hand on her mouth.")
 
 		saynn("[say=eliza]Did he talk to you?[/say]")
 
@@ -71,7 +71,7 @@ func _run():
 
 		saynn("[say=captain]I'm afraid I don't have any more time to chat, I need to work.[/say]")
 
-		saynn("Eliza's paw slowly slides off the captain's shoulder as he turns away and leaves.")
+		saynn("Eliza's hand slowly slides off the captain's shoulder as he turns away and leaves.")
 
 		saynn("Eliza sighs.")
 
@@ -243,7 +243,7 @@ func _run():
 
 		saynn("Nurses quickly take notice of a free inmate walking around the staff-only area.. but one look is enough to make them get out of the way.")
 
-		saynn("Suddenly, Eliza runs up to you, using her paws to quickly wipe away her tears.")
+		saynn("Suddenly, Eliza runs up to you, quickly wipe away her tears with the back of her hand.")
 
 		saynn("[say=eliza]I know what we can do![/say]")
 

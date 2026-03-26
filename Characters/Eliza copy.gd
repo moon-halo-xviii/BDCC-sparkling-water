@@ -1,21 +1,23 @@
+# because this bitch is a whole other ballpark
 extends Character
 
 func _init():
-	id = "eliza"
+	id = "elizaOriginal"
 	npcLevel = 5
 	npcBaseLust = 150
 	npcBasePain = 120
 	npcCharacterType = CharacterType.Nurse
 	
-	pickedSkin="FurGirl"
-	pickedSkinRColor=Color("ffeebcad")
-	pickedSkinGColor=Color("ffea8432")
-	pickedSkinBColor=Color("ffebb7a0")
+	pickedSkin="ArconSkin"
+	pickedSkinRColor=Color("fffee5c2")
+	pickedSkinGColor=Color("fffff4f5")
+	pickedSkinBColor=Color("ffd39666")
 	npcSkinData={
+	"head": {"skin": "LynxSkin",},
 	"hair": {"r": Color("ffd6aac7"),"g": Color("fff1c0e0"),"b": Color("ff46460d"),},
-	"ears": {"g": Color("ffd79482"),},
-	"penis": {"g": Color("ffffb290"),"b": Color("ffe0957e"),},
-	"tail": {"g": Color("ffd6aac7"),},
+	"ears": {"g": Color("ffdb6b74"),},
+	"horns": {"r": Color("ffbd64a5"),"g": Color("ffebc57d"),"b": Color("ff9e0081"),},
+	"penis": {"g": Color("ffff90e8"),"b": Color("ff8b0089"),},
 	}
 	
 	npcLustInterests = {
@@ -92,7 +94,7 @@ func getGender():
 	return Gender.Female
 	
 func getSmallDescription() -> String:
-	return "An elegant woman with pink hair. Wears a lab coat and carries quite a few medical tools on her belt"
+	return "An elegant feline with pastel yellow fur. Wears a lab coat and carries quite a few medical tools on her belt"
 
 func getSpecies():
 	return [Species.Human]
@@ -217,17 +219,17 @@ func updateBodyparts():
 			giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
 			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears2"))
 			shouldPaint = true
-	elif(speciesTF == "feline"):
-		elizaSkinType = "feline"
-		if(currentHead != "felinehead" || hasHorns()):
+	elif(speciesTF == "human"):
+		elizaSkinType = "human"
+		if(currentHead != "humanhead" || hasTail()):
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 			if(hasHorns()):
 				removeBodypart(BodypartSlot.Horns)
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinetail"))
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears"))
+			if(hasTail()):
+				removeBodypart(BodypartSlot.Tail)
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 			shouldPaint = true
-
 	elif(speciesTF == "demon"):
 		elizaSkinType = "demon"
 		if(currentHead != "felinehead" || !hasHorns()):
@@ -238,14 +240,13 @@ func updateBodyparts():
 			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears"))
 			shouldPaint = true
 	else:
-		if(currentHead != "humanhead" || hasTail()):
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
+		if(currentHead != "felinehead" || hasHorns()):
 			if(hasHorns()):
 				removeBodypart(BodypartSlot.Horns)
-			if(hasTail()):
-				removeBodypart(BodypartSlot.Tail)
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
-			giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinetail"))
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+			giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears"))
 			shouldPaint = true
 	
 	if(bodyTF == "hucow"):
@@ -285,7 +286,18 @@ func updateBodyparts():
 		"legs": {"skin": "LuxeSkin","g": Color("ffeb7dbb"),},
 		"penis": {"g": Color("ffff90e8"),"b": Color("ff8b0089"),},
 		}
-	elif(elizaSkinType == "feline"):
+	elif(elizaSkinType == "human"):
+		pickedSkin="FurGirl"
+		pickedSkinRColor=Color("ffeebcad")
+		pickedSkinGColor=Color("ffea8432")
+		pickedSkinBColor=Color("ff-")
+		npcSkinData={
+		"hair": {"r": Color("ffd6aac7"),"g": Color("fff1c0e0"),"b": Color("ff46460d"),},
+		"ears": {"g": Color("ffd79482"),},
+		"penis": {"g": Color("ffffb290"),"b": Color("ffe0957e"),},
+		"tail": {"g": Color("ffd6aac7"),},
+		}
+	else:
 		pickedSkin="ArconSkin"
 		pickedSkinRColor=Color("fffee5c2")
 		pickedSkinGColor=Color("fffff4f5")
@@ -296,18 +308,6 @@ func updateBodyparts():
 		"ears": {"g": Color("ffdb6b74"),},
 		"horns": {"r": Color("ffbd64a5"),"g": Color("ffebc57d"),"b": Color("ff9e0081"),},
 		"penis": {"g": Color("ffff90e8"),"b": Color("ff8b0089"),},
-		}
-
-	else:
-		pickedSkin="FurGirl"
-		pickedSkinRColor=Color("ffeebcad")
-		pickedSkinGColor=Color("ffea8432")
-		pickedSkinBColor=Color("ffebb7a0")
-		npcSkinData={
-		"hair": {"r": Color("ffd6aac7"),"g": Color("fff1c0e0"),"b": Color("ff46460d"),},
-		"ears": {"g": Color("ffd79482"),},
-		"penis": {"g": Color("ffffb290"),"b": Color("ffe0957e"),},
-		"tail": {"g": Color("ffd6aac7"),},
 		}
 	
 	if(shouldPaint):

@@ -589,10 +589,10 @@ func _run():
 		saynn("Occasionally, his fingers pass over your"+str(" rich" if GM.pc.hasBigBreasts() else " modest")+" chest too, his claws finding your perky nips and just slightly poking them.."+str(" Until some {pc.milk} comes out.." if GM.pc.canBeMilked() else "")+"")
 
 		if (GM.pc.isWearingChastityCage()):
-			saynn("Obviously, his hands also reach out to play with your chastity cage a bit. His claws catch onto the metal frame.. and tug on it, testing how tightly it sits. One of his paws gently cups your balls.")
+			saynn("Obviously, his hands also reach out to play with your chastity cage a bit. His claws catch onto the metal frame.. and tug on it, testing how tightly it sits. One of his hands gently cups your balls.")
 
 		elif (GM.pc.hasReachablePenis()):
-			saynn("Obviously, his hands also reach out down to your crotch. His hands slide over the surface of your {pc.penis}, testing how easy it is to cause a reaction. One of his paws gently cups your balls.")
+			saynn("Obviously, his hands also reach out down to your crotch. His hands slide over the surface of your {pc.penis}, testing how easy it is to cause a reaction. One of his hands gently cups your balls.")
 
 		elif (GM.pc.hasReachableVagina()):
 			saynn("Obviously, his hands also reach out down to your crotch. His hands don't dare to get too close, just gently brushing over the inner side of your thighs, caressing them.")

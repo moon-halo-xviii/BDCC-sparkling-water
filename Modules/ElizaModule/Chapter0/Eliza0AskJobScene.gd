@@ -131,7 +131,7 @@ func _run():
 
 		addButton("Continue", "See what happens next", "after_test")
 	if(state == "after_test"):
-		saynn("She looks around the lobby, her paw grips her personal coffee mag, her clawed thumb tapping a rhythm on it.")
+		saynn("She looks around the lobby, gripping her personal coffee mag, her thumb tapping a rhythm on it.")
 
 		saynn("[say=eliza]You know.. You still did better than all others. I usually just get drug junkies.[/say]")
 

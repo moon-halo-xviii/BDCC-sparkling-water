@@ -71,7 +71,7 @@ func _run():
 		else:
 			saynn("[say=eliza]Fuck.. Let's do this. The only problem is..[/say]")
 
-			saynn("Her paw slides along the side of her body.")
+			saynn("Her hand slides along the side of her body.")
 
 			saynn("[say=eliza]I'm not really lactating.. but that will just require a small detour~.[/say]")
 
@@ -105,7 +105,7 @@ func _run():
 
 		saynn("[say=eliza]Mhh-h..[/say]")
 
-		saynn("She bites her lip, looking down at herself. Her paws slide along her new curves.")
+		saynn("She bites her lip, looking down at herself. Her hands slide along her new curves.")
 
 		saynn("[say=eliza]They're itching..[/say]")
 
@@ -154,7 +154,7 @@ func _run():
 
 		saynn("[say=eliza]Mhh~..[/say]")
 
-		saynn("You grab her paws and carefully set them down into the special restraints. They're just simple cuffs.. but they are attached to the stall, meaning you can't move. You lock the cuffs around her wrists with a satisfying click, leaving Eliza to stand in this.. quite exposed.. position.. where her full breasts are dangling free.")
+		saynn("You grab her hands and carefully set them down into the special restraints. They're just simple cuffs.. but they are attached to the stall, meaning you can't move. You lock the cuffs around her wrists with a satisfying click, leaving Eliza to stand in this.. quite exposed.. position.. where her full breasts are dangling free.")
 
 		saynn("After locking her up, you take one of the small milk tanks.. ones that have a big seal lid at the top.. and position it under the feline. Seeing it sends a ripple through her, making her rub her thighs together already.")
 
@@ -421,7 +421,7 @@ func _run():
 
 		saynn("[say=pc]There we go. Thank you for your contribution, let's hope it won't be the last one.[/say]")
 
-		saynn("She squints at your playful tone.. and reaches her paw to pat you on the head.")
+		saynn("She squints at your playful tone.. and reaches out her hand to pat you on the head.")
 
 		saynn("[say=eliza]You're welcome. I really need a shower now.. so, if you excuse moo~..[/say]")
 
@@ -645,7 +645,7 @@ func _run():
 			if (sexDidPullout):
 				saynn("The manipulators let go of her limbs.. without you pressing anything.. huh.")
 
-				saynn("Eliza gets off the table and turns towards you, her paws exploring her pink slit and the messy butt.")
+				saynn("Eliza gets off the table and turns towards you, her fingers exploring her pink slit and the messy butt.")
 
 				saynn("[say=eliza]So much.. I gotta take a shower..[/say]")
 
@@ -654,7 +654,7 @@ func _run():
 
 				saynn("The manipulators let go of her limbs.. without you pressing anything.. huh.")
 
-				saynn("Eliza gets off the table and turns towards you, her paws exploring her pink, creamed slit.")
+				saynn("Eliza gets off the table and turns towards you, her fingers exploring her pink, creamed slit.")
 
 				if (hasCumInStrapon):
 					saynn("[say=eliza]Wow.. what is this stuff? I gotta take a shower or I'm gonna be dripping all over the floor..[/say]")
@@ -691,7 +691,7 @@ func _run():
 
 			saynn("The manipulators let go of her limbs.. without you pressing anything.. huh.")
 
-			saynn("Eliza gets off the table and turns towards you, her paws exploring her pink, wet slit.")
+			saynn("Eliza gets off the table and turns towards you, her fingers exploring her pink, wet slit.")
 
 			saynn("[say=eliza]Felt great.. but I gotta take a shower..[/say]")
 
@@ -863,7 +863,7 @@ func _run():
 
 		saynn("[say=elizaMom]Oh hey, you brought your assistant. Something happened?[/say]")
 
-		saynn("Eliza blinks a lot, her paw scratching her nose, her ears flipping down, her tail wrapped up around her leg. The atmosphere in the room is.. tense.")
+		saynn("Eliza blinks a lot, her hand scratching her nose, her ears flipping down, her tail wrapped up around her leg. The atmosphere in the room is.. tense.")
 
 		saynn("[say=eliza]Um.. {pc.He} wanted.. to.. um.. ask you?.. something.. maybe.. um..[/say]")
 
@@ -1278,7 +1278,7 @@ func _run():
 
 		saynn("[say=eliza]I know you won't..[/say]")
 
-		saynn("Eliza's paw reaches out to gently cup Scarlet's chin, clawed digits softly scritching it. She forces eye contact and bravely holds it.")
+		saynn("Eliza's hand reaches out to gently cup Scarlet's chin, clawed digits softly scritching it. She forces eye contact and bravely holds it.")
 
 		saynn("[say=eliza]You can't even if you wanted to..[/say]")
 
@@ -1291,7 +1291,7 @@ func _run():
 		addButton("Continue", "See what happens next", "s2_eliza_starts_milking_scarlet")
 	if(state == "s2_eliza_starts_milking_scarlet"):
 		playAnimation(StageScene.MilkingStallDuo, "milk", {pc="elizaMom", npc="eliza", bodyState={naked=true}})
-		saynn("Eliza's skilled paws reach down to Scarlet's chest, digits shaking a little as they touch the ample forms for the first time. She just explores them at first, gently cupping and rubbing Scarlet's breasts, feeling their weight, teasing the swollen nips.")
+		saynn("Eliza's skilled hands reach down to Scarlet's chest, digits shaking a little as they touch the ample forms for the first time. She just explores them at first, gently cupping and rubbing Scarlet's breasts, feeling their weight, teasing the swollen nips.")
 
 		saynn("[say=eliza]You have some.. impressive breasts, mom..[/say]")
 
@@ -1332,7 +1332,7 @@ func _run():
 
 		saynn("[say=elizaMom]Moo-o~..[/say]")
 
-		saynn("Eliza is completely focussed, her hands moving methodically, massaging Scarlet's udders with an intensity that draws out every last drop of milk. Scarlet's eyes no longer can focus on her daughter, instead closing as she loses herself in the sensation, her body lightly squirming against the restraints and Eliza's paws..")
+		saynn("Eliza is completely focussed, her hands moving methodically, massaging Scarlet's udders with an intensity that draws out every last drop of milk. Scarlet's eyes no longer can focus on her daughter, instead closing as she loses herself in the sensation, her body lightly squirming against the restraints and Eliza's hands..")
 
 		addButton("Continue", "See what happens next", "s2_eliza_starts_milking_scarlet_cum")
 	if(state == "s2_eliza_starts_milking_scarlet_cum"):
@@ -1354,7 +1354,7 @@ func _run():
 		addButton("Continue", "See what happens next", "s2_after_eliza_milks_scarlet")
 	if(state == "s2_after_eliza_milks_scarlet"):
 		playAnimation(StageScene.MilkingStallDuo, "start", {pc="elizaMom", npc="eliza", bodyState={naked=true}})
-		saynn("Eliza stops when the flow of milk finally begins to subside. She does a final weight check with her paws, cupping Scarlet's breasts.")
+		saynn("Eliza stops when the flow of milk finally begins to subside. She does a final weight check with her hands, cupping Scarlet's breasts.")
 
 		saynn("[say=eliza]They certainly got less heavy.[/say]")
 
@@ -1463,7 +1463,7 @@ func _run():
 
 		saynn("[say=elizaMom]That's it, sweetie.. feed on me..[/say]")
 
-		saynn("Eliza nods softly and keeps sucking her mother's nips.. drawing out milk. She begins to use her paws too, kneading and caressing those big breasts, stimulating them to give her more of that nectar.")
+		saynn("Eliza nods softly and keeps sucking her mother's nips.. drawing out milk. She begins to use her hands too, kneading and caressing those big breasts, stimulating them to give her more of that nectar.")
 
 		saynn("[say=elizaMom]Mm.. ah-h..[/say]")
 
@@ -1538,7 +1538,7 @@ func _run():
 
 		saynn("[say=eliza]Well. That's the one.[/say]")
 
-		saynn("She brings her paw up to knock on it..")
+		saynn("She brings her hand up to knock on it..")
 
 		saynn("..but then..")
 
@@ -1652,7 +1652,7 @@ func _run():
 		addButton("Continue", "See what happens next", "s3_rng_hold_hands")
 	if(state == "s3_rng_hold_hands"):
 		playAnimation(StageScene.SexDoubleDown, "sexhands", {pc="pc", npc="elizaMom", npc2="eliza", bodyState={naked=true, hard=true}, npcBodyState={naked=true, hard=true}, npc2BodyState={naked=true, hard=true}})
-		saynn("Before their deep kiss ends, Scarlet finds Eliza's paws and grabs them, their fingers intertwining.. You can feel that pussy becoming even more wet when that happens, her twitching slit dripping juices onto your tongue as you keep eating her out..")
+		saynn("Before their deep kiss ends, Scarlet finds Eliza's hands and grabs them, their fingers intertwining.. You can feel that pussy becoming even more wet when that happens, her twitching slit dripping juices onto your tongue as you keep eating her out..")
 
 		saynn("[say=eliza]Mmh~.. hhmmh..[/say]")
 
@@ -1739,7 +1739,7 @@ func _run():
 
 		saynn("[say=eliza]Yes~. My mom is a total cum slut~.[/say]")
 
-		saynn("Scarlet squints at Eliza.. but keeps sucking on her digits.. her other hand holding Eliza's paw.")
+		saynn("Scarlet squints at Eliza.. but keeps sucking on her digits.. her other hand holding Eliza's hand.")
 
 		saynn("Better to let them figure out who's the biggest slut on their own..")
 
@@ -1835,7 +1835,7 @@ func _run():
 		saynn("They're deciding how they're gonna fuck you.. While you're just acting like a subby mess, moaning softly..")
 
 		if (GM.pc.isWearingChastityCage()):
-			saynn("Eliza puts her free paw on your locked cock and squeezes your balls slightly..")
+			saynn("Eliza puts her free hand on your locked cock and squeezes your balls slightly..")
 
 			saynn("[say=eliza]Your little locked toy is leaking so much already~.[/say]")
 
@@ -1887,7 +1887,7 @@ func _run():
 
 			saynn("[say=elizaMom]Never thought that you'd be into chastity.[/say]")
 
-			saynn("You can't move a muscle.. while Eliza is dragging her paw near your crotch..")
+			saynn("You can't move a muscle.. while Eliza is dragging her hand near your crotch..")
 
 			saynn("[say=eliza]Chastity is super hot, mom~.[/say]")
 
@@ -1949,7 +1949,7 @@ func _run():
 
 		saynn("[say=pc]Nhh.. hh.. khh.. ghh!..[/say]")
 
-		saynn("Eliza puts one of her paws around your throat, feeling her rubber cock traveling back and forth along it.. The wet noises and gagging of your throat and the slaps of Scarlet's hips against your butt fill the room."+str(" Your locked away cock squirts with precum as your prostate gets smashed.. again and again.." if (hasPP && isAnal) else "")+""+str(" Your locked away cock squirts with precum as your g-spot gets smashed.. again and again.." if (hasPP && !isAnal) else "")+"")
+		saynn("Eliza puts one of her hands around your throat, feeling her rubber cock traveling back and forth along it.. The wet noises and gagging of your throat and the slaps of Scarlet's hips against your butt fill the room."+str(" Your locked away cock squirts with precum as your prostate gets smashed.. again and again.." if (hasPP && isAnal) else "")+""+str(" Your locked away cock squirts with precum as your g-spot gets smashed.. again and again.." if (hasPP && !isAnal) else "")+"")
 
 		saynn("[say=eliza]I can see that you love it~.[/say]")
 
@@ -2183,7 +2183,7 @@ func _run():
 
 		saynn("And so she leans in and parts her lips, catching the head of your cock with them and then using her feline tongue to play with the tip, licking and sucking.")
 
-		saynn("Eliza watches her mother work.. and swallows audibly.. her tongue peeks out too for a bit.. licking her own lip. Eventually, she decides to commit too, going lower than her mother and focussing on your balls instead, gently cupping them with her paws and dragging her tongue around.")
+		saynn("Eliza watches her mother work.. and swallows audibly.. her tongue peeks out too for a bit.. licking her own lip. Eventually, she decides to commit too, going lower than her mother and focussing on your balls instead, gently cupping them with her hands and dragging her tongue around.")
 
 		saynn("With such service, it doesn't take long for your shaft to start getting hard and bigger, blood flowing to it while Scarlet expertly curls her tongue around its girth, coating it with her saliva.")
 
@@ -2446,7 +2446,7 @@ func _run():
 
 		saynn("[say=eliza]Since I have the cock, we're doing it my way~.[/say]")
 
-		saynn("Her paw darts out towards your collar.. and yanks you towards the nearest table surface.")
+		saynn("Her hand darts out towards your collar.. and yanks you towards the nearest table surface.")
 
 		addButton("Continue", "See what happens next", "futa_table")
 	if(state == "futa_table"):
@@ -2509,7 +2509,7 @@ func _run():
 
 		saynn("[say=eliza]There we go..[/say]")
 
-		saynn("She rests her chin on your shoulder and purrs into your ear, her paws resting on your belly.")
+		saynn("She rests her chin on your shoulder and purrs into your ear, her hands resting on your belly.")
 
 		saynn("[say=eliza]Thank you for helping me drain my balls~.[/say]")
 

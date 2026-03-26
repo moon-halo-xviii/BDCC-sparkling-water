@@ -42,11 +42,11 @@ func _run():
 
 		saynn("[say=eliza]These feel soft..[/say]")
 
-		saynn("She looks at her paws.. who still remain mostly the same.. but somehow looking even more paw-like.")
+		saynn("She looks at her hands.. who still remain mostly the same.. but her nails begin to resemble claws, and you can faintly make out the texture of feline paw pads on her palms.")
 
 		saynn("[say=eliza]I feel soft..[/say]")
 
-		saynn("You watch the transformation with great interest. As the contours of her head finish changing.. you realize.. that she is a human now.. well, part-human.. a catgirl. Her pupils are thin and tall, like that of a wild animal.")
+		saynn("You watch the transformation with great interest. As the contours of her head finish changing.. you realize that she is, well.. a catgirl. Her pupils are thin and tall, like that of a wild animal.")
 
 		addButton("Continue", "See what happens next", "silly_talk")
 	if(state == "silly_talk"):

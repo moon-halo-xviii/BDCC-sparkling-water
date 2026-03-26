@@ -73,7 +73,7 @@ func _run():
 
 		saynn("[say=elizaMom]I'm certainly glad you managed to avoid endangering yourself. You have maybe grown, my dear girl. But I think the drug problem isn't solved until it's fully solved.[/say]")
 
-		saynn("Eliza lowers her gaze, her paw scratching the back of her head.")
+		saynn("Eliza lowers her gaze, her hand scratching the back of her head.")
 
 		saynn("[say=eliza]Hah? It is solved..[/say]")
 
@@ -131,13 +131,13 @@ func _run():
 
 		saynn("[say=eliza]I..[/say]")
 
-		saynn("Eliza fails to get the words out, her voice trembling. Scarlet reaches her hand out gently, grabbing her daughter's paw.")
+		saynn("Eliza fails to get the words out, her voice trembling. Scarlet reaches her hand out gently, grabbing her daughter's hand.")
 
 		saynn("[say=elizaMom]I'm not gonna get angry at you. Right now I'm just curious.. How can your current lab setup be better than what we have at home?[/say]")
 
 		saynn("[say=eliza]Well.. it's not. The equipment we have is much worse.[/say]")
 
-		saynn("Eliza's paw holds her mother's hand tightly. A hint of smile returns on Scarlet's face.")
+		saynn("Eliza's hand holds her mother's hand tightly. A hint of smile returns on Scarlet's face.")
 
 		saynn("[say=elizaMom]Obviously. So if you wanna help me push science forward, you should come with me.[/say]")
 
@@ -335,7 +335,7 @@ func _run():
 	if(state == "eliza_outro"):
 		removeCharacter("elizaMom")
 		playAnimation(StageScene.Duo, "stand", {npc="eliza"})
-		saynn("While Scarlet and her guards head off somewhere, Eliza Quinn approaches you next, her paw quickly swiping off the left-over tears.")
+		saynn("While Scarlet and her guards head off somewhere, Eliza Quinn approaches you next, her hand quickly swiping off the left-over tears.")
 
 		saynn("[say=eliza]That went.. pretty good.[/say]")
 

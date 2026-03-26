@@ -265,7 +265,7 @@ func _run():
 
 		saynn("[say=eliza]Ohh, I will bite you alright. If my mom was here, she would have started a full-on brawl with you~.[/say]")
 
-		saynn("She wiggles the wine in her glass with little circular motions of her paw.")
+		saynn("She wiggles the wine in her glass with little circular motions of her hand.")
 
 		saynn("[say=pc]You're not on the best terms?[/say]")
 
@@ -350,7 +350,7 @@ func _run():
 
 		saynn("You're the assistant here.. so you obviously nod."+str(" You grab the wine bottle and fill both glasses, not until edges.. but pretty close." if isWine else " You grab the wine bottle and fill her glass. Yours gets topped with juice instead.")+"")
 
-		saynn("But before you can return to drinking and resting, she covers the top of your glass with her paw.")
+		saynn("But before you can return to drinking and resting, she covers the top of your glass with her palm.")
 
 		saynn("[say=eliza]I wonder.. hmm~.[/say]")
 
@@ -368,7 +368,7 @@ func _run():
 
 		saynn("[say=pc]Thank you.[/say]")
 
-		saynn("Her free paw reaches somewhere into her pouches.")
+		saynn("Her free hand reaches somewhere into her pouches.")
 
 		saynn("[say=eliza]But can you prove your words~.[/say]")
 
@@ -394,7 +394,7 @@ func _run():
 
 		saynn("[say=eliza]Now.. Do you trust this feline that's sitting in front of you? And I'm not looking for just words here~.[/say]")
 
-		saynn("Her paw moves the glass closer to you.")
+		saynn("She moves the glass closer to you.")
 
 		saynn("[say=pc]If I don't, will you stop trusting me?[/say]")
 
@@ -531,7 +531,7 @@ func _run():
 
 		saynn("[say=pc]Sure.[/say]")
 
-		saynn("She leans in and scritches under your chin with her free paw.")
+		saynn("She leans in and scritches under your chin with her free hand.")
 
 		saynn("[say=eliza]I'm glad you trust me so much~. But.. Now the question is.. Can I trust you?[/say]")
 
@@ -563,7 +563,7 @@ func _run():
 
 		saynn("[say=pc]Alright. This is not how I saw our.. whatever this is.. going. What's the game?[/say]")
 
-		saynn("Her paw puts the glass of wine down.. and produces a piece of tight fabric instead.. It looks like a blindfold.")
+		saynn("She puts the glass of wine down.. and produces a piece of tight fabric instead.. It looks like a blindfold.")
 
 		saynn("[say=eliza]You've never been on dates~? I need to put this on you first.[/say]")
 
@@ -618,7 +618,7 @@ func _run():
 
 		saynn("[say=pc]Do I get a consolation prize at least?[/say]")
 
-		saynn("[say=eliza]Sure, make your choice. Getting to kiss my hind paw, a day in the padded room or being my seat for an hour~?[/say]")
+		saynn("[say=eliza]Sure, make your choice. Getting to kiss my feet, a day in the padded room or being my seat for an hour~?[/say]")
 
 		saynn("You're not sure if she is being serious or not by this point.")
 
@@ -930,7 +930,7 @@ func _run():
 
 		saynn("[say=eliza]But you're my assistant so it's a different deal~. You seem to want to help me push science forward. And I appreciate it.[/say]")
 
-		saynn("She reaches her paw out to boop you on the nose.")
+		saynn("She reaches her hand out to boop you on the nose.")
 
 		saynn("[say=eliza]You also proved that I trust you~. So yeah, you're cute.[/say]")
 
@@ -940,7 +940,7 @@ func _run():
 
 		saynn("[say=eliza]Bark-bark~.[/say]")
 
-		saynn("What.. Eliza even holds her paws near her chest, like a puppy. She sticks her tongue out and pants while watching your confused reaction.")
+		saynn("What.. Eliza even holds her hands near her chest, like a puppy's paws. She sticks her tongue out and pants while watching your confused reaction.")
 
 		saynn("[say=eliza]Bark~? Want me to awoo? I can do awoo too.[/say]")
 
@@ -980,7 +980,7 @@ func _run():
 	if(state == "stop_asking"):
 		saynn("[say=pc]That's all I wanted to know, I think.[/say]")
 
-		saynn("Eliza nods, her paw reaches for the wine bottle.. only to realize that it is now fully empty.")
+		saynn("Eliza nods, her hand reaches for the wine bottle.. only to realize that it is now fully empty.")
 
 		saynn("[say=eliza]Just in time~.[/say]")
 

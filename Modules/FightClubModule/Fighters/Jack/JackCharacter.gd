@@ -73,7 +73,7 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Tall stallion wearing a red inmate uniform. Brown coat, rich black mane."
+	return "Tall stallion wearing a red inmate uniform. Brown coat, thick black hair."
 
 func getSpecies():
 	return ["equine"]
@@ -98,8 +98,8 @@ func getFemininity() -> int:
 	return 0
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horseheadbig"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horseears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanoldhead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
@@ -110,8 +110,7 @@ func createBodyparts():
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("horsetail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("hoofs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("shorthair2"))
 
 func getDefaultEquipment():

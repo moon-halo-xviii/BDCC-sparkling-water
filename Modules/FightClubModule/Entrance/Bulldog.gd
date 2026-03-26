@@ -8,13 +8,12 @@ func _init():
 	npcBaseLust = 150
 	npcCharacterType = CharacterType.Inmate
 	
-	pickedSkin="WoonaSkin"
-	pickedSkinRColor=Color("ff543120")
-	pickedSkinGColor=Color("ff2f1b12")
-	pickedSkinBColor=Color("ff9a6b54")
+	pickedSkin="HumanSkin"
+	pickedSkinRColor=Color("ff543120") #543120
+	pickedSkinGColor=Color("ff2f1b12") #2f1b12
+	pickedSkinBColor=Color("ff9a6b54") #9a6b54
 	npcSkinData={
 	"hair": {"r": Color("ff753131"),"g": Color("ffa55656"),"b": Color("ffb61515"),},
-	"penis": {"g": Color("ffff0000"),"b": Color("ff8b0000"),},
 	}
 	
 	npcLustInterests = {
@@ -87,10 +86,10 @@ func getGender():
 	return Gender.Male
 	
 func getSmallDescription() -> String:
-	return "Red block inmate. Angry-looking bulldog"
+	return "Red block inmate. Angry-looking, and rather short"
 
 func getSpecies():
-	return ["canine"]
+	return ["human"]
 
 func _getAttacks():
 	return ["biteattack", "simplekickattack", "shoveattack", "trygetupattack"]
@@ -105,21 +104,20 @@ func getFemininity() -> int:
 	return 0
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("bulldoghead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("mohawkhair"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("bulldogears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("buffarms"))
 	var breasts = GlobalRegistry.createBodypart("malebreasts")
 	breasts.size = -1
 	giveBodypartUnlessSame(breasts)
-	var penis = GlobalRegistry.createBodypart("caninepenis")
+	var penis = GlobalRegistry.createBodypart("humanpenis")
 	penis.lengthCM = 22
 	penis.ballsScale = 1
 	giveBodypartUnlessSame(penis)
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anus"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("shorttail"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("plantilegs"))
 
 func getLootTable(_battleName):
 	return InmateLoot.new()

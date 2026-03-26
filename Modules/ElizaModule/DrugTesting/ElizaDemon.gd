@@ -10,12 +10,12 @@ func _init():
 	pickedSkinGColor=Color("fffff4f5")
 	pickedSkinBColor=Color("ffd39666")
 	npcSkinData={
-	"head": {"skin": "LynxSkin",},
+	"head": {"skin": "FurGirl",},
 	"hair": {"r": Color("ffce74af"),"g": Color("fff1c0e0"),"b": Color("ff46460d"),},
-	"ears": {"g": Color("ffdb6b74"),},
+	"ears": {"r": Color("ffd6aac7"),"g": Color("ffdb6b74"),},
 	"horns": {"r": Color("ffbd64a5"),"g": Color("ffebc57d"),"b": Color("ff9e0081"),},
-	"tail": {"g": Color("ffeb7dbb"),},
-	"legs": {"skin": "LuxeSkin","g": Color("ffeb7dbb"),},
+	"tail": {"r": Color("ffc25994"), "g": Color("ffeb7dbb"), "b": Color("ffebc57d")},
+	"legs": {"skin": "LuxeSkin","g": Color("ffeb7dbb"), "b": Color("ffc25994")},
 	}
 	
 func _getName():
@@ -25,10 +25,10 @@ func getGender():
 	return Gender.Female
 	
 func getSmallDescription() -> String:
-	return "An elegant feline with pastel yellow fur. Wears a lab coat and carries quite a few medical tools on her belt"
+	return "An elegant woman with pink hair. Wears a lab coat and carries quite a few medical tools on her belt. Oh, and she's a demon now, too."
 
 func getSpecies():
-	return ["feline"]
+	return ["human", "demon"]
 
 func getThickness() -> int:
 	return 90
@@ -37,9 +37,9 @@ func getFemininity() -> int:
 	return 100
 
 func createBodyparts():
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felinehead"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("ponytailhair2"))
-	giveBodypartUnlessSame(GlobalRegistry.createBodypart("felineears"))
+	giveBodypartUnlessSame(GlobalRegistry.createBodypart("humanears"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("demonhorns2"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypartUnlessSame(GlobalRegistry.createBodypart("anthroarms"))

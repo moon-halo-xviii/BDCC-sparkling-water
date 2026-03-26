@@ -12,7 +12,7 @@ var location:String = "cellblock_orange_playercell"#"ScriptedRoom"
 
 var pickedGender = Gender.Female
 var pronounsGender = null
-var pickedSpecies = ["feline"]
+var pickedSpecies = ["human"]
 var inmateNumber = "12859"
 var pickedFemininity: int = 50
 var pickedThickness: int = 50
@@ -56,19 +56,18 @@ func _ready():
 	var _ok2 = menstrualCycle.connect("visiblyPregnant", self, "onPlayerVisiblyPregnant")
 	
 	getInventory().clear()
-	giveBodypart(GlobalRegistry.createBodypart("digilegs"))
+	giveBodypart(GlobalRegistry.createBodypart("plantilegs"))
 	var mybreasts: BodypartBreasts = GlobalRegistry.createBodypart("humanbreasts")
 	mybreasts.size = BreastsSize.C
 	giveBodypart(mybreasts)
 	giveBodypart(GlobalRegistry.createBodypart("baldhair"))
-	giveBodypart(GlobalRegistry.createBodypart("felinetail"))
-	giveBodypart(GlobalRegistry.createBodypart("felinehead"))
+	giveBodypart(GlobalRegistry.createBodypart("humanhead"))
 	giveBodypart(GlobalRegistry.createBodypart("anthrobody"))
 	giveBodypart(GlobalRegistry.createBodypart("anthroarms"))
-	giveBodypart(GlobalRegistry.createBodypart("felineears"))
+	giveBodypart(GlobalRegistry.createBodypart("humanears"))
 	giveBodypart(GlobalRegistry.createBodypart("vagina"))
 	giveBodypart(GlobalRegistry.createBodypart("anus"))
-	#giveBodypart(GlobalRegistry.createBodypart("caninepenis"))
+	giveBodypart(GlobalRegistry.createBodypart("simplehair"))
 	updateNonBattleEffects()
 	
 	var allSkills = GlobalRegistry.getSkills();
