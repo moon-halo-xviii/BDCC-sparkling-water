@@ -9,15 +9,29 @@ func _run():
 		playAnimation(StageScene.Duo, "kneel", {npc="kait"})
 
 	if(state == ""):
-		saynn("Defeated, you cry out a painful noise and drop to your knees. Kait quickly dashes towards you and shoves her knee into your chest, making you fly back another meter before hitting the ground. Ow. She then pounces at you and pins to the floor.")
+		if(not getModuleFlag("MoonAF26", "startedKaitQuest", false)):
+			saynn("Defeated, you cry out a painful noise and drop to your knees. Kait quickly dashes towards you and shoves her knee into your chest, making you fly back another meter before hitting the ground. Ow. She then pounces at you and pins to the floor.")
 
-		saynn("[say=kait]And don’t move a single muscle.[/say]")
+			saynn("[say=kait]And don’t move a single muscle.[/say]")
 
-		saynn("You hiss from the pain and huge discomfort.")
+			saynn("You hiss from the pain and huge discomfort.")
 
-		saynn("[say=pc]I can’t exactly do that..[/say]")
+			saynn("[say=pc]I can’t exactly do that..[/say]")
 
-		addButton("A proposal", "See what happens next", "a_proposal")
+			addButton("A proposal", "See what happens next", "a_proposal")
+		else:
+			saynn("Defeated, you cry out a painful noise and drop to your knees. Kait quickly dashes towards you and shoves her knee into your chest, making you fly back another meter before hitting the ground. Ow. She then pounces at you and pins to the floor.")
+
+			saynn("[say=kait]Got you.[/say]")
+
+			saynn("[say=pc]Good going, boss. Mind giving me a hand? Or is this training gonna get more interesting?[/say]")
+
+			saynn("She gets off of you, and helps you get on your feet.")
+
+			saynn("[say=kait]Maybe another time. Let's go.[/say]")
+
+			addButton("Leave", "Nothing like a good sparring session", "endthescene")
+
 
 	if(state == "a_proposal"):
 		saynn("She is straddling you, using the weight of her body to keep you pinned. One of her arms is holding yours while another is threatening to shove claws into your neck.")
@@ -52,7 +66,7 @@ func _run():
 
 		saynn("[say=kait]Then I will mark you, like I said.[/say]")
 
-		addDisabledButton("Agree", "Begin the Team Escape route (not done, sorry)")
+		addButton("Agree", "Begin the Team Escape route. Kept you waiting, huh?", "startKaitQuest")
 		if(OPTIONS.isContentEnabled(ContentType.Watersports)):
 			addButton("Get pissed on", "You would rather suffer the consequences", "get_pissed_on")
 		else:
@@ -158,6 +172,16 @@ func _react(_action: String, _args):
 		GM.pc.addSkillExperience(Skill.CumLover, 30, "kait_getmarked")
 
 	if(_action == "endthescene"):
+		if(getModuleFlag("MoonAF26", "kaitFondness", 0) >= 0):
+			increaseModuleFlag("MoonAF26", "kaitFondness", -1)
+		endScene()
+		return
+
+	if(_action == "startKaitQuest"):
+		setModuleFlag("MoonAF26", "startedKaitQuest", true)
+		setModuleFlag("MoonAF26", "fcKaitLost", false)
+		increaseModuleFlag("MoonAF26", "kaitFondness", 1)
+		runScene("KaitStartQuest_Lost")
 		endScene()
 		return
 
