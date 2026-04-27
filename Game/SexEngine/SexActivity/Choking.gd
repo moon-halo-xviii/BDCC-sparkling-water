@@ -19,6 +19,7 @@ func getGoals():
 func getSupportedSexTypes():
 	return {
 		SexType.DefaultSex: true,
+		SexType.TentaclesSex: true,
 	}
 
 func canStopSexWithThisActivity() -> bool:
@@ -33,6 +34,8 @@ func getActivityBaseScore(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo:
 		return -1.0
 	if(_sexEngine.hasGoal(_domInfo, SexGoal.SubMakeUnconscious, _subInfo)):
 		return 1.5
+	if(_subInfo.getChar().isPlayer() && GM.main.encounterSettings.isGoalDisabledForSubPC(SexGoal.Choke)):
+		return 0.0 # Stops the npcs from randomly choking the pc if the pc has the goal disabled
 	return _domInfo.getIsAngryScore() * 1.0 * max(0.1, 0.1 + _domInfo.personalityScore({PersonalityStat.Mean: 1.0})) - _subInfo.getAboutToPassOutScore() * _domInfo.fetishScore({Fetish.UnconsciousSex: -1.0})
 
 func getTags(_indx:int) -> Array:
@@ -43,7 +46,10 @@ func getTags(_indx:int) -> Array:
 	return []
 
 func startActivity(_args):
-	addText("{dom.You} {dom.youVerb('put')} {dom.yourHis} hand on {sub.your} neck!")
+	if(!isTentaclesSex()):
+		addText("{dom.You} {dom.youVerb('put')} {dom.yourHis} hand on {sub.your} neck!")
+	else:
+		addText("{dom.You} {dom.youVerb('wrap')} {dom.yourHis} tentacle around {sub.your} neck!")
 	react(SexReaction.AboutToBeatUp)
 
 func getExtraChokeText() -> String:
@@ -120,16 +126,23 @@ func getActions(_indx:int):
 		if(getState() == "" || getSubInfo().isUnconscious()):
 			addAction("stop", getStopChokeScore(), "Stop choking", "Enough choking")
 
-		if(getSub().hasReachableVagina() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
-			addAction("startvag", getDomInfo().goalsScore({SexGoal.ChokeSexVaginal: 0.3}, getSubID()), "+ Fuck Vaginal", "Start fucking their pussy at the same time", {A_CATEGORY: ["Fuck"]})
-		if(getSub().hasReachableAnus() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
-			addAction("startanal", getDomInfo().goalsScore({SexGoal.ChokeSexAnal: 0.3}, getSubID()), "+ Fuck Anal", "Start fucking their ass at the same time", {A_CATEGORY: ["Fuck"]})
+		if(!isTentaclesSex()):
+			if(getSub().hasReachableVagina() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
+				addAction("startvag", getDomInfo().goalsScore({SexGoal.ChokeSexVaginal: 0.3}, getSubID()), "+ Fuck Vaginal", "Start fucking their pussy at the same time", {A_CATEGORY: ["Fuck"]})
+			if(getSub().hasReachableAnus() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
+				addAction("startanal", getDomInfo().goalsScore({SexGoal.ChokeSexAnal: 0.3}, getSubID()), "+ Fuck Anal", "Start fucking their ass at the same time", {A_CATEGORY: ["Fuck"]})
 
-		if(getDom().hasReachableVagina() && (getSub().hasReachablePenis() || getSub().isWearingStrapon())):
-			addAction("startridevag", getDomInfo().goalsScore({SexGoal.ChokeReceiveVaginal: 0.3}, getSubID()), "+ Ride Vaginal", "Ride their cock with your pussy at the same time", {A_CATEGORY: ["Fuck"]})
-		if(getDom().hasReachableAnus() && (getSub().hasReachablePenis() || getSub().isWearingStrapon())):
-			addAction("startrideanal", getDomInfo().goalsScore({SexGoal.ChokeReceiveAnal: 0.3}, getSubID()), "+ Ride Anal", "Ride their cock with your ass at the same time", {A_CATEGORY: ["Fuck"]})
-	
+			if(getDom().hasReachableVagina() && (getSub().hasReachablePenis() || getSub().isWearingStrapon())):
+				addAction("startridevag", getDomInfo().goalsScore({SexGoal.ChokeReceiveVaginal: 0.3}, getSubID()), "+ Ride Vaginal", "Ride their cock with your pussy at the same time", {A_CATEGORY: ["Fuck"]})
+			if(getDom().hasReachableAnus() && (getSub().hasReachablePenis() || getSub().isWearingStrapon())):
+				addAction("startrideanal", getDomInfo().goalsScore({SexGoal.ChokeReceiveAnal: 0.3}, getSubID()), "+ Ride Anal", "Ride their cock with your ass at the same time", {A_CATEGORY: ["Fuck"]})
+		else:
+			if(getSub().hasReachableVagina() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
+				addAction("startvagtentacles", getDomInfo().goalsScore({SexGoal.ChokeSexVaginal: 0.3}, getSubID()), "+ Fuck Vaginal", "Start fucking their pussy at the same time", {A_CATEGORY: ["Fuck"]})
+			if(getSub().hasReachableAnus() && (getDom().hasReachablePenis() || getDom().isWearingStrapon())):
+				addAction("startanaltentacles", getDomInfo().goalsScore({SexGoal.ChokeSexAnal: 0.3}, getSubID()), "+ Fuck Anal", "Start fucking their ass at the same time", {A_CATEGORY: ["Fuck"]})
+
+		
 	if(_indx == SUB_0):
 		var escapeScore:float = 0.3 + getSubInfo().getResistScore() * 2.0 - getSubInfo().fetishScore({Fetish.Choking: 0.5})
 		addAction("escape", escapeScore, "Escape choking", "Try to escape the choking", {A_CHANCE: getResistChance(SUB_0, DOM_0, RESIST_NECK_FOCUS, 20.0, 0.0)})
@@ -161,6 +174,14 @@ func doAction(_indx:int, _actionID:String, _action:Dictionary):
 		react(SexReaction.StartChokeFuck)
 	if(_actionID == "startanal"):
 		switchCurrentActivityTo("SexAnalOnAllFours", ["choke"])
+		addText("{dom.You} {dom.youVerb('raise')} {sub.yourHis} leg, preparing to fuck {sub.yourHis} {anus}.")
+		react(SexReaction.StartChokeFuck)
+	if(_actionID == "startvagtentacles"):
+		switchCurrentActivityTo("TentaclesSexVag", ["choke"])
+		addText("{dom.You} {dom.youVerb('raise')} {sub.yourHis} leg, preparing to fuck {sub.yourHis} {pussy}.")
+		react(SexReaction.StartChokeFuck)
+	if(_actionID == "startanaltentacles"):
+		switchCurrentActivityTo("TentaclesSexAnal", ["choke"])
 		addText("{dom.You} {dom.youVerb('raise')} {sub.yourHis} leg, preparing to fuck {sub.yourHis} {anus}.")
 		react(SexReaction.StartChokeFuck)
 	if(_actionID == "startridevag"):
@@ -232,6 +253,13 @@ func getAnimationPriority():
 	return 2
 
 func getAnimation():
+	if(isTentaclesSex()):
+		if(getState() == "hardchoking"):
+			return [StageScene.TentaclesChoke, "chokefast", {pc=SUB_0}]
+		if(getState() == "choking"):
+			return [StageScene.TentaclesChoke, "choke", {pc=SUB_0}]
+		return [StageScene.TentaclesChoke, "tease", {pc=SUB_0}]
+	
 	if(getSexType() != SexType.DefaultSex):
 		return null
 	if(getState() == "hardchoking" || getSubInfo().isUnconscious()):

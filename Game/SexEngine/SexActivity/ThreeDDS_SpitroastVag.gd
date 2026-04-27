@@ -173,6 +173,9 @@ func getActions(_indx:int):
 			addAction("fuckMore", getContinueSexScore(_indx, SUB_0, usedBodypart if _indx == DOM_0 else S_MOUTH)-getStopScore(), "Continue fucking", "Start fucking them again")
 			addAction("pullOut", getStopScore(), "Pull out", "Pull your member out")
 		
+		if(state in ["sex", "inside"]):
+			addEggStuffButton(_indx, SUB_0, usedBodypart if _indx == DOM_0 else S_MOUTH)
+		
 		if(state == ""):
 			addAction("rub", 1.0 if !isReadyToPenetrate(_indx) else 0.4, "Rub", "Rub your cock against them", {A_PRIORITY: 4})
 			if(isReadyToFuck(DOM_0) && isReadyToFuck(DOM_1) && !checkActiveDomPC(_indx) && hasBodypartUncovered(SUB_0, usedBodypart)):
@@ -184,7 +187,7 @@ func getActions(_indx:int):
 		if(state == "sex" && isStrapon(_indx) && isReadyToCumHandled(_indx)):
 			addAction("cum" if !checkActiveDomPC(_indx) else "domcumstrapon", 1.0, "Cum!", "You're about to cum", {A_PRIORITY: 1001})
 		elif(state == "sex" && (isReadyToCumHandled(DOM_0) || isStrapon(DOM_0)) && (isReadyToCumHandled(DOM_1) || isStrapon(DOM_1))):
-			if(!isStrapon(_indx) && !checkActiveDomPC(_indx)):
+			if(!isStrapon(_indx) && !checkActiveDomPCUnlessStrapon(_indx)):
 				addAction("cum", 1.0, "Cum inside", "Cum inside them!", {A_PRIORITY: 1001})
 		elif(state == "sex" && isReadyToCumHandled(SUB_0) && !canDoActions(SUB_0) && !checkActiveDomPC(_indx)):
 			addAction("subcum", 1.0, "Sub orgasm!", "They are about to cum!", {A_PRIORITY: 1001})
@@ -195,6 +198,8 @@ func getActions(_indx:int):
 			if(isReadyToCumHandled(SUB_0)):
 				addAction("subcum", 1.0, "Cum!", "You're about to cum!", {A_PRIORITY: 1001})
 func doAction(_indx:int, _id:String, _action:Dictionary):
+	if(_id == "stuffegg"):
+		doStuffEggInto(_indx, SUB_0, usedBodypart if _indx == DOM_0 else S_MOUTH)
 	if(_id == "switch"):
 		addText("{<DOM>.You} {<DOM>.youVerb('decide')} to switch spots.".replace("<DOM>", indxToTextID(_indx)))
 		switchDoms(0, 1)

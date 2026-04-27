@@ -98,6 +98,7 @@ func _init():
 		SexReaction.ThreesomeSpitroast: {REACT_CHANCE: 100},
 		SexReaction.ThreesomeRideGrind: {REACT_CHANCE: 100},
 		SexReaction.PainStrongGeneric: {REACT_CHANCE: 100},
+		SexReaction.EggsStolen: {REACT_CHANCE: 100},
 	}
 
 func getLines(_reaction:int, _role:int, _args:Array):
@@ -671,7 +672,7 @@ func getLines(_reaction:int, _role:int, _args:Array):
 						"Take your "+_args[0]+" off for me.",
 						"Strip your "+_args[0]+" off, nice and slow.",
 						"I want to see you without your "+_args[0]+".",
-						"Get your "+_args[0]+" off me.",
+						"Get your "+_args[0]+" off for me.",
 					])
 
 		SexReaction.ForceUndress:
@@ -5179,4 +5180,12 @@ func getLines(_reaction:int, _role:int, _args:Array):
 						"AGH.. Shit..",
 						"G-Gah!..",
 					])
+
+		SexReaction.EggsStolen:
+			if(_role == ROLE_MAIN):
+				addLines([
+					"My eggs! Give it back.",
+					"Hey, those are mine!",
+					"I laid that.. it's mine!",
+				])
 
