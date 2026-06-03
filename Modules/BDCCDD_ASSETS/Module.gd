@@ -11,3 +11,11 @@ func _init():
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/OfficialTrenchcoat/OfficialTrenchcoat.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/OfficialTrenchcoatRed/OfficialTrenchcoatRed.gd",
 	]
+
+	events = [
+		"res://Modules/BDCCDD_ASSETS/DEBUG/StatusEffectTestEvent.gd",
+	]
+
+	statusEffects = [
+		"res://Modules/BDCCDD_ASSETS/StatusEffect/BleedV2.gd",
+	]
