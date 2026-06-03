@@ -8,6 +8,7 @@ var currentRun = ""
 var tabAmount = 0
 var reacts = {}
 var sceneID = "TestScene"
+var sceneParent:String = "SceneBase"
 var sceneReacts = {}
 var trackedVariables = {}
 var initSceneLines = []
@@ -15,6 +16,8 @@ var reactInitLines = []
 var npcAssocs = {}
 var functions = []
 var devCommentary = []
+var runLines:Array = []
+var reactLines:Array = []
 
 var theGame:MainScene
 var testingScene = false
@@ -31,6 +34,7 @@ func reset():
 	currentRun = ""
 	tabAmount = 0
 	sceneID = "TestScene"
+	sceneParent = "SceneBase"
 	sceneReacts = {}
 	trackedVariables = {}
 	initSceneLines.clear()
@@ -38,6 +42,8 @@ func reset():
 	npcAssocs.clear()
 	functions.clear()
 	devCommentary = []
+	runLines.clear()
+	reactLines.clear()
 
 func setCurrentRun(newcur):
 	currentRun = newcur
@@ -83,6 +89,10 @@ func _on_Button_pressed():
 		
 		if(line.begins_with("sceneID=")):
 			sceneID = line.substr(8).strip_edges()
+			_i += 1
+			continue
+		if(line.begins_with("extends=")):
+			sceneParent = line.substr(8).strip_edges()
 			_i += 1
 			continue
 		
@@ -191,7 +201,7 @@ func _on_Button_pressed():
 			if(commandID in ["reactSceneEnd", "onSceneEnd"] && splittedStuff.size() > 0):
 				var theSceneId = splittedStuff[0].strip_edges()
 				sceneReacts[theSceneId] = theCode
-			if(commandID in ["initScene"]):
+			if(commandID in ["initScene", "initArgs"]):
 				initSceneLines = theCode
 			if(commandID in ["reactInit"]):
 				reactInitLines = theCode
@@ -200,6 +210,10 @@ func _on_Button_pressed():
 				functions.append("")
 			if(commandID in ["devCom", "developerCommentary"]):
 				devCommentary = theCode
+			if(commandID in ["run"]):
+				runLines = theCode
+			if(commandID in ["react"]):
+				reactLines = theCode
 			
 			continue
 		
@@ -271,7 +285,7 @@ func _on_Button_pressed():
 		_i += 1
 	
 	
-	result.append("extends SceneBase")
+	result.append("extends "+sceneParent)
 	result.append("")
 	
 	if(!trackedVariables.empty()):
@@ -306,6 +320,10 @@ func _on_Button_pressed():
 		result.append("")
 	
 	result.append("func _run():")
+	if(!runLines.empty()):
+		for line in runLines:
+			result.append("\t"+line)
+		result.append("")
 	for runID in runs:
 		if(runs[runID].size() > 0):
 			result.append('\tif(state == "'+runID+'"):')
@@ -318,6 +336,10 @@ func _on_Button_pressed():
 	result.append("")
 	
 	result.append("func _react(_action: String, _args):")
+	if(!reactLines.empty()):
+		for line in reactLines:
+			result.append("\t"+line)
+		result.append("")
 	result.append('\tif(_action == "endthescene"):')
 	result.append('\t\tendScene()')
 	result.append('\t\treturn')

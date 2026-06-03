@@ -211,7 +211,10 @@ func addNextButton(method: String, args = []):
 func addButton(text: String, tooltip: String = "", method: String = "", args = []):
 	GM.ui.addButton(text, tooltip, method, args)
 	#emit_signal("addButton", text, method, tooltip)
-	
+
+func addContinue(method: String = "", args = []):
+	addButton("Continue", "See what happens next", method, args)
+
 func addDisabledButton(text: String, tooltip: String = ""):
 	GM.ui.addDisabledButton(text, tooltip)
 	#emit_signal("addDisabledButton", text, tooltip)
@@ -248,11 +251,11 @@ func addButtonWithChecksAt(index:int, text: String, tooltip: String, method: Str
 			reasonText = "["+reasonText+"] "
 		addDisabledButtonAt(index, text, ButtonChecks.getPrefix(checks) + reasonText +tooltip)
 
-func addExtraButton(text: String, tooltip: String = "", method: String = "", args = []):
-	GM.ui.addExtraButton(text, tooltip, method, args)
+func addExtraButton(text: String, tooltip: String = "", method: String = "", args = [], _enabled:bool = true):
+	GM.ui.addExtraButton(text, tooltip, method, args, _enabled)
 
-func addExtraButtonAt(index:int, text: String, tooltip: String = "", method: String = "", args = []):
-	GM.ui.addExtraButtonAt(index, text, tooltip, method, args)
+func addExtraButtonAt(index:int, text: String, tooltip: String = "", method: String = "", args = [], _enabled:bool = true):
+	GM.ui.addExtraButtonAt(index, text, tooltip, method, args, _enabled)
 
 func addTextbox(id):
 	return GM.ui.addUITextbox(id)
@@ -380,6 +383,41 @@ func isSpyingOnInteractionsWith(_charID:String):
 
 func supportsShowingPawns() -> bool:
 	return false
+
+# Just a quick function, spawns an item out of nowhere
+func putOn(_charID:String, _itemID:String):
+	var theCharacter := getCharacter(_charID)
+	if(!theCharacter):
+		return null
+	var theItem = GlobalRegistry.createItem(_itemID)
+	if(!theItem):
+		return null
+	theCharacter.getInventory().forceEquipStoreOtherUnlessRestraint(theItem)
+	return theItem
+
+# Deletes the item!
+func putOff(_charID:String, _itemID:String):
+	var theCharacter := getCharacter(_charID)
+	if(!theCharacter):
+		return null
+	var theCurItem:ItemBase = theCharacter.getInventory().getEquippedItemByID(_itemID)
+	if(!theCurItem):
+		return null
+	theCharacter.getInventory().removeEquippedItem(theCurItem)
+	return theCurItem
+
+func clearSlot(_charID:String, _slot:String):
+	var theCharacter := getCharacter(_charID)
+	if(!theCharacter):
+		return
+	theCharacter.getInventory().clearSlot(_slot)
+
+# Quickly removes some item id from the player's inventory
+func removeItemID(_itemID:String, _am:int = 1):
+	GM.pc.getInventory().removeXOfOrDestroy(_itemID, _am)
+
+func hasItemID(_itemID:String) -> bool:
+	return GM.pc.getInventory().hasItemID(_itemID)
 
 func saveData():
 	var data = {}

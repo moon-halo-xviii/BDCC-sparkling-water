@@ -1,9 +1,9 @@
 extends Node
 
 var game_version_major = 0
-var game_version_minor = 1
-var game_version_revision = 12
-var game_version_suffix = "fix4"
+var game_version_minor = 2
+var game_version_revision = 5
+var game_version_suffix = ""
 
 var contributorsCredits:Dictionary = {
 	"Max-Maxou": [
@@ -137,6 +137,8 @@ var contributorsCredits:Dictionary = {
 		"[url=https://github.com/Alexofp/BDCC/pull/249]#18[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/250]#19[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/251]#20[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/268]#21[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/269]#22[/url]",
 	],
 	"CheeseyCake92": [
 		"[url=https://github.com/Alexofp/BDCC/pull/158]#1[/url]",
@@ -148,6 +150,8 @@ var contributorsCredits:Dictionary = {
 		"[url=https://github.com/Alexofp/BDCC/pull/230]#3[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/237]#4[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/239]#5[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/264]#6[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/265]#7[/url]",
 	],
 	"moon-halo-xviii": [
 		"[url=https://github.com/Alexofp/BDCC/pull/196]#1[/url]",
@@ -163,6 +167,33 @@ var contributorsCredits:Dictionary = {
 		"[url=https://github.com/Alexofp/BDCC/pull/245]#4[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/247]#5[/url]",
 		"[url=https://github.com/Alexofp/BDCC/pull/248]#6[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/281]#7[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/282]#8[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/284]#9[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/285]#10[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/287]#11[/url]",
+	],
+	"SongJo": [
+		"42 great haircuts",
+	],
+	"Meepyneepy": [
+		"[url=https://github.com/Alexofp/BDCC/pull/259]#1[/url]",
+	],
+	"Mari": [
+		"[url=https://github.com/Alexofp/BDCC/pull/266]#1[/url]",
+	],
+	"FrivolousBorks": [
+		"[url=https://github.com/Alexofp/BDCC/pull/267]#1[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/271]#2[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/274]#3[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/275]#4[/url]",
+		"[url=https://github.com/Alexofp/BDCC/pull/278]#5[/url]",
+	],
+	"Ferricyanide": [
+		"[url=https://github.com/Alexofp/BDCC/pull/280]#1[/url]",
+	],
+	"Zsar": [
+		"[url=https://github.com/Alexofp/BDCC/pull/293]#1[/url]",
 	],
 }
 
@@ -262,6 +293,7 @@ var npcOwners:Dictionary = {}
 var npcOwnerEvents:Dictionary = {}
 var npcOwnerEventIDsByTag:Dictionary = {}
 var npcOwnerTraits:Dictionary = {}
+var recruits:Dictionary = {}
 
 var bodypartStorageNode
 
@@ -312,8 +344,8 @@ func getDatapacksFolder() -> String:
 		var _ok = Directory.new().make_dir(modsFolder)
 	return modsFolder
 	
-func getRawModList():
-	var result = []
+func getRawModList() -> Array:
+	var result:Array = []
 	
 	var modsFolder = getModsFolder()
 	
@@ -488,7 +520,7 @@ func onDonationDataRequest(result, _response_code, _headers, body):
 	cachedDonationData = donationData
 	emit_signal("donationDataUpdated")
 
-func getDonationDataString():
+func getDonationDataString(_tightGrouping:bool = false):
 	var theData
 	if(cachedDonationData == null):
 		theData = cachedLocalDonationData
@@ -501,14 +533,20 @@ func getDonationDataString():
 	if(theData == null || !validateDonationData(theData)):
 		return ""
 	
-	var newText = "[center][b][url=https://subscribestar.adult/rahi]SubscribeStar[/url][/b]\nCompiled "+str(theData["dateString"])+"\n\n"
+	var newText:String = "[center][b][url=https://subscribestar.adult/rahi]SubscribeStar[/url][/b]\nCompiled "+str(theData["dateString"])+"\n\n"
 	
 	for tierName in theData["tiers"]:
 		if(!theData["entries"].has(tierName)):
 			continue
 		newText += "[b]"+tierName+" tier[/b]\n"
-		for entry in theData["entries"][tierName]:
-			newText += entry["nickname"]+"\n"
+		if(!_tightGrouping):
+			for entry in theData["entries"][tierName]:
+				newText += entry["nickname"]+"\n"
+		else:
+			var theNames:Array = []
+			for entry in theData["entries"][tierName]:
+				theNames.append(entry["nickname"])
+			newText += Util.join(theNames, ", ")+"\n"
 		newText += "\n"
 	newText += "Thank you [color=red]<3[/color][/center]"
 	return newText
@@ -563,6 +601,7 @@ func registerEverything():
 	registerItemFolder("res://Inventory/Items/Weapons/")
 	registerItemFolder("res://Inventory/Items/Clothes/")
 	registerItemFolder("res://Inventory/Items/Unique/")
+	registerItemFolder("res://Inventory/Items/Pills/")
 	
 	registerBuffFolder("res://Inventory/Buffs/")
 	
@@ -605,6 +644,7 @@ func registerEverything():
 		registerSceneFolder("res://Scenes/Mineshaft/")
 		registerSceneFolder("res://Game/NpcSlavery/SlaveActionScenes/")
 		registerSceneFolder("res://Game/NpcSlavery/SlaveActionScenes/Prostitution/")
+		registerSceneFolder("res://Game/DomRoute/RecruitScenes/")
 		
 		var end2 = OS.get_ticks_usec()
 		var worker_time2 = (end2-start2)/1000000.0
@@ -638,6 +678,7 @@ func registerEverything():
 	yield(get_tree(), "idle_frame")
 	
 	registerSexActivitiesFolder("res://Game/SexEngine/SexActivity/")
+	registerSexActivitiesFolder("res://Game/SexEngine/SexActivity/Tentacles/")
 	registerFetishesFolder("res://Game/SexEngine/Fetish/")
 	registerSexGoalsFolder("res://Game/SexEngine/Goal/")
 	registerSexTypeFolder("res://Game/SexEngine/SexType/")
@@ -671,6 +712,7 @@ func registerEverything():
 	registerTransformationsFolder("res://Game/Transformation/TFs/")
 	registerTransformationEffectsFolder("res://Game/Transformation/Effects/")
 	registerNurseryTaskFolder("res://Game/Science/NurseryTasks/")
+	registerRecruitFolder("res://Game/DomRoute/Recruits/")
 	
 	emit_signal("loadingUpdate", 11.0/totalStages, "Sex scenes")
 	yield(get_tree(), "idle_frame")
@@ -870,9 +912,11 @@ func registerSceneFolder(folder: String):
 	else:
 		Log.printerr("An error occurred when trying to access the path "+folder)
 
-func registerBodypart(path: String):
+func registerBodypart(path: String, _authorOverride:String = ""):
 	var bodypart = load(path)
 	var bodypartObject = bodypart.new()
+	if(!_authorOverride.empty()):
+		bodypartObject.author = _authorOverride
 	bodyparts[bodypartObject.id] = bodypartObject
 	bodypartStorageNode.add_child(bodypartObject)
 
@@ -895,6 +939,16 @@ func getBodypartsIdsBySlot(_slot:String) -> Array:
 	var result:Array = []
 	for bodypartID in bodyparts:
 		var bodypart = bodyparts[bodypartID]
+		if(bodypart.getSlot() == _slot):
+			result.append(bodypartID)
+	return result
+
+func getBodypartsIdsBySlotForTF(_slot:String) -> Array:
+	var result:Array = []
+	for bodypartID in bodyparts:
+		var bodypart = bodyparts[bodypartID]
+		if(bodypart.shouldBeExcludedFromTFPick()):
+			continue
 		if(bodypart.getSlot() == _slot):
 			result.append(bodypartID)
 	return result
@@ -2860,6 +2914,29 @@ func getNpcOwnerTrait(id: String):
 
 func getNpcOwnerTraits():
 	return npcOwnerTraits
+
+
+func registerRecruit(path: String):
+	var loadedClass = load(path)
+	var object = loadedClass.new()
+	
+	recruits[object.id] = loadedClass
+
+func registerRecruitFolder(folder: String):
+	var scripts = getScriptsInFoldersRecursive(folder)
+	for scriptPath in scripts:
+		registerRecruit(scriptPath)
+
+func createRecruit(id: String):
+	if(recruits.has(id)):
+		return recruits[id].new()
+	else:
+		Log.printerr("ERROR: recruit with the id "+id+" wasn't found")
+		return null
+
+func getRecruits():
+	return recruits
+
 
 
 
