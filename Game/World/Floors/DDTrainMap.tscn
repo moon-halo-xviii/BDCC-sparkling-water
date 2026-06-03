@@ -1,0 +1,952 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/World/SubWorld.gd" type="Script" id=3]
+
+[node name="DDTrainMap" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="DDTrainMap" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="DDTrainCore" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+scale = Vector2( 4.25, 4.25 )
+roomName = "Main Sector"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 3
+
+[node name="DDTrainCore2" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, -768 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Security Checkpoint"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainCore3" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -768, 0 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Security Checkpoint"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainCore4" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, 0 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Security Checkpoint"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainCore5" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, 768 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Security Checkpoint"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainCore6" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 512, 512 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Red Sector"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 2
+gridColor = 2
+
+[node name="DDTrainCore7" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, -512 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Staff Sector"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainCore8" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -512, -512 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Lilac Sector"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 4
+gridColor = 4
+
+[node name="DDTrainCore9" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -512, 512 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "General Sector"
+roomDescription = "The Core of the Facility. Typically inaccessable."
+roomColor = 5
+gridColor = 5
+
+[node name="DDTrainLine" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -192, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine2" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -256, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine3" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -320, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine4" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -384, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine5" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -448, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine6" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -512, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine7" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -576, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine8" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -640, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine9" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -768, 128 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine10" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -768, 192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine11" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -768, 256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine12" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -768, 320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine13" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -768, 384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine14" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -704, 384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine15" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -704, 448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine16" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -640, 448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine17" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -640, 512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 5
+
+[node name="DDTrainLine18" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -512, 640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine19" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -448, 640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine20" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -448, 704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine21" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -384, 704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine22" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -384, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine23" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -320, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine24" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine25" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -192, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine26" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -128, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine27" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 128, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine28" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine29" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine30" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine31" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 384, 768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine32" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 384, 704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine33" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 448, 704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine34" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 448, 640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine35" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 512, 640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine36" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine37" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 640, 448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine38" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 704, 448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine39" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 704, 384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine40" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 768, 384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine41" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 768, 320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine42" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 768, 256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine43" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 768, 192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine44" parent="." instance=ExtResource( 1 )]
+position = Vector2( 768, 128 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+
+[node name="DDTrainLine45" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 768, 128 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine46" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -128 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine47" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine48" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine49" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine50" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine51" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, -384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine52" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, -448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine53" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine54" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 7
+gridColor = 2
+
+[node name="DDTrainLine55" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 512, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine56" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 448, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine57" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 448, -704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine58" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 384, -704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine59" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 384, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine60" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine61" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine62" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine63" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 128, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+gridColor = 7
+
+[node name="DDTrainLine64" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -128, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine65" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -192, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine66" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine67" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -320, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine68" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -384, -768 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine69" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -384, -704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine70" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -448, -704 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine71" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -448, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine72" parent="." instance=ExtResource( 1 )]
+position = Vector2( -512, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+
+[node name="DDTrainLine73" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -512, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine74" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -640, -512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine75" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -640, -448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine76" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -704, -448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine77" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -704, -384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine78" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -768, -384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine79" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -768, -320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine80" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -768, -256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine81" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -768, -192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine82" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -768, -128 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 4
+
+[node name="DDTrainLine83" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine84" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine85" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine86" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine87" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine88" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine89" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -576 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine90" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, -640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine91" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 192, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine92" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 256, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine93" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 320, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine94" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 384, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine95" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 448, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine96" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 512, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine97" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 576, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine98" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 640, 0 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 2
+
+[node name="DDTrainLine99" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 192 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine100" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 256 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine101" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 320 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine102" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 384 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine103" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 448 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine104" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 512 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine105" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 576 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3
+
+[node name="DDTrainLine106" parent="." instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 0, 640 )
+scale = Vector2( 0.5625, 0.5625 )
+roomName = "Train Line"
+roomDescription = "A route along the train network. You shouldn't be standing here."
+roomColor = 3

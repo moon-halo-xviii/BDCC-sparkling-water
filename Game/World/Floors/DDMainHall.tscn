@@ -1,0 +1,2501 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=2]
+
+[node name="DDMainHall" instance=ExtResource( 2 )]
+
+[node name="MainHall" parent="." index="0" instance=ExtResource( 1 )]
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen.
+
+As you step into the center of the chamber, you watch as an inmate gets dragged. They kick and scream in fear as a set of chains is lowered down to the guards dragging them. Before your eyes, you watch as they get cuffed to the chains before being hoisted up and dangled from the catwalks, hanging there and being put on display. Another dreadful reminder that dissonance will not be tolerated."
+roomSprite = 4
+population = 3
+
+[node name="MainHall2" parent="." index="1" instance=ExtResource( 1 )]
+position = Vector2( 0, -64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+population = 3
+
+[node name="MainHall3" parent="." index="2" instance=ExtResource( 1 )]
+position = Vector2( 64, -64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen.
+
+You step up to the area where the red inmates hang out. They all stop what they're doing and stare at you, their gazes cutting into you like knives. They open up a bit to reveal a poor lilac in the center of the group, completely naked and ass up in the air, leaking jizz. Poor guy. ...or lucky guy depending on your perspective."
+canNorth = false
+canEast = false
+gridColor = 2
+population = 3
+
+[node name="MainHall4" parent="." index="3" instance=ExtResource( 1 )]
+position = Vector2( 64, 0 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+population = 3
+
+[node name="MainHall5" parent="." index="4" instance=ExtResource( 1 )]
+position = Vector2( 64, 64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+canEast = false
+canSouth = false
+population = 3
+
+[node name="MainHall6" parent="." index="5" instance=ExtResource( 1 )]
+position = Vector2( 0, 64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+population = 3
+
+[node name="MainHall7" parent="." index="6" instance=ExtResource( 1 )]
+position = Vector2( -64, 64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen.
+
+This is where the orange inmates hang out. They look at you with a bit of discomfort before going back to their business."
+canWest = false
+canSouth = false
+gridColor = 5
+population = 3
+
+[node name="MainHall8" parent="." index="7" instance=ExtResource( 1 )]
+position = Vector2( -64, 0 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+population = 3
+
+[node name="MainHall9" parent="." index="8" instance=ExtResource( 1 )]
+position = Vector2( -64, -64 )
+roomName = "Central Chamber"
+roomDescription = "You step into the central chamber, the massive lights above blinding you for a short moment. You look up at the lights, seeing the faint silhouettes of the guard catwalks, as well as the barely noticable outlines of soldiers looking down at you, patrolling back and forth. You can barely see the glow of their rifles through the blinding lights. Your eyes begin to feel sore and you look away. As your eyes adjust, you see groups of inmates divided and chatting amongst each other. Reds stay to the far corners, while Oranges are gathered more toward the center. Lilacs are nowhere to be seen."
+canWest = false
+canNorth = false
+population = 3
+
+[node name="MainHall10" parent="." index="9" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, -128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canNorth = false
+canSouth = false
+roomColor = 8
+population = 3
+
+[node name="MainHall11" parent="." index="10" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall12" parent="." index="11" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -64 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canWest = false
+canEast = false
+roomColor = 8
+population = 3
+
+[node name="MainHall13" parent="." index="12" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 0 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A red block inmate shoves past you to get to the central chamber, cussing you out as they pass."
+roomColor = 8
+population = 3
+
+[node name="MainHall14" parent="." index="13" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 64 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canWest = false
+canEast = false
+roomColor = 8
+population = 3
+
+[node name="MainHall15" parent="." index="14" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall16" parent="." index="15" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, 128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall17" parent="." index="16" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, 128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons."
+roomColor = 8
+population = 3
+
+[node name="MainHall18" parent="." index="17" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, 128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall19" parent="." index="18" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall20" parent="." index="19" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 64 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canWest = false
+canEast = false
+roomColor = 8
+population = 3
+
+[node name="MainHall21" parent="." index="20" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 0 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+You watch a poor lilac enter the central chamber, only for them to get scooped up by the red block inmates and carried off to their corner. A short while later, moans and groans start to come from the corner. Seems like they'll be busy..."
+roomColor = 8
+population = 3
+
+[node name="MainHall22" parent="." index="21" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -64 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canWest = false
+canEast = false
+roomColor = 8
+population = 3
+
+[node name="MainHall23" parent="." index="22" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+roomColor = 8
+population = 3
+
+[node name="MainHall24" parent="." index="23" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, -128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+A tall barbed wire fence prevents you from entering the central chamber from this spot."
+canNorth = false
+canSouth = false
+roomColor = 8
+population = 3
+
+[node name="MainHall25" parent="." index="24" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, -128 )
+roomName = "Outer Chamber"
+roomDescription = "You stroll among the outer edges of the central chamber, the guard's lights are dimmer in this location and nowhere near as blinding, yet they're still bright. Inmates are often found wandering this area, Reds, Oranges and Lilacs alike. Though, Lilacs are very rarely seen in the central chamber for quite valid reasons.
+
+To the north is a heavily guarded security checkpoint that stops you from going toward the connector to the engineering zone..
+
+An orange block inmate carefully scoots around you as they go to the central chamber"
+roomColor = 8
+population = 3
+
+[node name="MainSalvEnt" parent="." index="25" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -320 )
+roomName = "Salvage Stairs"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day.
+
+These stairs lead down into the salvage area, where salvagers and many inmates end up."
+roomColor = 8
+population = 3
+
+[node name="MainSalvStairs" parent="." index="26" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, -320 )
+roomName = "Salvage Stairs"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day.
+
+These stairs lead down into the salvage area, where salvagers and many inmates end up."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainElevator" parent="." index="27" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 0, -448 )
+roomName = "General Elevator"
+roomDescription = "You step into the elevator. It's a massive cargo elevator, clearly designed to move extremely large amounts of cargo to and from various floors of the prison. You can tell it's seen much use given the rusty gears that are used to move the elevator up and down. Looking up, you can see a virtuously endless number of floors, enough to give you vertigo as you try to process them all.
+
+There is a panel on the right where you came in. There's a bunch of different buttons and whatnot that you can use to go up and down to various floors.
+
+Currently, you're on the bottom floor; the Main Hall."
+roomSprite = 3
+roomColor = 2
+population = 3
+
+[node name="MainHall32" parent="." index="28" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, -320 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainConnector" parent="." index="29" instance=ExtResource( 1 )]
+position = Vector2( 0, 192 )
+roomName = "Corridor"
+roomDescription = "You stroll through the large corridor leading away from the central chamber, leading toward the tram station. Your brain tells you this is supposed to be a connector to the green zone, but that isn't the case. Not anymore.
+
+Just to the south is a security checkpoint that pats down every inmate that comes from the tram line, making sure they don't have any illegal items on them."
+population = 3
+
+[node name="MainConnector2" parent="." index="30" instance=ExtResource( 1 )]
+position = Vector2( -192, 0 )
+roomName = "Corridor"
+roomDescription = "You stroll through the large corridor leading away from the central chamber, leading toward the yard. Your brain tells you this is supposed to be a connector to the cafeteria, but that isn't the case. Not anymore."
+population = 3
+
+[node name="MainCheckpoint" parent="." index="31" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 0, 256 )
+roomName = "Checkpoint"
+roomDescription = "A heavily armored guard watches over the checkpoint, monitoring inmates and patting them down as they pass through. This guard looks exceptionally brutish and you wouldn't want to get on this guy's bad side. Might not be a good idea to try and sneak in contraband while he's around..."
+roomSprite = 1
+roomColor = 2
+population = 3
+
+[node name="MainCheckpoint2" parent="." index="32" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 0, -192 )
+roomName = "Checkpoint"
+roomDescription = "A heavily armored guard watches over the checkpoint, monitoring inmates and patting them down as they pass through. This guard looks exceptionally brutish and you wouldn't want to get on this guy's bad side. Might not be a good idea to try and sneak in contraband while he's around..."
+roomSprite = 1
+roomColor = 2
+population = 3
+
+[node name="MainLaundry" parent="." index="33" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, 0 )
+roomName = "Laundry Room"
+roomDescription = "You stroll through the large corridor leading away from the central chamber, leading into the laundry room. At least something feels familiar around here. It's a pretty similar setup to the other prison, however there is no uniform vendor here. In its place is a bunch of laundry machines and an engineer with a crate of uniforms. There's also a sewing kit for those trying to fix their uniform. It looks well used."
+roomSprite = 9
+roomColor = 3
+population = 3
+
+[node name="MainTram" parent="." index="34" instance=ExtResource( 1 )]
+position = Vector2( 0, 320 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+Just to the north is a security checkpoint that pats down every inmate that comes from the tram line, making sure they don't have any illegal items on them."
+population = 3
+
+[node name="MainTram2" parent="." index="35" instance=ExtResource( 1 )]
+position = Vector2( 0, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram4" parent="." index="36" instance=ExtResource( 1 )]
+position = Vector2( 64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram5" parent="." index="37" instance=ExtResource( 1 )]
+position = Vector2( 128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram6" parent="." index="38" instance=ExtResource( 1 )]
+position = Vector2( 64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram7" parent="." index="39" instance=ExtResource( 1 )]
+position = Vector2( 0, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram8" parent="." index="40" instance=ExtResource( 1 )]
+position = Vector2( -64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram9" parent="." index="41" instance=ExtResource( 1 )]
+position = Vector2( -128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram12" parent="." index="42" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="MainTram13" parent="." index="43" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainTram15" parent="." index="44" instance=ExtResource( 1 )]
+position = Vector2( 64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram16" parent="." index="45" instance=ExtResource( 1 )]
+position = Vector2( 0, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram17" parent="." index="46" instance=ExtResource( 1 )]
+position = Vector2( -64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainTram19" parent="." index="47" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="MainTram21" parent="." index="48" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainTram22" parent="." index="49" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainTram23" parent="." index="50" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="MainTram24" parent="." index="51" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+roomColor = 8
+population = 3
+
+[node name="MainTram25" parent="." index="52" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+roomColor = 8
+population = 3
+
+[node name="MainTram26" parent="." index="53" instance=ExtResource( 1 )]
+position = Vector2( -256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram27" parent="." index="54" instance=ExtResource( 1 )]
+position = Vector2( -192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram28" parent="." index="55" instance=ExtResource( 1 )]
+position = Vector2( -128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram29" parent="." index="56" instance=ExtResource( 1 )]
+position = Vector2( -64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram30" parent="." index="57" instance=ExtResource( 1 )]
+position = Vector2( 0, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram31" parent="." index="58" instance=ExtResource( 1 )]
+position = Vector2( 64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram32" parent="." index="59" instance=ExtResource( 1 )]
+position = Vector2( 128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram33" parent="." index="60" instance=ExtResource( 1 )]
+position = Vector2( 192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram34" parent="." index="61" instance=ExtResource( 1 )]
+position = Vector2( 256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram35" parent="." index="62" instance=ExtResource( 1 )]
+position = Vector2( 320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram36" parent="." index="63" instance=ExtResource( 1 )]
+position = Vector2( 384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram37" parent="." index="64" instance=ExtResource( 1 )]
+position = Vector2( 320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram38" parent="." index="65" instance=ExtResource( 1 )]
+position = Vector2( 256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="MainTram39" parent="." index="66" instance=ExtResource( 1 )]
+position = Vector2( 192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram40" parent="." index="67" instance=ExtResource( 1 )]
+position = Vector2( 128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram41" parent="." index="68" instance=ExtResource( 1 )]
+position = Vector2( 64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram42" parent="." index="69" instance=ExtResource( 1 )]
+position = Vector2( 0, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="MainTram43" parent="." index="70" instance=ExtResource( 1 )]
+position = Vector2( -64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram44" parent="." index="71" instance=ExtResource( 1 )]
+position = Vector2( -128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram45" parent="." index="72" instance=ExtResource( 1 )]
+position = Vector2( -192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram46" parent="." index="73" instance=ExtResource( 1 )]
+position = Vector2( -256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="MainTram47" parent="." index="74" instance=ExtResource( 1 )]
+position = Vector2( -320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram48" parent="." index="75" instance=ExtResource( 1 )]
+position = Vector2( -384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram49" parent="." index="76" instance=ExtResource( 1 )]
+position = Vector2( -320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram50" parent="." index="77" instance=ExtResource( 1 )]
+position = Vector2( -256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram51" parent="." index="78" instance=ExtResource( 1 )]
+position = Vector2( -192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram52" parent="." index="79" instance=ExtResource( 1 )]
+position = Vector2( -128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram53" parent="." index="80" instance=ExtResource( 1 )]
+position = Vector2( -64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram54" parent="." index="81" instance=ExtResource( 1 )]
+position = Vector2( 0, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram55" parent="." index="82" instance=ExtResource( 1 )]
+position = Vector2( 64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram56" parent="." index="83" instance=ExtResource( 1 )]
+position = Vector2( 128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram57" parent="." index="84" instance=ExtResource( 1 )]
+position = Vector2( 192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram58" parent="." index="85" instance=ExtResource( 1 )]
+position = Vector2( 256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+"
+population = 3
+
+[node name="MainTram59" parent="." index="86" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram60" parent="." index="87" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram61" parent="." index="88" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram62" parent="." index="89" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram63" parent="." index="90" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram64" parent="." index="91" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram65" parent="." index="92" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 0, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram66" parent="." index="93" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram67" parent="." index="94" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram68" parent="." index="95" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram69" parent="." index="96" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram70" parent="." index="97" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram71" parent="." index="98" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="MainTram3" parent="." index="99" instance=ExtResource( 1 )]
+position = Vector2( -64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="MainEngineering" parent="." index="100" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, -256 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering2" parent="." index="101" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, -256 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering3" parent="." index="102" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, -320 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering4" parent="." index="103" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, -384 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering5" parent="." index="104" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 64, -320 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering6" parent="." index="105" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, -320 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering7" parent="." index="106" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, -384 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering8" parent="." index="107" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, -448 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainEngineering9" parent="." index="108" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, -512 )
+roomName = "Engineering Zone"
+roomDescription = "The sounds of heavy machinery running nearly deafens you as you move through the engineering zone. Engineers walk around you carrying heavy materials, and sometimes the occaisonal inmate is seen with some tools aiding in the engineering of various things. Maybe you'll be able to help out one day."
+roomColor = 5
+population = 3
+
+[node name="MainFactory" parent="." index="109" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 192, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step into the manufacturing zone, the sounds of machinery becoming louder and louder as you get closer and closer to the sounds of working machines. It seems that this is where most of the inmates work, as you can see rows upon rows of inmates assembling various tools and other important equipment that could be used by the likes of soldiers and/or guards.
+
+You're approached by a big wolf who cracks his knuckles.
+
+[b]Boss:[/b] [color=yellow]\"Hope you got some ID on you.\"[/color]
+
+You pull out an identification card and give it to the big wolf who huffs and passes it back. Seems like he was hoping for a fight. He motions inward and gets out of the way."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory2" parent="." index="110" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 256, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory3" parent="." index="111" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory4" parent="." index="112" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -448 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory5" parent="." index="113" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -512 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory6" parent="." index="114" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory7" parent="." index="115" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 384, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory8" parent="." index="116" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory9" parent="." index="117" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -512 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly" parent="." index="118" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -512 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly19" parent="." index="119" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -640 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly20" parent="." index="120" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, -640 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly2" parent="." index="121" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -448 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly3" parent="." index="122" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -384 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly4" parent="." index="123" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -320 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly18" parent="." index="124" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -192 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly5" parent="." index="125" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, -320 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly6" parent="." index="126" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, -384 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly7" parent="." index="127" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, -448 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly8" parent="." index="128" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, -512 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly9" parent="." index="129" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 576, -512 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly10" parent="." index="130" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -512 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly11" parent="." index="131" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, -512 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly12" parent="." index="132" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, -448 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly13" parent="." index="133" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -448 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly14" parent="." index="134" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 576, -448 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly15" parent="." index="135" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -320 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly16" parent="." index="136" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -256 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 8
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainAssembly17" parent="." index="137" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 640, -192 )
+roomName = "Assembly Line"
+roomDescription = "How the fuck are you standing here?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory10" parent="." index="138" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -448 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory11" parent="." index="139" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory12" parent="." index="140" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -320 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory13" parent="." index="141" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 448, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory14" parent="." index="142" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 384, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory15" parent="." index="143" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory16" parent="." index="144" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 320, -320 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory17" parent="." index="145" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 512, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory18" parent="." index="146" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 576, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory19" parent="." index="147" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 576, -320 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+There is an open bay to begin working here."
+roomSprite = 4
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory20" parent="." index="148" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 576, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory21" parent="." index="149" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 640, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory22" parent="." index="150" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 704, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+canEast = false
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory23" parent="." index="151" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 704, -320 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+canEast = false
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory24" parent="." index="152" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 704, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory25" parent="." index="153" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -256 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory26" parent="." index="154" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -320 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+canWest = false
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory27" parent="." index="155" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -384 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+canWest = false
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory28" parent="." index="156" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -448 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory29" parent="." index="157" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -512 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here..."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory30" parent="." index="158" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 768, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory31" parent="." index="159" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 704, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory32" parent="." index="160" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 640, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory33" parent="." index="161" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 576, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainFactory34" parent="." index="162" instance=ExtResource( 1 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 512, -576 )
+roomName = "Manufacturing Zone"
+roomDescription = "You step deeper into the manufactoring zone, being surrounded on all sides by complex machinery. You don't really know what you're doing here, but given the instructions that the security officer gave you, you're supposed to find an empty bay and start working. Given how hard these people are working, it might be pretty hard to find a spot to start.
+
+It's really loud in here...
+
+You're currently on a catwalk overlooking the assembly lines. These go over the conveyer belts and allow the manufactured items to pass underneath."
+roomColor = 5
+gridColor = 6
+loctag_EngineersEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainYard" parent="." index="163" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard2" parent="." index="164" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard3" parent="." index="165" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard4" parent="." index="166" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease."
+roomColor = 1
+population = 3
+
+[node name="MainYard5" parent="." index="167" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease."
+roomColor = 1
+population = 3
+
+[node name="MainYard6" parent="." index="168" instance=ExtResource( 1 )]
+position = Vector2( -512, -128 )
+roomName = "Stairs"
+roomDescription = "You step up to the stairs. Looking up, you see the edges of greenery and on the wall leading up you can read 'Hydroponics.' There's a sign on the wall next to the stairs that reads: [color=red]No Unauthorized Personnel.[/color]
+
+Looks like this area is off limits."
+gridColor = 2
+population = 2
+
+[node name="MainYard7" parent="." index="169" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease."
+roomColor = 1
+population = 3
+
+[node name="MainYard8" parent="." index="170" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease."
+roomColor = 1
+population = 3
+
+[node name="MainYard9" parent="." index="171" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease."
+roomColor = 1
+population = 3
+
+[node name="MainYard10" parent="." index="172" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, 64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease.
+
+To your south is a nice exercise yard. From here you can see a few inmates working out and doing yoga."
+roomColor = 1
+population = 3
+
+[node name="MainYard11" parent="." index="173" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, 64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease.
+
+To your south is a nice exercise yard. From here you can see a few inmates working out and doing yoga."
+roomColor = 1
+population = 3
+
+[node name="MainExercise" parent="." index="174" instance=ExtResource( 1 )]
+position = Vector2( -512, 128 )
+roomName = "Exercise Platform"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the other exercise area. Except this is definitely much bigger, and gets a lot more use."
+population = 3
+
+[node name="MainExercise2" parent="." index="175" instance=ExtResource( 1 )]
+position = Vector2( -576, 128 )
+roomName = "Exercise Platform"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the other exercise area. Except this is definitely much bigger, and gets a lot more use."
+population = 3
+
+[node name="MainExercise3" parent="." index="176" instance=ExtResource( 1 )]
+position = Vector2( -576, 192 )
+roomName = "Weights Bench"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the other exercise area. Except this is definitely much bigger, and gets a lot more use.
+
+There's some weights that aren't in use here."
+roomSprite = 4
+population = 3
+
+[node name="MainExercise4" parent="." index="177" instance=ExtResource( 1 )]
+position = Vector2( -512, 192 )
+roomName = "Exercise Platform"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the other exercise area. Except this is definitely much bigger, and gets a lot more use."
+population = 3
+
+[node name="MainExercise5" parent="." index="178" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -512, 256 )
+roomName = "'Gym' Showers"
+roomDescription = "You step into the showers. There's no undressing room and the showers are pretty open. But, hey, a shower is just what someone needs after working out. Are you really going to complain?"
+roomSprite = 7
+roomColor = 3
+population = 3
+
+[node name="MainExercise6" parent="." index="179" instance=ExtResource( 1 )]
+position = Vector2( -448, 192 )
+roomName = "Yoga Mats"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the gym from BDCC, except this is definitely much bigger, and gets a lot more use.
+
+There's an open yoga mat here for you to use. ...if you want."
+roomSprite = 4
+population = 3
+
+[node name="MainExercise7" parent="." index="180" instance=ExtResource( 1 )]
+position = Vector2( -448, 128 )
+roomName = "Exercise Platform"
+roomDescription = "Scattered all around you are various inmates working out. Some do weights, others do yoga. It's not unlike the other exercise area. Except this is definitely much bigger, and gets a lot more use."
+population = 3
+
+[node name="MainYard12" parent="." index="181" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, 64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+There is a large rock in the center of the yard. Fortunately, you can walk around it with ease.
+
+To your south is a nice exercise yard. From here you can see a few inmates working out and doing yoga."
+roomColor = 1
+population = 3
+
+[node name="MainYard13" parent="." index="182" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -640, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard14" parent="." index="183" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, 0 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard15" parent="." index="184" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, -64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard17" parent="." index="185" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, 64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful."
+roomColor = 1
+population = 3
+
+[node name="MainYard18" parent="." index="186" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -768, 64 )
+roomName = "Main Yard"
+roomDescription = "You walk amongst the expansive yard, surrounded by trees and various bushes. There's a clear stone path that guides you through the greenery, each individual stone polished to provide a smooth walking experience underfoot and you couldn't be more grateful.
+
+...
+
+Hm? There's a vent in the wall. It's been welded on."
+roomColor = 1
+population = 3
+
+[node name="MainHydro26" parent="." index="187" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -192 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro28" parent="." index="188" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -256 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro40" parent="." index="189" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -320 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro41" parent="." index="190" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+canNorth = false
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro42" parent="." index="191" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro56" parent="." index="192" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro45" parent="." index="193" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro46" parent="." index="194" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -448 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro47" parent="." index="195" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -512 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro48" parent="." index="196" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -512 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro49" parent="." index="197" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -512 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them.
+
+Arriving at one of the hydroponics trays that aren't being watched, you find it ripe full of good stuff to take. You've come this far... might as well snag it."
+canWest = false
+roomSprite = 4
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro29" parent="." index="198" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -256 )
+roomName = "Hydroponics"
+roomDescription = "You duck down out of sight as some gardeners come around a corner, going into an elevator in the wall. Various equipment for gardening and maintaining plants and whatnot is scattered around here. This place is way more developed than your prison ever was given the tech of this stuff...
+
+Trying to use the elevator prints an error message."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro30" parent="." index="199" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -320 )
+roomName = "Hydroponics"
+roomDescription = "You duck down out of sight as some gardeners come around a corner, going into an elevator in the wall. Various equipment for gardening and maintaining plants and whatnot is scattered around here. This place is way more developed than your prison ever was given the tech of this stuff...
+
+Trying to use the elevator prints an error message."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro31" parent="." index="200" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+canNorth = false
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro50" parent="." index="201" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -448 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro51" parent="." index="202" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -448 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro52" parent="." index="203" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -512 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro53" parent="." index="204" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -512, -576 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro54" parent="." index="205" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -576 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro55" parent="." index="206" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -576, -512 )
+roomName = "Hydroponics"
+roomDescription = "Get out of here, Stalker!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 3
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro32" parent="." index="207" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -640, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro33" parent="." index="208" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro34" parent="." index="209" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -768, -384 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro35" parent="." index="210" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, -448 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro37" parent="." index="211" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, -512 )
+roomName = "Hydroponics"
+roomDescription = "Humidity sticks to your fur as you walk around the hydroponics, making you feel all sweaty and damp. It's really hot in here. Going off the marks on the wall, you shouldn't be here. As a matter of fact, there's a red [color=red]Off-Limits[/color] sign on the wall to your right.
+
+You can see various gardeners around in heavy gear carrying large fumigators. They don't look the type to take kindly to tresspassers... might be a good idea to avoid them."
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainHydro39" parent="." index="212" instance=ExtResource( 1 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -704, -576 )
+roomName = "Hydroponics"
+roomDescription = "You enter into an office off to the side of the hydroponics area. It seems empty for now. There's scattered papers all around but it doesn't make any sense to you. Might prove useful to just leave it be.
+
+Oh hey there's A/C in here!"
+roomSprite = 1
+roomColor = 1
+gridColor = 2
+loctag_Greenhouses = true
+loctag_GuardsEncounter = true
+loctag_Offlimits = true
+population = 2
+
+[node name="MainTramLine" parent="." index="213" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine2" parent="." index="214" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine3" parent="." index="215" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine4" parent="." index="216" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine5" parent="." index="217" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine6" parent="." index="218" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="MainTramLine7" parent="." index="219" instance=ExtResource( 1 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3

@@ -1,0 +1,1876 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=2]
+
+[node name="Town" instance=ExtResource( 1 )]
+
+[node name="TownCore" parent="." index="0" instance=ExtResource( 2 )]
+position = Vector2( 64, 1792 )
+
+[node name="TownApartment" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( 1472, 1216 )
+roomName = "Apartment - Entrance"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+This is the little entrance you have when coming in. It's where you put stuff like your jacket for when it's raining, or you have to go on a ride. Your helmet and bag are also here, but after you settled in, you didn't have much use for them, so they've kinda been collecting dust."
+roomSprite = 3
+
+[node name="TownApartment2" parent="." index="2" instance=ExtResource( 2 )]
+position = Vector2( 1472, 1152 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least."
+
+[node name="TownApartment3" parent="." index="3" instance=ExtResource( 2 )]
+position = Vector2( 1408, 1152 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+Your cramped kitchen. It doesn't see much use, only being used to make instant noodles, coffee, or instant mac-and-cheese. ...hell sometimes you get ballsy and make mac-an-ramen. It's actually... not that bad."
+roomSprite = 2
+
+[node name="TownApartment4" parent="." index="4" instance=ExtResource( 2 )]
+position = Vector2( 1408, 1088 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least."
+
+[node name="TownApartment5" parent="." index="5" instance=ExtResource( 2 )]
+position = Vector2( 1472, 1088 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least."
+
+[node name="TownApartment6" parent="." index="6" instance=ExtResource( 2 )]
+position = Vector2( 1472, 1024 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+Your computer you bought shortly after getting into town. It's just a crappy laptop, but better than nothing.
+
+It's charging right now."
+roomSprite = 5
+
+[node name="TownApartment7" parent="." index="7" instance=ExtResource( 2 )]
+position = Vector2( 1408, 1024 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+This is your bed. It's not great, but better than the one in the BDCC."
+roomSprite = 4
+
+[node name="TownApartment8" parent="." index="8" instance=ExtResource( 2 )]
+position = Vector2( 1344, 1088 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+Your bathroom. Not much to say about it, but looking in the mirror... it's still you."
+roomSprite = 8
+
+[node name="TownApartment10" parent="." index="9" instance=ExtResource( 2 )]
+position = Vector2( 1344, 1152 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+Your shower. Much better than the showers in the BDCC by a landslide. This one actually gets hot when you want it too. Oh, and it's clean. You prefer it that way."
+canWest = false
+canEast = false
+canSouth = false
+roomSprite = 7
+
+[node name="TownApartment9" parent="." index="10" instance=ExtResource( 2 )]
+position = Vector2( 1536, 1088 )
+roomName = "Apartment"
+roomDescription = "Your apartment you've been staying in for the past two weeks. It's rather cramped, with you barely having much room to work with. But it's home... for now at least.
+
+Your laundry room. Fit for your whites and other basic clothing, but stuff like your work clothes must be handled by the laundromat."
+roomSprite = 9
+
+[node name="TownSidewalk" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( -832, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk2" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( -768, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is an arcade, with bright neon lights that read; \"LASER-BLAZER!\"
+
+The appeal for arcades died out a long time ago, but sometimes you'd venture in here just to check things out. It brings an odd feeling of nostalgia, but you can't figure out why."
+
+[node name="TownSidewalk3" parent="." index="13" instance=ExtResource( 2 )]
+position = Vector2( -704, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is an arcade, with bright neon lights that read; \"LASER-BLAZER!\"
+
+The appeal for arcades died out a long time ago, but sometimes you'd venture in here just to check things out. It brings an odd feeling of nostalgia, but you can't figure out why."
+
+[node name="TownSidewalk4" parent="." index="14" instance=ExtResource( 2 )]
+position = Vector2( -640, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is an arcade, with bright neon lights that read; \"LASER-BLAZER!\"
+
+The appeal for arcades died out a long time ago, but sometimes you'd venture in here just to check things out. It brings an odd feeling of nostalgia, but you can't figure out why."
+
+[node name="TownSidewalk5" parent="." index="15" instance=ExtResource( 2 )]
+position = Vector2( -576, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is an arcade, with bright neon lights that read; \"LASER-BLAZER!\"
+
+The appeal for arcades died out a long time ago, but sometimes you'd venture in here just to check things out. It brings an odd feeling of nostalgia, but you can't figure out why."
+
+[node name="TownSidewalk6" parent="." index="16" instance=ExtResource( 2 )]
+position = Vector2( -512, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is an arcade, with bright neon lights that read; \"LASER-BLAZER!\"
+
+The appeal for arcades died out a long time ago, but sometimes you'd venture in here just to check things out. It brings an odd feeling of nostalgia, but you can't figure out why."
+
+[node name="TownSidewalk7" parent="." index="17" instance=ExtResource( 2 )]
+position = Vector2( -448, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk8" parent="." index="18" instance=ExtResource( 2 )]
+position = Vector2( -384, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk9" parent="." index="19" instance=ExtResource( 2 )]
+position = Vector2( -320, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk10" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( -256, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+roomSprite = 4
+
+[node name="TownSidewalk11" parent="." index="21" instance=ExtResource( 2 )]
+position = Vector2( -192, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk12" parent="." index="22" instance=ExtResource( 2 )]
+position = Vector2( -128, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk13" parent="." index="23" instance=ExtResource( 2 )]
+position = Vector2( -64, 192 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk14" parent="." index="24" instance=ExtResource( 2 )]
+position = Vector2( -64, 256 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk15" parent="." index="25" instance=ExtResource( 2 )]
+position = Vector2( -64, 320 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+roomSprite = 4
+
+[node name="TownSidewalk16" parent="." index="26" instance=ExtResource( 2 )]
+position = Vector2( -64, 384 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk17" parent="." index="27" instance=ExtResource( 2 )]
+position = Vector2( -64, 448 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the above-ground entrance to the train station. It's meant to help people in the outer-zones, which is where you've been living these past two weeks, into the inner-zones where all the fancy hi-tech stuff is.
+
+You haven't ridden on a train in a long time, and you don't intend to anything soon due to a lack of a train card and money to afford transport. You also can't think of a reason to go to the inner-zones right now."
+
+[node name="TownSidewalk18" parent="." index="28" instance=ExtResource( 2 )]
+position = Vector2( -64, 512 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk19" parent="." index="29" instance=ExtResource( 2 )]
+position = Vector2( -64, 576 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a public bathhouse. Rather uncommon now, as even the cheapest apartments have heated showers nowadays. You visit this place just to bask in the warmth of a hot tub, even if you have to share it with other people most the time.
+
+...
+
+You think back to the showers in the BDCC, about how they were always so frigid, even on the highest heat. As unpleasant as it was... it did always wake you up.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk20" parent="." index="30" instance=ExtResource( 2 )]
+position = Vector2( -64, 640 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a public bathhouse. Rather uncommon now, as even the cheapest apartments have heated showers nowadays. You visit this place just to bask in the warmth of a hot tub, even if you have to share it with other people most the time.
+
+...
+
+You think back to the showers in the BDCC, about how they were always so frigid, even on the highest heat. As unpleasant as it was... it did always wake you up.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk21" parent="." index="31" instance=ExtResource( 2 )]
+position = Vector2( -64, 704 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a public bathhouse. Rather uncommon now, as even the cheapest apartments have heated showers nowadays. You visit this place just to bask in the warmth of a hot tub, even if you have to share it with other people most the time.
+
+...
+
+You think back to the showers in the BDCC, about how they were always so frigid, even on the highest heat. As unpleasant as it was... it did always wake you up.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk22" parent="." index="32" instance=ExtResource( 2 )]
+position = Vector2( -64, 768 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a public bathhouse. Rather uncommon now, as even the cheapest apartments have heated showers nowadays. You visit this place just to bask in the warmth of a hot tub, even if you have to share it with other people most the time.
+
+...
+
+You think back to the showers in the BDCC, about how they were always so frigid, even on the highest heat. As unpleasant as it was... it did always wake you up.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk23" parent="." index="33" instance=ExtResource( 2 )]
+position = Vector2( -64, 832 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a public bathhouse. Rather uncommon now, as even the cheapest apartments have heated showers nowadays. You visit this place just to bask in the warmth of a hot tub, even if you have to share it with other people most the time.
+
+...
+
+You think back to the showers in the BDCC, about how they were always so frigid, even on the highest heat. As unpleasant as it was... it did always wake you up.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk24" parent="." index="34" instance=ExtResource( 2 )]
+position = Vector2( -64, 896 )
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk25" parent="." index="35" instance=ExtResource( 2 )]
+position = Vector2( 192, 896 )
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk26" parent="." index="36" instance=ExtResource( 2 )]
+position = Vector2( 192, 832 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There's nothing of importance here. There's a sign on the front that reads; \"Lyrica Vanillin's Maid Cafe.\" Shame it's abandonded. You would have loved to see a fox or something similar in a maid outfit.
+
+...
+
+The thought of a fox reminds you of Gavin, the one back in the BDCC...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk27" parent="." index="37" instance=ExtResource( 2 )]
+position = Vector2( 192, 768 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There's nothing of importance here. There's a sign on the front that reads; \"Lyrica Vanillin's Maid Cafe.\" Shame it's abandonded. You would have loved to see a fox or something similar in a maid outfit.
+
+...
+
+The thought of a fox reminds you of Gavin, the one back in the BDCC...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk28" parent="." index="38" instance=ExtResource( 2 )]
+position = Vector2( 192, 704 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There's nothing of importance here. There's a sign on the front that reads; \"Lyrica Vanillin's Maid Cafe.\" Shame it's abandonded. You would have loved to see a fox or something similar in a maid outfit.
+
+...
+
+The thought of a fox reminds you of Gavin, the one back in the BDCC...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk29" parent="." index="39" instance=ExtResource( 2 )]
+position = Vector2( 192, 640 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There's nothing of importance here. There's a sign on the front that reads; \"Lyrica Vanillin's Maid Cafe.\" Shame it's abandonded. You would have loved to see a fox or something similar in a maid outfit.
+
+...
+
+The thought of a fox reminds you of Gavin, the one back in the BDCC...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk30" parent="." index="40" instance=ExtResource( 2 )]
+position = Vector2( 192, 576 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There's nothing of importance here. There's a sign on the front that reads; \"Lyrica Vanillin's Maid Cafe.\" Shame it's abandonded. You would have loved to see a fox or something similar in a maid outfit.
+
+...
+
+The thought of a fox reminds you of Gavin, the one back in the BDCC...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk31" parent="." index="41" instance=ExtResource( 2 )]
+position = Vector2( 192, 512 )
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk32" parent="." index="42" instance=ExtResource( 2 )]
+position = Vector2( 192, 448 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk33" parent="." index="43" instance=ExtResource( 2 )]
+position = Vector2( 192, 384 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk34" parent="." index="44" instance=ExtResource( 2 )]
+position = Vector2( 192, 320 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk35" parent="." index="45" instance=ExtResource( 2 )]
+position = Vector2( 192, 256 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk36" parent="." index="46" instance=ExtResource( 2 )]
+position = Vector2( 192, 192 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk37" parent="." index="47" instance=ExtResource( 2 )]
+position = Vector2( 256, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk38" parent="." index="48" instance=ExtResource( 2 )]
+position = Vector2( 320, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk39" parent="." index="49" instance=ExtResource( 2 )]
+position = Vector2( 384, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk40" parent="." index="50" instance=ExtResource( 2 )]
+position = Vector2( 448, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk41" parent="." index="51" instance=ExtResource( 2 )]
+position = Vector2( 512, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of importance here. There's a sign on an overhang at the front of the building that reads; \"Jerry's Alehouse.\" Something must have happened, as the entire building looks like it was torched."
+
+[node name="TownSidewalk42" parent="." index="52" instance=ExtResource( 2 )]
+position = Vector2( 576, 128 )
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk43" parent="." index="53" instance=ExtResource( 2 )]
+position = Vector2( 640, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the apartment building you've been staying in for the past two weeks. It's a rather decent place, and it's rather affordable given your financial situation. Sure, you hear moaning through the walls every so often, but it's not as bad as the BDCC was.
+
+...
+
+You think back to your cell. A cold, damp, and dark place. Yet despite that, it was home. You had a bed, several walls, and even people you could share it with.
+
+...
+
+You think back to Rahi and Tavi, about how they're doing... you wonder if they miss you.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk44" parent="." index="54" instance=ExtResource( 2 )]
+position = Vector2( 704, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the apartment building you've been staying in for the past two weeks. It's a rather decent place, and it's rather affordable given your financial situation. Sure, you hear moaning through the walls every so often, but it's not as bad as the BDCC was.
+
+...
+
+You think back to your cell. A cold, damp, and dark place. Yet despite that, it was home. You had a bed, several walls, and even people you could share it with.
+
+...
+
+You think back to Rahi and Tavi, about how they're doing... you wonder if they miss you.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk45" parent="." index="55" instance=ExtResource( 2 )]
+position = Vector2( 768, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the apartment building you've been staying in for the past two weeks. It's a rather decent place, and it's rather affordable given your financial situation. Sure, you hear moaning through the walls every so often, but it's not as bad as the BDCC was.
+
+The door is a creaky and old piece of shit but it gets the job done when it comes to keeping the air out.
+
+...
+
+You think back to your cell. A cold, damp, and dark place. Yet despite that, it was home. You had a bed, several walls, and even people you could share it with.
+
+...
+
+You think back to Rahi and Tavi, about how they're doing... you wonder if they miss you.
+
+...
+
+Nah, just let it go."
+roomSprite = 4
+
+[node name="TownSidewalk46" parent="." index="56" instance=ExtResource( 2 )]
+position = Vector2( 832, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the apartment building you've been staying in for the past two weeks. It's a rather decent place, and it's rather affordable given your financial situation. Sure, you hear moaning through the walls every so often, but it's not as bad as the BDCC was.
+
+...
+
+You think back to your cell. A cold, damp, and dark place. Yet despite that, it was home. You had a bed, several walls, and even people you could share it with.
+
+...
+
+You think back to Rahi and Tavi, about how they're doing... you wonder if they miss you.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk47" parent="." index="57" instance=ExtResource( 2 )]
+position = Vector2( 896, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is the apartment building you've been staying in for the past two weeks. It's a rather decent place, and it's rather affordable given your financial situation. Sure, you hear moaning through the walls every so often, but it's not as bad as the BDCC was.
+
+...
+
+You think back to your cell. A cold, damp, and dark place. Yet despite that, it was home. You had a bed, several walls, and even people you could share it with.
+
+...
+
+You think back to Rahi and Tavi, about how they're doing... you wonder if they miss you.
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk48" parent="." index="58" instance=ExtResource( 2 )]
+position = Vector2( 960, 128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk49" parent="." index="59" instance=ExtResource( 2 )]
+position = Vector2( 960, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk50" parent="." index="60" instance=ExtResource( 2 )]
+position = Vector2( 896, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of note here. There was a sign that read; \"Billy's Tacklebox\" and it seemed to be a place that sold fishing supplies. You guess that Billy went out of business once he realized that people in the city don't fish."
+
+[node name="TownSidewalk51" parent="." index="61" instance=ExtResource( 2 )]
+position = Vector2( 832, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of note here. There was a sign that read; \"Billy's Tacklebox\" and it seemed to be a place that sold fishing supplies. You guess that Billy went out of business once he realized that people in the city don't fish."
+
+[node name="TownSidewalk52" parent="." index="62" instance=ExtResource( 2 )]
+position = Vector2( 768, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of note here. There was a sign that read; \"Billy's Tacklebox\" and it seemed to be a place that sold fishing supplies. You guess that Billy went out of business once he realized that people in the city don't fish."
+
+[node name="TownSidewalk53" parent="." index="63" instance=ExtResource( 2 )]
+position = Vector2( 704, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of note here. There was a sign that read; \"Billy's Tacklebox\" and it seemed to be a place that sold fishing supplies. You guess that Billy went out of business once he realized that people in the city don't fish."
+
+[node name="TownSidewalk54" parent="." index="64" instance=ExtResource( 2 )]
+position = Vector2( 640, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is run-down. There isn't anything of note here. There was a sign that read; \"Billy's Tacklebox\" and it seemed to be a place that sold fishing supplies. You guess that Billy went out of business once he realized that people in the city don't fish."
+
+[node name="TownSidewalk55" parent="." index="65" instance=ExtResource( 2 )]
+position = Vector2( 576, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk56" parent="." index="66" instance=ExtResource( 2 )]
+position = Vector2( 512, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk57" parent="." index="67" instance=ExtResource( 2 )]
+position = Vector2( 448, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk58" parent="." index="68" instance=ExtResource( 2 )]
+position = Vector2( 384, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+The entrance, like usual, is brightly lit up. You could eat if you wanted to, but... you're not hungry.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+roomSprite = 4
+
+[node name="TownSidewalk59" parent="." index="69" instance=ExtResource( 2 )]
+position = Vector2( 320, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk60" parent="." index="70" instance=ExtResource( 2 )]
+position = Vector2( 256, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk61" parent="." index="71" instance=ExtResource( 2 )]
+position = Vector2( 192, -192 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk62" parent="." index="72" instance=ExtResource( 2 )]
+position = Vector2( 192, -256 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk63" parent="." index="73" instance=ExtResource( 2 )]
+position = Vector2( 192, -320 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk64" parent="." index="74" instance=ExtResource( 2 )]
+position = Vector2( 192, -384 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk65" parent="." index="75" instance=ExtResource( 2 )]
+position = Vector2( 192, -448 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is part of a local restaurant chain that you frequent. It specializes in burgers and fries, but higher quality than your traditional fast-food joint. Most certainly better than the shit they served back in the BDCC.
+
+...
+
+A brief thought takes you back to the canteen. Rows upon rows of inmates sitting down and chatting, eating, having peace among the eatery...
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk66" parent="." index="76" instance=ExtResource( 2 )]
+position = Vector2( 192, -512 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk67" parent="." index="77" instance=ExtResource( 2 )]
+position = Vector2( 192, -576 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a police station, and a rather large one at that. Through the windows you can see various officers chatting about various things that you can't hear from here. Oddly enough, they wear very similar outfits to the guards at BDCC.
+
+...
+
+...you wonder how Nova and Risha are doing...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk68" parent="." index="78" instance=ExtResource( 2 )]
+position = Vector2( 192, -640 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a police station, and a rather large one at that. Through the windows you can see various officers chatting about various things that you can't hear from here. Oddly enough, they wear very similar outfits to the guards at BDCC.
+
+...
+
+...you wonder how Nova and Risha are doing...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk69" parent="." index="79" instance=ExtResource( 2 )]
+position = Vector2( 192, -704 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a police station, and a rather large one at that. Through the windows you can see various officers chatting about various things that you can't hear from here. Oddly enough, they wear very similar outfits to the guards at BDCC.
+
+...
+
+...you wonder how Nova and Risha are doing...?
+
+...
+
+Nah, just let it go."
+roomSprite = 4
+
+[node name="TownSidewalk70" parent="." index="80" instance=ExtResource( 2 )]
+position = Vector2( 192, -768 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a police station, and a rather large one at that. Through the windows you can see various officers chatting about various things that you can't hear from here. Oddly enough, they wear very similar outfits to the guards at BDCC.
+
+...
+
+...you wonder how Nova and Risha are doing...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk71" parent="." index="81" instance=ExtResource( 2 )]
+position = Vector2( 192, -832 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a police station, and a rather large one at that. Through the windows you can see various officers chatting about various things that you can't hear from here. Oddly enough, they wear very similar outfits to the guards at BDCC.
+
+...
+
+...you wonder how Nova and Risha are doing...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk72" parent="." index="82" instance=ExtResource( 2 )]
+position = Vector2( 192, -896 )
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk73" parent="." index="83" instance=ExtResource( 2 )]
+position = Vector2( -64, -896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk74" parent="." index="84" instance=ExtResource( 2 )]
+position = Vector2( -64, -832 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a laundromat you frequently visit to keep your work clothes clean. Fortunately it's rather cheap, otherwise your ass would be more broken than a lot of the inmates back in BDCC.
+
+...
+
+Those were some fun days, weren't they...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk75" parent="." index="85" instance=ExtResource( 2 )]
+position = Vector2( -64, -768 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a laundromat you frequently visit to keep your work clothes clean. Fortunately it's rather cheap, otherwise your ass would be more broken than a lot of the inmates back in BDCC.
+
+...
+
+Those were some fun days, weren't they...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk76" parent="." index="86" instance=ExtResource( 2 )]
+position = Vector2( -64, -704 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a laundromat you frequently visit to keep your work clothes clean. Fortunately it's rather cheap, otherwise your ass would be more broke than a lot of the inmates back in BDCC.
+
+...
+
+Those were some fun days, weren't they...?
+
+...
+
+Nah, just let it go."
+roomSprite = 4
+
+[node name="TownSidewalk77" parent="." index="87" instance=ExtResource( 2 )]
+position = Vector2( -64, -640 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a laundromat you frequently visit to keep your work clothes clean. Fortunately it's rather cheap, otherwise your ass would be more broken than a lot of the inmates back in BDCC.
+
+...
+
+Those were some fun days, weren't they...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk78" parent="." index="88" instance=ExtResource( 2 )]
+position = Vector2( -64, -576 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a laundromat you frequently visit to keep your work clothes clean. Fortunately it's rather cheap, otherwise your ass would be more broken than a lot of the inmates back in BDCC.
+
+...
+
+Those were some fun days, weren't they...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk79" parent="." index="89" instance=ExtResource( 2 )]
+position = Vector2( -64, -512 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownSidewalk80" parent="." index="90" instance=ExtResource( 2 )]
+position = Vector2( -64, -448 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk81" parent="." index="91" instance=ExtResource( 2 )]
+position = Vector2( -64, -384 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk82" parent="." index="92" instance=ExtResource( 2 )]
+position = Vector2( -64, -320 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk83" parent="." index="93" instance=ExtResource( 2 )]
+position = Vector2( -64, -256 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk84" parent="." index="94" instance=ExtResource( 2 )]
+position = Vector2( -64, -192 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk85" parent="." index="95" instance=ExtResource( 2 )]
+position = Vector2( -128, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk86" parent="." index="96" instance=ExtResource( 2 )]
+position = Vector2( -192, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk87" parent="." index="97" instance=ExtResource( 2 )]
+position = Vector2( -256, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+...
+
+Nah, just let it go."
+
+[node name="TownSidewalk88" parent="." index="98" instance=ExtResource( 2 )]
+position = Vector2( -320, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk89" parent="." index="99" instance=ExtResource( 2 )]
+position = Vector2( -384, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you... actually isn't a building at all. Not yet at least. It's a construction site, something that's been getting worked on since you arrived here. You don't know what it is, but a sign out front seems to indicate it's going to be a clinic.
+
+...
+
+A clinic... You wonder how Eliza is doing...?
+
+Nah, just let it go."
+
+[node name="TownSidewalk90" parent="." index="100" instance=ExtResource( 2 )]
+position = Vector2( -448, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownAlley" parent="." index="101" instance=ExtResource( 2 )]
+position = Vector2( -448, -192 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley2" parent="." index="102" instance=ExtResource( 2 )]
+position = Vector2( -448, -256 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley3" parent="." index="103" instance=ExtResource( 2 )]
+position = Vector2( -448, -320 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley4" parent="." index="104" instance=ExtResource( 2 )]
+position = Vector2( -448, -384 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley5" parent="." index="105" instance=ExtResource( 2 )]
+position = Vector2( -448, -448 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley6" parent="." index="106" instance=ExtResource( 2 )]
+position = Vector2( -448, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+canWest = false
+canNorth = false
+
+[node name="TownAlley7" parent="." index="107" instance=ExtResource( 2 )]
+position = Vector2( -384, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley8" parent="." index="108" instance=ExtResource( 2 )]
+position = Vector2( -320, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley9" parent="." index="109" instance=ExtResource( 2 )]
+position = Vector2( -256, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley10" parent="." index="110" instance=ExtResource( 2 )]
+position = Vector2( -192, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley11" parent="." index="111" instance=ExtResource( 2 )]
+position = Vector2( -128, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that goes behind the construction site. You can't hear or see anyone working there currently, but there are signs that they are, in fact, still working on it."
+
+[node name="TownAlley12" parent="." index="112" instance=ExtResource( 2 )]
+position = Vector2( 256, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley13" parent="." index="113" instance=ExtResource( 2 )]
+position = Vector2( 320, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley14" parent="." index="114" instance=ExtResource( 2 )]
+position = Vector2( 384, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley15" parent="." index="115" instance=ExtResource( 2 )]
+position = Vector2( 448, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley16" parent="." index="116" instance=ExtResource( 2 )]
+position = Vector2( 512, -512 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley17" parent="." index="117" instance=ExtResource( 2 )]
+position = Vector2( 576, -512 )
+roomName = "Town - Sidewalk"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+canNorth = false
+canEast = false
+
+[node name="TownAlley18" parent="." index="118" instance=ExtResource( 2 )]
+position = Vector2( 576, -448 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley19" parent="." index="119" instance=ExtResource( 2 )]
+position = Vector2( 576, -384 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley20" parent="." index="120" instance=ExtResource( 2 )]
+position = Vector2( 576, -320 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley21" parent="." index="121" instance=ExtResource( 2 )]
+position = Vector2( 576, -256 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley22" parent="." index="122" instance=ExtResource( 2 )]
+position = Vector2( 576, -192 )
+roomName = "Town - Alleyway"
+roomDescription = "An alleyway that runs behind a local restaurant chain. A lot of homeless people hang around back here, hoping to get some scraps when the cook tosses out the excess food for the night."
+
+[node name="TownAlley23" parent="." index="123" instance=ExtResource( 2 )]
+position = Vector2( 576, 192 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley24" parent="." index="124" instance=ExtResource( 2 )]
+position = Vector2( 576, 256 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley25" parent="." index="125" instance=ExtResource( 2 )]
+position = Vector2( 576, 320 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley26" parent="." index="126" instance=ExtResource( 2 )]
+position = Vector2( 576, 384 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley27" parent="." index="127" instance=ExtResource( 2 )]
+position = Vector2( 576, 448 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley28" parent="." index="128" instance=ExtResource( 2 )]
+position = Vector2( 576, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canEast = false
+
+[node name="TownAlley45" parent="." index="129" instance=ExtResource( 2 )]
+position = Vector2( 576, 576 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley46" parent="." index="130" instance=ExtResource( 2 )]
+position = Vector2( 576, 640 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex.
+
+This is also where you can enter the parking lot to retrieve your Reverse Trike."
+canWest = false
+canEast = false
+roomSprite = 4
+
+[node name="TownAlley47" parent="." index="131" instance=ExtResource( 2 )]
+position = Vector2( 576, 704 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley48" parent="." index="132" instance=ExtResource( 2 )]
+position = Vector2( 576, 768 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley49" parent="." index="133" instance=ExtResource( 2 )]
+position = Vector2( 576, 832 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley50" parent="." index="134" instance=ExtResource( 2 )]
+position = Vector2( 576, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley51" parent="." index="135" instance=ExtResource( 2 )]
+position = Vector2( 512, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley52" parent="." index="136" instance=ExtResource( 2 )]
+position = Vector2( 448, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley53" parent="." index="137" instance=ExtResource( 2 )]
+position = Vector2( 384, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley54" parent="." index="138" instance=ExtResource( 2 )]
+position = Vector2( 320, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley55" parent="." index="139" instance=ExtResource( 2 )]
+position = Vector2( 256, 896 )
+roomName = "Town - Sidewalk"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+canWest = false
+canEast = false
+
+[node name="TownAlley29" parent="." index="140" instance=ExtResource( 2 )]
+position = Vector2( 512, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley30" parent="." index="141" instance=ExtResource( 2 )]
+position = Vector2( 448, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley31" parent="." index="142" instance=ExtResource( 2 )]
+position = Vector2( 384, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley32" parent="." index="143" instance=ExtResource( 2 )]
+position = Vector2( 320, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley33" parent="." index="144" instance=ExtResource( 2 )]
+position = Vector2( 256, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind one of the many run-down and dilapidated buildings of the city. Despite their dangerousness to the general public, people still go in and out of there for many reasons, whether it be for dealing drugs, having illegal parties, or just looking for adventure. You, fortunately, have better things to do than risk your life looking for a piece of non-existant treasure in a burned down apartment complex."
+
+[node name="TownAlley34" parent="." index="145" instance=ExtResource( 2 )]
+position = Vector2( -128, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley35" parent="." index="146" instance=ExtResource( 2 )]
+position = Vector2( -192, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley36" parent="." index="147" instance=ExtResource( 2 )]
+position = Vector2( -256, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley37" parent="." index="148" instance=ExtResource( 2 )]
+position = Vector2( -320, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley38" parent="." index="149" instance=ExtResource( 2 )]
+position = Vector2( -384, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley39" parent="." index="150" instance=ExtResource( 2 )]
+position = Vector2( -448, 512 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+canWest = false
+canSouth = false
+
+[node name="TownAlley40" parent="." index="151" instance=ExtResource( 2 )]
+position = Vector2( -448, 448 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley41" parent="." index="152" instance=ExtResource( 2 )]
+position = Vector2( -448, 384 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley42" parent="." index="153" instance=ExtResource( 2 )]
+position = Vector2( -448, 320 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley43" parent="." index="154" instance=ExtResource( 2 )]
+position = Vector2( -448, 256 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownAlley44" parent="." index="155" instance=ExtResource( 2 )]
+position = Vector2( -448, 192 )
+roomName = "Town - Alleyway"
+roomDescription = "You roam behind the building that leads down into the train station. Even from up here you can feel the trains as they pass below you, shaking the earth at their extreme speeds. It seems train technology has advanced a lot since you were incarcerated."
+
+[node name="TownSidewalk91" parent="." index="156" instance=ExtResource( 2 )]
+position = Vector2( -512, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a basic office complex. This is where you've been working for the past two weeks since your arrival into town. 
+
+It's pay is really crappy, the hours are long, and your manager is a total dick... but you'd rather work here than swing a pickaxe all day long in the mines back on BDCC. ...hm? What's this feeling...? Homesickness...?
+
+Nah, couldn't be."
+
+[node name="TownSidewalk92" parent="." index="157" instance=ExtResource( 2 )]
+position = Vector2( -576, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a basic office complex. This is where you've been working for the past two weeks since your arrival into town. 
+
+It's pay is really crappy, the hours are long, and your manager is a total dick... but you'd rather work here than swing a pickaxe all day long in the mines back on BDCC. ...hm? What's this feeling...? Homesickness...?
+
+Nah, couldn't be."
+
+[node name="TownSidewalk93" parent="." index="158" instance=ExtResource( 2 )]
+position = Vector2( -640, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a basic office complex. This is where you've been working for the past two weeks since your arrival into town. 
+
+It's pay is really crappy, the hours are long, and your manager is a total dick... but you'd rather work here than swing a pickaxe all day long in the mines back on BDCC. ...hm? What's this feeling...? Homesickness...?
+
+Nah, couldn't be."
+roomSprite = 4
+
+[node name="TownSidewalk94" parent="." index="159" instance=ExtResource( 2 )]
+position = Vector2( -704, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a basic office complex. This is where you've been working for the past two weeks since your arrival into town. 
+
+It's pay is really crappy, the hours are long, and your manager is a total dick... but you'd rather work here than swing a pickaxe all day long in the mines back on BDCC. ...hm? What's this feeling...? Homesickness...?
+
+Nah, couldn't be."
+
+[node name="TownSidewalk95" parent="." index="160" instance=ExtResource( 2 )]
+position = Vector2( -768, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough.
+
+The building next to you is a basic office complex. This is where you've been working for the past two weeks since your arrival into town. 
+
+It's pay is really crappy, the hours are long, and your manager is a total dick... but you'd rather work here than swing a pickaxe all day long in the mines back on BDCC. ...hm? What's this feeling...? Homesickness...?
+
+Nah, couldn't be."
+
+[node name="TownSidewalk96" parent="." index="161" instance=ExtResource( 2 )]
+position = Vector2( -832, -128 )
+roomName = "Town - Sidewalk"
+roomDescription = "You walk down the sidewalk, rain pouring down from above and making your body temperature start to drop. Your jacket seems to protect you well enough."
+
+[node name="TownBuilding1" parent="." index="162" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, -320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 5
+
+[node name="TownBuilding2" parent="." index="163" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -640, -320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Office Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 5
+roomColor = 7
+gridColor = 3
+
+[node name="TownBuilding3" parent="." index="164" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, -704 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Petty's Dry Cleaners"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 9
+roomColor = 7
+gridColor = 4
+
+[node name="TownBuilding4" parent="." index="165" instance=ExtResource( 2 )]
+position = Vector2( 384, -320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Restaurant"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 2
+gridColor = 4
+
+[node name="TownBuilding5" parent="." index="166" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 384, -704 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Police Station"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 3
+gridColor = 5
+
+[node name="TownBuilding6" parent="." index="167" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -256, 320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Tram Station"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 3
+roomColor = 3
+gridColor = 2
+
+[node name="TownBuilding7" parent="." index="168" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -640, 320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 6
+roomColor = 1
+gridColor = 4
+
+[node name="TownBuilding8" parent="." index="169" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, 320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+
+[node name="TownBuilding10" parent="." index="170" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, 704 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+
+[node name="TownBuilding11" parent="." index="171" instance=ExtResource( 2 )]
+position = Vector2( 768, 320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 1
+
+[node name="TownBuilding12" parent="." index="172" instance=ExtResource( 2 )]
+position = Vector2( -256, 704 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomSprite = 7
+
+[node name="TownBuilding9" parent="." index="173" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, -320 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Building"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 2
+
+[node name="TownCrossing" parent="." index="174" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, -128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing2" parent="." index="175" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, -64 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing3" parent="." index="176" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 0 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing4" parent="." index="177" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 64 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing5" parent="." index="178" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing6" parent="." index="179" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 0, 128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing7" parent="." index="180" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 64, 128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing8" parent="." index="181" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 128, 128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing9" parent="." index="182" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing10" parent="." index="183" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 64 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing11" parent="." index="184" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 0 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing12" parent="." index="185" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, -64 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing13" parent="." index="186" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, -128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing14" parent="." index="187" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 128, -128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing15" parent="." index="188" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 64, -128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownCrossing16" parent="." index="189" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 0, -128 )
+roomName = "Crosswalk"
+roomDescription = "A yellow-striped path going across the road, allowing you to safely cross the road without getting run over."
+roomColor = 6
+gridColor = 5
+
+[node name="TownRoad2" parent="." index="190" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 0 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad15" parent="." index="191" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -256 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad16" parent="." index="192" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -448 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad17" parent="." index="193" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -640 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad18" parent="." index="194" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -832 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad11" parent="." index="195" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 256 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad12" parent="." index="196" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 448 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad13" parent="." index="197" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 640 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad14" parent="." index="198" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, 832 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad19" parent="." index="199" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 768, 640 )
+scale = Vector2( 4.625, 4.625 )
+roomName = "Parking Lot"
+roomDescription = "Can you explain to me how you got here so I can fix it?"
+roomColor = 7
+
+[node name="TownRoad7" parent="." index="200" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 320, 0 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad8" parent="." index="201" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 512, 0 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad9" parent="." index="202" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 704, 0 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad10" parent="." index="203" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 896, 0 )
+scale = Vector2( 3.25, 3.25 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+roomColor = 7
+
+[node name="TownRoad" parent="." index="204" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 0 )
+scale = Vector2( 3.125, 3.125 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="TownRoad3" parent="." index="205" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, 0 )
+scale = Vector2( 3.125, 3.125 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="TownRoad4" parent="." index="206" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -576, 0 )
+scale = Vector2( 3.125, 3.125 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="TownRoad5" parent="." index="207" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -768, 0 )
+scale = Vector2( 3.125, 3.125 )
+roomDescription = "Vroom vroom! BOOM! You got hit by a car! Congratulations you're dead!"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7

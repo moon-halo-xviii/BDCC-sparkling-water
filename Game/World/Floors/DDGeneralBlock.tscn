@@ -1,0 +1,1198 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.gd" type="Script" id=1]
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=3]
+
+[node name="DDGeneralBlock" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="DDGeneralBlock" parent="." instance=ExtResource( 2 )]
+
+[node name="GeneralBlock" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 192 )
+roomName = "General Block"
+roomDescription = "You enter the General Block, leaving the checkpoint behind and taking in the sights. Automatically you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+
+[node name="GeneralBlock2" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock3" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock4" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -128, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock5" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -128, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock6" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -192, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock7" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -192, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock8" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -192, 0 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock9" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -192, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock15" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -128, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock18" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 128 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canNorth = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock72" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 192 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock73" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, 192 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock74" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -64, 192 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canEast = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock26" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 0 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canNorth = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock27" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, -64 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canNorth = false
+canSouth = false
+roomColor = 7
+
+[node name="GeneralBlock75" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -192, -128 )
+roomName = "A Cell"
+roomDescription = "You enter this random cell. It's clear the occupant doesn't like you very much.
+
+[b]Inmate:[/b] [color=orange]\"Get the fuck out of here!\"[/color]
+
+You immediately turn around and face away from them."
+canWest = false
+canNorth = false
+canEast = false
+roomSprite = 3
+roomColor = 8
+
+[node name="GeneralBlock19" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 64 )
+roomName = "You and Anya's Cell"
+roomDescription = "You enter your cell that you share with Anya. Her side is significantly more decorated than your side, featuring numerous posters. She kept this place [i]very[/i] tidy and you can't help but appreciate that as you look over at your side. Your side is a completely blank slate, with no decorations or even a poster. Though, there is a small table and on said table there is a small lavender plant that Anya gave you."
+canWest = false
+canNorth = false
+canSouth = false
+roomSprite = 10
+roomColor = 7
+
+[node name="GeneralBlock16" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -128, 0 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock17" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -128, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canNorth = false
+roomColor = 5
+
+[node name="GeneralBlock20" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canNorth = false
+roomColor = 5
+
+[node name="GeneralBlock21" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, 0 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock22" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( -64, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock23" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock24" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock25" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 0, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock33" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, -128 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock34" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, -128 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock35" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, -128 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock36" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, -192 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock39" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, -192 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock40" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, -192 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock41" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, -192 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock42" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, -192 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock44" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -256 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look a table! Oh. It's full."
+roomColor = 8
+
+[node name="GeneralBlock45" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, -256 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock46" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, -256 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look a table! Oh. It's full."
+roomColor = 8
+
+[node name="GeneralBlock47" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, -256 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock48" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -256 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look a table! Oh. It's full."
+roomColor = 8
+
+[node name="GeneralBlock49" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -320 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look! A table that isn't full!"
+roomSprite = 2
+roomColor = 8
+
+[node name="GeneralBlock50" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, -320 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock51" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, -320 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look a table! Oh. It's full."
+roomColor = 8
+
+[node name="GeneralBlock52" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, -320 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line..."
+
+[node name="GeneralBlock53" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -320 )
+roomName = "Canteen"
+roomDescription = "You enter the canteen, the smell of the usual nutrient paste and water hitting your nose. In an instant you scrunch up your nose. You look around, seeing a few old server counters that clearly haven't been used in years. On the opposite side is an automated dispenser of nutrient paste and a long line of inmates, each one looking extremely tired of this slop they've been given for who knows how long. Guess you should get in line...
+
+Hey look a table! Oh. It's full."
+roomColor = 8
+
+[node name="GeneralBlock28" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 64, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canNorth = false
+roomColor = 5
+
+[node name="GeneralBlock29" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 64, 0 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock30" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 64, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock31" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 64, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock32" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, 128 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canEast = false
+roomColor = 5
+
+[node name="GeneralBlock37" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, 64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canEast = false
+roomColor = 5
+
+[node name="GeneralBlock38" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, 0 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+roomColor = 5
+
+[node name="GeneralBlock54" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, 0 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock55" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, -64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock69" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, -128 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomSprite = 8
+roomColor = 3
+
+[node name="GeneralBlock70" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, -128 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomSprite = 8
+roomColor = 3
+
+[node name="GeneralBlock71" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, -128 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomSprite = 8
+roomColor = 3
+
+[node name="GeneralBlock56" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, -64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock57" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, -64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock63" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 384, -64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+
+[node name="GeneralBlock66" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 448, -64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+
+[node name="GeneralBlock67" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 448, 0 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomSprite = 7
+
+[node name="GeneralBlock68" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 448, 64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+
+[node name="GeneralBlock64" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 384, 0 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+
+[node name="GeneralBlock65" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 384, 64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+
+[node name="GeneralBlock58" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, 0 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock59" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 320, 64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock60" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, 64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock61" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 192, 64 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock62" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( 256, 0 )
+roomName = "Washrooms"
+roomDescription = "You enter the washrooms, looking around as you see those who are freshly out of the shower dry themselves off. You can see where the showers are off towards the back, while the toilets are off towards the left. From the showers, you can hear the moans of a few people getting dirty. The thought of watching someone plough someone else is rather exciting, but something inside you stops you from pursuing it..."
+roomColor = 3
+
+[node name="GeneralBlock43" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.8, 0.6, 1 )
+position = Vector2( 128, -64 )
+roomName = "General Block"
+roomDescription = "As you roam the General Block, you notice a lot more inmates in orange uniforms. They hang around with not much to do in the center area. Above you, you can spot the usual guards on catwalks, their visors glowing green as they keep close watch on the inmates under their supervision. Looking to your left, you see the wall of cells that expand both up and down. Directly ahead of you is the cafeteria, and it seems like you're back to eating sludge. To the right is the bathrooms and showers. Even from here you can hear some moans as people enjoy themselves a bit too much."
+canNorth = false
+canEast = false
+roomColor = 5
+
+[node name="GeneralTram22" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+canEast = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="GeneralTram23" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+canWest = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="GeneralTram24" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+roomColor = 8
+population = 3
+
+[node name="GeneralTram25" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+roomColor = 8
+population = 3
+
+[node name="GeneralTram26" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram27" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram28" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram29" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram30" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram31" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram32" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram33" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram34" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram35" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram36" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram37" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram38" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="GeneralTram39" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram40" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram41" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram42" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="GeneralTram43" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram44" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram45" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram46" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="GeneralTram47" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram48" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram49" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram50" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram51" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram52" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram53" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram54" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram55" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram56" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram57" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram58" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram59" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram60" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram61" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram62" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram63" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram64" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram65" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 0, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram66" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram67" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram68" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram69" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram70" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTram71" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="GeneralTramLine" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine2" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine3" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine4" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine5" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine6" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralTramLine7" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="GeneralCheckpoint" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( 0, 256 )
+roomName = "Checkpoint"
+roomDescription = "A heavily armored guard watches over the checkpoint, monitoring inmates and patting them down as they pass through. This guard looks exceptionally brutish and you wouldn't want to get on this guy's bad side. Might not be a good idea to try and sneak in contraband while he's around..."
+roomSprite = 1
+roomColor = 2
+population = 3
+
+[node name="GeneralTram" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 320 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates and staff of different types pass through here on their way to and from the main areas of the prison.
+
+Just to the north is a security checkpoint that pats down every inmate that comes from the tram line, making sure they don't have any illegal items on them."
+population = 3
+
+[node name="GeneralTram2" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram4" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram5" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram6" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram7" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram8" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram9" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram12" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="GeneralTram13" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="GeneralTram15" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram16" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram17" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3
+
+[node name="GeneralTram19" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="GeneralTram21" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="GeneralTram3" parent="DDGeneralBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison."
+population = 3

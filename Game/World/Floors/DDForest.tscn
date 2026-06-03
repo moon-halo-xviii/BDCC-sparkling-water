@@ -1,0 +1,2340 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=2]
+
+[node name="Forest" instance=ExtResource( 1 )]
+
+[node name="ForestOrigin" parent="." index="0" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest9" parent="." index="1" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest10" parent="." index="2" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest11" parent="." index="3" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest12" parent="." index="4" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest13" parent="." index="5" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest14" parent="." index="6" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest15" parent="." index="7" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest16" parent="." index="8" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest17" parent="." index="9" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canEast = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest18" parent="." index="10" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+canWest = false
+canEast = false
+roomColor = 7
+gridColor = 8
+
+[node name="Road27" parent="." index="11" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road28" parent="." index="12" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 128, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road29" parent="." index="13" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road30" parent="." index="14" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 256, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road31" parent="." index="15" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 320, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road32" parent="." index="16" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road33" parent="." index="17" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 448, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road20" parent="." index="18" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -64, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road21" parent="." index="19" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road22" parent="." index="20" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road23" parent="." index="21" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road24" parent="." index="22" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -320, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road25" parent="." index="23" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road26" parent="." index="24" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -448, -640 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road49" parent="." index="25" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road50" parent="." index="26" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 64, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road51" parent="." index="27" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 128, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road52" parent="." index="28" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road53" parent="." index="29" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 256, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road54" parent="." index="30" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 320, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road55" parent="." index="31" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road56" parent="." index="32" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 448, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road57" parent="." index="33" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -64, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road58" parent="." index="34" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road59" parent="." index="35" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road60" parent="." index="36" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road61" parent="." index="37" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -320, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road62" parent="." index="38" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road63" parent="." index="39" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -448, -768 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 7
+gridColor = 8
+
+[node name="Road34" parent="." index="40" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 0, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road35" parent="." index="41" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 64, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road36" parent="." index="42" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road37" parent="." index="43" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 192, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road38" parent="." index="44" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 256, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road39" parent="." index="45" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 320, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road40" parent="." index="46" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 384, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road41" parent="." index="47" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 448, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road42" parent="." index="48" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -64, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road43" parent="." index="49" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road44" parent="." index="50" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -192, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road45" parent="." index="51" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -256, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road46" parent="." index="52" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -320, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road47" parent="." index="53" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -384, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Road48" parent="." index="54" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -448, -704 )
+roomName = "A Road?"
+roomDescription = "You're standing on... a road?"
+roomColor = 8
+gridColor = 6
+
+[node name="Forest2" parent="." index="55" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest3" parent="." index="56" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest4" parent="." index="57" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 0, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="TheInbetween" parent="." index="58" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, 704 )
+roomName = "???"
+roomDescription = "???"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+gridColor = 7
+
+[node name="Forest5" parent="." index="59" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest6" parent="." index="60" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest7" parent="." index="61" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest8" parent="." index="62" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest19" parent="." index="63" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest20" parent="." index="64" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest21" parent="." index="65" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest22" parent="." index="66" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest23" parent="." index="67" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest24" parent="." index="68" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest25" parent="." index="69" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest26" parent="." index="70" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 64, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest28" parent="." index="71" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest29" parent="." index="72" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest30" parent="." index="73" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest31" parent="." index="74" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest32" parent="." index="75" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest33" parent="." index="76" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest34" parent="." index="77" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest35" parent="." index="78" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest36" parent="." index="79" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest37" parent="." index="80" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest38" parent="." index="81" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 128, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest40" parent="." index="82" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest41" parent="." index="83" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest42" parent="." index="84" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest43" parent="." index="85" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest44" parent="." index="86" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest45" parent="." index="87" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest46" parent="." index="88" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest47" parent="." index="89" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest48" parent="." index="90" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest49" parent="." index="91" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest51" parent="." index="92" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 192, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest52" parent="." index="93" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest53" parent="." index="94" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest54" parent="." index="95" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest55" parent="." index="96" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest56" parent="." index="97" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest57" parent="." index="98" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest58" parent="." index="99" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest59" parent="." index="100" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest60" parent="." index="101" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest61" parent="." index="102" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest63" parent="." index="103" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 256, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest64" parent="." index="104" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest65" parent="." index="105" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest66" parent="." index="106" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest67" parent="." index="107" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest68" parent="." index="108" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest69" parent="." index="109" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest70" parent="." index="110" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest71" parent="." index="111" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest72" parent="." index="112" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest73" parent="." index="113" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest75" parent="." index="114" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 320, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest76" parent="." index="115" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest77" parent="." index="116" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest78" parent="." index="117" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest79" parent="." index="118" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest80" parent="." index="119" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest81" parent="." index="120" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest82" parent="." index="121" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest83" parent="." index="122" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest84" parent="." index="123" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest85" parent="." index="124" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest87" parent="." index="125" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 384, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest88" parent="." index="126" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest89" parent="." index="127" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest90" parent="." index="128" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest91" parent="." index="129" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest92" parent="." index="130" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest93" parent="." index="131" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest94" parent="." index="132" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest95" parent="." index="133" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest96" parent="." index="134" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest97" parent="." index="135" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest99" parent="." index="136" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( 448, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest100" parent="." index="137" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest101" parent="." index="138" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest102" parent="." index="139" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest103" parent="." index="140" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest104" parent="." index="141" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest105" parent="." index="142" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest106" parent="." index="143" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest107" parent="." index="144" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest108" parent="." index="145" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest109" parent="." index="146" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest110" parent="." index="147" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest172" parent="." index="148" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest173" parent="." index="149" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest111" parent="." index="150" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest112" parent="." index="151" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest113" parent="." index="152" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest114" parent="." index="153" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest115" parent="." index="154" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest116" parent="." index="155" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest117" parent="." index="156" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest118" parent="." index="157" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest119" parent="." index="158" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest120" parent="." index="159" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest121" parent="." index="160" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest122" parent="." index="161" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest123" parent="." index="162" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest124" parent="." index="163" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest125" parent="." index="164" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest126" parent="." index="165" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest127" parent="." index="166" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest128" parent="." index="167" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest129" parent="." index="168" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest130" parent="." index="169" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest131" parent="." index="170" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest132" parent="." index="171" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest133" parent="." index="172" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest134" parent="." index="173" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest135" parent="." index="174" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest136" parent="." index="175" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest137" parent="." index="176" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest138" parent="." index="177" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest139" parent="." index="178" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest140" parent="." index="179" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest141" parent="." index="180" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest142" parent="." index="181" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest143" parent="." index="182" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest144" parent="." index="183" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest145" parent="." index="184" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest146" parent="." index="185" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -192, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest147" parent="." index="186" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -256, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest148" parent="." index="187" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest149" parent="." index="188" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest150" parent="." index="189" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest151" parent="." index="190" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest152" parent="." index="191" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest153" parent="." index="192" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest154" parent="." index="193" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest155" parent="." index="194" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest156" parent="." index="195" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest157" parent="." index="196" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest158" parent="." index="197" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -128, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest159" parent="." index="198" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -320, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest160" parent="." index="199" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, 0 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest161" parent="." index="200" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, 64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest162" parent="." index="201" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -64 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest163" parent="." index="202" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -128 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest164" parent="." index="203" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -192 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest165" parent="." index="204" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -256 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest166" parent="." index="205" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -320 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest167" parent="." index="206" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -384 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest168" parent="." index="207" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -448 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest169" parent="." index="208" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -448, -512 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest170" parent="." index="209" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -384, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1
+
+[node name="Forest171" parent="." index="210" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 1, 0.7, 1 )
+position = Vector2( -64, -576 )
+roomName = "A Forest?"
+roomDescription = "You're in... a forest?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 1
+gridColor = 1

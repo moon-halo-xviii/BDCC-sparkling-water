@@ -1,0 +1,1022 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.gd" type="Script" id=1]
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=3]
+
+[node name="DDRedBlock" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="DDRedBlock" parent="." instance=ExtResource( 2 )]
+
+[node name="LilacTram22" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+canEast = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="LilacTram23" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+canWest = false
+canSouth = false
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="LilacTram24" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+roomColor = 8
+population = 3
+
+[node name="LilacTram25" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -256, 576 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+roomColor = 8
+population = 3
+
+[node name="LilacTram26" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram27" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram28" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram29" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram30" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram31" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram32" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram33" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram34" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 640 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram35" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram36" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram37" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram38" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here...
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="LilacTram39" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram40" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram41" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram42" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here...
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="LilacTram43" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram44" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram45" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram46" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here...
+
+Currently you're stood right next to one of the signs used to help inmates and staff figure out where they're going. Considering you're part of the general block, you can only access the cell blocks. You take note that each block is divided by color, orange signifying general, red signifying... red, and pink signifiying lilacs."
+roomSprite = 4
+population = 3
+
+[node name="LilacTram47" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -320, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram48" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -384, 768 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram49" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -320, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram50" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram51" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram52" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram53" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram54" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram55" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram56" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram57" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 192, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram58" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 256, 704 )
+roomName = "Tram Station"
+roomDescription = "You walk about the lower half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram59" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram60" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram61" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram62" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram63" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram64" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( -64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram65" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 0, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram66" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 64, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram67" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 128, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram68" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 192, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram69" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 256, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram70" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 320, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTram71" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 1, 0.7, 1 )
+position = Vector2( 384, 832 )
+roomName = "Safety Line"
+roomDescription = "Don't stand too close! ...why are you standing here anyway?"
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 6
+population = 3
+
+[node name="LilacTramLine" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine2" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine3" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine4" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 0, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine5" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 128, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine6" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 256, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacTramLine7" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 384, 960 )
+scale = Vector2( 2.25, 2.25 )
+roomName = "Tram"
+roomDescription = "HEY YOU'RE GONNA GET RUN OVER-!!!
+
+[color=red]SPLAT!!![/color]
+
+...
+
+Damn it."
+canWest = false
+canNorth = false
+canEast = false
+canSouth = false
+roomColor = 7
+population = 3
+
+[node name="LilacCheckpoint" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, 256 )
+roomName = "Checkpoint"
+roomDescription = "Where there was once a checkpoint is a heavily sealed off door with a closed viewport on the upper-half of the door itself. The door is heavily armored with welded steel panels and thick armor plating. It's clear that people have tried to break in from the heavy abuse present on the door, with remnants of dents and scorch marks from attempted arson.
+
+On the door is a simple warning:
+
+[color=pink]LILACS & LILAC GUESTS ONLY BEYOND THIS POINT[/color]
+
+Looks like you won't get in without permission..."
+canNorth = false
+roomSprite = 4
+roomColor = 4
+gridColor = 7
+population = 3
+
+[node name="LilacMain" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, 192 )
+roomName = "Lilac Entrance Hall"
+roomDescription = "The heavy door slams behind you as you pass the doorman, giving you a sly smirk as you take in the sudden change of atmosphere. The air is heavy with lavender, but also tobacco smoke and other potent fragrances. Enough to make you choke a little bit, but not enough to draw attention to yourself.
+
+Curtains cover the door leading into the main hall, blocking your vision."
+roomColor = 4
+population = 3
+
+[node name="LilacMain2" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, 128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You step out and into the main hall, shocked to see the lilacs and their living conditions. They live like royalty here, and that is echoed in the fact that the lilac block is similar to that of a bazzar from some desert movie, with various lilac prisoners advertising their goods to passing guests of orange, red, and lilac variety. Of course, there are also the cells full of whores who sell themselves for sex and profit.
+
+In the center of the hall is a throne, and sitting atop it is a huge lilac. She easily towers over everyone in the room, and it's clear that she has her sights set on you, staring at you with amusement on her face as you enter the main hall of the lilac block."
+roomColor = 4
+population = 3
+
+[node name="LilacMain26" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 128, 64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain27" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 64, 64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain28" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, 64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain29" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -64, 64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain30" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -128, 64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain31" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -128, 0 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain32" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -64, 0 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain33" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain34" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 64, 0 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain35" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 128, 0 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain36" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 128, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain55" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 192, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You enter the eastern side of the Lilac, and immediately you're covered in whores of various caliber, male and female and all inbetween. They drape you with their bodies, but with a masterful precision you are able to avoid their advances enough to move around. It's clear you've entered the slave market, or at least the whore market. Several people, seemingly slave owners, shout at the ones who drape themselves over you and one by one they leave you be. This area doesn't seem to hold much value... but at the same time this could be a good spot to relieve yourself."
+roomColor = 4
+population = 3
+
+[node name="LilacMain56" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 256, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You enter the eastern side of the Lilac, and immediately you're covered in whores of various caliber, male and female and all inbetween. They drape you with their bodies, but with a masterful precision you are able to avoid their advances enough to move around. It's clear you've entered the slave market, or at least the whore market. Several people, seemingly slave owners, shout at the ones who drape themselves over you and one by one they leave you be. This area doesn't seem to hold much value... but at the same time this could be a good spot to relieve yourself."
+roomColor = 4
+population = 3
+
+[node name="LilacMain57" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 320, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You enter the eastern side of the Lilac, and immediately you're covered in whores of various caliber, male and female and all inbetween. They drape you with their bodies, but with a masterful precision you are able to avoid their advances enough to move around. It's clear you've entered the slave market, or at least the whore market. Several people, seemingly slave owners, shout at the ones who drape themselves over you and one by one they leave you be. This area doesn't seem to hold much value... but at the same time this could be a good spot to relieve yourself."
+roomColor = 4
+population = 3
+
+[node name="LilacMain58" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 384, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You enter the eastern side of the Lilac, and immediately you're covered in whores of various caliber, male and female and all inbetween. They drape you with their bodies, but with a masterful precision you are able to avoid their advances enough to move around. It's clear you've entered the slave market, or at least the whore market. Several people, seemingly slave owners, shout at the ones who drape themselves over you and one by one they leave you be. This area doesn't seem to hold much value... but at the same time this could be a good spot to relieve yourself.
+
+[color=red]Dev Note: This is the end of the market for now. I will expand using the other modules. For now though, enjoy the concept.[/color] [color=pink]<3[/color]"
+roomColor = 4
+population = 3
+
+[node name="LilacMain37" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 64, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain38" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You step up to The Lilac Queen's throne, taking in her bedazzling appearance as she looks down at you from atop her chair. She is properly adjusted now, giving you her full attention as you get closer. You see in the corner of your eyes a few physically emposing lilacs take up a position around you and The Queen, as if protecting the both of you, while the rest of the block starts to notice and watch in mutter whispers"
+roomSprite = 1
+roomColor = 4
+gridColor = 5
+population = 3
+
+[node name="LilacMain39" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -64, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain40" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -128, -64 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain51" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -192, -64 )
+roomName = "Lilac Black Market"
+roomDescription = "You enter the western side of the Lilac Block, entering what can only be called a black market. Market stalls are set in rows upon rows and the people manning them, obviously smugglers, drug dealers, and whatnot, try to get your attention in an attempt to get you to purchase one of their wares. Very few have anything you could care about, but there are a select few you can notice that seem to have stuff you could use. Might be worth checking out."
+roomColor = 4
+population = 3
+
+[node name="LilacMain52" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -256, -64 )
+roomName = "Lilac Black Market"
+roomDescription = "You enter the western side of the Lilac Block, entering what can only be called a black market. Market stalls are set in rows upon rows and the people manning them, obviously smugglers, drug dealers, and whatnot, try to get your attention in an attempt to get you to purchase one of their wares. Very few have anything you could care about, but there are a select few you can notice that seem to have stuff you could use. Might be worth checking out."
+roomColor = 4
+population = 3
+
+[node name="LilacMain53" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -320, -64 )
+roomName = "Lilac Black Market"
+roomDescription = "You enter the western side of the Lilac Block, entering what can only be called a black market. Market stalls are set in rows upon rows and the people manning them, obviously smugglers, drug dealers, and whatnot, try to get your attention in an attempt to get you to purchase one of their wares. Very few have anything you could care about, but there are a select few you can notice that seem to have stuff you could use. Might be worth checking out."
+roomColor = 4
+population = 3
+
+[node name="LilacMain54" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -384, -64 )
+roomName = "Lilac Black Market"
+roomDescription = "You enter the western side of the Lilac Block, entering what can only be called a black market. Market stalls are set in rows upon rows and the people manning them, obviously smugglers, drug dealers, and whatnot, try to get your attention in an attempt to get you to purchase one of their wares. Very few have anything you could care about, but there are a select few you can notice that seem to have stuff you could use. Might be worth checking out.
+
+[color=red]Dev Note: This is the end of the market for now. I will expand using the other modules. For now though, enjoy the concept.[/color] [color=pink]<3[/color]"
+roomColor = 4
+population = 3
+
+[node name="LilacMain41" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -128, -128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain42" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -64, -128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain43" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, -128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain44" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 64, -128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+You're stood on the elevated platform next to the throne. The Lilac Queen adjusts herself in preparation to address you as you get closer."
+roomColor = 4
+gridColor = 3
+population = 3
+
+[node name="LilacMain45" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 128, -128 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain46" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 128, -192 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain47" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 64, -192 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain48" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( 0, -192 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam.
+
+[color=red]Dev Note: I haven't figured out a design for the living quarters yet. I'm hoping to figure out a design soon, as I don't like leaving these notes in actual gameplay. For now though, enjoy the idea![/color] [color=pink]<3[/color]"
+roomColor = 4
+population = 3
+
+[node name="LilacMain49" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -64, -192 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacMain50" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 1, 0.6, 0.8, 1 )
+position = Vector2( -128, -192 )
+roomName = "Lilac Main Hall"
+roomDescription = "You roam the main hall of the lilac block. This area is significantly altered from the usual block structure, and you can't tell if the lilacs did that themselves or if they paid the prison engineers to do it for them. In either case, the area is absolutely huge. To the north is the living quarters, housing all of the \"cells.\" To the east is the Sex Market, where lilacs will whore themselves out or sell various lewd goods. To the west is the Bazaar District, but it's more like a black market, dealing with contraband and other things that would definitely get you sent to solitary... or worse.
+
+In the center of the room is the throne, where the Lilac Queen sits, watching you roam."
+roomColor = 4
+population = 3
+
+[node name="LilacTram" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 320 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram2" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram4" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram5" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram6" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram7" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram8" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram9" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -128, 448 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram12" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( 128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here...
+
+There are stairs leading down toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="LilacTram13" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( 192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs going downward, toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="LilacTram15" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram16" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( 0, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram17" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3
+
+[node name="LilacTram19" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.7, 0.7, 0.7, 1 )
+position = Vector2( -128, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here...
+
+There are stairs leading down toward the tram platform."
+roomColor = 8
+population = 3
+
+[node name="LilacTram21" parent="DDRedBlock" instance=ExtResource( 3 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -192, 512 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. Various inmates pass through here on their way to and from the main areas of the prison.
+
+There are stairs leading down toward the tram platform."
+roomSprite = 3
+roomColor = 7
+population = 3
+
+[node name="LilacTram3" parent="DDRedBlock" instance=ExtResource( 3 )]
+position = Vector2( -64, 384 )
+roomName = "Upper Tram Station"
+roomDescription = "You walk about the upper half of the tram station. The area is eerily empty, with nobody around. The air is heavy with a sense of dust and dread as the purple lined walls tell you're in the Lilac Block. The odd atmosphere is enough to make you question why you're here..."
+population = 3

@@ -1,0 +1,321 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/World/SubWorld.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game/World/GameRoom.tscn" type="PackedScene" id=2]
+
+[node name="DDMedical" instance=ExtResource( 1 )]
+
+[node name="MedicalFloor" parent="." index="0" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+roomName = "H.C. Elevator"
+roomDescription = "You shouldn't see this."
+canNorth = false
+canSouth = false
+roomSprite = 3
+roomColor = 2
+gridColor = 2
+
+[node name="MedicalFloor2" parent="." index="1" instance=ExtResource( 2 )]
+position = Vector2( -64, 0 )
+roomName = "Entrance Hall"
+roomDescription = "You shouldn't see this."
+canNorth = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor3" parent="." index="2" instance=ExtResource( 2 )]
+self_modulate = Color( 0.5, 0.5, 0.5, 1 )
+position = Vector2( -128, 0 )
+roomName = "Entrance Gate"
+roomDescription = "You shouldn't see this."
+canWest = false
+canNorth = false
+canSouth = false
+roomSprite = 1
+roomColor = 7
+gridColor = 2
+
+[node name="MedicalFloor4" parent="." index="3" instance=ExtResource( 2 )]
+position = Vector2( -192, 0 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison.
+
+You look at the guard watching the entrance gate. Every once in a while a group of new prisoners arrive, being escorted by various personnel. Trying to get closer results in your collar sparking angrily."
+canEast = false
+canSouth = false
+population = 3
+
+[node name="MedicalFloor9" parent="." index="4" instance=ExtResource( 2 )]
+position = Vector2( -256, 0 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canSouth = false
+population = 3
+
+[node name="MedicalFloor10" parent="." index="5" instance=ExtResource( 2 )]
+position = Vector2( -320, 0 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+population = 3
+
+[node name="MedicalFloor15" parent="." index="6" instance=ExtResource( 2 )]
+position = Vector2( -320, 64 )
+roomName = "Medical - Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canWest = false
+canEast = false
+population = 3
+
+[node name="MedicalFloor16" parent="." index="7" instance=ExtResource( 2 )]
+self_modulate = Color( 1, 0.6, 0.6, 1 )
+position = Vector2( -320, 128 )
+roomName = "General Elevator"
+canWest = false
+canEast = false
+roomSprite = 3
+roomColor = 2
+population = 3
+
+[node name="MedicalFloor11" parent="." index="8" instance=ExtResource( 2 )]
+position = Vector2( -384, 0 )
+roomName = "Medical Vendor"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison.
+
+Right next to you is an advanced medical vendor that sells basic medical supplies and over-the-counter medication. There is an option to recieve perscription medication from here, but that requires special access."
+canSouth = false
+roomSprite = 6
+population = 3
+
+[node name="MedicalFloor12" parent="." index="9" instance=ExtResource( 2 )]
+position = Vector2( -448, 0 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canSouth = false
+population = 3
+
+[node name="MedicalFloor5" parent="." index="10" instance=ExtResource( 2 )]
+position = Vector2( -192, -64 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canEast = false
+population = 3
+
+[node name="MedicalFloor13" parent="." index="11" instance=ExtResource( 2 )]
+position = Vector2( -448, -64 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canWest = false
+population = 3
+
+[node name="MedicalFloor14" parent="." index="12" instance=ExtResource( 2 )]
+position = Vector2( -448, -128 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canWest = false
+canNorth = false
+population = 3
+
+[node name="MedicalFloor19" parent="." index="13" instance=ExtResource( 2 )]
+position = Vector2( -384, -128 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canNorth = false
+population = 3
+
+[node name="MedicalFloor23" parent="." index="14" instance=ExtResource( 2 )]
+position = Vector2( -384, -192 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canWest = false
+canEast = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor27" parent="." index="15" instance=ExtResource( 2 )]
+position = Vector2( -384, -256 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canWest = false
+canEast = false
+gridColor = 2
+
+[node name="MedicalFloor29" parent="." index="16" instance=ExtResource( 2 )]
+position = Vector2( -384, -320 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canNorth = false
+canEast = false
+gridColor = 2
+
+[node name="MedicalFloor30" parent="." index="17" instance=ExtResource( 2 )]
+position = Vector2( -448, -320 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canNorth = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor31" parent="." index="18" instance=ExtResource( 2 )]
+position = Vector2( -512, -320 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canNorth = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor32" parent="." index="19" instance=ExtResource( 2 )]
+position = Vector2( -576, -320 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canNorth = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor33" parent="." index="20" instance=ExtResource( 2 )]
+position = Vector2( -640, -320 )
+roomName = "Emergency Hall"
+roomDescription = "This area is meant to be inaccessable right now. It will serve a purpose in future builds."
+canNorth = false
+canSouth = false
+gridColor = 2
+
+[node name="MedicalFloor28" parent="." index="21" instance=ExtResource( 2 )]
+position = Vector2( -256, -256 )
+roomName = "Medical Hall"
+roomDescription = "A general hallway for the Clinical Wing of the Medical Floor. The walls are a sterile white with doctors and nurses constantly rushing about, going to various sectors of their work. They pay you no mind as they run by, often times nearly crashing into you. You can see the occaisonal inmate around as well, some wearing medical bands and others being led by leash to other destinations."
+canWest = false
+canEast = false
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor34" parent="." index="22" instance=ExtResource( 2 )]
+position = Vector2( -256, -320 )
+roomName = "Medical Hall"
+roomDescription = "A general hallway for the Clinical Wing of the Medical Floor. The walls are a sterile white with doctors and nurses constantly rushing about, going to various sectors of their work. They pay you no mind as they run by, often times nearly crashing into you. You can see the occaisonal inmate around as well, some wearing medical bands and others being led by leash to other destinations."
+canWest = false
+canNorth = false
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor35" parent="." index="23" instance=ExtResource( 2 )]
+position = Vector2( -192, -320 )
+roomName = "Medical Hall"
+roomDescription = "A general hallway for the Clinical Wing of the Medical Floor. The walls are a sterile white with doctors and nurses constantly rushing about, going to various sectors of their work. They pay you no mind as they run by, often times nearly crashing into you. You can see the occaisonal inmate around as well, some wearing medical bands and others being led by leash to other destinations."
+canNorth = false
+canSouth = false
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor36" parent="." index="24" instance=ExtResource( 2 )]
+position = Vector2( -128, -320 )
+roomName = "Medical Hall"
+roomDescription = "A general hallway for the Clinical Wing of the Medical Floor. The walls are a sterile white with doctors and nurses constantly rushing about, going to various sectors of their work. They pay you no mind as they run by, often times nearly crashing into you. You can see the occaisonal inmate around as well, some wearing medical bands and others being led by leash to other destinations."
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor37" parent="." index="25" instance=ExtResource( 2 )]
+position = Vector2( -128, -384 )
+roomName = "Medical Hall"
+roomDescription = "You enter the open rooms of the Clinical Wing, beds scattered around about as much as the medical staff. You spot various inmates being treated out in the open with minor wounds that don't require more invasive medication, nor cryopod usage. Some inmates however are being taken to dedicated rooms with the posibility of a short-time stay, as their wounds are more severe and they can't afford cryopod treatment."
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor38" parent="." index="26" instance=ExtResource( 2 )]
+position = Vector2( -128, -448 )
+roomName = "Clinical Zone"
+roomDescription = "You enter the open rooms of the Clinical Wing, beds scattered around about as much as the medical staff. You spot various inmates being treated out in the open with minor wounds that don't require more invasive medication, nor cryopod usage. Some inmates however are being taken to dedicated rooms with the posibility of a short-time stay, as their wounds are more severe and they can't afford cryopod treatment.
+
+You spot Rebecca's Office door with her name plastered on it to your left."
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor39" parent="." index="27" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -64, -384 )
+roomName = "Cryopod"
+roomColor = 3
+population = 2
+
+[node name="MedicalFloor45" parent="." index="28" instance=ExtResource( 2 )]
+position = Vector2( -128, -512 )
+roomName = "Clinical Zone"
+roomDescription = "You enter the open rooms of the Clinical Wing, beds scattered around about as much as the medical staff. You spot various inmates being treated out in the open with minor wounds that don't require more invasive medication, nor cryopod usage. Some inmates however are being taken to dedicated rooms with the posibility of a short-time stay, as their wounds are more severe and they can't afford cryopod treatment."
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor46" parent="." index="29" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -192, -448 )
+roomName = "Rebecca's Office"
+roomSprite = 1
+roomColor = 3
+gridColor = 4
+population = 2
+
+[node name="MedicalFloor52" parent="." index="30" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -128, -576 )
+roomName = "Restricted Door"
+canSouth = false
+roomColor = 3
+gridColor = 2
+
+[node name="MedicalFloor51" parent="." index="31" instance=ExtResource( 2 )]
+self_modulate = Color( 0.7, 0.7, 1, 1 )
+position = Vector2( -64, -512 )
+roomName = "Inspection Room"
+roomColor = 3
+population = 2
+
+[node name="MedicalFloor24" parent="." index="32" instance=ExtResource( 2 )]
+position = Vector2( -256, -192 )
+roomName = "Medical Hall"
+roomDescription = "A general hallway for the Clinical Wing of the Medical Floor. The walls are a sterile white with doctors and nurses constantly rushing about, going to various sectors of their work. They pay you no mind as they run by, often times nearly crashing into you. You can see the occaisonal inmate around as well, some wearing medical bands and others being led by leash to other destinations."
+canWest = false
+canEast = false
+canSouth = false
+gridColor = 1
+population = 2
+
+[node name="MedicalFloor20" parent="." index="33" instance=ExtResource( 2 )]
+position = Vector2( -384, -64 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+population = 3
+
+[node name="MedicalFloor21" parent="." index="34" instance=ExtResource( 2 )]
+position = Vector2( -320, -64 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+population = 3
+
+[node name="MedicalFloor22" parent="." index="35" instance=ExtResource( 2 )]
+position = Vector2( -320, -128 )
+roomName = "Medical - Desk"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison.
+
+You step up to the front desk, typically manned by a few nurses. You can often find Rebecca and her beaming self here."
+canNorth = false
+roomSprite = 1
+population = 3
+
+[node name="MedicalFloor25" parent="." index="36" instance=ExtResource( 2 )]
+position = Vector2( -256, -128 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canNorth = false
+population = 3
+
+[node name="MedicalFloor26" parent="." index="37" instance=ExtResource( 2 )]
+position = Vector2( -256, -64 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+population = 3
+
+[node name="MedicalFloor6" parent="." index="38" instance=ExtResource( 2 )]
+position = Vector2( -192, -128 )
+roomName = "Medical Lobby"
+roomDescription = "You step into the sterile lobby of the medical floor. Doctors and nurses run around rampant in this place and every few minutes an alarm goes off before paramedics are dispatched. Many of the paramedics come back with stretchers carrying wounded inmates. Others come back with body bags. A constant reminder that life is a fleeting thing in this prison."
+canNorth = false
+canEast = false
+population = 3
