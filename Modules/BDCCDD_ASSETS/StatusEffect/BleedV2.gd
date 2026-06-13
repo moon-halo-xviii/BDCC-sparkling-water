@@ -29,16 +29,25 @@ func processTime(_secondsPassed: int):
 				stop()
 
 func getEffectName():
-	return "Bleeding"
+	if character.getPain() > 0:
+		return "Bleeding"
+	else:
+		return "Acute Blood Loss"
 
 func getEffectDesc():
-	return "I'm losing "+str(woundSeverity)+" health a turn. "
+	if character.getPain() > 0:
+		return "I'm losing "+str(woundSeverity)+" health a turn."
+	else:
+		return "I'm losing a lot of blood... If I don't do something fast, I'll pass out."
 
 func getEffectImage():
 	return "res://Images/StatusEffects/bleeding-wound.png"
 
 func getIconColor():
-	return IconColorRed
+	if character.getPain() > 0:
+		return IconColorRed
+	else:
+		return Color("#911919")
 
 func combine(_args = []):
 	if(_args.size() > 0):
