@@ -21,7 +21,12 @@ func processTime(_secondsPassed: int):
 			var bloodloss = -1*(woundSeverity - clamp(floor(character.skillsHolder.getStat(Stat.Vitality)/5),0,woundSeverity))/character.painThreshold()
 			character.addConsciousness(bloodloss)
 			if is_zero_approx(character.getConsciousness()):
+				#Reset the consciousness for when they get up. If they never get up, it doesn't matter anyway.
+				character.addConsciousness(1.0)
+				character.addEffect(DDStatusEffect.Dying, [woundSeverity])
+				#Change to a Dying interaction
 				GM.main.IS.startInteraction("Unconscious", {main="pc"})
+				stop()
 
 func getEffectName():
 	return "Bleeding"

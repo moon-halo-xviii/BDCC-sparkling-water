@@ -18,4 +18,5 @@ func _init():
 
 	statusEffects = [
 		"res://Modules/BDCCDD_ASSETS/StatusEffect/BleedV2.gd",
+		"res://Modules/BDCCDD_ASSETS/StatusEffect/Dying.gd",
 	]
