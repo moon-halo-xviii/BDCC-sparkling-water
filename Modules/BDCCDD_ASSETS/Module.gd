@@ -10,6 +10,8 @@ func _init():
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/BDMSP_JumpsuitRed/BDMSP_Jumpsuit.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/OfficialTrenchcoat/OfficialTrenchcoat.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/OfficialTrenchcoatRed/OfficialTrenchcoatRed.gd",
+
+		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Bandage.gd",
 	]
 
 	events = [
@@ -18,6 +20,7 @@ func _init():
 
 	scenes = [
 		"res://Modules/BDCCDD_ASSETS/StatusEffect/DeathScene.gd",
+		"res://Modules/BDCCDD_ASSETS/Scenes/Game/DDMedicineScene.gd",
 	]
 
 	statusEffects = [
@@ -29,3 +32,5 @@ func _init():
 		"res://Modules/BDCCDD_ASSETS/StatusEffect/FractureRib.gd",
 		"res://Modules/BDCCDD_ASSETS/StatusEffect/Headache.gd",
 	]
+
+

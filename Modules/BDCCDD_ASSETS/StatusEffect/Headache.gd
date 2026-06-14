@@ -1,7 +1,7 @@
 extends StatusEffectBase
 
 func _init():
-	id = DDStatusEffect.Headache
+	id = DDRef.Headache
 
 func getBuffs():
 	return [

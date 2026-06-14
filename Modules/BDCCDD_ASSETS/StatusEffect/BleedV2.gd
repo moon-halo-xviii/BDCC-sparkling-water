@@ -3,7 +3,7 @@ extends StatusEffectBase
 var woundSeverity = 0
 
 func _init():
-	id = DDStatusEffect.Bleed
+	id = DDRef.Bleed
 	
 func initArgs(_args = []):
 	if(_args.size() > 0):
@@ -23,7 +23,7 @@ func processTime(_secondsPassed: int):
 			if is_zero_approx(character.getConsciousness()):
 				#Reset the consciousness for when they get up. If they never get up, it doesn't matter anyway.
 				character.addConsciousness(1.0)
-				character.addEffect(DDStatusEffect.Dying, [woundSeverity])
+				character.addEffect(DDRef.Dying, [woundSeverity])
 				#Change to a Dying interaction
 				GM.main.IS.startInteraction("Unconscious", {main="pc"})
 				stop()

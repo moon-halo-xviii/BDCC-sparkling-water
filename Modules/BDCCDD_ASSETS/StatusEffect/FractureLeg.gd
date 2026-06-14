@@ -1,7 +1,7 @@
 extends StatusEffectBase
 
 func _init():
-	id = DDStatusEffect.FractureLeg
+	id = DDRef.FractureLeg
 
 func getBuffs():
 	return [

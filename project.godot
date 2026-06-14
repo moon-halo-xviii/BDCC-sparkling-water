@@ -385,9 +385,9 @@ _global_script_classes=[ {
 "path": "res://Game/Pregnancy/CycleStage.gd"
 }, {
 "base": "Node",
-"class": "DDStatusEffect",
+"class": "DDRef",
 "language": "GDScript",
-"path": "res://Modules/BDCCDD_ASSETS/DDStatusEffect.gd"
+"path": "res://Modules/BDCCDD_ASSETS/DDRef.gd"
 }, {
 "base": "Node",
 "class": "DamageType",
@@ -2120,7 +2120,7 @@ _global_script_class_icons={
 "CurveEditorCustom": "",
 "CurveRenderer": "",
 "CycleStage": "",
-"DDStatusEffect": "",
+"DDRef": "",
 "DamageType": "",
 "Datapack": "",
 "DatapackCharacter": "",

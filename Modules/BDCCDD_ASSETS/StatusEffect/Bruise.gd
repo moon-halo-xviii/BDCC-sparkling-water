@@ -1,7 +1,7 @@
 extends StatusEffectBase
 
 func _init():
-	id = DDStatusEffect.Bruise
+	id = DDRef.Bruise
 
 func getBuffs():
 	return [

@@ -3,17 +3,17 @@ extends StatusEffectBase
 var bleedoutTimer = 300
 
 func _init():
-	id = DDStatusEffect.Dying
+	id = DDRef.Dying
 
 func initArgs(_args = []):
 	#The first argument should always be numerical. The second optional argument should be a bool
 	#If the second argument is false or not supplied, bleedout is calculated from the severity of the wound that started this status effect (which should be supplied as the first argument)
 	#If the second argument is true, the first argument supplies the bleedoutTimer duration directly
 	if(_args.size() > 0):
-		if(_args.get(1)):
+		if(_args.size() > 1 && _args[1]):
 			bleedoutTimer = _args[0]
 		else:
-			bleedoutTimer = 100 + character.getPainThreshold() - _args[0]
+			bleedoutTimer = 100 + character.painThreshold() - _args[0]
 
 func processTime(_secondsPassed: int):
 	bleedoutTimer -= _secondsPassed
