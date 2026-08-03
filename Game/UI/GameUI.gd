@@ -103,6 +103,12 @@ func _ready():
 		textOutput.selection_enabled = false
 	setIsRightHandedLayout(OPTIONS.isUILayoutRightHanded())
 	
+	connect("visibility_changed", self, "onVisChanged")
+	
+func onVisChanged():
+	playerPanel.setPCViewportVis(visible)
+	#print("Visibility changed: "+str(visible))
+	
 func say(text: String):
 	#textOutput.append_bbcode(gameParser.executeString(sayParser.processString(text)))
 	textOutput.bbcode_text += gameParser.executeString(sayParser.processString(text))
@@ -549,18 +555,18 @@ func translateText(manualButton = false):
 			manualTranslateButton.visible = true
 			return
 		
-		var buttonsTexts = []
+		var buttonsTexts:Array = []
 		if(AutoTranslation.shouldTranslateButtons):
 			for optionID in options:
-				buttonsTexts.append(options[optionID][1])
-				buttonsTexts.append(options[optionID][2].replace("\n", "^"))
+				buttonsTexts.append("[[BTN_"+str(optionID)+"_TEXT]]"+options[optionID][1])
+				buttonsTexts.append("[[BTN_"+str(optionID)+"_DESC]]"+options[optionID][2].replace("\n", "^"))
 		
 		translateStatusLabel.text = "Translating.."
 		currentTranslationTask += 1
 		var rememberedTask = currentTranslationTask
 		savedOriginalText = textOutput.bbcode_text
 		
-		var toTranslate = textOutput.text
+		var toTranslate:String = textOutput.bbcode_text if AutoTranslation.shouldKeepBBTags else textOutput.text
 		if(buttonsTexts.size() > 0):
 			toTranslate += "\n"+Util.join(buttonsTexts, "\n")
 		var result = AutoTranslation.translate(toTranslate)
@@ -575,18 +581,29 @@ func translateText(manualButton = false):
 			translateStatusLabel.text = "Failed to translate"
 		if(result != null && result != ""):
 			if(buttonsTexts.size() > 0):
-				var resultSplitted = result.split("\n")
-				if(resultSplitted.size() >= buttonsTexts.size()):
-					var _i = 0
-					for optionID in options:
-						var realI = resultSplitted.size() - buttonsTexts.size() + _i*2
-						options[optionID].append(resultSplitted[realI])
-						options[optionID].append(resultSplitted[realI+1].replace("^", "\n"))
-						
-						_i += 1
-					resultSplitted.resize(resultSplitted.size() - buttonsTexts.size())
-					result = Util.join(resultSplitted, "\n")
-					queueUpdate()
+				var resultSplitted:Array = result.split("\n")
+				var translatedButtons:Dictionary = {}
+				var storyLines:Array = []
+				for line in resultSplitted:
+					if(line.begins_with("[[BTN_") && line.find("]]", 0) != -1):
+						var markerEnd:int = line.find("]]", 0)
+						var marker:String = line.substr(2, markerEnd - 2)
+						var translatedText:String = line.substr(markerEnd + 2, line.length())
+						translatedButtons[marker] = translatedText
+					else:
+						storyLines.append(line)
+				for optionID in options:
+					var textMarker = "BTN_"+str(optionID)+"_TEXT"
+					var descMarker = "BTN_"+str(optionID)+"_DESC"
+					if(translatedButtons.has(textMarker) && translatedButtons.has(descMarker)):
+						if(options[optionID].size() > 5):
+							options[optionID][5] = translatedButtons[textMarker]
+							options[optionID][6] = translatedButtons[descMarker].replace("^", "\n")
+						else:
+							options[optionID].append(translatedButtons[textMarker])
+							options[optionID].append(translatedButtons[descMarker].replace("^", "\n"))
+				result = Util.join(storyLines, "\n")
+				queueUpdate()
 			
 			savedTranslatedText = result
 			if(!showOriginalCheckbox.pressed):
