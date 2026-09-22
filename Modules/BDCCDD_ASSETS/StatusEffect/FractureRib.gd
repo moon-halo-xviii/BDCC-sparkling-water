@@ -12,6 +12,9 @@ func getBuffs():
 		buff(Buff.RestEffectivenessBuff, [-50]),
 	]
 
+func getAfflictedHitLocs():
+	return [HitLoc.Chest]
+
 func getEffectName():
 	return "Rib Fracture"
 

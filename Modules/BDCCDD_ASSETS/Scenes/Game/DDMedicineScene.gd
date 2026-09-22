@@ -1,6 +1,7 @@
 extends SceneBase
 
 var uniqueItemID = ""
+var partToTreat = ""
 
 func _init():
 	sceneID = "DD_MedicineScene"
@@ -8,45 +9,53 @@ func _init():
 func _initScene(_args = []):
 	if(_args.size() > 0):
 		uniqueItemID = _args[0]
+	
 
 func _reactInit():
 	if(uniqueItemID == null || uniqueItemID == ""):
 		return
 	var item: ItemBase = GM.pc.getInventory().getItemByUniqueID(uniqueItemID)
 	
-	match item.id:
-		DDRef.Bandage:
-			setState("bandage")
-		_:
-			setState("")
+	for injury in item.treatableEffects():
+		if GM.pc.hasEffect(injury):
+			setState("selectBodypart")
+			break
+
 
 func _run():
-	if(state == ""):
-		#Something went wrong
-		addButton("Continue", "You shouldn't be here", "endthescene")
+	var item: ItemBase = GM.pc.getInventory().getItemByUniqueID(uniqueItemID)
 	
-	#Test implementation, the final implementation needs to be applicable to specific bodyparts
-	if(state == "bandage"):
-		if GM.pc.hasEffect(DDRef.Bleed):
-			var bleed = GM.pc.getEffect(DDRef.Bleed)
-			GM.pc.getInventory().getItemByUniqueID(uniqueItemID).removeXOrDestroy(1)
-			bleed.woundSeverity -= 20
-			if bleed.woundSeverity <= 0:
-				GM.pc.removeEffect(DDRef.Bleed)
-				saynn("You used the bandage on your wound. The bleeding stopped.")
-			else:
-				if bleed.woundSeverity < 5:
-					saynn("You used the bandage on your wound. It's still bleeding a little.")
-				elif bleed.woundSeverity < 15:
-					saynn("You used the bandage on your wound. It's still bleeding quite a bit, though.")
-				else:
-					saynn("You tried using the bandage on your wound. It isn't very effective.")
-			addButton("Continue", "Get on your way", "endthescene")
-		else:
-			saynn("You don't have any wounds to treat.")
-			addButton("Continue", "Okay", "endthescene")
+	if(state == ""):
+		say("You have no wounds that this item can treat right now.")
+		addButton("Continue", "Return to the previous menu", "endthescene")
+	
+	if(state == "selectBodypart"):
+		saynn("Select the bodypart you wish to treat:")
+
+		addButton("RETURN", "Return to the previous menu", "endthescene")
+
+		var validParts = []
+
+		for injury in item.treatableEffects():
+			if GM.pc.hasEffect(injury):
+				for hitloc in GM.pc.getEffect(injury).getAfflictedHitLocs():
+					if not(hitloc in validParts):
+						validParts.append(hitloc)
+		
+		validParts.sort_custom(HitLoc, "sortHitLocs")
+
+		for hitloc in validParts:
+			addButton(HitLoc.getName(hitloc).capitalize(), "Select this bodypart", "treatBodypart", [hitloc])
+
+	if(state == "treatBodypart"):
+		for injury in item.treatableEffects():
+			saynn(item.treat(injury, partToTreat, uniqueItemID))
+			addButton("Continue", "Return to inventory", "endthescene")
 
 func _react(_action: String, _args):
+	if(_action == "treatBodypart"):
+		partToTreat = _args[0]
+
 	if(_action == "endthescene"):
 		endScene()
 		return
@@ -56,7 +65,9 @@ func _react(_action: String, _args):
 func saveData():
 	return {
 		"uID": uniqueItemID,
+		"ptt": partToTreat, 
 	}
 
 func loadData(_data):
 	uniqueItemID = SAVE.loadVar(_data, "uID", "")
+	partToTreat = SAVE.loadVar(_data, "ptt", "")

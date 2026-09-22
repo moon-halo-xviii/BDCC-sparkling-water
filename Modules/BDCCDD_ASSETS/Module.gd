@@ -12,6 +12,8 @@ func _init():
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/OfficialTrenchcoatRed/OfficialTrenchcoatRed.gd",
 
 		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Bandage.gd",
+		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Suture.gd",
+		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Splint.gd",
 	]
 
 	events = [

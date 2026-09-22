@@ -874,6 +874,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Modules/HypnokinkModule/Scenes/Sessions/HK_Sessions.gd"
 }, {
+"base": "Node",
+"class": "HitLoc",
+"language": "GDScript",
+"path": "res://Modules/BDCCDD_ASSETS/HitLoc.gd"
+}, {
 "base": "Object",
 "class": "HypnokinkUtil",
 "language": "GDScript",
@@ -2218,6 +2223,7 @@ _global_script_class_icons={
 "HK_Glasses": "",
 "HK_HypnoRestraint": "",
 "HK_Sessions": "",
+"HitLoc": "",
 "HypnokinkUtil": "",
 "ImageCon": "",
 "ImageConditions": "",

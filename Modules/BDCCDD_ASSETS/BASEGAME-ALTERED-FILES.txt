@@ -1,0 +1,7 @@
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\PlayerOnly\PunchPCAttack.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\PlayerOnly\KickPCAttack.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\NpcAttacks\StrongPunch.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\NpcAttacks\StrongKick.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\StunbatonStrongAttack.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\StunbatonAttack.gd
+D:\Games\BDCC\sparkling-water\BDCC-sparkling-water-1\Attacks\StrongKickAttack.gd

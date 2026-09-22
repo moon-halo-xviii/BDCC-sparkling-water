@@ -18,7 +18,7 @@ const FractureArm = "DD_FractureArm"
 const FractureLeg = "DD_FractureLeg"
 const FractureRib = "DD_FractureRib"
 const Headache = "DD_Headache"
-const Puncture = "DD_Puncture"
+const StabWound = "DD_StabWound"
 
 #Condition Status Effects
 const HealingWound = "DD_HealingWound"

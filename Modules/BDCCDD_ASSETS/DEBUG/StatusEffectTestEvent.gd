@@ -15,8 +15,8 @@ func getPriority():
 
 func onButton(_method, _args):
 	if(_method == "applyEffect"):
-		GM.pc.addEffect(DDStatusEffect.Bleed, [10])
+		GM.pc.addEffect(DDRef.Bleed, [[HitLoc.Chest, "Debug", 3]])
 	if(_method == "applyEffect2"):
-		GM.pc.addEffect(DDStatusEffect.FractureRib)
-		GM.pc.addEffect(DDStatusEffect.FractureArm)
-		GM.pc.addEffect(DDStatusEffect.FractureLeg)
+		GM.pc.addEffect(DDRef.FractureRib)
+		GM.pc.addEffect(DDRef.FractureArm, [HitLoc.ArmLeft, HitLoc.ArmRight])
+		GM.pc.addEffect(DDRef.FractureLeg, [HitLoc.LegLeft, HitLoc.LegRight])

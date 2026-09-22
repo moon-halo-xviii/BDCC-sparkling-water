@@ -1,4 +1,4 @@
-extends Attack
+extends "res://Modules/BDCCDD_ASSETS/Attacks/Core/BluntAttack.gd"
 
 func _init():
 	id = "stunbatonStrongAttack"
