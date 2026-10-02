@@ -30,12 +30,12 @@ func canUseInCombat():
 func treatableEffects():
 	return [DDRef.Bleed]
 
-func treat(injury, hitloc, uniqueItemID):
+func treat(hitloc, uniqueItemID):
 	GM.pc.getInventory().getItemByUniqueID(uniqueItemID).removeXOrDestroy(1)
 
 	GM.pc.addPain(10)
 
-	var bleed = GM.pc.getEffect(injury)
+	var bleed = GM.pc.getEffect(DDRef.Bleed)
 
 	var bleedingArea = bleed.bleeds[hitloc]
 

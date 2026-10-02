@@ -87,8 +87,8 @@ func checkRequirement(_attacker, _receiver, req):
 				return false
 		"UsableArm":
 			if(_attacker.hasEffect(DDRef.FractureArm)):
-				var fractures = _attacker.getEffect(DDRef.FractureArm)
-				if fractures.fracLeft && fractures.fracRight:
+				var fractures = _attacker.getEffect(DDRef.FractureArm).getAfflictedHitLocs()
+				if HitLoc.ArmLeft in fractures  && fractures.fracRight in fractures:
 					return false
 
 	return true

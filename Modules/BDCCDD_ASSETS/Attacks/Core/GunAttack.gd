@@ -2,11 +2,14 @@ extends Attack
 
 var aimHitLoc = null
 
+func _init():
+	id = "DD_GunAttack"
+
 func _doAttack(_attacker, _receiver, _context = {}):
-	if(checkMissed(_attacker, _receiver, DamageType.Physical, customAccuracyMult = 1.5, _optionalVerb = "shoot")):
-		return genericMissMessage(_attacker, _receiver)
+	if(checkMissed(_attacker, _receiver, DamageType.Physical, 1.5)):
+		return genericMissMessage(_attacker, _receiver, "shoot")
 	
-	if(checkDodged(_attacker, _receiver, DamageType.Physical, customDodgeMult = 0.3)):
+	if(checkDodged(_attacker, _receiver, DamageType.Physical, 0.3)):
 		var randomText = RNG.pick([
 		"{_receiver.name} narrowly rolled away from the shot!",
 		])
@@ -16,7 +19,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 			dodged = true,
 		}
 
-	getBodypartToHit()
+	getBodypartToHit(_receiver)
 
 	var text = "{_attacker.name} shoots {_receiver.name}'s "+HitLoc.getName(aimHitLoc)+"."
 
@@ -32,14 +35,14 @@ func _doAttack(_attacker, _receiver, _context = {}):
 				damage = _receiver.painThreshold()
 				damageMult = 6
 			elif roll <= 0.9:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/3]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/3]])
 				text += " Somehow, {_receiver.he} seems to still be alive."
 			else:
 				damageMult = 0.25
 				text += " But it only grazed {_receiver.his} skull!"
 		HitLoc.Chest:
 			if roll <= 0.6:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/6]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/6]])
 			elif roll <= 0.97:
 				damageMult = 0.25
 				text += " It only grazes the flesh."
@@ -53,7 +56,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 				damageMult = 0.25
 				text += " It only grazes the flesh."
 			else:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/6]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/6]])
 				if roll > 0.8:
 					if _receiver.addEffect(DDRef.FractureArm, [HitLoc.ArmLeft]):
 						text += " {_receiver.His} left arm gets fractured!"
@@ -62,7 +65,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 				damageMult = 0.25
 				text += " It only grazes the flesh."
 			else:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/6]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/6]])
 				if roll > 0.8:
 					if _receiver.addEffect(DDRef.FractureArm, [HitLoc.ArmRight]):
 						text += " {_receiver.His} right arm gets fractured!"
@@ -71,7 +74,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 				damageMult = 0.25
 				text += " It only grazes the flesh."
 			else:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/6]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/6]])
 				if roll > 0.65:
 					if _receiver.addEffect(DDRef.FractureLeg, [HitLoc.LegLeft]):
 						text += " {_receiver.His} left leg gets fractured!"
@@ -80,7 +83,7 @@ func _doAttack(_attacker, _receiver, _context = {}):
 				damageMult = 0.25
 				text += " It only grazes the flesh."
 			else:
-				_receiver.addEffect(DDRef.Bleed, [aimHitLoc, "Gunshot Wound", [damage/6]])
+				_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, "Gunshot Wound", damage/6]])
 				if roll > 0.65:
 					if _receiver.addEffect(DDRef.FractureLeg, [HitLoc.LegRight]):
 						text += " {_receiver.His} right leg gets fractured!"
@@ -116,3 +119,51 @@ func getRecieverArmorScaling(_attacker, _receiver, _damageType) -> float:
 
 func getAttackerDamageMultiplierEfficiency(_attacker, _receiver, _damageType) -> float:
 	return 0.0
+
+func getAttackSoloAnimation():
+	return ["firepistol"]
+
+func getVisibleName(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisibleName()
+	
+func getVisibleDesc(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisisbleDescription()
+
+func getRequirements():
+	return [AttackRequirement.FreeArms, AttackRequirement.FreeHands, "UsableArm"]
+
+func checkRequirement(_attacker, _receiver, req):
+	var reqtype = req[0]
+	match reqtype:
+		AttackRequirement.FreeArms:
+			if(_attacker.hasBoundArms()):
+				return false
+		AttackRequirement.FreeHands:
+			if(_attacker.hasBlockedHands()):
+				return false
+		"UsableArm":
+			if(_attacker.hasEffect(DDRef.FractureArm)):
+				var fractures = _attacker.getEffect(DDRef.FractureArm).getAfflictedHitLocs()
+				if HitLoc.ArmLeft in fractures  && fractures.fracRight in fractures:
+					return false
+
+	return true
+
+func getRequirementText(req):
+	var reqtype = req[0]
+	if(reqtype == AttackRequirement.FreeArms):
+		return "Arms must be free"
+	if(reqtype == AttackRequirement.FreeHands):
+		return "Hands must be free"
+	if(reqtype == "UsableArm"):
+		return "At least one arm must be usable"
+
+	return "Error: bad requirement:" + reqtype

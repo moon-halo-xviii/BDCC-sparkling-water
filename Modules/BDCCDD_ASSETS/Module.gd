@@ -4,6 +4,13 @@ func _init():
 	id = "BDCCDD_ASSETS"
 	author = "MOON_HALO / Sumobear50"
 
+	attacks = [
+		"res://Modules/BDCCDD_ASSETS/Attacks/Core/GunAttack.gd",
+		"res://Modules/BDCCDD_ASSETS/Attacks/Core/BladeAttack.gd",
+		"res://Modules/BDCCDD_ASSETS/Attacks/Core/BluntAttack.gd",
+		"res://Modules/BDCCDD_ASSETS/Attacks/Basic/BasicBluntAttack.gd",
+	]
+
 	items = [
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/BDMSP_JumpsuitOrange/BDMSP_Jumpsuit.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Clothes/BDMSP_JumpsuitLilac/BDMSP_JumpsuitLilac.gd",
@@ -14,6 +21,11 @@ func _init():
 		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Bandage.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Suture.gd",
 		"res://Modules/BDCCDD_ASSETS/Items/Medicine/Splint.gd",
+		"res://Modules/BDCCDD_ASSETS/Items/Medicine/ChestBrace.gd",
+
+		"res://Modules/BDCCDD_ASSETS/Items/Weapons/TestPistol.gd",
+		"res://Modules/BDCCDD_ASSETS/Items/Weapons/TestBlade.gd",
+		"res://Modules/BDCCDD_ASSETS/Items/Weapons/TestBat.gd",
 	]
 
 	events = [

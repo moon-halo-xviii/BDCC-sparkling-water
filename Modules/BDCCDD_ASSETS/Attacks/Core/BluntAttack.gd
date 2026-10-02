@@ -2,6 +2,14 @@ extends Attack
 
 var aimHitLoc = null
 
+func _init():
+	id = "DD_BluntAttack"
+
+func _doAttack(_attacker, _receiver, _context = {}):
+	return {
+		text = "Bad attack happened, let the developer know",
+	}
+
 func doAttack(_attacker, _receiver, _context = {}):
 	doRequirements(_attacker, _receiver)
 	var result = _doAttack(_attacker, _receiver, _context)
@@ -114,3 +122,17 @@ func bluntInjury(_receiver, netDamage):
 	print(_receiver.getName()+" hit in "+HitLoc.getName(aimHitLoc))
 
 	return " ".join(injuryReport)
+
+func getVisibleName(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisibleName()
+	
+func getVisibleDesc(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisisbleDescription()

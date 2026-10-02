@@ -61,7 +61,7 @@ func processTime(_secondsPassed: int):
 				character.addConsciousness(1.0)
 				character.addEffect(DDRef.Dying, [totalWoundSeverity])
 				#Change to a Dying interaction
-				GM.main.IS.startInteraction("Unconscious", {main="pc"})
+				#GM.main.IS.startInteraction("Unconscious", {main="pc"})
 				stop()
 
 	#Natural healing
@@ -104,7 +104,10 @@ func getIconColor():
 
 func combine(_args = []):
 	for wound in _args:
-		bleeds[wound[0]].append([wound[1], wound[2]])
+		if bleeds.keys().has(wound[0]):
+			bleeds[wound[0]].append([wound[1], wound[2]])
+		else:
+			bleeds[wound[0]] = [[wound[1], wound[2]]]
 	updateTotalWoundSeverity()
 
 func saveData():

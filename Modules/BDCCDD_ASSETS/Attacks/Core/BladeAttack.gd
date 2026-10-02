@@ -2,6 +2,10 @@ extends Attack
 
 var aimHitLoc = null
 
+func _init():
+	id = "DD_BladeAttack"
+	isWeaponAttack = true
+
 func _doAttack(_attacker, _receiver, _context = {}):
 	if(checkMissed(_attacker, _receiver, DamageType.Physical)):
 		return genericMissMessage(_attacker, _receiver)
@@ -10,20 +14,23 @@ func _doAttack(_attacker, _receiver, _context = {}):
 	
 	getBodypartToHit(_receiver)
 
-	var damage = RNG.randi_range(20,40)
+	var damageRange = [0,0]
 
-	var attackVerb:String
+	var item = getItem(_context)
+	if(item != null):
+		damageRange = item.getDamageRange()
+
+	var attackVerb = ["slashes", "Laceration"]
+
+	var damage = RNG.randi_range(damageRange[0], damageRange[1])
 
 	if randf() <= 0.33:
 		damage *= 2
 		attackVerb = ["stabs", "Stab Wound"]
-	else:
-		attackVerb = ["slashes", "Laceration"]
 
+	var text = "{_attacker.name} {attack_verb} {_receiver.name}'s {hitloc}.".format({"attack_verb":attackVerb[0], "hitloc":HitLoc.getName(aimHitLoc)})
 
-	var text = "{_attacker.name} %s {_receiver.name}'s %s.".format([attackVerb[0], HitLoc.getName(aimHitLoc)])
-
-	_receiver.addEffect.(DDRef.Bleed, [aimHitLoc, attackVerb[1], damage/6])
+	_receiver.addEffect(DDRef.Bleed, [[aimHitLoc, attackVerb[1], damage/6]])
 
 	return {
 		text = text,
@@ -53,3 +60,51 @@ func calcDamage(_attacker, _receiver, _damageType, _damage: int) -> int:
 			damageMult += 0.1		
 
 	return int(round(_damage * (1.0 + damageMult)))
+
+func getAttackSoloAnimation():
+	return "shiv"
+
+func getVisibleName(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisibleName()
+	
+func getVisibleDesc(_context = {}):
+	var item = getItem(_context)
+	if(item == null):
+		return "error"
+	
+	return item.getVisisbleDescription()
+
+func getRequirements():
+	return [AttackRequirement.FreeArms, AttackRequirement.FreeHands, "UsableArm"]
+
+func checkRequirement(_attacker, _receiver, req):
+	var reqtype = req[0]
+	match reqtype:
+		AttackRequirement.FreeArms:
+			if(_attacker.hasBoundArms()):
+				return false
+		AttackRequirement.FreeHands:
+			if(_attacker.hasBlockedHands()):
+				return false
+		"UsableArm":
+			if(_attacker.hasEffect(DDRef.FractureArm)):
+				var fractures = _attacker.getEffect(DDRef.FractureArm).getAfflictedHitLocs()
+				if HitLoc.ArmLeft in fractures  && fractures.fracRight in fractures:
+					return false
+
+	return true
+
+func getRequirementText(req):
+	var reqtype = req[0]
+	if(reqtype == AttackRequirement.FreeArms):
+		return "Arms must be free"
+	if(reqtype == AttackRequirement.FreeHands):
+		return "Hands must be free"
+	if(reqtype == "UsableArm"):
+		return "At least one arm must be usable"
+
+	return "Error: bad requirement:" + reqtype

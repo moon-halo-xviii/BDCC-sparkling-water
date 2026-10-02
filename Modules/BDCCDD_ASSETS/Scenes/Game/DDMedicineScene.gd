@@ -48,9 +48,8 @@ func _run():
 			addButton(HitLoc.getName(hitloc).capitalize(), "Select this bodypart", "treatBodypart", [hitloc])
 
 	if(state == "treatBodypart"):
-		for injury in item.treatableEffects():
-			saynn(item.treat(injury, partToTreat, uniqueItemID))
-			addButton("Continue", "Return to inventory", "endthescene")
+		saynn(item.treat(partToTreat, uniqueItemID))
+		addButton("Continue", "Return to inventory", "endthescene")
 
 func _react(_action: String, _args):
 	if(_action == "treatBodypart"):
