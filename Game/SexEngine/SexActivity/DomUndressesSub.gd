@@ -36,19 +36,41 @@ func getTags(_indx:int) -> Array:
 		return [SexActivityTag.BeingUndressed]
 	return []
 
-func canStartActivity(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo: SexSubInfo):
-	var itemToUndress = getItemToRemove(_subInfo.getChar())
-	if(itemToUndress == null):
-		return false
+#func canStartActivity(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo: SexSubInfo):
+#	var itemToUndress = getItemToRemove(_subInfo.getChar())
+#	if(itemToUndress == null):
+#		return false
+#
+#	if(_sexEngine.hasTag(_subInfo.charID, SexActivityTag.OrderedToUndress)):
+#		return false
+#
+#	return .canStartActivity(_sexEngine, _domInfo, _subInfo)
+
+func getStartActions(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo: SexSubInfo):
+	var sub:BaseCharacter = _subInfo.getChar()
+	var handledItems:Dictionary = {}
 	
 	if(_sexEngine.hasTag(_subInfo.charID, SexActivityTag.OrderedToUndress)):
-		return false
+		return
 	
-	return .canStartActivity(_sexEngine, _domInfo, _subInfo)
-
+	var itemToUndress = getItemToRemove(_subInfo.getChar())
+	if(itemToUndress):
+		addStartAction([], getVisibleName(), getVisibleDesc(), getActivityScore(_sexEngine, _domInfo, _subInfo))
+	
+	if(_domInfo.getChar().isPlayer()):
+		var _inv:Inventory = sub.getInventory()
+		for slot in _inv.getEquippedItems():
+			addUndressButtonsForSlot(_inv, slot, handledItems)
+	
+func addUndressButtonsForSlot(_inv:Inventory, _slot:String, _handled:Dictionary):
+	var theItem = _inv.getEquippedItem(_slot)
+	if(!_handled.has(theItem) && _inv.canUndressSlotSexEngine(_slot)):
+		_handled[theItem] = true
+		addStartAction([theItem], "Take off "+str(theItem.getCasualName()), "Take off this item from the sub", 0.0, {A_CATEGORY: ["Undress", "Sub (specific)"]})
+		
 func startActivity(_args):
 	#affectSub(getSubInfo().fetishScore({Fetish.Bodywritings: 1.0}, -0.25), 0.01, 0.0, -0.2, -0.02)
-	var itemToUndress = getItemToRemove(getSub())
+	var itemToUndress = getItemToRemove(getSub()) if _args.empty() else _args[0]
 	if(itemToUndress == null):
 		endActivity()
 		return

@@ -40,7 +40,19 @@ func getStartActions(_sexEngine: SexEngine, _domInfo: SexDomInfo, _subInfo: SexS
 			continue
 		
 		handledItems[firstItem] = true
-		addStartAction([firstItem], "Take off "+str(firstItem.getCasualName()), "Take off this item", theActivityScore, {A_CATEGORY: ["Undress"]})
+		addStartAction([firstItem], "Take off "+str(firstItem.getCasualName()), "Take off this item", theActivityScore)
+	
+	if(sub.isPlayer()):
+		var _inv:Inventory = sub.getInventory()
+		for slot in _inv.getEquippedItems():
+			if _inv.hasSlotEquipped(slot):
+				addUndressButtonsForSlot(_inv, slot, handledItems)
+	
+func addUndressButtonsForSlot(_inv:Inventory, _slot:String, _handled:Dictionary):
+	var theItem = _inv.getEquippedItem(_slot)
+	if(!_handled.has(theItem) && _inv.canUndressSlotSexEngine(_slot)):
+		_handled[theItem] = true
+		addStartAction([theItem], "Take off "+str(theItem.getCasualName()), "Take off this item", 0.0)
 
 func getTags(_indx:int) -> Array:
 	if(_indx == SUB_0):

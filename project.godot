@@ -289,6 +289,26 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Game/Computer/ComputerBase.gd"
 }, {
+"base": "Sprite",
+"class": "ContentAutoSprite",
+"language": "GDScript",
+"path": "res://UI/ContentBoard/Util/ContentSprite.gd"
+}, {
+"base": "Object",
+"class": "ContentBoardCondition",
+"language": "GDScript",
+"path": "res://UI/ContentBoard/Util/ContentBoardCondition.gd"
+}, {
+"base": "Reference",
+"class": "ContentBoardEntryBase",
+"language": "GDScript",
+"path": "res://UI/ContentBoard/ContentBoardEntryBase.gd"
+}, {
+"base": "Object",
+"class": "ContentBoardStatus",
+"language": "GDScript",
+"path": "res://UI/ContentBoard/Util/ContentBoardStatus.gd"
+}, {
 "base": "Object",
 "class": "ContentType",
 "language": "GDScript",
@@ -378,6 +398,16 @@ _global_script_classes=[ {
 "class": "CurveRenderer",
 "language": "GDScript",
 "path": "res://Player/Player3D/Chains/CurveRenderer.gd"
+}, {
+"base": "Reference",
+"class": "CustomBodypartSlot",
+"language": "GDScript",
+"path": "res://Player/Bodyparts/CustomBodypartSlot.gd"
+}, {
+"base": "Reference",
+"class": "CustomInventorySlot",
+"language": "GDScript",
+"path": "res://Inventory/CustomInventorySlot.gd"
 }, {
 "base": "Object",
 "class": "CycleStage",
@@ -484,10 +514,10 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Util/AutoTranslation/Translators/DeepLTranslator.gd"
 }, {
-"base": "CodeContex",
-"class": "DelayedCodeContext",
+"base": "TranslatorBase",
+"class": "DeepLTranslatorV2",
 "language": "GDScript",
-"path": "res://FoxLib/CrotchBlocks/Contexts/DelayedCodeContext.gd"
+"path": "res://Util/AutoTranslation/Translators/DeepLTranslatorV2.gd"
 }, {
 "base": "Reference",
 "class": "DialogueFiller",
@@ -840,6 +870,11 @@ _global_script_classes=[ {
 "path": "res://Util/AutoTranslation/Translators/GoogleBatchTranslator.gd"
 }, {
 "base": "TranslatorBase",
+"class": "GoogleGTXTranslator",
+"language": "GDScript",
+"path": "res://Util/AutoTranslation/Translators/GoogleGTXTranslator.gd"
+}, {
+"base": "TranslatorBase",
 "class": "GoogleTranslator",
 "language": "GDScript",
 "path": "res://Util/AutoTranslation/Translators/GoogleTranslator.gd"
@@ -969,6 +1004,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Inventory/ItemState.gd"
 }, {
+"base": "ItemState",
+"class": "ItemStateUnremovable",
+"language": "GDScript",
+"path": "res://Inventory/ItemStateUnremovable.gd"
+}, {
 "base": "Object",
 "class": "ItemTag",
 "language": "GDScript",
@@ -1049,6 +1089,21 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Game/LustCombat/LustInterests.gd"
 }, {
+"base": "Object",
+"class": "MainRouteEnding",
+"language": "GDScript",
+"path": "res://Game/Flags/MainRouteEnding.gd"
+}, {
+"base": "Reference",
+"class": "MainRouteHistory",
+"language": "GDScript",
+"path": "res://Game/Flags/MainRouteHistory.gd"
+}, {
+"base": "Reference",
+"class": "MainRouteHistoryEntry",
+"language": "GDScript",
+"path": "res://Game/Flags/MainRouteHistoryEntry.gd"
+}, {
 "base": "Control",
 "class": "MainScene",
 "language": "GDScript",
@@ -1088,6 +1143,21 @@ _global_script_classes=[ {
 "class": "MinigameResult",
 "language": "GDScript",
 "path": "res://Game/Minigames/MinigameResult.gd"
+}, {
+"base": "Reference",
+"class": "MissionBase",
+"language": "GDScript",
+"path": "res://Game/DomRoute/MissionBase.gd"
+}, {
+"base": "QuestBase",
+"class": "MissionQuestProxy",
+"language": "GDScript",
+"path": "res://Game/DomRoute/Util/MissionQuestProxy.gd"
+}, {
+"base": "Reference",
+"class": "MissionSystem",
+"language": "GDScript",
+"path": "res://Game/DomRoute/MissionSystem.gd"
 }, {
 "base": "Reference",
 "class": "ModEntry",
@@ -1433,6 +1503,11 @@ _global_script_classes=[ {
 "class": "RecruitSystem",
 "language": "GDScript",
 "path": "res://Game/DomRoute/RecruitSystem.gd"
+}, {
+"base": "SceneBase",
+"class": "RecruitTalkSceneBase",
+"language": "GDScript",
+"path": "res://Game/DomRoute/Util/RecruitTalkSceneBase.gd"
 }, {
 "base": "Reference",
 "class": "RelationshipEntry",
@@ -2048,6 +2123,11 @@ _global_script_classes=[ {
 "class": "WritingsHandler",
 "language": "GDScript",
 "path": "res://Player/Player3D/WritingsHandler/WritingsHandler.gd"
+}, {
+"base": "TranslatorBase",
+"class": "YandexTranslator",
+"language": "GDScript",
+"path": "res://Util/AutoTranslation/Translators/YandexTranslator.gd"
 } ]
 _global_script_class_icons={
 "AIStrategyBase": "",
@@ -2106,6 +2186,10 @@ _global_script_class_icons={
 "CodeContex": "",
 "ColorUtils": "",
 "ComputerBase": "",
+"ContentAutoSprite": "",
+"ContentBoardCondition": "",
+"ContentBoardEntryBase": "",
+"ContentBoardStatus": "",
 "ContentType": "",
 "CreatedInteraction": "",
 "CreatedInteractionAction": "",
@@ -2124,6 +2208,8 @@ _global_script_class_icons={
 "CumProduction": "",
 "CurveEditorCustom": "",
 "CurveRenderer": "",
+"CustomBodypartSlot": "",
+"CustomInventorySlot": "",
 "CycleStage": "",
 "DDRef": "",
 "DamageType": "",
@@ -2145,7 +2231,7 @@ _global_script_class_icons={
 "DatapackSkin": "",
 "DatapackTriggerCodeContext": "",
 "DeepLTranslator": "",
-"DelayedCodeContext": "",
+"DeepLTranslatorV2": "",
 "DialogueFiller": "",
 "DialogueFillerAdder": "",
 "DialogueForm": "",
@@ -2216,6 +2302,7 @@ _global_script_class_icons={
 "GlobalTask": "",
 "Globals": "",
 "GoogleBatchTranslator": "",
+"GoogleGTXTranslator": "",
 "GoogleTranslator": "",
 "GuardGenerator": "",
 "GuardLoot": "",
@@ -2242,6 +2329,7 @@ _global_script_class_icons={
 "ItemBase": "",
 "ItemCategory": "",
 "ItemState": "",
+"ItemStateUnremovable": "",
 "ItemTag": "",
 "JiggleBone": "",
 "JunkieLoot": "",
@@ -2258,6 +2346,9 @@ _global_script_class_icons={
 "LustCombatState": "",
 "LustFocus": "",
 "LustInterests": "",
+"MainRouteEnding": "",
+"MainRouteHistory": "",
+"MainRouteHistoryEntry": "",
 "MainScene": "",
 "MapDecoration": "",
 "MedicalLoot": "",
@@ -2266,6 +2357,9 @@ _global_script_class_icons={
 "MeshInstanceWithPattern": "",
 "MicrosoftTranslator": "",
 "MinigameResult": "",
+"MissionBase": "",
+"MissionQuestProxy": "",
+"MissionSystem": "",
 "ModEntry": "",
 "Module": "",
 "MyBoneAttachment": "",
@@ -2335,6 +2429,7 @@ _global_script_class_icons={
 "RecruitDifficulty": "",
 "RecruitSceneBase": "",
 "RecruitSystem": "",
+"RecruitTalkSceneBase": "",
 "RelationshipEntry": "",
 "RelationshipSystem": "",
 "RepStat": "",
@@ -2457,7 +2552,8 @@ _global_script_class_icons={
 "WorldPopulation": "",
 "WorldZone": "",
 "WritingZoneInfoNode": "",
-"WritingsHandler": ""
+"WritingsHandler": "",
+"YandexTranslator": ""
 }
 
 [application]
@@ -2608,6 +2704,7 @@ common/enable_pause_aware_picking=true
 [rendering]
 
 quality/driver/fallback_to_gles2=true
+2d/snapping/use_gpu_pixel_snap=true
 vram_compression/import_etc=true
 vram_compression/import_pvrtc=true
 gles2/compatibility/disable_half_float=true

@@ -103,6 +103,12 @@ func _ready():
 		textOutput.selection_enabled = false
 	setIsRightHandedLayout(OPTIONS.isUILayoutRightHanded())
 	
+	connect("visibility_changed", self, "onVisChanged")
+	
+func onVisChanged():
+	playerPanel.setPCViewportVis(visible)
+	#print("Visibility changed: "+str(visible))
+	
 func say(text: String):
 	#textOutput.append_bbcode(gameParser.executeString(sayParser.processString(text)))
 	textOutput.bbcode_text += gameParser.executeString(sayParser.processString(text))
@@ -129,6 +135,7 @@ func clearButtons():
 	updateButtons()
 	clearExtraButtons()
 	#_on_option_button_tooltip_end()
+	translateStatusLabel.text = ""
 		
 func addButtonAt(place, text: String, tooltip: String = "", method: String = "", args = []):
 	options[place] = [true, text, tooltip, method, args]
@@ -549,21 +556,29 @@ func translateText(manualButton = false):
 			manualTranslateButton.visible = true
 			return
 		
-		var buttonsTexts = []
+		var toTranslateFinal:Dictionary = {}
+		
+		#var buttonsTexts:Array = []
 		if(AutoTranslation.shouldTranslateButtons):
 			for optionID in options:
-				buttonsTexts.append(options[optionID][1])
-				buttonsTexts.append(options[optionID][2].replace("\n", "^"))
+				toTranslateFinal[str(optionID)+"_text"] = options[optionID][1]
+				toTranslateFinal[str(optionID)+"_desc"] = options[optionID][2]
+				
+				#buttonsTexts.append("[[BTN_"+str(optionID)+"_TEXT]] "+options[optionID][1])
+				#buttonsTexts.append("[[BTN_"+str(optionID)+"_DESC]] "+options[optionID][2].replace("\n", "^"))
 		
 		translateStatusLabel.text = "Translating.."
 		currentTranslationTask += 1
 		var rememberedTask = currentTranslationTask
 		savedOriginalText = textOutput.bbcode_text
 		
-		var toTranslate = textOutput.text
-		if(buttonsTexts.size() > 0):
-			toTranslate += "\n"+Util.join(buttonsTexts, "\n")
-		var result = AutoTranslation.translate(toTranslate)
+		var toTranslate:String = textOutput.bbcode_text if AutoTranslation.shouldKeepBBTags else textOutput.text
+		#if(buttonsTexts.size() > 0):
+		#	toTranslate += "\n"+Util.join(buttonsTexts, "\n")
+		
+		toTranslateFinal["text"] = toTranslate
+		
+		var result = AutoTranslation.translateDict(toTranslateFinal)
 	
 		if(result is GDScriptFunctionState):
 			result = yield(result, "completed")
@@ -571,33 +586,30 @@ func translateText(manualButton = false):
 		if(rememberedTask != currentTranslationTask):
 			return
 		
-		if(result == null || result == ""):
+		if(!(result is Dictionary)):
 			translateStatusLabel.text = "Failed to translate"
-		if(result != null && result != ""):
-			if(buttonsTexts.size() > 0):
-				var resultSplitted = result.split("\n")
-				if(resultSplitted.size() >= buttonsTexts.size()):
-					var _i = 0
-					for optionID in options:
-						var realI = resultSplitted.size() - buttonsTexts.size() + _i*2
-						options[optionID].append(resultSplitted[realI])
-						options[optionID].append(resultSplitted[realI+1].replace("^", "\n"))
-						
-						_i += 1
-					resultSplitted.resize(resultSplitted.size() - buttonsTexts.size())
-					result = Util.join(resultSplitted, "\n")
-					queueUpdate()
+		else:
+			var theText:String = result.get("text", savedOriginalText)
 			
-			savedTranslatedText = result
+			for optionID in options:
+				options[optionID][1] = result.get(str(optionID)+"_text", "???")
+				options[optionID][2] = result.get(str(optionID)+"_desc", "???")
+				#toTranslateFinal[str(optionID)+"_text"] = options[optionID][1]
+				#toTranslateFinal[str(optionID)+"_desc"] = options[optionID][2]
+			
+			queueUpdate()
+			
+			savedTranslatedText = theText
 			if(!showOriginalCheckbox.pressed):
-				textOutput.bbcode_text = result
-			if(AutoTranslation.hadToUseFallback):
-				translateStatusLabel.text = "Used fallback translator"
-				yield(get_tree().create_timer(2.0), "timeout")
-				if(translateStatusLabel != null && translateStatusLabel.text == "Used fallback translator"):
-					translateStatusLabel.text = ""
-			else:
-				translateStatusLabel.text = ""
+				textOutput.bbcode_text = theText
+			translateStatusLabel.text = AutoTranslation.statusText
+			#if(AutoTranslation.hadToUseFallback):
+			#	translateStatusLabel.text = "Used fallback translator"
+				#yield(get_tree().create_timer(2.0), "timeout")
+				#if(translateStatusLabel != null && translateStatusLabel.text == "Used fallback translator"):
+				#	translateStatusLabel.text = ""
+			#else:
+			#	translateStatusLabel.text = ""
 				
 			showOriginalCheckbox.disabled = false
 

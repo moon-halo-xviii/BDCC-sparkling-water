@@ -250,7 +250,7 @@ func _run():
 		addWonButton()
 
 	if(state == "offer_body"):
-		saynn("You really wanna avoid any fights but also don’t feel like being thrown out of the engineering block. So instead of submitting, you offer the enginner a kind smile while striking a sexy pose, showing off your {pc.masc} curves.")
+		saynn("You really wanna avoid any fights but also don’t feel like being thrown out of the engineering block. So instead of submitting, you offer the engineer a kind smile while striking a sexy pose, showing off your {pc.masc} curves.")
 
 		saynn("[say=pc]How about I offer you something better? Myself for example.[/say]")
 
@@ -344,7 +344,13 @@ func _react_scene_end(_tag, _result):
 		if(battlestate == "win"):
 			setState("if_won")
 			addExperienceToPlayer(30)
+			if(GM.ES.triggerReact(Trigger.WonCaughtOffLimitsFight, [npcID, "engineer"])):
+				endScene()
+				return
 		else:
+			if(GM.ES.triggerReact(Trigger.LostCaughtOffLimitsFight, [npcID, "engineer"])):
+				endScene()
+				return
 			setState("if_lost")
 			addExperienceToPlayer(5)
 			
